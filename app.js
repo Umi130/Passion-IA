@@ -1,0 +1,3 @@
+.bandeau{
+	width:100%;
+}
