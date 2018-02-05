@@ -1,0 +1,12 @@
+
+main {
+	 height: 100vh; 
+	 background: url('./fond-discret.png') no-repeat center top;
+	 background-size: cover;
+}
+main[v-cloak] {
+  display: none !important; 
+}
+main .card {
+  width: 45rem;
+}
