@@ -1,36 +1,30 @@
+body {
+	background: url('./fond-discret.png') no-repeat center top;
+	background-size: cover;
+}
 
 main {
-	 height: 100vh; 
-	 background: url('./fond-discret.png') no-repeat center top;
-	 background-size: cover;
-}
-main[v-cloak] {
-  display: none !important; 
+	height: 100vh;
+	max-width: 600px !important;
 }
 
-.col{
-	margin:3px;
-	max-width: 300px,
-	height:200px;
-	justify-content: center;
+main section, main header {
+	margin-bottom: 32px;
 }
+
+#parcours img {
+	transition: 0.1s transform ease-in-out;
+	transform: scale(1);
+}
+
+#parcours img:hover {
+	cursor: pointer;
+	transform: scale(1.1);
+}
+/*main[v-cloak] {
+  display: none !important; 
+}*/
 
 h1 {
-	margin: 3px;
-	font-family: Symbol, sans-serif;
-	font-weight: bold;
 	color: #006bb3;
-	text-align:center;
-}
-
-h2 {
-	margin: 3px;
-	font: 18px arial, sans-serif;
-	color: #0099ff;
-	text-align:justify;	
-}
-
-.img-logo {
-	max-width:100%;
-	height:auto;
 }

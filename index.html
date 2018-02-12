@@ -4,28 +4,31 @@
 <head>
 	<meta charset="utf-8">
 	<title>Passion IA</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 
 <body>
-	<main>
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col">
-					<h1>L'Ecole des IA</h1>
-					<h2>Elever une intelligence artificielle n'est pas plus compliqué qu'éduquer un enfant. De l'algortithme aux questions éthiques en passant par l'apprentissage profond, quatre parcours pour comprendre le développement d'une intelligence artificiell et ses différentes applications dans notre quotidien. Retroussez vos manches et essayez d'amener votre intelligence artificielle le plus loin possible.</h2>
-				</div>
+	<main class="container d-flex flex-column justify-content-center align-items-center">
+		<header class="row">
+			<div class="col">
+				<h1>L'Ecole des IA</h1>
+				<p class="lead">Elever une intelligence artificielle n'est pas plus compliqué qu'éduquer un enfant. De l'algortithme aux questions éthiques en passant par l'apprentissage profond, quatre parcours pour comprendre le développement d'une intelligence artificiell et ses différentes applications dans notre quotidien. Retroussez vos manches et essayez d'amener votre intelligence artificielle le plus loin possible.</p>
 			</div>
-			<div class="row2">
-				<img src="./Roue.png" alt="Symbole Voiture" class="img-logo">
-				<img src="./Guitare.png" alt="Symbole Musique" class="img-logo">
-				<img src="./law.png" alt="Symbole Juriste" class="img-logo">
-				<img src="./Heaphone.png" alt="Symbole Audio" class="img-logo">
-			</div>
-
-		</div>
+		</header>
+		<section class="row d-flex flex-nowrap" id="parcours">
+			<div class="col"><img src="./Roue.png" alt="Symbole Voiture" class="img-fluid"></div>
+			<div class="col"><img src="./Guitare.png" alt="Symbole Musique" class="img-fluid"></div>
+			<div class="col"><img src="./law.png" alt="Symbole Juriste" class="img-fluid"></div>
+			<div class="col"><img src="./Heaphone.png" alt="Symbole Audio" class="img-fluid"></div>
+		</section>
+		<section class="row">
+			<div class="col"><button type="button" class="btn btn-primary">Je commence</button></div>
+		</section>
+		<footer class="row">
+			<div class="col"><button type="button" class="btn btn-info">A propos</button></div>
+		</footer>
 	</main>
 
 	<script src="./app.js"></script>	
