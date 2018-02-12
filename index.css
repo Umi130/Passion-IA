@@ -7,6 +7,30 @@ main {
 main[v-cloak] {
   display: none !important; 
 }
-main .card {
-  width: 45rem;
+
+.col{
+	margin:3px;
+	max-width: 300px,
+	height:200px;
+	justify-content: center;
+}
+
+h1 {
+	margin: 3px;
+	font-family: Symbol, sans-serif;
+	font-weight: bold;
+	color: #006bb3;
+	text-align:center;
+}
+
+h2 {
+	margin: 3px;
+	font: 18px arial, sans-serif;
+	color: #0099ff;
+	text-align:justify;	
+}
+
+.img-logo {
+	max-width:100%;
+	height:auto;
 }
