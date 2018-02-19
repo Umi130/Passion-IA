@@ -17,7 +17,7 @@ const juriste = [
 	},
 	{
 		type: "illustration",
-		src: "./assets/images/Robot.png"
+		src: "./assets/images/illust_bebejuge.png"
 	},
 	{
 		type: "choices",
