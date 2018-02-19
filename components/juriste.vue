@@ -3,7 +3,7 @@
 		<explanation v-if="currentStep.type === 'explanation'" :content="currentStep" :answers="answers"></explanation>
 		<illustration v-if="currentStep.type === 'illustration'" :content="currentStep"></illustration>
 		<choices v-if="currentStep.type === 'choices'" :content="currentStep" v-on:select="selectChoice"></choices>
-		<router-link :to="`/juriste/${current + 1}`" v-if="current < filteredStory.length - 1">Suivant</router-link>
+		<router-link :to="`/juriste/${current + 1}`" v-if="currentStep.type !== 'choices'" v-if="current < filteredStory.length - 1">Suivant</router-link>
 	</main>
 </template>
 
