@@ -7,13 +7,13 @@
 			</div>
 		</header>
 		<section class="row">
-			<div class="col"><img src="./assets/images/Robot.png" alt="Robot" max-height="50%" class="img-fluid" /></div>
+			<div class="col"><img src="./assets/images/Robot.png" height="248" width="130" alt="Robot" max-height="50%" class="img-fluid" /></div>
 		</section>
 		<section class="row d-flex flex-nowrap" id="parcours">
-			<div class="col"><img src="./assets/images/Roue.png" alt="Symbole Voiture" class="img-fluid" /></div>
-			<div class="col"><img src="./assets/images/Guitare.png" alt="Symbole Musique" class="img-fluid" /></div>
-			<div class="col"><router-link to="/juriste/1"><img src="./assets/images/law.png" alt="Symbole Juriste" class="img-fluid" /></router-link></div>
-			<div class="col"><img src="./assets/images/Heaphone.png" alt="Symbole Audio" class="img-fluid" /></div>
+			<div class="col"><img src="./assets/images/voiture.png" alt="Symbole Voiture" class="img-fluid" /></div>
+			<div class="col"><img src="./assets/images/musicien.png" alt="Symbole Musicien" class="img-fluid" /></div>
+			<div class="col"><router-link to="/juriste/1"><img src="./assets/images/juge.png" alt="Symbole Juriste" class="img-fluid" /></router-link></div>
+			<div class="col"><img src="./assets/images/assistant.png" alt="Symbole Assistant" class="img-fluid" /></div>
 		</section>
 		<section class="row">
 			<div class="col"><button type="button" class="btn btn-primary">Je commence</button></div>
