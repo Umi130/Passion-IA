@@ -1,3 +1,12 @@
+// Illustration: Taille images variable desktop/smartphone
+// Choices: Nom de variable dans choix multiple? Apostrophe (Exemple: "salariés dans l’entreprise")
+// Explanation: Texte plus grand sur mobile
+// Explanation: Pouvoir faire italique, gras, à la ligne...
+// Explanation: fond couleur différent programmatique (container d-flex flex-column justify-content-center align-items-center)
+//
+//
+//
+
 const juriste = [
 	{
 		type: "explanation",
@@ -87,7 +96,7 @@ const juriste = [
 	{
 		type: "explanation",
 		message: "Pour ce dossier, le salarié licencié devrait recevoir des indemnités égales à douze mois de salaire brut. Vous vous rendez compte que les textes de loi et la jurisprudence que vous avez soumis à l'algorithme étaient trop larges et l'indemnité est plus élevée que ce que prévoit la loi.",
-		when: answers => answers.choice_premiereslois === 'Tous les articles de loi'
+		when: answers => answers.choice_premiereslois === 'Tous les articles de loi' 
 	},
 	{
 		type: "explanation",
@@ -122,7 +131,7 @@ const juriste = [
 		when: answers => answers.choice_premiereslois === 'Que des décisions similaires'
 	},
 
-//TOCHANGE TO JUGE ENFANT
+//TODO TO JUGE ENFANT
 	{
 		type: "illustration",
 		src: "./assets/images/illust_jugeenfant.png"
@@ -133,66 +142,72 @@ const juriste = [
 		message: "À chaque fois que la machine trouve le bon mot, elle est 'récompensée'. C'est en multipliant les exemples et les primes qu'elle finit par comprendre seule où se trouve l'information clé dans une phrase, en fonction des mots qui l'entourent. Pour nos dossiers, il faudrait apprendre à  {{ name }}  à repérer l'ancienneté d'un salarié dans l'entreprise - critère décisif pour définir le montant des indemnités. On essaye ?",
 	},
 
-//TOCHANGE TO INPUT
+
+//INPUT OLIVIER FERRAND 
 	{
-		type: "choices",
-		name: "choice_emploi_duree1",
-		message: "M. Olivier Ferrand a travaillé 10...",
-		choices: [
+		type: "blanks",
+		name: "blanks_emploi_duree1",
+		message: "M. Olivier Ferrand a travaillé",
+		blanks: [
 			{
-				"value": "Pendant x ans",
-				"description": ""
+				"value": "word_1",
+				"type": "input",
+				"answers": ['pendant', 'durant']
 			},
 			{
-				"value": "Autre réponse",
-				"description": ""
+				"value": " 10 ",
 			},
-			]
+			{
+				"value": "word_2",
+				"type": "input",
+				"answers": ['ans', 'années']
+			},
+		]
 	},
 //Si réponse correcte
 	{
 		type: "explanation",
 		message: "Bonne réponse ! Ici, l'information clé est le nombre d'années passées dans l'entreprise. Pour repérer cette information, qui varie selon les salariés, la machine doit reconnaître les mots contextuels 'pendant' et 'ans' qui précèdent et suivent cette information.",
-		when: answers => answers.choice_emploi_duree1 === 'Pendant x ans'
+		when: answers => answers.blanks_emploi_duree1 
 	},
 //Si réponse incorrecte
 	{
 		type: "explanation",
 		message: "Mauvaise réponse ! Ici, l'information clé est le nombre d'années passées dans l'entreprise. Pour repérer cette information, qui varie selon les salariés, la machine doit reconnaître les mots contextuels 'pendant' et 'ans' qui précèdent et suivent cette information.",
-		when: answers => answers.choice_emploi_duree1 !== 'Pendant x ans'
+		when: answers => !answers.blanks_emploi_duree1 
 	},
 
-//TOCHANGE TO INPUT
+//INPUT CORINNE DUTEIL
 	{
-		type: "choices",
-		name: "choice_emploi_duree2",
-		message: "M. Corinne Duteil a été ... en 2013.",
-		choices: [
+		type: "blanks",
+		name: "blanks_emploi_duree2",
+		message: "Mme Corinne Duteil a été ",
+		blanks: [
 			{
-				"value": "embauchée en / engagée en / recrutée en",
-				"description": ""
+				"value": "word_1",
+				"type": "input",
+				"answers": ['embauchée', 'engagée', 'recrutée']
 			},
 			{
-				"value": "Autre réponse",
-				"description": ""
+				"value": " en 2013.",
 			},
-			]
+		]
 	},
 //Si réponse correcte
 	{
 		type: "explanation",
-		message: "Bonne réponse ! Plus l'information est énoncée de manière détournée, plus le taux d'erreur de la machine est élevé. 'Quand le taux d'erreur est supérieur à 15 ou 20%, on étiquette les données à la main', dit Jacques Levy-Vehel, co-fondateur de Case Law Analytics.",
-		when: answers => answers.choice_emploi_duree2 === 'embauchée en / engagée en / recrutée en'
+		message: "Bonne réponse ! Ici, l'information clé est le nombre d'années passées dans l'entreprise. Pour repérer cette information, qui varie selon les salariés, la machine doit reconnaître les mots contextuels 'pendant' et 'ans' qui précèdent et suivent cette information.",
+		when: answers => answers.blanks_emploi_duree2 
 	},
 //Si réponse incorrecte
 	{
 		type: "explanation",
-		message: "Mauvaise réponse ! Plus l'information est énoncée de manière détournée, plus le taux d'erreur de la machine est élevé. 'Quand le taux d'erreur est supérieur à 15 ou 20%, on étiquette les données à la main', dit Jacques Levy-Vehel, co-fondateur de Case Law Analytics.",
-		when: answers => answers.choice_emploi_duree2 !== 'embauchée en / engagée en / recrutée en'
+		message: "Mauvaise réponse ! Ici, l'information clé est le nombre d'années passées dans l'entreprise. Pour repérer cette information, qui varie selon les salariés, la machine doit reconnaître les mots contextuels 'pendant' et 'ans' qui précèdent et suivent cette information.",
+		when: answers => !answers.blanks_emploi_duree2 
 	},
 
 
-//Ajouter compte des bonnes & mauvaises réponses
+//TODO Ajouter compte des bonnes & mauvaises réponses
 	{
 		type: "explanation",
 		message: "Plutôt long et fastidieux comme tâche non? C'est la partie 'humaine' de l'intelligence artificielle. Selon la taille de la base de données, l'opération peut prendre plusieurs jours voire plusieurs semaines.",
@@ -203,13 +218,13 @@ const juriste = [
 	{
 		type: "explanation",
 		message: "Bravo. Le taux d'erreur de votre algorithme de traitement automatique du langage est inférieur à 15%, vous pourrez donc économiser de longues heures d'étiquetage manuel de vos données. Vous avez maintenant une base de données suffisamment complète pour que {{name}} puisse 'prédire' la probabilité des différents jugements pour un nouveau dossier.",
-		when: answers => answers.choice_emploi_duree1 === 'embauchée en / engagée en / recrutée en',
+		when: answers => answers.blanks_emploi_duree1 && answers.blanks_emploi_duree2,
 	},
 //Sinon
 	{
 		type: "explanation",
-		message: "Vous avez fait trop d'erreur dans les textes à trou. Votre algorithme de traitement automatique du langage n'est pas assez performant, le taux d'erreur est trop élevé. Vous devez étiqueter vos données manuellement. Vous perdez beaucoup de temps mais vous avez maintenant une base de données suffisamment complète pour que {{name}} puisse 'prédire' les différents jugements possibles et la probabilité qui leur est associée.",
-		when: answers => answers.choice_emploi_duree1 !== 'embauchée en / engagée en / recrutée en',
+		message: "Vous avez fait trop d'erreurs dans les textes à trous. Votre algorithme de traitement automatique du langage n'est pas assez performant, le taux d'erreur est trop élevé. Vous devez étiqueter vos données manuellement. Vous perdez beaucoup de temps mais vous avez maintenant une base de données suffisamment complète pour que {{name}} puisse 'prédire' les différents jugements possibles et la probabilité qui leur est associée.",
+		when: answers => !answers.blanks_emploi_duree1 || !answers.blanks_emploi_duree2,
 	},
 
 //TOCHANGE TO JUGE ADO
@@ -301,7 +316,7 @@ const juriste = [
 		when: answers => answers.choice_critereneglige_automatise !== 'Oui',
 	},
 
-//TOCHANGE TO JUGE ADULTE
+//TODO TO JUGE ADULTE
 	{
 		type: "illustration",
 		src: "./assets/images/illust_jugeadulte.png"

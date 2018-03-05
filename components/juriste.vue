@@ -3,7 +3,10 @@
 		<explanation v-if="currentStep.type === 'explanation'" :content="currentStep" :answers="answers"></explanation>
 		<illustration v-if="currentStep.type === 'illustration'" :content="currentStep"></illustration>
 		<choices v-if="currentStep.type === 'choices'" :content="currentStep" v-on:select="selectChoice"></choices>
-		<router-link :to="`/juriste/${current + 1}`" v-if="currentStep.type !== 'choices'" v-if="current < filteredStory.length - 1">Suivant</router-link>
+		<blanks v-if="currentStep.type === 'blanks'" :content="currentStep" v-on:fill="fillBlanks"></blanks>
+		<router-link :to="`/juriste/${current + 1}`" v-if="displayNextButton()" class="btn btn-primary">
+			Suivant
+		</router-link>
 	</main>
 </template>
 
@@ -14,7 +17,8 @@ module.exports = {
 	components: {
 		Explanation: httpVueLoader('./explanation.vue'),
 		Illustration: httpVueLoader('./illustration.vue'),
-		Choices: httpVueLoader('./choices.vue')
+		Choices: httpVueLoader('./choices.vue'),
+		Blanks: httpVueLoader('./blanks.vue')
 	},
 	data () {
 		return {
@@ -41,8 +45,16 @@ module.exports = {
 			this.$set(this.answers, choice.name, choice.value)
 			this.nextStep()
 		},
+		fillBlanks (answer) {
+			this.$set(this.answers, answer.name, answer.value)
+			this.nextStep()
+		},
 		nextStep () {
 			this.$router.push({ path: `/juriste/${this.current + 1}` })
+		},
+		displayNextButton(){
+			return ['choices', 'blanks'].indexOf(this.currentStep.type) === -1  && 
+				this.current < this.filteredStory.length - 1;
 		}
 	}
 }
