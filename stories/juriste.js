@@ -249,7 +249,7 @@ const juriste = [
 				"description": ""
 			},
 			{
-				"value": "Nombre de salariés dans l'entreprise",
+				"value": "Nombre de salariés dans entreprise",
 				"description": ""
 			},
 			{
@@ -335,25 +335,25 @@ const juriste = [
 	{
 		type: "explanation",
 		message: "Bonne réponse ! Vous prenez le risque que votre programme soit modifié, mais l'Open Source permettra à chacun d'apprécier les fondements de la décision prise par le juge qui l'utilisera. Vous ne serez pas personnellement responsable de l'utilisation de cet outil. De plus, en le rendant gratuit vous évitez la création de nouvelles inégalités entre les professionnels de la justice qui pourraient se l'offrir et ceux qui ne pourraient pas.",
-		when: answers => answers.choice_critereneglige_opensource === 'Vous décidez de le rendre accessible en Open source',
+		when: answers => answers.choice_opensource === 'Vous décidez de le rendre accessible en Open source',
 	},
 	{
 		type: "explanation",
 		message: "Après plusieurs mois d'utilisation de votre algorithme, vous êtes confronté.e à un nouveau type de contestation. Une association a étudié en détail votre algorithme qui était en accès libre. Elle lui a soumis des dossiers similaires et a mis en avant que les indemnités proposées aux femmes par l'intelligence artificielle sont souvent inférieures à celles proposées aux hommes.",
-		when: answers => answers.choice_critereneglige_opensource !== 'Vous décidez de le rendre accessible en Open source',
+		when: answers => answers.choice_opensource === 'Vous décidez de le rendre accessible en Open source',
 	},
 //Si mauvaise réponse
 	{
 		type: "explanation",
 		message: "Après plusieurs mois d'utilisation de votre algorithme, vous êtes confronté à un nouveau type de contestation. Des hackers ont réussi à pirater votre programme. Ils lui ont soumis des dossiers similaires et ont mis en avant que les indemnités proposées aux femmes par l'intelligence artificielle sont souvent inférieures à celles proposées aux hommes.",
-		when: answers => answers.choice_critereneglige_opensource !== 'Vous décidez de le rendre accessible en Open source',
+		when: answers => answers.choice_opensource === 'Vous décidez de le rendre accessible en Open source',
 	},
 
 
 	{
 		type: "explanation",
 		message: "Mauvaise réponse ! En rendant le code de votre algorithme secret, vous exposez les juges qui l'utiliseront à des contestations : il faut que ceux-ci sachent sur quel critères se basent votre algorithme pour en tenir compte dans leur décision. Pour assurer la transparence d'une décision il faut que l'outil que vous utilisez le soit aussi.  ",
-		when: answers => answers.choice_critereneglige_opensource !== 'Vous décidez de le rendre accessible en Open source',
+		when: answers => answers.choice_opensource === 'Vous décidez de le rendre accessible en Open source',
 	},
 
 
@@ -392,10 +392,54 @@ const juriste = [
 	},
 
 
+//Biais indemnités homme/femme
+	{
+		type: "choices",
+		name: "choice_indemniteshommefemme_biais",
+		message: "",
+		choices: [
+			{
+				"value": "Vous corrigez",
+				"description": "votre programme pour que le mot 'Madame' ne soit pas associé à des indemnités plus faibles que celles des hommes."
+			},
+			{
+				"value": "Vous anonymisez",
+				"description": "toutes les décisions de votre base de données."
+			},
+			]
+	},
+//Si bonne réponse
 	{
 		type: "explanation",
-		message: "Mauvaise réponse ! En rendant le code de votre algorithme secret, vous exposez les juges qui l'utiliseront à des contestations : il faut que ceux-ci sachent sur quel critères se basent votre algorithme pour en tenir compte dans leur décision. Pour assurer la transparence d'une décision il faut que l'outil que vous utilisez le soit aussi.  ",
-		when: answers => answers.choice_critereneglige_opensource !== 'Vous décidez de le rendre accessible en Open source',
+		message: "Si vous voulez utiliser l'intelligence artificielle dans d'autres domaines que celui des indemnités de licenciement, il vous faudra répéter cette manipulation à chaque fois que vous trouverez un biais issu de la base de données et mal interprété par le système de traitement automatique du langage.",
+		when: answers => answers.choice_indemniteshommefemme_biais === 'Vous anonymisez',
 	},
+//Si mauvaise réponse
+	{
+		type: "explanation",
+		message: "Le raisonnement est plutôt logique, mais les contestations concernent des dossiers similaires dans lesquels les femmes touchent autant que les hommes.",
+		when: answers => answers.choice_indemniteshommefemme_biais !== 'Vous anonymisez',
+	},
+
+	{
+		type: "explanation",
+		message: "L'anonymisation des données est un enjeu clé dans le domaine juridique. Depuis le vote de la loi pour une République Numérique en octobre 2016 et la publication du rapport Cadiet sur l'open-data dans le monde de la justice, les professionnels du secteur attendent une décision sur la question.",
+	},
+	{
+		type: "explanation",
+		message: "Avocats, juristes et magistrats sont nombreux à s'inquiéter d'une intelligence artificielle qui utiliserait des données non anonymisées notamment dans le cadre de procédure pénale. ",
+	},
+	{
+		type: "explanation",
+		message: "CITATION PHILOSOPHIQUE A TROUVER SUR L'AVENIR DE LA JUSTICE AVEC L'INTELLIGENCE ARTIFICIELLE",
+	},
+
+	{
+		type: "explanation",
+		message: "Mais concentrons-nous sur l'avenir de l'intelligence artificielle dans la justice en fonction des décisions que vous avez prises tout au long de ce parcours. Notre algorithme va calculer votre score.",
+	},
+
+	//Score mauvaise attitude --> Mini nouvelle sur l'avenir pessimiste de l'IA dans la justice 
+
 
 ]
