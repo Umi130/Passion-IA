@@ -19,6 +19,10 @@ const juriste = [
 		type: "illustration",
 		src: "./assets/images/illust_bebejuge.png"
 	},
+		{
+		type: "explanation",
+		message: "Ce ne sont que quelques lignes de code mais vous vous prenez déjà d'affection pour ce super-assistant qui va faire diminuer la pile de dossier sur votre bureau. Vous décidez de lui donner un prénom."
+	},
 	{
 		type: "choices",
 		name: "name",

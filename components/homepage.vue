@@ -7,16 +7,34 @@
 			</div>
 		</header>
 		<section class="row">
-			<div class="col"><img src="./assets/images/Robot.png" height="248" width="130" alt="Robot" max-height="50%" class="img-fluid" /></div>
+			<div class="col">
+				<img src="./assets/images/Robot.png" v-if="story === null" height="248" width="130" alt="Robot" max-height="50%" class="img-fluid" />
+				<img :src="storyImage" v-if="story !== null" height="248" width="130" :alt="'Robot ' + story " max-height="50%" class="img-fluid" />
+			</div>
 		</section>
 		<section class="row d-flex flex-nowrap" id="parcours">
-			<div class="col"><img src="./assets/images/voiture.png" alt="Symbole Voiture" class="img-fluid" /></div>
-			<div class="col"><img src="./assets/images/musicien.png" alt="Symbole Musicien" class="img-fluid" /></div>
-			<div class="col"><router-link to="/juriste/1"><img src="./assets/images/juge.png" alt="Symbole Juriste" class="img-fluid" /></router-link></div>
-			<div class="col"><img src="./assets/images/assistant.png" alt="Symbole Assistant" class="img-fluid" /></div>
+			<div class="col">
+				<img :src="imageFor('voiture')" @click="story = 'voiture'" alt="Symbole Voiture" class="img-fluid" />
+			</div>
+			<div class="col">
+				<img :src="imageFor('musicien')" @click="story = 'musicien'" alt="Symbole Musicien" class="img-fluid" />
+			</div>
+			<div class="col">
+				<img :src="imageFor('juriste')" @click="story = 'juriste'" alt="Symbole Juriste" class="img-fluid" />
+			</div>
+			<div class="col">
+				<img :src="imageFor('assistant')" @click="story = 'assistant'" alt="Symbole Assistant" class="img-fluid" />
+			</div>
 		</section>
 		<section class="row">
-			<div class="col"><button type="button" class="btn btn-primary">Je commence</button></div>
+			<div class="col">
+				<router-link :to="storyLink" class="btn btn-primary" v-if="story !== null">
+					Je commence
+				</router-link>
+				<button class="btn btn-primary" disabled v-if="story === null">
+					Je commence
+				</button>
+			</div>
 		</section>
 		<footer class="row">
 			<div class="col"><button type="button" class="btn btn-info">A propos</button></div>
@@ -25,7 +43,26 @@
 </template>
 
 <script>
-module.exports = {}
+module.exports = {
+	data: function() {
+		return {
+			story: null
+		}
+	},
+	methods: {
+		imageFor: function(name) {
+			return './assets/images/' + name + (name === this.story ? '-select.png' : '.png')
+		}
+	},
+	computed: {
+		storyImage: function() {
+			return ['./assets/images/robot-', this.story, '.png'].join('')
+		},
+		storyLink: function() {
+			return ['/', this.story, '/1'].join('')
+		}
+	}
+}
 </script>
 
 <style></style>
