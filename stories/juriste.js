@@ -1,7 +1,7 @@
 const juriste = [
 	{
 		type: "explanation",
-		message: "Vous êtes assis.e à votre bureau et contemplez la centaine de dossiers en attente de jugement. Vous faites partie de la chambre sociale notamment en charge des recours en cas de licenciement abusif. Comme la plupart des tribunaux français, le votre est encombré. Vous avez entendu parler d'outils d'intelligence artificielle pour traiter plus rapidement des dossiers. "
+		message: "Vous êtes assis.e à votre bureau et contemplez la centaine de dossiers en attente de jugement. Vous faites partie de la chambre sociale notamment en charge des recours en cas de licenciement abusif. Comme la plupart des tribunaux français, le votre est encombré. Vous avez entendu parler d'outils d'intelligence artificielle pour traiter plus rapidement des dossiers."
 	},
 	{
 		type: "explanation",
@@ -42,26 +42,24 @@ const juriste = [
 			}
 		]
 	},
+
+//	{
+//		type: "explanation",
+//		message: "Votre robot s'appelle {{ name }}",
+//		when: answers => answers.name !== 'Justum'
+//	},
+
 	{
 		type: "explanation",
-		message: "Votre robot s'appelle {{ name }}",
-		when: answers => answers.name !== 'Justum'
-	},
-	{
-		type: "explanation",
-		message: "Bravo vous n'êtes pas sexistes ! Votre robot s'appelle {{ name }}",
-		when: answers => answers.name === 'Justum'
+		message: "Vous soumettez un premier dossier de votre pile pour tester {{ name }}. Le salarié licencié a droit à une indemnité comprise entre 1,5 et 6 mois de salaire brut.",
 	},
 
 	{
 		type: "explanation",
-		message: "Vous soumettez un premier dossier de votre pile pour tester l'algorithme. Le salarié licencié a droit à une indemnité comprise entre 1,5 et 6 mois de salaire brut.",
+		message: "Vous êtes complètement déçu… {{\n}} L’algorithme n’a fait que répéter ce qui est écrit dans la loi. Vous n’êtes pas très avancé.",
 	},
 
-	{
-		type: "explanation",
-		message: "Vous êtes complètement déçu… {{{\n}}} L’algorithme n’a fait que répéter ce qui est écrit dans la loi. Vous n’êtes pas très avancé.",
-	},
+
 
 	{
 		type: "choices",
@@ -79,11 +77,10 @@ const juriste = [
 			]
 	},
 
-
 //Quelque soit le choix, afficher la même chose
 	{
 		type: "explanation",
-		message: "Vous soumettez un dossier pour tester votre algorithme.",
+		message: "Vous soumettez un nouveau dossier pour tester votre algorithme.",
 	},
 
 //Si choix - Que des décisions similaires

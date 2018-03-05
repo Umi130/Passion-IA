@@ -59,7 +59,7 @@ module.exports = {
 			return ['./assets/images/robot-', this.story, '.png'].join('')
 		},
 		storyLink: function() {
-			return ['/', this.story, '/1'].join('')
+			return ['/', this.story, '/0'].join('')
 		}
 	}
 }
