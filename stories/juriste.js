@@ -3,18 +3,18 @@
 // Explanation: Texte plus grand sur mobile
 // Explanation: Pouvoir faire italique, gras, à la ligne...
 // Explanation: fond couleur différent programmatique quand faux (container d-flex flex-column justify-content-center align-items-center)
-//
-//
+// Page de chargement : définir un temps et ne pas afficher le bouton suivant
+// Quand il y a résultat : i; faudrait que ce soit dans une bulle qui sort de la bouche du robot, pour séparer le résultat de l'explication qui suit. 
 //
 
 const juriste = [
 	{
 		type: "explanation",
-		message: "Vous êtes assis.e à votre bureau et contemplez la centaine de dossiers en attente de jugement. Vous faites partie de la chambre sociale notamment en charge des recours en cas de licenciement abusif. Comme la plupart des tribunaux français, le votre est encombré. Vous avez entendu parler d'outils d'intelligence artificielle pour traiter plus rapidement des dossiers."
+		message: "Vous êtes assis.e à votre bureau et contemplez la centaine de dossiers en attente de jugement. Vous faites partie de la chambre sociale notamment en charge des recours en cas de licenciement abusif. Comme la plupart des tribunaux français, le vôtre est encombré. Vous avez entendu parler d'outils d'intelligence artificielle pour traiter plus rapidement des dossiers."
 	},
 	{
 		type: "explanation",
-		message: "Vous vous inspirez de Case Law Analytics et de Predictice, deux entreprises françaises qui proposent ce genre de services surtout à des avocats et vous vous associez avec un ingénieur pour écrire un algorithme adapté aux magistrats."
+		message: "Vous vous inspirez de Case Law Analytics et de Predictice, deux entreprises françaises qui proposent ce genre de services à des avocats. Vous vous associez avec un ingénieur pour écrire un algorithme adapté aux magistrats."
 	},
 	{
 		type: "explanation",
@@ -22,7 +22,7 @@ const juriste = [
 	},
 	{
 		type: "explanation",
-		message: "L'ingrédient principal dont a besoin votre algorithme, c'est la loi sur les critères qui déterminent les indemnités de licenciement d'un salarié."
+		message: "L'ingrédient principal dont a besoin votre algorithme, c'est la loi qui détermine le montant des indemnités de licenciement d'un salarié."
 	},
 	{
 		type: "illustration",
@@ -117,7 +117,7 @@ const juriste = [
 	},	
 	{
 		type: "explanation",
-		message: "Résultat : M. Husson devrait recevoir douze mois de salaire brut en indemnité. Ce n'est plus une fourchette... mais le montant des indemnités est supérieur à ce que prévoit la loi actuelle. L'algorithme a pris en compte toutes les décisions liées auxlois précédentes. Le résultat est faussé.",
+		message: "Résultat : M. Husson devrait recevoir douze mois de salaire brut en indemnité. Ce n'est plus une fourchette... mais le montant des indemnités est supérieur à ce que prévoit la loi actuelle. L'algorithme a pris en compte toutes les décisions liées aux lois précédentes. Le résultat est faussé.",
 		when: answers => answers.choice_premiereslois === 'Tous les articles de loi' 
 	},
 	{
@@ -127,7 +127,7 @@ const juriste = [
 	},
 	{
 		type: "explanation",
-		message: "Définir manuellement les critères qui motivent votre décision va prendre du temps. C'est le côté 'humain' de l'intelligence artificielle. Lorsqu'on soumet à l'algorithme une première base de données, il faut lui indiquer où sont les informations clés.",
+		message: "Définir manuellement les critères qui motivent votre décision va prendre du temps. C'est le côté 'humain' de l'intelligence artificielle. Lorsqu'on soumet à l'algorithme une première base de données, il faut lui indiquer où sont les informations clés. Vous voys attelez à cette tâche.",
 		when: answers => answers.choice_premiereslois === 'Tous les articles de loi'
 	},
 
@@ -143,12 +143,12 @@ const juriste = [
 	},	
 	{
 		type: "explanation",
-		message: "Résultat : M.Husson devrait recevoir trois mois de salaire brut en indemnité. Ce n'est plus une fourchette... mais vous vous rendez compte que l'algorithme' n'a pas tenu compte de la zone géographique de votre cour. Vous auriez eu tendance à lui attribuer une indemnité d'au moins 6 mois de salaire brut puisque le chômage est plus élevé dans votre région.",
+		message: "Résultat : M.Husson devrait recevoir trois mois de salaire brut en indemnité. Ce n'est plus une fourchette... mais vous vous rendez compte que l'algorithme n'a pas tenu compte de la zone géographique de votre cour. Vous auriez eu tendance à lui attribuer une indemnité d'au moins 6 mois de salaire brut puisque le chômage est plus élevé dans votre région.",
 		when: answers => answers.choice_premiereslois === 'Que des décisions similaires'
 	},
 	{
 		type: "explanation",
-		message: "La définition manuelle des critères va prendre du temps, mais elle sera plus juste car elle tiendra compte des spécificités des dossiers. C'est le côté 'humain' de l'IA : lorsqu'on soumet une première base de données à l'algorithme, il faut lui indiquer où sont les informations clés.",
+		message: "La définition manuelle des critères prend du temps, mais elle sera plus juste car elle tiendra compte des spécificités des dossiers. C'est le côté 'humain' de l'IA : lorsqu'on soumet une première base de données à l'algorithme, il faut lui indiquer où sont les informations clés.",
 		when: answers => answers.choice_premiereslois === 'Que des décisions similaires'
 	},
 	
@@ -221,13 +221,13 @@ const juriste = [
 //Si réponse correcte
 	{
 		type: "explanation",
-		message: "Bonne réponse ! Ici, l'information clé est le nombre d'années passées dans l'entreprise. Pour repérer cette information, qui varie selon les salariés, la machine doit reconnaître les mots contextuels 'pendant' et 'ans' qui précèdent et suivent cette information.",
+		message: "Bonne réponse ! Ici, trois réponses étaient possibles. Plus l'information est énoncée de manière détournée, plus le taux d'erreur de la machine est élevé.'Quand le taux d'erreur est supérieur à 15 ou 20%, on étiquette les données à la main' Jacques Levy-Vehel, co-fondateur de Case Law Analytics",
 		when: answers => answers.blanks_emploi_duree2 
 	},
 //Si réponse incorrecte
 	{
 		type: "explanation",
-		message: "Mauvaise réponse ! Ici, l'information clé est le nombre d'années passées dans l'entreprise. Pour repérer cette information, qui varie selon les salariés, la machine doit reconnaître les mots contextuels 'pendant' et 'ans' qui précèdent et suivent cette information.",
+		message: "Mauvaise réponse ! Ici, trois réponses étaient possibles. Plus l'information est énoncée de manière détournée, plus le taux d'erreur de la machine est élevé.'Quand le taux d'erreur est supérieur à 15 ou 20%, on étiquette les données à la main' Jacques Levy-Vehel, co-fondateur de Case Law Analytics",
 		when: answers => !answers.blanks_emploi_duree2 
 	},
 
@@ -265,11 +265,11 @@ const juriste = [
 //Cas licenciements
 	{
 		type: "explanation",
-		message: "Avant d'utiliser l'algorithme, il faudrait vérifier si ses prédictions reflètent la réalité des décisions que vous avez prises par le passé. Case Law Analytics nous conseille de comparer les statistiques sorties par l'algorithme à un groupe de décisions 'témoin'.",
+		message: "Avant d'utiliser l'algorithme, il faudrait vérifier si ses prédictions reflètent la réalité des décisions que vous avez prises par le passé. Case Law Analytics vous conseille de comparer les statistiques sorties par l'algorithme à un corpus de décisions 'témoin'.",
 	},
 	{
 		type: "explanation",
-		message: "Mme.Petit, 10 d'ancienneté, 29 ans, ouvrière, entreprise de 10 salariés : indemnité selon l'IA 2,5 mois de salaire brut. A LA LIGNE M. Martin, 62 ans,10 ans d'ancienneté, cadre technique, entreprise de 25 salariés : indemnité selon le corpus texte 3 mois de salaire brut**",
+		message: "Mme.Petit, 10 d'ancienneté, 29 ans, ouvrière, entreprise de 10 salariés. Indemnité selon l'IA : 2,5 mois de salaire brut. A LA LIGNE M. Martin, 62 ans,10 ans d'ancienneté, cadre technique, entreprise de 25 salariés. Indemnité selon le corpus de décisions témoin: 3 mois de salaire brut**",
 	},
 		{
 		type: "explanation",
@@ -302,7 +302,7 @@ const juriste = [
 //Réponse correcte 3
 	{
 		type: "explanation",
-		message: "Bravo ! Les indemnités diffèrent en fonction du nombre de salarié dans l'entreprise. ",
+		message: "Bravo ! Depuis 2017, les indemnités diffèrent en fonction du nombre de salarié dans l'entreprise. ",
 		when: answers => answers.choice_critereneglige === 'Nombre de salariés dans entreprise',
 	},
 //Si mauvaise réponse
@@ -311,6 +311,24 @@ const juriste = [
 		message: "Faux. Les indemnités diffèrent en fonction du nombre de salariés dans l'entreprise. Il faut donc augmenter le poids de ce critère lorsque votre programme apprend à reconnaître les informations clés d'un dossier.",
 		when: answers => answers.choice_critereneglige !== 'Nombre de salariés dans entreprise',
 	},
+
+// Etape commune 	
+	{
+		type: "explanation",
+		message:"Votre programme est maintenant bien entraîné. Vous lui soumettez un dossier. M. Olivier a été victime d'un licenciement abusif après avoir travaillé pendant un an dans une start-up.", 
+	},
+	{
+		type: "illustration",
+		src: "./assets/images/robot-juge-marteau-anime.gif"	
+	},
+	{
+		type: "explanation",
+		message: "Résultat : M. Olivier devrait avoir un mois de salaire brut d'indemnité. C'est exactement ce que vous auriez décidé en étudiant vous-même le dossier.",
+	},
+	{
+		type: "explanation",
+		message:"La pile descend beaucoup plus vite et vous avez beaucoup plus de temps à consacrer aux dossiers compliqués. Pour chaque affaire, ROSS/AGATTHA/JUSTUM vous propose plusieurs décisions et les classe en fonction de leur probabilité. Pour les dossiers les plus simples, une décision se dégage souvent avec des taux de probabilité supérieur à 90%.",
+	},	 
 //Nouveau choix proposé
 	{
 		type: "choices",
@@ -330,7 +348,7 @@ const juriste = [
 //Si bonne réponse
 	{
 		type: "explanation",
-		message: "Vous risquez d'être sanctionné si vous oubliez le côté 'humain' de la justice. Une décision ne peut se baser uniquement sur un algorithme. Votre travail de juge ne consiste pas à trouver une machine pour vous remplacer. Le jugement doit être rédigé par un juge qui a connaissance du dossier.",
+		message: "Vous risquez d'être sanctionné si vous oubliez le côté 'humain' de la justice. Une décision ne peut se baser uniquement sur un algorithme. Votre travail de juge ne consiste pas à trouver une machine pour vous remplacer. Le jugement doit être rédigé par un juge qui a connaissance du dossier. L'IA ne peut être qu'un outil d'aide à la décision.",
 		when: answers => answers.choice_critereneglige_automatise === 'Oui',
 	},
 		{
@@ -341,8 +359,14 @@ const juriste = [
 //Si mauvaise réponse
 	{
 		type: "explanation",
-		message: "Vous avez bien fait, même sur les dossiers les plus simples, les décisions ne peuvent être prises automatiquement car cela va à l'encontre de la nature même d'une procédure judiciaire.",
+		message: "Vous avez bien fait, même sur les dossiers les plus simples, les décisions ne peuvent être prises automatiquement car cela va à l'encontre de la nature même d'une procédure judiciaire. L'IA ne peut être qu'un outil d'aide à la décision.",
 		when: answers => answers.choice_critereneglige_automatise !== 'Oui',
+	},
+
+// commun à tous 
+	{
+		type: "explanation",
+		message: "Aux Etats-Unis, le logiciel Compas permet d'évaluer le risque de récidive d'un criminel. Les juges qui ont motivé leur décision uniquement en fonction des conclusions du programme ont été contraints de revoir leur jugement et de justifier leur décision par un raisonnement humain et non informatique.",
 	},
 
 //Robot devient adulte
@@ -351,10 +375,6 @@ const juriste = [
 		src: "./assets/images/robot-juriste-adulte.png"
 	},
 
-	{
-		type: "explanation",
-		message: "Aux Etats-Unis, le logiciel Compas permet d'évaluer le risque de récidive d'un criminel. Les juges qui ont motivé leur décision de non remise en liberté en fonction des conclusions du programme ont été contraints de revoir leur jugement et de justifier leur décision par un raisonnement humain et non informatique.",
-	},
 
 //Choix Open source
 	{
@@ -383,18 +403,18 @@ const juriste = [
 		message: "Après plusieurs mois d'utilisation de votre algorithme, vous êtes confronté.e à un nouveau type de contestation. Une association a étudié en détail votre algorithme qui était en accès libre. Elle lui a soumis des dossiers similaires et a mis en avant que les indemnités proposées aux femmes par l'intelligence artificielle sont souvent inférieures à celles proposées aux hommes.",
 		when: answers => answers.choice_opensource === 'Vous décidez de le rendre accessible en Open source',
 	},
-//Si mauvaise réponse
-	{
-		type: "explanation",
-		message: "Après plusieurs mois d'utilisation de votre algorithme, vous êtes confronté à un nouveau type de contestation. Des hackers ont réussi à pirater votre programme. Ils lui ont soumis des dossiers similaires et ont mis en avant que les indemnités proposées aux femmes par l'intelligence artificielle sont souvent inférieures à celles proposées aux hommes.",
-		when: answers => answers.choice_opensource === 'Vous décidez de le rendre accessible en Open source',
-	},
 
+//Si mauvaise réponse
 
 	{
 		type: "explanation",
 		message: "Mauvaise réponse ! En rendant le code de votre algorithme secret, vous exposez les juges qui l'utiliseront à des contestations : il faut que ceux-ci sachent sur quel critères se basent votre algorithme pour en tenir compte dans leur décision. Pour assurer la transparence d'une décision il faut que l'outil que vous utilisez le soit aussi.  ",
-		when: answers => answers.choice_opensource === 'Vous décidez de le rendre accessible en Open source',
+		when: answers => answers.choice_opensource === 'Vous décidez de le diffuser uniquement aux magistrats',
+	},
+	{
+		type: "explanation",
+		message: "Après plusieurs mois d'utilisation de votre algorithme, vous êtes confronté à un nouveau type de contestation. Des hackers ont réussi à pirater votre programme. Ils lui ont soumis des dossiers similaires et ont mis en avant que les indemnités proposées aux femmes par l'intelligence artificielle sont souvent inférieures à celles proposées aux hommes.  ",
+		when: answers => answers.choice_opensource === 'Vous décidez de le diffuser uniquement aux magistrats',
 	},
 
 
@@ -424,7 +444,7 @@ const juriste = [
 	{
 		type: "explanation",
 		message: "Le raisonnement est plutôt logique, mais les contestations concernent des dossiers similaires dans lesquels les femmes touchent autant que les hommes.",
-		when: answers => answers.choice_indemniteshommefemme !== 'Valide',
+		when: answers => answers.choice_indemniteshommefemme !== 'Invalide',
 	},
 
 	{
@@ -452,14 +472,14 @@ const juriste = [
 //Si bonne réponse
 	{
 		type: "explanation",
-		message: "Si vous voulez utiliser l'intelligence artificielle dans d'autres domaines que celui des indemnités de licenciement, il vous faudra répéter cette manipulation à chaque fois que vous trouverez un biais issu de la base de données et mal interprété par le système de traitement automatique du langage.",
+		message: "Bonne réponse ! En prenant l'habitude d'anonymiser vos données, vous éviterez les biais liés au sexe des individus dans tous les domaines du droit que vous souhaitez couvrir avec votre intelligence artificielle. ",
 		when: answers => answers.choice_indemniteshommefemme_biais === 'Vous anonymisez',
 	},
 //Si mauvaise réponse
 	{
 		type: "explanation",
-		message: "Le raisonnement est plutôt logique, mais les contestations concernent des dossiers similaires dans lesquels les femmes touchent autant que les hommes.",
-		when: answers => answers.choice_indemniteshommefemme_biais !== 'Vous anonymisez',
+		message: "Mauvaise réponse ! Si vous voulez utiliser l'intelligence artificielle dans d'autres domaines que celui des indemnités de licenciement, il vous faudra répéter cette manipulation à chaque fois que vous trouverez un biais issu de la base de données et mal interprété par le système de traitement automatique du langage.",
+		when: answers => answers.choice_indemniteshommefemme_biais !== 'Vous corrigez',
 	},
 
 	{
@@ -468,7 +488,7 @@ const juriste = [
 	},
 	{
 		type: "explanation",
-		message: "Avocats, juristes et magistrats sont nombreux à s'inquiéter d'une intelligence artificielle qui utiliserait des données non anonymisées notamment dans le cadre de procédure pénale. ",
+		message: "Avocats, juristes et magistrats sont nombreux à s'inquiéter d'une intelligence artificielle qui utiliserait des données non anonymisées notamment dans le cadre de procédure pénale.",
 	},
 	{
 		type: "explanation",
