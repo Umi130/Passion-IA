@@ -1,6 +1,10 @@
 <template>
 	<section>
-		<p>{{ formattedMessage }}</p>
+		<div class="explanation">
+			<h1 v-if="content.title">{{ content.title }}</h1>
+			<p>{{ formattedMessage }}</p>
+		</div>
+		<img v-if="content.image" :src="'./assets/images/'+content.image" class="img-fluid" />
 	</section>
 </template>
 
@@ -17,4 +21,15 @@ module.exports = {
 }
 </script>
 
-<style></style>
+<style scoped>
+	h1 {
+		font-family: Georgia;
+	}
+	.explanation {
+		background-color: #1c1840;
+		color: white;
+		padding: 3em;
+		font-size: 1.4em;
+		line-height: 1.6em;
+	}
+</style>

@@ -1,6 +1,6 @@
 <template>
 	<section>
-		<img :src="content.src" class="img-fluid" />
+		<img :src="'./assets/images/'+content.src" class="img-fluid" />
 	</section>
 </template>
 

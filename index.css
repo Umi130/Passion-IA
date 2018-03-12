@@ -1,21 +1,21 @@
-body {
+html, body {
 	background: url('./assets/images/fond.png') no-repeat center top;
 	background-size: cover;
+	font-size: 15px;
 }
 
 main {
 	min-height: 100vh;
-	max-width: 600px !important;
-	margin-top:5px;
-	padding: 25px 50px;
+	/*max-width: 600px !important;*/
+	/*margin-top: 5px;*/
+	/*padding: 25px 50px;*/
 }
 
 main section, main header {
 	margin-bottom:10px;
-	margin-top:10px;
+	/*margin-top:10px;*/
 	font-family: 'Source Sans Pro', sans-serif;
 	color: #5282d7;
-
 }
 
 #parcours img {
@@ -31,7 +31,7 @@ main section, main header {
 /*main[v-cloak] {
   display: none !important; 
 }*/
-
+/*
 h1 {
 	color: #006bb3;
 	text-align: center;
@@ -39,4 +39,4 @@ h1 {
 
 p {
 	font-size: 1em;
-}
+}*/

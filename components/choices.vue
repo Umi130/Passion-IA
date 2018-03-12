@@ -1,6 +1,6 @@
 <template>
 	<section>
-		<p>{{ content.message }}</p>
+		<p>{{ formattedMessage }}</p>
 		<div class="choice" v-for="choice in content.choices" :key="choice.value" @click="$emit('select', { name: content.name, value: choice.value })">
 			<h2>{{ choice.value }}</h2>
 			<p>{{ choice.description }}</p>
@@ -11,7 +11,12 @@
 <script>
 module.exports = {
 	name: 'choices',
-	props: ['content', 'answers']
+	props: ['content', 'answers'],
+	computed: {
+		formattedMessage () {
+			return Mustache.render(this.content.message, this.answers)
+		}
+	}
 }
 </script>
 

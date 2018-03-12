@@ -1,12 +1,14 @@
 <template>
 	<main>
-		<explanation v-if="currentStep.type === 'explanation'" :content="currentStep" :answers="answers"></explanation>
-		<illustration v-if="currentStep.type === 'illustration'" :content="currentStep"></illustration>
-		<choices v-if="currentStep.type === 'choices'" :content="currentStep" v-on:select="selectChoice"></choices>
-		<blanks v-if="currentStep.type === 'blanks'" :content="currentStep" v-on:fill="fillBlanks"></blanks>
-		<router-link :to="`/juriste/${current + 1}`" v-if="displayNextButton()" class="btn btn-primary">
-			SUIVANT
-		</router-link>
+		<explanation class="col-12" v-if="currentStep.type === 'explanation'" :content="currentStep" :answers="answers"></explanation>
+		<illustration class="col-12" v-if="currentStep.type === 'illustration'" :content="currentStep"></illustration>
+		<choices class="col-12" v-if="currentStep.type === 'choices'" :content="currentStep" v-on:select="selectChoice" :answers="answers"></choices>
+		<blanks class="col-12" v-if="currentStep.type === 'blanks'" :content="currentStep" v-on:fill="fillBlanks"></blanks>
+		<div class="col-12">
+			<router-link :to="`/juriste/${current + 1}`" v-if="displayNextButton()" class="btn btn-primary">
+				SUIVANT
+			</router-link>
+		</div>
 	</main>
 </template>
 
