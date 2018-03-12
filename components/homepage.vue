@@ -2,8 +2,8 @@
 	<main>
 		<header class="row">
 			<div class="col">
-				<h1>L'Ecole des IA</h1>
-				<p class="lead">Elever une intelligence artificielle n'est pas plus compliqué qu'éduquer un enfant. Retroussez vos manches et essayez d’amener votre bébé IA le plus loin possible.</p>
+				<h1>L'ÉCOLE DES IA</h1>
+				<p class="lead">Retroussez vos manches et essayez d’amener votre bébé IA le plus loin possible.</p>
 			</div>
 		</header>
 		<section class="row">
@@ -15,29 +15,33 @@
 		<section class="row d-flex flex-nowrap" id="parcours">
 			<div class="col">
 				<img :src="imageFor('voiture')" @click="story = 'voiture'" alt="Symbole Voiture" class="img-fluid" />
+				VOITURE
 			</div>
 			<div class="col">
 				<img :src="imageFor('musicien')" @click="story = 'musicien'" alt="Symbole Musicien" class="img-fluid" />
+				MUSICIEN
 			</div>
 			<div class="col">
 				<img :src="imageFor('juriste')" @click="story = 'juriste'" alt="Symbole Juriste" class="img-fluid" />
+				JURISTE
 			</div>
 			<div class="col">
 				<img :src="imageFor('assistant')" @click="story = 'assistant'" alt="Symbole Assistant" class="img-fluid" />
+				ASSISTANT
 			</div>
 		</section>
 		<section class="row">
 			<div class="col">
 				<router-link :to="storyLink" class="btn btn-primary" v-if="story !== null">
-					Je commence
+					JE COMMENCE
 				</router-link>
 				<button class="btn btn-primary" disabled v-if="story === null">
-					Je commence
+					JE COMMENCE
 				</button>
 			</div>
 		</section>
 		<footer class="row">
-			<div class="col"><button type="button" class="btn btn-info">A propos</button></div>
+			<div class="col"><button type="button" class="btn btn-info">À PROPOS</button></div>
 		</footer>
 	</main>
 </template>

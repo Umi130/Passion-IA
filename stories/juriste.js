@@ -2,7 +2,7 @@
 // Choices: Nom de variable dans choix multiple? Apostrophe (Exemple: "salariés dans l’entreprise")
 // Explanation: Texte plus grand sur mobile
 // Explanation: Pouvoir faire italique, gras, à la ligne...
-// Explanation: fond couleur différent programmatique (container d-flex flex-column justify-content-center align-items-center)
+// Explanation: fond couleur différent programmatique quand faux (container d-flex flex-column justify-content-center align-items-center)
 //
 //
 //
@@ -26,7 +26,7 @@ const juriste = [
 	},
 	{
 		type: "illustration",
-		src: "./assets/images/illust_bebejuge.png"
+		src: "./assets/images/robot-juriste-bebe.png"
 	},
 		{
 		type: "explanation",
@@ -62,6 +62,12 @@ const juriste = [
 		type: "explanation",
 		message: "Vous soumettez un premier dossier de votre pile pour tester {{ name }}. Le salarié licencié a droit à une indemnité comprise entre 1,5 et 6 mois de salaire brut.",
 	},
+
+
+// Animation marteau
+	{
+		type: "illustration",
+		src: "./assets/images/robot-juge-marteau-anime.gif"	},
 
 	{
 		type: "explanation",
@@ -134,7 +140,7 @@ const juriste = [
 //TODO TO JUGE ENFANT
 	{
 		type: "illustration",
-		src: "./assets/images/illust_jugeenfant.png"
+		src: "./assets/images/robot-juriste-enfant.png"
 	},
 
 	{
@@ -227,10 +233,10 @@ const juriste = [
 		when: answers => !answers.blanks_emploi_duree1 || !answers.blanks_emploi_duree2,
 	},
 
-//TOCHANGE TO JUGE ADO
+//Robot ado
 	{
 		type: "illustration",
-		src: "./assets/images/illust_jugeado.png"
+		src: "./assets/images/robot-juriste-ado.png"
 	},
 
 //Cas licenciements
@@ -316,10 +322,10 @@ const juriste = [
 		when: answers => answers.choice_critereneglige_automatise !== 'Oui',
 	},
 
-//TODO TO JUGE ADULTE
+//Robot devient adulte
 	{
 		type: "illustration",
-		src: "./assets/images/illust_jugeadulte.png"
+		src: "./assets/images/robot-juriste-adulte.png"
 	},
 
 	{

@@ -5,7 +5,7 @@
 		<choices v-if="currentStep.type === 'choices'" :content="currentStep" v-on:select="selectChoice"></choices>
 		<blanks v-if="currentStep.type === 'blanks'" :content="currentStep" v-on:fill="fillBlanks"></blanks>
 		<router-link :to="`/juriste/${current + 1}`" v-if="displayNextButton()" class="btn btn-primary">
-			Suivant
+			SUIVANT
 		</router-link>
 	</main>
 </template>
