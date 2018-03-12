@@ -1,3 +1,8 @@
+// Todo : add close box to go back to main menu
+// Todo : texte devient tableau
+// Todo : bouton SUIVANT toute la largeur, ancré en bas
+// Todo : charger police !
+
 // Illustration: Taille images variable desktop/smartphone
 // Choices: Nom de variable dans choix multiple? Apostrophe (Exemple: "salariés dans l’entreprise")
 // Explanation: Texte plus grand sur mobile
@@ -20,7 +25,9 @@ const juriste = [
 	},
 	{
 		type: "explanation",
+		title: "eXPLICATION",
 		message: "Un algorithme, ce sont les instructions qui commandent un programme informatique. C'est un peu comme une recette de cuisine. Les ingrédients sont les données. Votre plat, ce sont les différents jugements que vous pouvez rendre sur un dossier.",
+		image: "robot-juriste-ado.png",
 	},
 	{
 		type: "explanation",
@@ -28,7 +35,7 @@ const juriste = [
 	},
 	{
 		type: "illustration",
-		src: "./assets/images/robot-juriste-bebe.png",
+		src: "robot-juriste-bebe.png",
 	},
 		{
 		type: "explanation",
@@ -69,7 +76,7 @@ const juriste = [
 // Animation marteau
 	{
 		type: "illustration",
-		src: "./assets/images/robot-juge-marteau-anime.gif",
+		src: "robot-juge-marteau-anime.gif",
 	},
 	
 	{ 
@@ -114,7 +121,7 @@ const juriste = [
 	{
 		when: answers => answers.choice_premiereslois === 'Tous les articles de loi',
 		type: "illustration",
-		src: "./assets/images/robot-juge-marteau-anime.gif"	
+		src: "robot-juge-marteau-anime.gif"	
 		
 	},	
 	{
@@ -142,7 +149,7 @@ const juriste = [
 	{
 		when: answers => answers.choice_premiereslois === 'Que des décisions similaires',
 		type: "illustration",
-		src: "./assets/images/robot-juge-marteau-anime.gif",
+		src: "robot-juge-marteau-anime.gif",
 			
 	},	
 	{
@@ -159,7 +166,7 @@ const juriste = [
 //TODO TO JUGE ENFANT
 	{
 		type: "illustration",
-		src: "./assets/images/robot-juriste-enfant.png",
+		src: "robot-juriste-enfant.png",
 	},
  
 	{
@@ -243,7 +250,7 @@ const juriste = [
 	},
 	{
 		type: "illustration",
-		src: "./assets/images/robot-juge-marteau-anime.gif",	
+		src: "robot-juge-marteau-anime.gif",	
 	},	
 
 
@@ -263,7 +270,7 @@ const juriste = [
 //Robot ado
 	{
 		type: "illustration",
-		src: "./assets/images/robot-juriste-ado.png",
+		src: "robot-juriste-ado.png",
 	},
 
 //Cas licenciements
@@ -323,7 +330,7 @@ const juriste = [
 	},
 	{
 		type: "illustration",
-		src: "./assets/images/robot-juge-marteau-anime.gif"	
+		src: "robot-juge-marteau-anime.gif"	
 	},
 	{
 		type: "explanation",
@@ -376,7 +383,7 @@ const juriste = [
 //Robot devient adulte
 	{
 		type: "illustration",
-		src: "./assets/images/robot-juriste-adulte.png"
+		src: "robot-juriste-adulte.png"
 	},
 
 

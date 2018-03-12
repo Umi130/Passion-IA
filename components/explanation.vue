@@ -23,7 +23,8 @@ module.exports = {
 
 <style scoped>
 	h1 {
-		font-family: Georgia;
+	font-family: 'Source Sans Pro', sans-serif;
+	
 	}
 	.explanation {
 		background-color: #1c1840;
