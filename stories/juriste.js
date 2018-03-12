@@ -14,7 +14,7 @@ const juriste = [
 	},
 	{
 		type: "explanation",
-		message: "Vous vous inspirez de de Case Law Analytics et de Predictice, deux entreprises françaises qui proposent ce genre de services surtout à des avocats et vous vous associez avec un ingénieur pour écrire un algorithme adapté aux magistrats."
+		message: "Vous vous inspirez de Case Law Analytics et de Predictice, deux entreprises françaises qui proposent ce genre de services surtout à des avocats et vous vous associez avec un ingénieur pour écrire un algorithme adapté aux magistrats."
 	},
 	{
 		type: "explanation",
