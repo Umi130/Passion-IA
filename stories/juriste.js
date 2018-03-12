@@ -5,7 +5,7 @@
 // Explanation: fond couleur différent programmatique quand faux (container d-flex flex-column justify-content-center align-items-center)
 // Page de chargement : définir un temps et ne pas afficher le bouton suivant
 // Quand il y a résultat : i; faudrait que ce soit dans une bulle qui sort de la bouche du robot, pour séparer le résultat de l'explication qui suit. 
-//
+// ligne 93 : le nom ne s'affiche pas 
 
 const juriste = [
 	{
@@ -114,6 +114,7 @@ const juriste = [
 	{
 		type: "illustration",
 		src: "./assets/images/robot-juge-marteau-anime.gif"	
+		when: answers => answers.choice_premiereslois === 'Tous les articles de loi'
 	},	
 	{
 		type: "explanation",
@@ -148,7 +149,7 @@ const juriste = [
 	},
 	{
 		type: "explanation",
-		message: "La définition manuelle des critères prend du temps, mais elle sera plus juste car elle tiendra compte des spécificités des dossiers. C'est le côté 'humain' de l'IA : lorsqu'on soumet une première base de données à l'algorithme, il faut lui indiquer où sont les informations clés.",
+		message: "La définition manuelle des critères vous prend du temps, mais elle sera plus juste car elle tiendra compte des spécificités des dossiers. C'est le côté 'humain' de l'IA : lorsqu'on soumet une première base de données à l'algorithme, il faut lui indiquer où sont les informations clés.",
 		when: answers => answers.choice_premiereslois === 'Que des décisions similaires'
 	},
 	
@@ -221,13 +222,13 @@ const juriste = [
 //Si réponse correcte
 	{
 		type: "explanation",
-		message: "Bonne réponse ! Ici, trois réponses étaient possibles. Plus l'information est énoncée de manière détournée, plus le taux d'erreur de la machine est élevé.'Quand le taux d'erreur est supérieur à 15 ou 20%, on étiquette les données à la main' Jacques Levy-Vehel, co-fondateur de Case Law Analytics",
+		message: "Bonne réponse ! Ici, trois réponses étaient possibles. Plus l'information est énoncée de manière détournée, plus le taux d'erreur de la machine est élevé. 'Quand le taux d'erreur est supérieur à 15 ou 20%, on étiquette les données à la main' Jacques Levy-Vehel, co-fondateur de Case Law Analytics",
 		when: answers => answers.blanks_emploi_duree2 
 	},
 //Si réponse incorrecte
 	{
 		type: "explanation",
-		message: "Mauvaise réponse ! Ici, trois réponses étaient possibles. Plus l'information est énoncée de manière détournée, plus le taux d'erreur de la machine est élevé.'Quand le taux d'erreur est supérieur à 15 ou 20%, on étiquette les données à la main' Jacques Levy-Vehel, co-fondateur de Case Law Analytics",
+		message: "Mauvaise réponse ! Ici, trois réponses étaient possibles. Plus l'information est énoncée de manière détournée, plus le taux d'erreur de la machine est élevé. 'Quand le taux d'erreur est supérieur à 15 ou 20%, on étiquette les données à la main' Jacques Levy-Vehel, co-fondateur de Case Law Analytics",
 		when: answers => !answers.blanks_emploi_duree2 
 	},
 
@@ -269,7 +270,7 @@ const juriste = [
 	},
 	{
 		type: "explanation",
-		message: "Mme.Petit, 10 d'ancienneté, 29 ans, ouvrière, entreprise de 10 salariés. Indemnité selon l'IA : 2,5 mois de salaire brut. A LA LIGNE M. Martin, 62 ans,10 ans d'ancienneté, cadre technique, entreprise de 25 salariés. Indemnité selon le corpus de décisions témoin: 3 mois de salaire brut**",
+		message: "Mme.Petit, 10 d'ancienneté, 29 ans, ouvrière, entreprise de 10 salariés. Indemnité selon l'IA : 2,5 mois de salaire brut. A LA LIGNE M. Martin, 62 ans, 10 ans d'ancienneté, cadre technique, entreprise de 25 salariés. Indemnité selon le corpus de décisions témoin: 3 mois de salaire brut**",
 	},
 		{
 		type: "explanation",
@@ -327,7 +328,7 @@ const juriste = [
 	},
 	{
 		type: "explanation",
-		message:"La pile descend beaucoup plus vite et vous avez beaucoup plus de temps à consacrer aux dossiers compliqués. Pour chaque affaire, ROSS/AGATTHA/JUSTUM vous propose plusieurs décisions et les classe en fonction de leur probabilité. Pour les dossiers les plus simples, une décision se dégage souvent avec des taux de probabilité supérieur à 90%.",
+		message:"Vous lui soumettez un deuxième dossier, puis un troisième. La pile descend beaucoup plus vite et vous avez beaucoup plus de temps à consacrer aux dossiers compliqués. Pour chaque affaire, ROSS/AGATTHA/JUSTUM vous propose plusieurs décisions et les classe en fonction de leur probabilité. Pour les dossiers les plus simples, une décision se dégage souvent avec des taux de probabilité supérieur à 90%.",
 	},	 
 //Nouveau choix proposé
 	{
@@ -437,13 +438,13 @@ const juriste = [
 //Si bonne réponse
 	{
 		type: "explanation",
-		message: "Le raisonnement est plutôt logique, mais les contestations concernent des dossiers similaires* dans lesquels les femmes touchent autant que les hommes.",
+		message: "Mauvaise réponse! Le raisonnement est plutôt logique, mais les contestations concernent des dossiers similaires* dans lesquels les femmes touchent autant que les hommes.",
 		when: answers => answers.choice_indemniteshommefemme === 'Valide',
 	},
 //Si mauvaise réponse
 	{
 		type: "explanation",
-		message: "Le raisonnement est plutôt logique, mais les contestations concernent des dossiers similaires dans lesquels les femmes touchent autant que les hommes.",
+		message: "Bonne réponse! Le raisonnement est plutôt logique, mais les contestations concernent des dossiers similaires dans lesquels les femmes touchent autant que les hommes.",
 		when: answers => answers.choice_indemniteshommefemme !== 'Invalide',
 	},
 
