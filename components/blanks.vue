@@ -13,7 +13,7 @@
 				</span>			
 			</p>
 			<button class="btn btn-primary" @click="fill" type="submit" :disabled="filledValuesCount !== inputsCount">
-				Suivant
+				JE VALIDE
 			</button>
 		</form>
 	</section>

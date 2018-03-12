@@ -18,11 +18,11 @@ const juriste = [
 	},
 	{
 		type: "explanation",
-		message: "Un algorithme, ce sont les instructions qui commandent un programme informatique. Les instructions en justice, ce sont les textes de lois. Dans votre cas, c'est la loi qui encadre les licenciements abusifs."
+		message: " Un algorithme, ce sont les instructions qui commandent un programme informatique. C'est un peu comme une recette de cuisine. Les ingrédients sont les données. Votre plat, ce sont les différents jugements que vous pouvez rendre sur un dossier."
 	},
 	{
 		type: "explanation",
-		message: "C'est un peu comme une recette de cuisine. Le résultat est le plat. Les ingrédients sont les données. Votre plat, ce sont les différents jugements que vous pouvez rendre sur un dossier. La recette, ce sont les critères qui motivent votre décision. "
+		message: "L'ingrédient principal dont a besoin votre algorithme, c'est la loi sur les critères qui déterminent les indemnités de licenciement d'un salarié."
 	},
 	{
 		type: "illustration",
@@ -60,22 +60,33 @@ const juriste = [
 
 	{
 		type: "explanation",
-		message: "Vous soumettez un premier dossier de votre pile pour tester {{ name }}. Le salarié licencié a droit à une indemnité comprise entre 1,5 et 6 mois de salaire brut.",
+		message: "Vous soumettez un premier dossier de votre pile pour tester {{ name }}. Mme Laurent a été victime d'un licenciement abusif après avoir travaillé cinq ans dans un petit magasin.",
 	},
 
 
 // Animation marteau
 	{
 		type: "illustration",
-		src: "./assets/images/robot-juge-marteau-anime.gif"	},
+		src: "./assets/images/robot-juge-marteau-anime.gif"
+	},
+	
+	{ 
+		type: "explanation",
+		message: "Résultat : Mme Laurent a droit à une indemnité comprise entre 1,5 et 6 mois de salaire brut."
+	},
+	{
+		type: "explanation",
+		message: "Vous êtes complètement déçu… {{\n}} L’algorithme n’a fait que répéter ce qui est écrit dans la loi. Vous n’êtes pas très avancé car vous souhaitez avoir un montant précis et pas seulement une fourchette.",
+	},
+	{
+		type: "explanation",
+		message: "Vous demandez conseil à Jacques Levy Vehel, le co-fondateur de Case Law Analytics. Selon lui «l'intelligence artificielle calcule ces probabilités grâce à un algorithme: à condition qu'on lui donne assez d'exemples, elle pourra simuler les différentes décisions possibles pour un cas particulier».",
+	}, 
 
 	{
 		type: "explanation",
-		message: "Vous êtes complètement déçu… {{\n}} L’algorithme n’a fait que répéter ce qui est écrit dans la loi. Vous n’êtes pas très avancé.",
+		message: "Votre algorithme a donc besoin de plus de précisions quant aux critères qui motivent votre décision."
 	},
-
-
-
 	{
 		type: "choices",
 		name: "choice_premiereslois",
@@ -92,21 +103,26 @@ const juriste = [
 			]
 	},
 
-//Quelque soit le choix, afficher la même chose
-	{
-		type: "explanation",
-		message: "Vous soumettez un nouveau dossier pour tester votre algorithme.",
-	},
 
-//Si choix - Que des décisions similaires
+
+//Si choix - Tous les articles de loi
+	{	
+		type: "explanation",
+		message: "Vous soumettez un dossier de votre pile pour tester {{ name }}. M. Husson a été victime d'un licenciement abusif après avoir travaillé dix ans dans une entreprise de télécommunication.",
+		when: answers => answers.choice_premiereslois === 'Tous les articles de loi'
+	},
+	{
+		type: "illustration",
+		src: "./assets/images/robot-juge-marteau-anime.gif"	
+	},	
 	{
 		type: "explanation",
-		message: "Pour ce dossier, le salarié licencié devrait recevoir des indemnités égales à douze mois de salaire brut. Vous vous rendez compte que les textes de loi et la jurisprudence que vous avez soumis à l'algorithme étaient trop larges et l'indemnité est plus élevée que ce que prévoit la loi.",
+		message: "Résultat : M. Husson devrait recevoir douze mois de salaire brut en indemnité. Ce n'est plus une fourchette... mais le montant des indemnités est supérieur à ce que prévoit la loi actuelle. L'algorithme a pris en compte toutes les décisions liées auxlois précédentes. Le résultat est faussé.",
 		when: answers => answers.choice_premiereslois === 'Tous les articles de loi' 
 	},
 	{
 		type: "explanation",
-		message: "En donnant à l'algorithme trop de textes de lois et trop de jurisprudence vous prenez le risque de prendre en compte des dossiers trop différents de celui que vous souhaitez analyser. De plus, il y a des critères 'purement juridiques et d'autres purement humains dans une décision' (Jacques Levy-Vehel) et la loi ne suffit pas à tous les définir.",
+		message: "En donnant à l'algorithme trop de textes de lois et trop de jurisprudence vous prenez le risque de prendre en compte des dossiers trop différents de celui que vous souhaitez analyser. De plus, il y a des critères juridiques mais aussi humains dans une décision. La loi ne suffit pas à tous les définir.",
 		when: answers => answers.choice_premiereslois === 'Tous les articles de loi'
 	},
 	{
@@ -114,16 +130,20 @@ const juriste = [
 		message: "Définir manuellement les critères qui motivent votre décision va prendre du temps. C'est le côté 'humain' de l'intelligence artificielle. Lorsqu'on soumet à l'algorithme une première base de données, il faut lui indiquer où sont les informations clés.",
 		when: answers => answers.choice_premiereslois === 'Tous les articles de loi'
 	},
-	{
-		type: "explanation",
-		message: "Pour que {{ name }} puisse reconnaître les données importantes dans toutes les futures décisions que vous ajouterez à la base données, l'ingénieur vous conseille de recourir aux techniques de traitement automatique du langage naturel. Une partie de ce processus consiste à soumettre à la machine un texte à trous qu'elle doit remplir à partir des données qu'elle a traitées par le passé.",
-		when: answers => answers.choice_premiereslois === 'Tous les articles de loi'
-	},
 
 //Si choix - Que des décisions similaires
+	{	
+		type: "explanation",
+		message: "Vous soumettez un dossier de votre pile pour tester {{ name }}. M. Husson a été victime d'un licenciement abusif après avoir travaillé cinq ans dans une entreprise de télécommunication.",
+		when: answers => answers.choice_premiereslois === 'Que des décisions similaires'
+	},
+	{
+		type: "illustration",
+		src: "./assets/images/robot-juge-marteau-anime.gif"	
+	},	
 	{
 		type: "explanation",
-		message: "Pour ce dossier, le salarié licencié devrait recevoir des indemnités égales à trois mois de salaire brut. Vous vous rendez compte que la décision n'a pas tenu compte de la zone géographique de votre cour. Vous auriez eu tendance à lui attribuer une indemnité d'au moins 6 mois de salaire brut.",
+		message: "Résultat : M.Husson devrait recevoir trois mois de salaire brut en indemnité. Ce n'est plus une fourchette... mais vous vous rendez compte que l'algorithme' n'a pas tenu compte de la zone géographique de votre cour. Vous auriez eu tendance à lui attribuer une indemnité d'au moins 6 mois de salaire brut puisque le chômage est plus élevé dans votre région.",
 		when: answers => answers.choice_premiereslois === 'Que des décisions similaires'
 	},
 	{
@@ -131,18 +151,17 @@ const juriste = [
 		message: "La définition manuelle des critères va prendre du temps, mais elle sera plus juste car elle tiendra compte des spécificités des dossiers. C'est le côté 'humain' de l'IA : lorsqu'on soumet une première base de données à l'algorithme, il faut lui indiquer où sont les informations clés.",
 		when: answers => answers.choice_premiereslois === 'Que des décisions similaires'
 	},
-	{
-		type: "explanation",
-		message: "Pour que {{ name }} puisse reconnaître les données importantes dans toutes les futures décisions que vous ajouterez à la base données, l'ingénieur vous conseille de recourir aux techniques de traitement automatique du langage naturel. Une partie de ce processus consiste à soumettre à la machine un texte à trous qu'elle doit remplir à partir des données qu'elle a traitées par le passé.",
-		when: answers => answers.choice_premiereslois === 'Que des décisions similaires'
-	},
-
+	
 //TODO TO JUGE ENFANT
 	{
 		type: "illustration",
 		src: "./assets/images/robot-juriste-enfant.png"
 	},
-
+ 
+	{
+		type: "explanation",
+		message: "Pour que {{ name }} puisse reconnaître les données importantes dans toutes les futures décisions que vous ajouterez à la base données, l'ingénieur vous conseille de recourir aux techniques de traitement automatique du langage naturel. Une partie de ce processus consiste à soumettre à la machine un texte à trous qu'elle doit remplir à partir des données qu'elle a traitées par le passé.",
+	},
 	{
 		type: "explanation",
 		message: "À chaque fois que la machine trouve le bon mot, elle est 'récompensée'. C'est en multipliant les exemples et les primes qu'elle finit par comprendre seule où se trouve l'information clé dans une phrase, en fonction des mots qui l'entourent. Pour nos dossiers, il faudrait apprendre à  {{ name }}  à repérer l'ancienneté d'un salarié dans l'entreprise - critère décisif pour définir le montant des indemnités. On essaye ?",
@@ -218,6 +237,10 @@ const juriste = [
 		type: "explanation",
 		message: "Plutôt long et fastidieux comme tâche non? C'est la partie 'humaine' de l'intelligence artificielle. Selon la taille de la base de données, l'opération peut prendre plusieurs jours voire plusieurs semaines.",
 	},
+	{
+		type: "illustration",
+		src: "./assets/images/robot-juge-marteau-anime.gif"	
+	},	
 
 
 //Si toutes réponses correctes
