@@ -6,31 +6,33 @@
 // Page de chargement : définir un temps et ne pas afficher le bouton suivant
 // Quand il y a résultat : i; faudrait que ce soit dans une bulle qui sort de la bouche du robot, pour séparer le résultat de l'explication qui suit. 
 // ligne 93 : le nom ne s'affiche pas 
+// 
+// 
 
 const juriste = [
 	{
 		type: "explanation",
-		message: "Vous êtes assis.e à votre bureau et contemplez la centaine de dossiers en attente de jugement. Vous faites partie de la chambre sociale notamment en charge des recours en cas de licenciement abusif. Comme la plupart des tribunaux français, le vôtre est encombré. Vous avez entendu parler d'outils d'intelligence artificielle pour traiter plus rapidement des dossiers."
+		message: "Vous êtes assis.e à votre bureau et contemplez la centaine de dossiers en attente de jugement. Vous faites partie de la chambre sociale notamment en charge des recours en cas de licenciement abusif. Comme la plupart des tribunaux français, le vôtre est encombré. Vous avez entendu parler d'outils d'intelligence artificielle pour traiter plus rapidement des dossiers.",
 	},
 	{
 		type: "explanation",
-		message: "Vous vous inspirez de Case Law Analytics et de Predictice, deux entreprises françaises qui proposent ce genre de services à des avocats. Vous vous associez avec un ingénieur pour écrire un algorithme adapté aux magistrats."
+		message: "Vous vous inspirez de Case Law Analytics et de Predictice, deux entreprises françaises qui proposent ce genre de services à des avocats. Vous vous associez avec un ingénieur pour écrire un algorithme adapté aux magistrats.",
 	},
 	{
 		type: "explanation",
-		message: " Un algorithme, ce sont les instructions qui commandent un programme informatique. C'est un peu comme une recette de cuisine. Les ingrédients sont les données. Votre plat, ce sont les différents jugements que vous pouvez rendre sur un dossier."
+		message: "Un algorithme, ce sont les instructions qui commandent un programme informatique. C'est un peu comme une recette de cuisine. Les ingrédients sont les données. Votre plat, ce sont les différents jugements que vous pouvez rendre sur un dossier.",
 	},
 	{
 		type: "explanation",
-		message: "L'ingrédient principal dont a besoin votre algorithme, c'est la loi qui détermine le montant des indemnités de licenciement d'un salarié."
+		message: "L'ingrédient principal dont a besoin votre algorithme, c'est la loi qui détermine le montant des indemnités de licenciement d'un salarié.",
 	},
 	{
 		type: "illustration",
-		src: "./assets/images/robot-juriste-bebe.png"
+		src: "./assets/images/robot-juriste-bebe.png",
 	},
 		{
 		type: "explanation",
-		message: "Ce ne sont que quelques lignes de code mais vous vous prenez déjà d'affection pour ce super-assistant qui va faire diminuer la pile de dossier sur votre bureau. Vous décidez de lui donner un prénom."
+		message: "Ce ne sont que quelques lignes de code mais vous vous prenez déjà d'affection pour ce super-assistant qui va faire diminuer la pile de dossier sur votre bureau. Vous décidez de lui donner un prénom.",
 	},
 	{
 		type: "choices",
@@ -67,12 +69,12 @@ const juriste = [
 // Animation marteau
 	{
 		type: "illustration",
-		src: "./assets/images/robot-juge-marteau-anime.gif"
+		src: "./assets/images/robot-juge-marteau-anime.gif",
 	},
 	
 	{ 
 		type: "explanation",
-		message: "Résultat : Mme Laurent a droit à une indemnité comprise entre 1,5 et 6 mois de salaire brut."
+		message: "Résultat : Mme Laurent a droit à une indemnité comprise entre 1,5 et 6 mois de salaire brut.",
 	},
 	{
 		type: "explanation",
@@ -85,7 +87,7 @@ const juriste = [
 
 	{
 		type: "explanation",
-		message: "Votre algorithme a donc besoin de plus de précisions quant aux critères qui motivent votre décision."
+		message: "Votre algorithme a donc besoin de plus de précisions quant aux critères qui motivent votre décision.",
 	},
 	{
 		type: "choices",
@@ -98,65 +100,66 @@ const juriste = [
 			},
 			{
 				"value": "Que des décisions similaires",
-				"description": "Vous soumettez à votre algorithme 1500 décisions qui ont été prises par vous et vos collègues dans des cas similaires depuis le changement de la loi sur les indemnités en cas de licenciement en septembre 2017"
+				"description": "Vous soumettez à votre algorithme 1500 décisions qui ont été prises par vous et vos collègues dans des cas similaires depuis le changement de la loi sur les indemnités en cas de licenciement en septembre 2017",
 			},
 			]
 	},
-
-
 
 //Si choix - Tous les articles de loi
 	{	
 		type: "explanation",
 		message: "Vous soumettez un dossier de votre pile pour tester {{ name }}. M. Husson a été victime d'un licenciement abusif après avoir travaillé dix ans dans une entreprise de télécommunication.",
-		when: answers => answers.choice_premiereslois === 'Tous les articles de loi'
+		when: answers => answers.choice_premiereslois === 'Tous les articles de loi',
 	},
 	{
+		when: answers => answers.choice_premiereslois === 'Tous les articles de loi',
 		type: "illustration",
 		src: "./assets/images/robot-juge-marteau-anime.gif"	
-		when: answers => answers.choice_premiereslois === 'Tous les articles de loi'
+		
 	},	
 	{
 		type: "explanation",
 		message: "Résultat : M. Husson devrait recevoir douze mois de salaire brut en indemnité. Ce n'est plus une fourchette... mais le montant des indemnités est supérieur à ce que prévoit la loi actuelle. L'algorithme a pris en compte toutes les décisions liées aux lois précédentes. Le résultat est faussé.",
-		when: answers => answers.choice_premiereslois === 'Tous les articles de loi' 
+		when: answers => answers.choice_premiereslois === 'Tous les articles de loi',
 	},
 	{
 		type: "explanation",
 		message: "En donnant à l'algorithme trop de textes de lois et trop de jurisprudence vous prenez le risque de prendre en compte des dossiers trop différents de celui que vous souhaitez analyser. De plus, il y a des critères juridiques mais aussi humains dans une décision. La loi ne suffit pas à tous les définir.",
-		when: answers => answers.choice_premiereslois === 'Tous les articles de loi'
+		when: answers => answers.choice_premiereslois === 'Tous les articles de loi',
 	},
 	{
 		type: "explanation",
 		message: "Définir manuellement les critères qui motivent votre décision va prendre du temps. C'est le côté 'humain' de l'intelligence artificielle. Lorsqu'on soumet à l'algorithme une première base de données, il faut lui indiquer où sont les informations clés. Vous voys attelez à cette tâche.",
-		when: answers => answers.choice_premiereslois === 'Tous les articles de loi'
+		when: answers => answers.choice_premiereslois === 'Tous les articles de loi',
 	},
 
 //Si choix - Que des décisions similaires
 	{	
 		type: "explanation",
 		message: "Vous soumettez un dossier de votre pile pour tester {{ name }}. M. Husson a été victime d'un licenciement abusif après avoir travaillé cinq ans dans une entreprise de télécommunication.",
-		when: answers => answers.choice_premiereslois === 'Que des décisions similaires'
+		when: answers => answers.choice_premiereslois === 'Que des décisions similaires',
 	},
 	{
+		when: answers => answers.choice_premiereslois === 'Que des décisions similaires',
 		type: "illustration",
-		src: "./assets/images/robot-juge-marteau-anime.gif"	
+		src: "./assets/images/robot-juge-marteau-anime.gif",
+			
 	},	
 	{
 		type: "explanation",
 		message: "Résultat : M.Husson devrait recevoir trois mois de salaire brut en indemnité. Ce n'est plus une fourchette... mais vous vous rendez compte que l'algorithme n'a pas tenu compte de la zone géographique de votre cour. Vous auriez eu tendance à lui attribuer une indemnité d'au moins 6 mois de salaire brut puisque le chômage est plus élevé dans votre région.",
-		when: answers => answers.choice_premiereslois === 'Que des décisions similaires'
+		when: answers => answers.choice_premiereslois === 'Que des décisions similaires',
 	},
 	{
 		type: "explanation",
 		message: "La définition manuelle des critères vous prend du temps, mais elle sera plus juste car elle tiendra compte des spécificités des dossiers. C'est le côté 'humain' de l'IA : lorsqu'on soumet une première base de données à l'algorithme, il faut lui indiquer où sont les informations clés.",
-		when: answers => answers.choice_premiereslois === 'Que des décisions similaires'
+		when: answers => answers.choice_premiereslois === 'Que des décisions similaires',
 	},
 	
 //TODO TO JUGE ENFANT
 	{
 		type: "illustration",
-		src: "./assets/images/robot-juriste-enfant.png"
+		src: "./assets/images/robot-juriste-enfant.png",
 	},
  
 	{
@@ -240,7 +243,7 @@ const juriste = [
 	},
 	{
 		type: "illustration",
-		src: "./assets/images/robot-juge-marteau-anime.gif"	
+		src: "./assets/images/robot-juge-marteau-anime.gif",	
 	},	
 
 
@@ -260,7 +263,7 @@ const juriste = [
 //Robot ado
 	{
 		type: "illustration",
-		src: "./assets/images/robot-juriste-ado.png"
+		src: "./assets/images/robot-juriste-ado.png",
 	},
 
 //Cas licenciements
@@ -272,7 +275,7 @@ const juriste = [
 		type: "explanation",
 		message: "Mme.Petit, 10 d'ancienneté, 29 ans, ouvrière, entreprise de 10 salariés. Indemnité selon l'IA : 2,5 mois de salaire brut. A LA LIGNE M. Martin, 62 ans, 10 ans d'ancienneté, cadre technique, entreprise de 25 salariés. Indemnité selon le corpus de décisions témoin: 3 mois de salaire brut**",
 	},
-		{
+	{
 		type: "explanation",
 		message: "Vous ne comprenez pas pourquoi le montant des indemnités diffère entre M. Martin et Mme Petit : tous les deux ont travaillé pendant 10 ans dans l'entreprise. Vous avez pourtant fourni assez de données à votre programme pour qu'il puisse calculer le montant des indemnités en fonction de l'ancienneté du salarié.",
 	},
