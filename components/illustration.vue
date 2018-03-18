@@ -1,6 +1,5 @@
 <template>
-	<section>
-		<img :src="'./assets/images/'+content.src" class="img-fluid" />
+	<section :style="{ 'background-image': 'url(./assets/images/' + content.src + ')' }">
 	</section>
 </template>
 
@@ -12,4 +11,10 @@ module.exports = {
 }
 </script>
 
-<style></style>
+<style scoped>
+	section {
+		background-size: auto 100%;
+		background-position: center center;
+		background-repeat: no-repeat;
+	}
+</style>

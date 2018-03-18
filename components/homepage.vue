@@ -1,42 +1,31 @@
 <template>
-	<main class="mt-5">
-		<header class="col-12 text-center pt-5">
+	<main>
+		<header class="container text-center mt-4">
 				<h1>L'école des IA</h1>
-				<p class="lead">Retroussez vos manches et essayez d’amener votre bébé IA le plus loin possible.</p>
+				<p class="lead">Tentez d’amener votre bébé IA le plus loin possible.</p>
 		</header>
-		<section class="col-12" id="robot-image">
-			<div class="text-center">
-				<img src="./assets/images/Robot.png" v-if="story === null" alt="Robot" class="img-fluid" />
-				<img :src="storyImage" v-if="story !== null" alt="'Robot ' + story " class="img-fluid" />
+		<section class="container text-center d-flex flex-column justify-content-end" id="robot-image":style="{ 'background-image': story === null ? 'url(./assets/images/Robot.png)' : 'url(' + storyImage + ')'  }">
+			<router-link :to="storyLink" class="btn btn-primary" v-if="story !== null">
+				JE COMMENCE
+			</router-link>
+		</section>
+		<footer class="d-flex justify-content-around text-center" id="parcours">
+			<div :class="{ active: story === 'voiture' }" @click="story = 'voiture'">
+				<p><img :src="imageFor('voiture')" alt="Symbole Voiture" class="img-fluid"/></p>
+				<p>Voiture</p>
 			</div>
-		</section>
-		<section class="col-12 d-flex justify-content-around" id="parcours">
-			<p>
-				<img :src="imageFor('voiture')" @click="story = 'voiture'" alt="Symbole Voiture" class="img-fluid" />
-				<span>Voiture</span>
-			</p>
-			<p>
-				<img :src="imageFor('musicien')" @click="story = 'musicien'" alt="Symbole Musicien" class="img-fluid" />
-				<span>Musicien</span>
-			</p>
-			<p>
-				<img :src="imageFor('juriste')" @click="story = 'juriste'" alt="Symbole Juriste" class="img-fluid" />
-				<span>Juge</span>
-			</p>
-			<p>
-				<img :src="imageFor('assistant')" @click="story = 'assistant'" alt="Symbole Assistant" class="img-fluid" />
-				<span>Assistant</span>
-			</p>
-		</section>
-		<section class="row">
-			<div class="col">
-				<router-link :to="storyLink" class="btn btn-primary" v-if="story !== null">
-					JE COMMENCE
-				</router-link>
+			<div :class="{ active: story === 'musicien' }" @click="story = 'musicien'">
+				<p><img :src="imageFor('musicien')" alt="Symbole Musicien" class="img-fluid" /></p>
+				<p>Musicien</p>
 			</div>
-		</section>
-		<footer class="row">
-			<div class="col"><button type="button" class="btn btn-info">À PROPOS</button></div>
+			<div :class="{ active: story === 'juriste' }" @click="story = 'juriste'">
+				<p><img :src="imageFor('juriste')" alt="Symbole Juriste" class="img-fluid" /></p>
+				<p>Juge</p>
+			</div>
+			<div :class="{ active: story === 'assistant' }" @click="story = 'assistant'">
+				<p><img :src="imageFor('assistant')" alt="Symbole Assistant" class="img-fluid" /></p>
+				<p>Assistant</p>
+			</div>
 		</footer>
 	</main>
 </template>
@@ -65,26 +54,35 @@ module.exports = {
 </script>
 
 <style scoped>
-	#robot-image div {
-		max-width: 200px;
-		margin: auto;
+	#robot-image {
+		flex: 1;
+		background-size: auto 70%;
+		background-position: top center;
+		background-repeat: no-repeat;
 	}
 	#parcours {
+		margin-top: 50px;
+
 		background-color: #4281de;
-		padding-bottom: 25px;
+		color: white;
+		font-size: 1em;
+		text-transform: uppercase;
+	}
+	#parcours div {
+		transform: translateY(-30%);
+
+		padding: 0 4px;
+
+		cursor: pointer;
 	}
 	#parcours p {
-		margin: 0 5px;
-		padding: 0;
-		font-size: 0.8em;
-		position: relative;
-		top: -37%;
+		margin-bottom: 0px;
 	}
-	#parcours p span {
-		padding-top: 25px;
-		text-align: center;
-		display: block;
-		color: white;
-		text-transform: uppercase;
+	#parcours img {
+		transition: 0.1s transform ease-in-out;
+	}
+
+	#parcours div:hover img, #parcours div.active img {
+		transform: scale(1.1);
 	}
 </style>

@@ -1,42 +1,31 @@
 html, body {
-	background: url('./assets/images/fond.png') no-repeat center top;
-	background-size: cover;
-	font-size: 15px;
-}
-
-main {
-	min-height: 100vh;
-	/*max-width: 600px !important;*/
-	/*margin-top: 5px;*/
-	/*padding: 25px 50px;*/
-}
-
-main section, main header {
-	margin-bottom:10px;
-	/*margin-top:10px;*/
 	font-family: 'Source Sans Pro', sans-serif;
 	color: #5282d7;
 }
 
-#parcours img {
-	transition: 0.1s transform ease-in-out;
-	transform: scale(1);
+body {
+	height: 100vh;
+
+	background: url('./assets/images/fond.png') no-repeat center top;
+	background-size: cover;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-#parcours img:hover {
-	cursor: pointer;
-	transform: scale(1.1);
+#app {
+	width: 100%;
+	min-width: 300px;
+
+	height: 100%;
+	min-height: 450px;
 }
 
-/*main[v-cloak] {
+main {
+	height: 100%;
+}
+
+main[v-cloak] {
   display: none !important; 
-}*/
-/*
-h1 {
-	color: #006bb3;
-	text-align: center;
 }
-
-p {
-	font-size: 1em;
-}*/

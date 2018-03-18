@@ -25,9 +25,8 @@ const juriste = [
 	},
 	{
 		type: "explanation",
-		title: "eXPLICATION",
-		message: "Un algorithme, ce sont les instructions qui commandent un programme informatique. C'est un peu comme une recette de cuisine. Les ingrédients sont les données. Votre plat, ce sont les différents jugements que vous pouvez rendre sur un dossier.",
-		image: "robot-juriste-ado.png",
+		title: "Explication",
+		message: "Un algorithme, ce sont les instructions qui commandent un programme informatique. C'est un peu comme une recette de cuisine. Les ingrédients sont les données. Votre plat, ce sont les différents jugements que vous pouvez rendre sur un dossier."
 	},
 	{
 		type: "explanation",

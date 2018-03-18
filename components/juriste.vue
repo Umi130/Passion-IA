@@ -1,14 +1,18 @@
 <template>
 	<main>
-		<explanation class="col-12" v-if="currentStep.type === 'explanation'" :content="currentStep" :answers="answers"></explanation>
-		<illustration class="col-12" v-if="currentStep.type === 'illustration'" :content="currentStep"></illustration>
-		<choices class="col-12" v-if="currentStep.type === 'choices'" :content="currentStep" v-on:select="selectChoice" :answers="answers"></choices>
-		<blanks class="col-12" v-if="currentStep.type === 'blanks'" :content="currentStep" v-on:fill="fillBlanks"></blanks>
-		<div class="col-12">
+		<header class="container mt-4">
+			<explanation v-if="currentStep.type === 'explanation'" :content="currentStep" :answers="answers"></explanation>
+		</header>
+
+		<illustration class="container" v-if="currentStep.type === 'illustration'" :content="currentStep"></illustration>
+		<choices class="container" v-if="currentStep.type === 'choices'" :content="currentStep" v-on:select="selectChoice" :answers="answers"></choices>
+		<blanks class="container" v-if="currentStep.type === 'blanks'" :content="currentStep" v-on:fill="fillBlanks"></blanks>
+
+		<footer class="container text-center pb-2">
 			<router-link :to="`/juriste/${current + 1}`" v-if="displayNextButton()" class="btn btn-primary">
 				SUIVANT
 			</router-link>
-		</div>
+		</footer>
 	</main>
 </template>
 
@@ -62,4 +66,12 @@ module.exports = {
 }
 </script>
 
-<style></style>
+<style scoped>
+	section {
+		flex: 1;
+	}
+
+	footer {
+		margin-top: 50px;
+	}
+</style>
