@@ -102,7 +102,7 @@ const juriste = [
 				"description": "Quelques 11 000 articles du code du travail et la jurisprudence associée",
 			},
 			{
-				"value": "Que des décisions similaires",
+				"value": "Uniquement des décisions similaires",
 				"description": "Vous soumettez à votre algorithme 1500 décisions qui ont été prises par vous et vos collègues dans des cas similaires depuis le changement de la loi sur les indemnités en cas de licenciement en septembre 2017",
 			},
 			]
@@ -229,7 +229,7 @@ const juriste = [
 	{
 		type: "explanation",
 		title: "Bonne réponse !",
-		message: "Ici, trois réponses étaient possibles. Plus l'information est énoncée de manière détournée, plus le taux d'erreur de la machine est élevé. 'Quand le taux d'erreur est supérieur à 15 ou 20%, on étiquette les données à la main' Jacques Levy-Vehel, co-fondateur de Case Law Analytics",
+		message: "Ici, trois réponses étaient possibles. Plus il y a aura de manières d'exprimer une idée, plus la machine mettra du temps à reconnaître l'information. 'Quand le taux d'erreur est supérieur à 15 ou 20%, on étiquette les données à la main' Jacques Levy-Vehel, co-fondateur de Case Law Analytics",
 		image: "robot-juriste-enfant.png",
 		when: answers => answers.blanks_emploi_duree2 
 	},
