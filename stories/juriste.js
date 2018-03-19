@@ -307,8 +307,8 @@ const juriste = [
 				"description": ""
 			},
 			{
-				"value": "Poste du salarié (cadre/non cadre)",
-				"description": ""
+				"value": "Poste du salarié",
+				"description": "Cadre ou non-cadre"
 			},
 			]
 	},
@@ -488,15 +488,15 @@ const juriste = [
 	{
 		type: "choices",
 		name: "choice_indemniteshommefemme_biais",
-		message: "",
+		message: "Comment corriger ce biais ?",
 		choices: [
 			{
-				"value": "Vous corrigez",
-				"description": "votre programme pour que le mot 'Madame' ne soit pas associé à des indemnités plus faibles que celles des hommes."
+				"value": "Corriger le programme",
+				"description": "pour que le mot 'Madame' ne soit pas associé à des indemnités plus faibles que celles des hommes."
 			},
 			{
-				"value": "Vous anonymisez",
-				"description": "toutes les décisions de votre base de données."
+				"value": "Anonymiser toutes les décisions",
+				"description": "de votre base de données."
 			},
 			]
 	},
