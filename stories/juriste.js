@@ -385,7 +385,7 @@ const juriste = [
 		type: "explanation",
 		message: "Vous avez bien fait, même sur les dossiers les plus simples, les décisions ne peuvent être prises automatiquement car cela va à l'encontre de la nature même d'une procédure judiciaire. L'IA ne peut être qu'un outil d'aide à la décision.",
 		image: "robot-juriste-adulte.png",
-		when: answers => answers.choice_critereneglige_automatise !== 'Non',
+		when: answers => answers.choice_critereneglige_automatise === 'Non',
 	},
 
 // commun à tous 
