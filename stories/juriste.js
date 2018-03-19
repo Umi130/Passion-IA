@@ -1,7 +1,6 @@
 // Todo : add close box to go back to main menu
 // Todo : texte devient tableau
 // Todo : bouton SUIVANT toute la largeur, ancré en bas
-// Todo : charger police !
 
 // Illustration: Taille images variable desktop/smartphone
 // Choices: Nom de variable dans choix multiple? Apostrophe (Exemple: "salariés dans l’entreprise")
