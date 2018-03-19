@@ -17,6 +17,7 @@ const juriste = [
 	{
 		type: "explanation",
 		message: "Vous êtes assis.e à votre bureau et contemplez la centaine de dossiers en attente de jugement. Vous faites partie de la chambre sociale notamment en charge des recours en cas de licenciement abusif. Comme la plupart des tribunaux français, le vôtre est encombré. Vous avez entendu parler d'outils d'intelligence artificielle pour traiter plus rapidement des dossiers.",
+		image: "robot-juriste-bebe.png"
 	},
 	{
 		type: "explanation",
