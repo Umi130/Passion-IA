@@ -1,18 +1,14 @@
 <template>
 	<section>
-<!-- class="d-flex flex-column" -->
-		<div>
 	<header>
 		<p class="message">{{ formattedMessage }}</p>
 	</header>
-	<p>
 		<div class="choices d-flex flex-column">
 			<div class="choice d-flex flex-column justify-content-center" v-for="choice in content.choices" :key="choice.value" @click="$emit('select', { name: content.name, value: choice.value })">
 				<h4>{{ choice.value }}</h4>
 				<p v-if="choice.description">{{ choice.description }}</p>
 			</div>
 		</div>
-				</div>
 	</section>
 </template>
 
@@ -29,6 +25,10 @@ module.exports = {
 </script>
 
 <style scoped>
+section {
+	padding: 0px;
+}
+
 header {
 	background-color: #1c1840;
 	color: white;
@@ -36,6 +36,7 @@ header {
 	text-align: center;
 	font-weight: bolder;
 	font-size: 1.5em;
+	margin-bottom: 30px;
 }
 
 h4 {
@@ -45,6 +46,7 @@ h4 {
 
 	.choices {
 		flex: 1;
+			padding: 15px;
 	}
 	.choice {
 		flex: 1;
