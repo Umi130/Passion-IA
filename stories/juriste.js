@@ -94,7 +94,7 @@ const juriste = [
 		type: "explanation",
 		title: "Vous demandez conseil.",
 		message: "Jacques Levy Vehel, le co-fondateur de Case Law Analytics, vous assiste.",
-		image: "robot-juriste-bebe.png",
+			image: "experts-juriste-vehel.jpg",
 },
 {
 		type: "explanation",
