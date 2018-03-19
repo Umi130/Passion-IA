@@ -61,12 +61,15 @@ module.exports = {
 		background-repeat: no-repeat;
 	}
 	#parcours {
-		margin-top: 50px;
-
 		background-color: #4281de;
 		color: white;
 		font-size: 1em;
 		text-transform: uppercase;
+
+		position: fixed;
+		bottom: 0;
+		left:0; 
+		right: 0;
 	}
 	#parcours div {
 		transform: translateY(-30%);
