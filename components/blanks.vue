@@ -61,14 +61,10 @@ module.exports = {
 </script>
 
 <style scoped>
-template {
-    position: absolute;
-}
-
 section {
 	padding: 0px;
     position: absolute;
-    
+    min-height:100%;
 }
 header {
 	background-color: #1c1840;
