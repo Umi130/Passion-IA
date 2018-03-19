@@ -465,7 +465,7 @@ const juriste = [
 		title: "Bonne réponse !",
 		message: "Le raisonnement est plutôt logique, car les contestations concernent des dossiers similaires, dans lesquels les femmes touchent autant que les hommes.",
 		image: "robot-juriste-adulte.png",
-		when: answers => answers.choice_indemniteshommefemme !== 'Invalide',
+		when: answers => answers.choice_indemniteshommefemme === 'Invalide',
 	},
 //Si mauvaise réponse
 	{
