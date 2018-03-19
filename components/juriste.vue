@@ -9,7 +9,7 @@
 		<blanks class="container-fluid" v-if="currentStep.type === 'blanks'" :content="currentStep" v-on:fill="fillBlanks"></blanks>
 
 		<footer class="container-fluid text-center pb-2">
-			<router-link :to="`/juriste/${current + 1}`" v-if="displayNextButton()" class="btn btn-primary">
+			<router-link :to="`/juriste/${current + 1}`" v-if="displayNextButton()" class="btn btn-primary btn-block">
 				SUIVANT
 			</router-link>
 		</footer>
