@@ -67,6 +67,8 @@ template {
 
 section {
 	padding: 0px;
+    position: absolute;
+    
 }
 header {
 	background-color: #1c1840;
