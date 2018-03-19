@@ -213,7 +213,7 @@ const juriste = [
 	{
 		type: "blanks",
 		name: "blanks_emploi_duree2",
-		message: "Mme Corinne Duteil a été ",
+		message: "Mme Corinne Duteil a été victime d'un licenciement abusif. Elle avait été ",
 		blanks: [
 			{
 				"value": "word_1",
@@ -221,7 +221,7 @@ const juriste = [
 				"answers": ['embauchée', 'engagée', 'recrutée', 'Embauchée', 'Engagée', 'Recrutée']
 			},
 			{
-				"value": " en 2013.",
+				"value": " dans l'entreprise en 2013.",
 			},
 		]
 	},
@@ -237,7 +237,7 @@ const juriste = [
 	{
 		type: "explanation",
 		title: "Mauvaise réponse !",
-		message: "Ici, trois réponses étaient possibles. Plus l'information est énoncée de manière détournée, plus le taux d'erreur de la machine est élevé. 'Quand le taux d'erreur est supérieur à 15 ou 20%, on étiquette les données à la main' Jacques Levy-Vehel, co-fondateur de Case Law Analytics",
+		message: "Ici, trois réponses étaient possibles : 'embauchée', 'recrutée' ou 'engagée'. Plus l'information est énoncée de manière détournée, plus le taux d'erreur de la machine est élevé. 'Quand le taux d'erreur est supérieur à 15 ou 20%, on étiquette les données à la main' Jacques Levy-Vehel, co-fondateur de Case Law Analytics",
 		image: "robot-juriste-enfant-etonne.png",
 		when: answers => !answers.blanks_emploi_duree2 
 	},
@@ -325,7 +325,7 @@ const juriste = [
 		type: "explanation",
 		title: "Faux...",
 		message: "Les indemnités diffèrent en fonction du nombre de salariés dans l'entreprise. Il faut donc augmenter le poids de ce critère lorsque votre programme apprend à reconnaître les informations clés d'un dossier.",
-		image: "robot-juriste-ado.png",
+		image: "robot-juriste-ado-etonne.png",
 		when: answers => answers.choice_critereneglige !== 'Nombre de salariés dans entreprise',
 	},
 
