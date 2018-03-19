@@ -61,7 +61,7 @@ module.exports = {
 		background-repeat: no-repeat;
 	}
 	#parcours {
-		margin-top: 50px;
+		margin-top: 20px;
 
 		background-color: #4281de;
 		color: white;
