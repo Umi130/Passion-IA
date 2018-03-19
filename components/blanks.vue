@@ -61,6 +61,10 @@ module.exports = {
 </script>
 
 <style scoped>
+template {
+    position: absolute;
+}
+
 section {
 	padding: 0px;
 }
