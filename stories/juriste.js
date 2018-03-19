@@ -87,7 +87,7 @@ const juriste = [
 	{
 		type: "explanation",
         title: "Vous êtes complètement déçu·e…",
-		message: "{{name}} n’a fait que répéter ce qui est écrit dans la loi. Vous n’êtes pas très avancé, car vous souhaitez avoir un montant précis et pas seulement une fourchette.",
+		message: "{{name}} n’a fait que répéter ce qui est écrit dans la loi. Vous n’êtes pas très avancé·e, car vous souhaitez avoir un montant précis et pas seulement une fourchette.",
 		image: "robot-juriste-bebe.png",
 	},
 	{
@@ -156,7 +156,7 @@ const juriste = [
 		type: "explanation",
 		message: "Vous soumettez un dossier de votre pile pour tester {{ name }}. M. Husson a été victime d'un licenciement abusif après avoir travaillé cinq ans dans une entreprise de télécommunication.",
 		image: "robot-juge-marteau-anime.gif",
-		when: answers => answers.choice_premiereslois === 'Que des décisions similaires',
+		when: answers => answers.choice_premiereslois !== 'Tous les articles de loi',
 	},
 
 	{
@@ -164,13 +164,13 @@ const juriste = [
 		title: "Résultat de l'algorithme :",
 		message: "M. Husson devrait recevoir trois mois de salaire brut en indemnité. Ce n'est plus une fourchette... mais vous vous rendez compte que l'algorithme n'a pas tenu compte de la zone géographique de votre cour. Vous auriez eu tendance à lui attribuer une indemnité d'au moins 6 mois de salaire brut puisque le chômage est plus élevé dans votre région.",
 		image: "robot-juriste-bebe.png",
-		when: answers => answers.choice_premiereslois === 'Que des décisions similaires',
+		when: answers => answers.choice_premiereslois !== 'Tous les articles de loi',
 	},
 	{
 		type: "explanation",
 		message: "La définition manuelle des critères vous prend du temps, mais elle sera plus juste car elle tiendra compte des spécificités des dossiers. C'est le côté 'humain' de l'IA : lorsqu'on soumet une première base de données à l'algorithme, il faut lui indiquer où sont les informations clés.",
 		image: "robot-juriste-bebe.png",
-		when: answers => answers.choice_premiereslois === 'Que des décisions similaires',
+		when: answers => answers.choice_premiereslois !== 'Tous les articles de loi',
 	},
 ////////////////
 // ROBOT ENFANT
@@ -462,13 +462,14 @@ const juriste = [
 	{
 		type: "explanation",
 		title: "Bonne réponse !",
-		message: "Vous prenez le risque que votre programme soit modifié, mais l'Open Source permettra à chacun d'apprécier les fondements de la décision prise par le juge qui l'utilisera. Vous ne serez pas personnellement responsable de l'utilisation de cet outil. De plus, en le rendant gratuit vous évitez la création de nouvelles inégalités entre les professionnels de la justice qui pourraient se l'offrir et ceux qui ne pourraient pas.",
+		message: "Vous prenez le risque que {{name}} soit modifié, mais l'Open Source permettra à chacun d'apprécier les fondements de la décision prise par le juge qui l'utilise. En le rendant gratuit, vous évitez la création de nouvelles inégalités entre les professionnels de la justice qui pourraient se l'offrir et ceux qui ne le pourraient pas.",
 		image: "robot-juriste-adulte.png",
 		when: answers => answers.choice_opensource === 'Le rendre accessible en Open source',
 	},
 	{
 		type: "explanation",
-		message: "Après plusieurs mois d'utilisation de votre algorithme, vous êtes confronté.e à un nouveau type de contestation. Une association a étudié en détail votre algorithme qui était en accès libre. Elle lui a soumis des dossiers similaires et a mis en avant que les indemnités proposées aux femmes par l'intelligence artificielle sont souvent inférieures à celles proposées aux hommes.",
+		title: "Après plusieurs mois d'utilisation...",
+		message: "Vous êtes confronté·e à un nouveau type de contestation. Une association a étudié en détail votre algorithme. Elle lui a soumis des dossiers similaires : les résultats montrent que les indemnités proposées aux femmes par {{name}} sont souvent inférieures à celles proposées aux hommes.",
 		image: "robot-juriste-adulte.png",
 		when: answers => answers.choice_opensource === 'Le rendre accessible en Open source',
 	},
@@ -478,13 +479,14 @@ const juriste = [
 	{
 		type: "explanation",
 		title: "Mauvaise réponse !",
-		message: "En rendant le code de votre algorithme secret, vous exposez les juges qui l'utiliseront à des contestations : il faut que ceux-ci sachent sur quel critères se basent votre algorithme pour en tenir compte dans leur décision. Pour assurer la transparence d'une décision, il faut que l'outil que vous utilisez le soit aussi.  ",
+		message: "En rendant le code de {{name}} secret, vous exposez les juges qui l'utiliseront à des contestations : il faut que ceux-ci sachent sur quels critères se basent {{name}}. Pour assurer la transparence d'une décision, il faut que l'outil que vous utilisez le soit aussi.",
 		image: "robot-juriste-adulte-etonne.png",
 		when: answers => answers.choice_opensource !== 'Le rendre accessible en Open source',
 	},
 	{
 		type: "explanation",
-		message: "Après plusieurs mois d'utilisation de votre algorithme, vous êtes confronté à un nouveau type de contestation. Des hackers ont réussi à pirater votre programme. Ils lui ont soumis des dossiers similaires et ont mis en avant que les indemnités proposées aux femmes par l'intelligence artificielle sont souvent inférieures à celles proposées aux hommes.  ",
+		title: "Après plusieurs mois d'utilisation...",
+		message: "Vous êtes confronté·e à un nouveau type de contestation. Des hackers ont réussi à pirater votre programme. Ils lui ont soumis des dossiers similaires : les résultats montrent que les indemnités proposées aux femmes par {{name}} sont souvent inférieures à celles proposées aux hommes.",
 		image: "robot-juriste-adulte.png",
 		when: answers => answers.choice_opensource !== 'Le rendre accessible en Open source',
 	},
@@ -494,14 +496,14 @@ const juriste = [
 	{
 		type: "choices",
 		name: "choice_indemniteshommefemme",
-		message: "Les indemnités sont calculées en fonction du salaire. Si le salaire des femmes est moins élevé, les indemnités seront moins élevées. Vous considérez que cet argument est :",
+		message: "Les indemnités sont calculées en fonction du salaire. Puisque le salaire des femmes est moins élevé, les indemnités seront moins élevées.",
 		choices: [
 			{
-				"value": "Valide",
+				"value": "Argument valide",
 				"description": ""
 			},
 			{
-				"value": "Invalide",
+				"value": "Argument invalide",
 				"description": ""
 			},
 			]
@@ -512,7 +514,7 @@ const juriste = [
 		title: "Bonne réponse !",
 		message: "Le raisonnement est plutôt logique, car les contestations concernent des dossiers similaires, dans lesquels les femmes touchent autant que les hommes.",
 		image: "robot-juriste-adulte.png",
-		when: answers => answers.choice_indemniteshommefemme === 'Invalide',
+		when: answers => answers.choice_indemniteshommefemme === "Argument invalide",
 	},
 //Si mauvaise réponse
 	{
@@ -520,13 +522,20 @@ const juriste = [
 		title: "Mauvaise réponse !",
 		message: "Le raisonnement est plutôt logique, mais les contestations concernent des dossiers similaires, dans lesquels les femmes touchent autant que les hommes.",
 		image: "robot-juriste-adulte-etonne.png",
-		when: answers => answers.choice_indemniteshommefemme === 'Valide',
+		when: answers => answers.choice_indemniteshommefemme !== "Argument invalide",
 	},
 
 
 	{
 		type: "explanation",
-		message: "Des études montrent également que dans certains domaines du droit, il y a une différence de traitement entre les femmes et les hommes. Ces derniers écopent par exemple de peines de prison plus lourdes. Le biais peut donc se situer dans l'appréciation personnelle des juges et se refléter dans la base de données soumise à l'algorithme.",
+		title: "Biais de traitement",
+		message: "Des études montrent également que dans certains domaines du droit, il y a une différence de traitement entre les femmes et les hommes. Ces derniers écopent par exemple de peines de prison plus lourdes.",
+		image: "robot-juriste-adulte.png",
+	},
+
+	{
+		type: "explanation",
+		message: "Le biais peut donc se situer dans l'appréciation personnelle des juges et se refléter dans la base de données soumise à l'algorithme.",
 		image: "robot-juriste-adulte.png",
 	},
 
@@ -539,7 +548,7 @@ const juriste = [
 		choices: [
 			{
 				"value": "Corriger le programme",
-				"description": "pour que le mot 'Madame' ne soit pas associé à des indemnités plus faibles que celles des hommes."
+				"description": "pour que le mot «Madame» ne soit pas associé à des indemnités plus faibles que celles des hommes."
 			},
 			{
 				"value": "Anonymiser les décisions",
@@ -551,9 +560,9 @@ const juriste = [
 	{
 		type: "explanation",
 		title: "Bonne réponse !",
-		message: "En prenant l'habitude d'anonymiser vos données, vous éviterez les biais liés au sexe des individus dans tous les domaines du droit que vous souhaitez couvrir avec votre intelligence artificielle. ",
+		message: "En prenant l'habitude d'anonymiser vos données, vous éviterez les biais liés au sexe des individus dans tous les domaines du droit que vous souhaitez couvrir avec votre intelligence artificielle.",
 		image: "robot-juriste-adulte.png",
-		when: answers => answers.choice_indemniteshommefemme_biais === 'Vous anonymisez',
+		when: answers => answers.choice_indemniteshommefemme_biais === "Anonymiser les décisions",
 	},
 //Si mauvaise réponse
 	{
@@ -561,17 +570,18 @@ const juriste = [
 		title: "Mauvaise réponse !",
 		message: "Si vous voulez utiliser l'intelligence artificielle dans d'autres domaines que celui des indemnités de licenciement, il vous faudra répéter cette manipulation à chaque fois que vous trouverez un biais issu de la base de données et mal interprété par le système de traitement automatique du langage.",
 		image: "robot-juriste-adulte-etonne.png",
-		when: answers => answers.choice_indemniteshommefemme_biais === 'Vous corrigez',
+		when: answers => answers.choice_indemniteshommefemme_biais !== "Anonymiser les décisions",
 	},
 
 	{
 		type: "explanation",
-		message: "L'anonymisation des données est un enjeu clé dans le domaine juridique. Depuis le vote de la loi pour une République Numérique en octobre 2016 et la publication du rapport Cadiet sur l'open-data dans le monde de la justice, les professionnels du secteur attendent une décision sur la question.",
+		title: "L'anonymisation des données est un enjeu-clé",
+		message: "Depuis le vote de la loi pour une République Numérique en octobre 2016, et la publication du rapport Cadiet sur l'open data dans le monde de la justice, les professionnels du secteur attendent une décision sur la question.",
 		image: "robot-juriste-adulte.png",
 	},
 	{
 		type: "explanation",
-		message: "Avocats, juristes et magistrats sont nombreux à s'inquiéter d'une intelligence artificielle qui utiliserait des données non anonymisées notamment dans le cadre de procédure pénale.",
+		message: "Avocats, juristes et magistrats sont nombreux à s'inquiéter d'une intelligence artificielle qui utiliserait des données non anonymisées, notamment dans le cadre de procédure pénale.",
 		image: "robot-juriste-adulte.png",
 	},
 
