@@ -1,3 +1,4 @@
+// Todo : image must be anchored on bottom, not top
 // Todo : don't shift text box for Blanks
 
 // Todo : add close box to go back to main menu
