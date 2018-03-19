@@ -36,6 +36,6 @@ header {
 }
 
 .content-image img {
-	max-height: 50vh;
+	max-height: 30vh;
 }
 </style>
