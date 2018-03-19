@@ -49,7 +49,7 @@ const juriste = [
 		choices: [
 			{
 				"value": "Ross",
-				"description": "Robot juriste start aux États-Unis"
+				"description": "Robot juriste star aux États-Unis"
 			},
 			{
 				"value": "Agatha",
@@ -103,7 +103,7 @@ const juriste = [
 			},
 			{
 				"value": "Uniquement des décisions similaires",
-				"description": "Vous soumettez à votre algorithme 1500 décisions qui ont été prises par vous et vos collègues dans des cas similaires depuis le changement de la loi sur les indemnités en cas de licenciement en septembre 2017",
+				"description": "1.500 décisions prises par vous et vos collègues dans des cas similaires depuis le changement de la loi sur les indemnités en cas de licenciement en septembre 2017",
 			},
 			]
 	},
@@ -131,7 +131,7 @@ const juriste = [
 	},
 	{
 		type: "explanation",
-		message: "Définir manuellement les critères qui motivent votre décision va prendre du temps. C'est le côté 'humain' de l'intelligence artificielle. Lorsqu'on soumet à l'algorithme une première base de données, il faut lui indiquer où sont les informations clés. Vous voys attelez à cette tâche.",
+		message: "Définir manuellement les critères qui motivent votre décision va prendre du temps. C'est le côté 'humain' de l'intelligence artificielle. Lorsqu'on soumet à l'algorithme une première base de données, il faut lui indiquer où sont les informations clés. Vous vous attelez à cette tâche.",
 		image: "robot-juriste-bebe.png",
 		when: answers => answers.choice_premiereslois === 'Tous les articles de loi',
 	},
@@ -161,7 +161,7 @@ const juriste = [
 ////////////////
 	{
 		type: "explanation",
-		message: "Pour que {{ name }} puisse reconnaître les données importantes dans toutes les futures décisions que vous ajouterez à la base données, l'ingénieur vous conseille de recourir aux techniques de traitement automatique du langage naturel. Une partie de ce processus consiste à soumettre à la machine un texte à trous qu'elle doit remplir à partir des données qu'elle a traitées par le passé.",
+		message: "Pour que {{ name }} puisse reconnaître les données importantes dans toutes les futures décisions que vous ajouterez à la base de données, l'ingénieur vous conseille de recourir aux techniques de traitement automatique du langage naturel. Une partie de ce processus consiste à soumettre à la machine un texte à trous qu'elle doit remplir à partir des données qu'elle a traitées par le passé.",
 		image: "robot-juriste-enfant.png",
 	},
 	{
@@ -280,7 +280,7 @@ const juriste = [
 	},
 	{
 		type: "explanation",
-		message: "Mme.Petit, 10 d'ancienneté, 29 ans, ouvrière, entreprise de 10 salariés. Indemnité selon l'IA : 2,5 mois de salaire brut. A LA LIGNE M. Martin, 62 ans, 10 ans d'ancienneté, cadre technique, entreprise de 25 salariés. Indemnité selon le corpus de décisions témoin: 3 mois de salaire brut**",
+		message: "Mme Petit : 29 ans, 10 ans d'ancienneté, ouvrière, entreprise de 10 salariés. Indemnité selon l'IA : 2,5 mois de salaire brut. M. Martin : 62 ans, 10 ans d'ancienneté, cadre technique, entreprise de 25 salariés. Indemnité selon le corpus de décisions témoin : 3 mois de salaire brut.",
 		image: "robot-juriste-ado.png",
 	},
 	{
@@ -348,7 +348,7 @@ const juriste = [
 	},
 	{
 		type: "explanation",
-		message:"Vous lui soumettez un deuxième dossier, puis un troisième. La pile descend beaucoup plus vite et vous avez beaucoup plus de temps à consacrer aux dossiers compliqués. Pour chaque affaire, {{name}} vous propose plusieurs décisions et les classe en fonction de leur probabilité. Pour les dossiers les plus simples, une décision se dégage souvent avec des taux de probabilité supérieur à 90%.",
+		message: "Vous lui soumettez un deuxième dossier, puis un troisième. La pile descend beaucoup plus vite et vous avez beaucoup plus de temps à consacrer aux dossiers compliqués. Pour chaque affaire, {{name}} vous propose plusieurs décisions et les classe en fonction de leur probabilité. Pour les dossiers les plus simples, une décision se dégage souvent avec des taux de probabilité supérieur à 90%.",
 		image: "robot-juriste-adulte.png",
 	},	 
 //Nouveau choix proposé
@@ -431,7 +431,7 @@ const juriste = [
 	{
 		type: "explanation",
 		title: "Mauvaise réponse !",
-		message: "En rendant le code de votre algorithme secret, vous exposez les juges qui l'utiliseront à des contestations : il faut que ceux-ci sachent sur quel critères se basent votre algorithme pour en tenir compte dans leur décision. Pour assurer la transparence d'une décision il faut que l'outil que vous utilisez le soit aussi.  ",
+		message: "En rendant le code de votre algorithme secret, vous exposez les juges qui l'utiliseront à des contestations : il faut que ceux-ci sachent sur quel critères se basent votre algorithme pour en tenir compte dans leur décision. Pour assurer la transparence d'une décision, il faut que l'outil que vous utilisez le soit aussi.  ",
 		image: "robot-juriste-adulte-etonne.png",
 		when: answers => answers.choice_opensource === 'Vous décidez de le diffuser uniquement aux magistrats',
 	},
@@ -495,7 +495,7 @@ const juriste = [
 				"description": "pour que le mot 'Madame' ne soit pas associé à des indemnités plus faibles que celles des hommes."
 			},
 			{
-				"value": "Anonymiser toutes les décisions",
+				"value": "Anonymiser les décisions",
 				"description": "de votre base de données."
 			},
 			]
