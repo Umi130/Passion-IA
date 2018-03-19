@@ -1,15 +1,12 @@
-// Todo : add close box to go back to main menu
-// Todo : texte devient tableau
-// Todo : bouton SUIVANT toute la largeur, ancré en bas
+// Todo : don't shift text box for Blanks
 
-// Illustration: Taille images variable desktop/smartphone
-// Choices: Nom de variable dans choix multiple? Apostrophe (Exemple: "salariés dans l’entreprise")
-// Explanation: Texte plus grand sur mobile
-// Explanation: Pouvoir faire italique, gras, à la ligne...
+// Todo : add close box to go back to main menu
+// Todo : texte devient tableau pour aller à la ligne
+// Todo : bouton SUIVANT ancré en bas
+// Illustration: Taille images variable desktop/smartphone?
+
 // Explanation: fond couleur différent programmatique quand faux (container d-flex flex-column justify-content-center align-items-center)
-// Page de chargement : définir un temps et ne pas afficher le bouton suivant
 // Quand il y a résultat : i; faudrait que ce soit dans une bulle qui sort de la bouche du robot, pour séparer le résultat de l'explication qui suit. 
-// ligne 93 : le nom ne s'affiche pas 
 // 
 // 
 
@@ -275,7 +272,7 @@ const juriste = [
 		type: "explanation",
 		title: "Mauvaise réponse !",
 		message: "Ici, trois réponses étaient possibles : 'embauchée', 'recrutée' ou 'engagée'. Plus il y a de manières d'exprimer une idée, plus {{name}} mettra du temps à reconnaître l'information.",
-		image: "robot-juriste-enfant.png",
+		image: "robot-juriste-enfant-etonne.png",
 },
 
 //Si toutes réponses correctes
@@ -290,15 +287,15 @@ const juriste = [
 	{
 		type: "explanation",
 		title: "Vous avez fait trop d'erreurs...",
-		message: "Le taux d'erreur de {{name}} est trop élevé. Vous devez étiqueter vos données manuellement. Vous perdez beaucoup de temps, mais vous avez maintenant une base de données suffisamment complète pour que {{name}} puisse «prédire» la probabilité des différents jugements pour un nouveau dossier.",
+		message: "Vous devez étiqueter vos données manuellement. Vous perdez beaucoup de temps, mais vous avez maintenant une base de données suffisamment complète pour que {{name}} puisse «prédire» la probabilité des différents jugements pour un nouveau dossier.",
 		image: "robot-juriste-ado-etonne.png",
 		when: answers => !answers.blanks_emploi_duree1 || !answers.blanks_emploi_duree2,
 	},
 
 {
 		type: "explanation",
-		title: "Jacques Levy-Vehel, co-fondateur de Case Law Analytics",
-		message: "«Quand le taux d'erreur est supérieur à 15 ou 20%, on étiquette les données à la main.»",
+		title: "",
+		message: "«Quand le taux d'erreur est supérieur à 15 ou 20%, on étiquette les données à la main.» (Jacques Levy-Vehel, co-fondateur de Case Law Analytics)",
 		image: "experts-juriste-vehel.jpg",
 	},
 
@@ -331,13 +328,14 @@ const juriste = [
 	},
 	{
 		type: "explanation",
-		title: "Le montant des indemnités est différent",
+		title: "Le montant des indemnités est différent...",
 		message: "Vous ne comprenez pas pourquoi : Mme Petit et M. Martin ont pourtant travaillé tous deux 10 ans dans l'entreprise.",
+			image: "robot-juriste-ado-etonne.png",
 	},
 	{
 		type: "explanation",
 		message: "Vous aviez pourtant programmé {{name}} pour calculer le montant des indemnités en fonction de l'ancienneté du salarié.",
-		image: "robot-juriste-ado.png",
+		image: "robot-juriste-ado-etonne.png",
 	},
 //Choix proposé
 	{
@@ -384,7 +382,7 @@ const juriste = [
 	{
 		type: "explanation",
 		title: "Votre algorithme est maintenant bien entraîné !",
-		message:"Vous lui soumettez un nouveau dossier : M. Olivier a été victime d'un licenciement abusif après avoir travaillé pendant un an dans une start-up.", 
+		message:"Vous lui soumettez un nouveau dossier : M. Olivier a été victime d'un licenciement abusif après avoir travaillé pendant 1 an dans une start-up.", 
 		image: "robot-juge-marteau-anime.gif",
 	},
 
