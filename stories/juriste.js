@@ -126,7 +126,7 @@ const juriste = [
 //Si choix - Tous les articles de loi
 	{	
 		type: "explanation",
-		title: "Dossier test",
+		title: "Deuxième dossier",
 		message: "Vous soumettez un dossier de votre pile pour tester {{ name }}. M. Husson a été victime d'un licenciement abusif après avoir travaillé 10 ans dans une entreprise de télécommunication.",
 		image: "robot-juge-marteau-anime.gif",
 		when: answers => answers.choice_premiereslois === 'Tous les articles de loi'
@@ -161,7 +161,7 @@ const juriste = [
 //Si choix - Que des décisions similaires
 	{	
 		type: "explanation",
-		title: "Dossier test",
+		title: "Deuxième dossier",
 		message: "M. Husson a été victime d'un licenciement abusif après avoir travaillé 10 ans dans une entreprise de télécommunication.",
 		image: "robot-juge-marteau-anime.gif",
 		when: answers => answers.choice_premiereslois !== 'Tous les articles de loi',
