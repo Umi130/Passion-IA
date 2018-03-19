@@ -17,29 +17,31 @@ const juriste = [
 	{
 		type: "explanation",
 		message: "Vous êtes assis.e à votre bureau et contemplez la centaine de dossiers en attente de jugement. Vous faites partie de la chambre sociale notamment en charge des recours en cas de licenciement abusif. Comme la plupart des tribunaux français, le vôtre est encombré. Vous avez entendu parler d'outils d'intelligence artificielle pour traiter plus rapidement des dossiers.",
-		image: "robot-juriste-bebe.png"
+		image: "robot-juriste-bebe.png",
 	},
 	{
 		type: "explanation",
 		message: "Vous vous inspirez de Case Law Analytics et de Predictice, deux entreprises françaises qui proposent ce genre de services à des avocats. Vous vous associez avec un ingénieur pour écrire un algorithme adapté aux magistrats.",
+		image: "robot-juriste-bebe.png",
 	},
 	{
 		type: "explanation",
 		title: "Explication",
-		message: "Un algorithme, ce sont les instructions qui commandent un programme informatique. C'est un peu comme une recette de cuisine. Les ingrédients sont les données. Votre plat, ce sont les différents jugements que vous pouvez rendre sur un dossier."
+		message: "Un algorithme, ce sont les instructions qui commandent un programme informatique. C'est un peu comme une recette de cuisine. Les ingrédients sont les données. Votre plat, ce sont les différents jugements que vous pouvez rendre sur un dossier.",
+		image: "robot-juriste-bebe.png",
 	},
 	{
 		type: "explanation",
 		message: "L'ingrédient principal dont a besoin votre algorithme, c'est la loi qui détermine le montant des indemnités de licenciement d'un salarié.",
+		image: "robot-juriste-bebe.png",
 	},
-	{
-		type: "illustration",
-		src: "robot-juriste-bebe.png",
-	},
+
 		{
 		type: "explanation",
 		message: "Ce ne sont que quelques lignes de code mais vous vous prenez déjà d'affection pour ce super-assistant qui va faire diminuer la pile de dossier sur votre bureau. Vous décidez de lui donner un prénom.",
+		image: "robot-juriste-bebe.png"
 	},
+
 	{
 		type: "choices",
 		name: "name",
@@ -60,40 +62,34 @@ const juriste = [
 		]
 	},
 
-//	{
-//		type: "explanation",
-//		message: "Votre robot s'appelle {{ name }}",
-//		when: answers => answers.name !== 'Justum'
-//	},
-
 	{
 		type: "explanation",
 		message: "Vous soumettez un premier dossier de votre pile pour tester {{ name }}. Mme Laurent a été victime d'un licenciement abusif après avoir travaillé cinq ans dans un petit magasin.",
-	},
-
-
-// Animation marteau
-	{
-		type: "illustration",
-		src: "robot-juge-marteau-anime.gif",
+		image: "robot-juge-marteau-anime.gif",
+//		when: answers => answers.name !== 'Justum'
 	},
 	
 	{ 
 		type: "explanation",
 		message: "Résultat : Mme Laurent a droit à une indemnité comprise entre 1,5 et 6 mois de salaire brut.",
+		image: "robot-juriste-bebe.png",
 	},
 	{
 		type: "explanation",
-		message: "Vous êtes complètement déçu… {{\n}} L’algorithme n’a fait que répéter ce qui est écrit dans la loi. Vous n’êtes pas très avancé car vous souhaitez avoir un montant précis et pas seulement une fourchette.",
+        title: "Vous êtes complètement déçu…",
+		message: "L’algorithme n’a fait que répéter ce qui est écrit dans la loi. Vous n’êtes pas très avancé car vous souhaitez avoir un montant précis et pas seulement une fourchette.",
+		image: "robot-juriste-bebe.png",
 	},
 	{
 		type: "explanation",
 		message: "Vous demandez conseil à Jacques Levy Vehel, le co-fondateur de Case Law Analytics. Selon lui «l'intelligence artificielle calcule ces probabilités grâce à un algorithme: à condition qu'on lui donne assez d'exemples, elle pourra simuler les différentes décisions possibles pour un cas particulier».",
+			image: "robot-juriste-bebe.png",
 	}, 
 
 	{
 		type: "explanation",
 		message: "Votre algorithme a donc besoin de plus de précisions quant aux critères qui motivent votre décision.",
+		image: "robot-juriste-bebe.png",
 	},
 	{
 		type: "choices",
@@ -102,7 +98,7 @@ const juriste = [
 		choices: [
 			{
 				"value": "Tous les articles de loi",
-				"description": "Quelques 11 000 articles du code du travail et la jurisprudence associée"
+				"description": "Quelques 11 000 articles du code du travail et la jurisprudence associée",
 			},
 			{
 				"value": "Que des décisions similaires",
@@ -115,27 +111,26 @@ const juriste = [
 	{	
 		type: "explanation",
 		message: "Vous soumettez un dossier de votre pile pour tester {{ name }}. M. Husson a été victime d'un licenciement abusif après avoir travaillé dix ans dans une entreprise de télécommunication.",
-		when: answers => answers.choice_premiereslois === 'Tous les articles de loi',
+		image: "robot-juge-marteau-anime.gif",
+		when: answers => answers.choice_premiereslois === 'Tous les articles de loi'
 	},
-	{
-		when: answers => answers.choice_premiereslois === 'Tous les articles de loi',
-		type: "illustration",
-		src: "robot-juge-marteau-anime.gif"	
-		
-	},	
+
 	{
 		type: "explanation",
 		message: "Résultat : M. Husson devrait recevoir douze mois de salaire brut en indemnité. Ce n'est plus une fourchette... mais le montant des indemnités est supérieur à ce que prévoit la loi actuelle. L'algorithme a pris en compte toutes les décisions liées aux lois précédentes. Le résultat est faussé.",
+		image: "robot-juriste-bebe.png",
 		when: answers => answers.choice_premiereslois === 'Tous les articles de loi',
 	},
 	{
 		type: "explanation",
 		message: "En donnant à l'algorithme trop de textes de lois et trop de jurisprudence vous prenez le risque de prendre en compte des dossiers trop différents de celui que vous souhaitez analyser. De plus, il y a des critères juridiques mais aussi humains dans une décision. La loi ne suffit pas à tous les définir.",
+		image: "robot-juriste-bebe.png",
 		when: answers => answers.choice_premiereslois === 'Tous les articles de loi',
 	},
 	{
 		type: "explanation",
 		message: "Définir manuellement les critères qui motivent votre décision va prendre du temps. C'est le côté 'humain' de l'intelligence artificielle. Lorsqu'on soumet à l'algorithme une première base de données, il faut lui indiquer où sont les informations clés. Vous voys attelez à cette tâche.",
+		image: "robot-juriste-bebe.png",
 		when: answers => answers.choice_premiereslois === 'Tous les articles de loi',
 	},
 
@@ -143,38 +138,34 @@ const juriste = [
 	{	
 		type: "explanation",
 		message: "Vous soumettez un dossier de votre pile pour tester {{ name }}. M. Husson a été victime d'un licenciement abusif après avoir travaillé cinq ans dans une entreprise de télécommunication.",
+		image: "robot-juge-marteau-anime.gif",
 		when: answers => answers.choice_premiereslois === 'Que des décisions similaires',
 	},
-	{
-		when: answers => answers.choice_premiereslois === 'Que des décisions similaires',
-		type: "illustration",
-		src: "robot-juge-marteau-anime.gif",
-			
-	},	
+
 	{
 		type: "explanation",
 		message: "Résultat : M.Husson devrait recevoir trois mois de salaire brut en indemnité. Ce n'est plus une fourchette... mais vous vous rendez compte que l'algorithme n'a pas tenu compte de la zone géographique de votre cour. Vous auriez eu tendance à lui attribuer une indemnité d'au moins 6 mois de salaire brut puisque le chômage est plus élevé dans votre région.",
+		image: "robot-juriste-bebe.png",
 		when: answers => answers.choice_premiereslois === 'Que des décisions similaires',
 	},
 	{
 		type: "explanation",
 		message: "La définition manuelle des critères vous prend du temps, mais elle sera plus juste car elle tiendra compte des spécificités des dossiers. C'est le côté 'humain' de l'IA : lorsqu'on soumet une première base de données à l'algorithme, il faut lui indiquer où sont les informations clés.",
+		image: "robot-juriste-bebe.png",
 		when: answers => answers.choice_premiereslois === 'Que des décisions similaires',
 	},
-	
-//TODO TO JUGE ENFANT
-	{
-		type: "illustration",
-		src: "robot-juriste-enfant.png",
-	},
- 
+////////////////
+// ROBOT ENFANT
+////////////////
 	{
 		type: "explanation",
 		message: "Pour que {{ name }} puisse reconnaître les données importantes dans toutes les futures décisions que vous ajouterez à la base données, l'ingénieur vous conseille de recourir aux techniques de traitement automatique du langage naturel. Une partie de ce processus consiste à soumettre à la machine un texte à trous qu'elle doit remplir à partir des données qu'elle a traitées par le passé.",
+		image: "robot-juriste-enfant.png",
 	},
 	{
 		type: "explanation",
 		message: "À chaque fois que la machine trouve le bon mot, elle est 'récompensée'. C'est en multipliant les exemples et les primes qu'elle finit par comprendre seule où se trouve l'information clé dans une phrase, en fonction des mots qui l'entourent. Pour nos dossiers, il faudrait apprendre à  {{ name }}  à repérer l'ancienneté d'un salarié dans l'entreprise - critère décisif pour définir le montant des indemnités. On essaye ?",
+		image: "robot-juriste-enfant.png",
 	},
 
 
@@ -187,7 +178,7 @@ const juriste = [
 			{
 				"value": "word_1",
 				"type": "input",
-				"answers": ['pendant', 'durant']
+				"answers": ['pendant', 'durant', 'Pendant', 'Durant']
 			},
 			{
 				"value": " 10 ",
@@ -195,20 +186,24 @@ const juriste = [
 			{
 				"value": "word_2",
 				"type": "input",
-				"answers": ['ans', 'années']
+				"answers": ['ans', 'années', 'Ans', 'Années']
 			},
 		]
 	},
 //Si réponse correcte
 	{
 		type: "explanation",
-		message: "Bonne réponse ! Ici, l'information clé est le nombre d'années passées dans l'entreprise. Pour repérer cette information, qui varie selon les salariés, la machine doit reconnaître les mots contextuels 'pendant' et 'ans' qui précèdent et suivent cette information.",
+		title: "Bonne réponse",
+		message: "Ici, l'information clé est le nombre d'années passées dans l'entreprise. Pour repérer cette information, qui varie selon les salariés, la machine doit reconnaître les mots contextuels 'pendant' et 'ans' qui précèdent et suivent cette information.",
+		image: "robot-juriste-enfant.png",
 		when: answers => answers.blanks_emploi_duree1 
 	},
 //Si réponse incorrecte
 	{
 		type: "explanation",
-		message: "Mauvaise réponse ! Ici, l'information clé est le nombre d'années passées dans l'entreprise. Pour repérer cette information, qui varie selon les salariés, la machine doit reconnaître les mots contextuels 'pendant' et 'ans' qui précèdent et suivent cette information.",
+		title: "Mauvaise réponse",
+		message: "Ici, l'information clé est le nombre d'années passées dans l'entreprise. Pour repérer cette information, qui varie selon les salariés, la machine doit reconnaître les mots contextuels 'pendant' et 'ans' qui précèdent et suivent cette information.",
+		image: "robot-juriste-enfant-etonne.png",
 		when: answers => !answers.blanks_emploi_duree1 
 	},
 
@@ -221,7 +216,7 @@ const juriste = [
 			{
 				"value": "word_1",
 				"type": "input",
-				"answers": ['embauchée', 'engagée', 'recrutée']
+				"answers": ['embauchée', 'engagée', 'recrutée', 'Embauchée', 'Engagée', 'Recrutée']
 			},
 			{
 				"value": " en 2013.",
@@ -231,13 +226,17 @@ const juriste = [
 //Si réponse correcte
 	{
 		type: "explanation",
-		message: "Bonne réponse ! Ici, trois réponses étaient possibles. Plus l'information est énoncée de manière détournée, plus le taux d'erreur de la machine est élevé. 'Quand le taux d'erreur est supérieur à 15 ou 20%, on étiquette les données à la main' Jacques Levy-Vehel, co-fondateur de Case Law Analytics",
+		title: "Bonne réponse",
+		message: "Ici, trois réponses étaient possibles. Plus l'information est énoncée de manière détournée, plus le taux d'erreur de la machine est élevé. 'Quand le taux d'erreur est supérieur à 15 ou 20%, on étiquette les données à la main' Jacques Levy-Vehel, co-fondateur de Case Law Analytics",
+		image: "robot-juriste-enfant.png",
 		when: answers => answers.blanks_emploi_duree2 
 	},
 //Si réponse incorrecte
 	{
 		type: "explanation",
-		message: "Mauvaise réponse ! Ici, trois réponses étaient possibles. Plus l'information est énoncée de manière détournée, plus le taux d'erreur de la machine est élevé. 'Quand le taux d'erreur est supérieur à 15 ou 20%, on étiquette les données à la main' Jacques Levy-Vehel, co-fondateur de Case Law Analytics",
+		title: "Mauvaise réponse",
+		message: "Ici, trois réponses étaient possibles. Plus l'information est énoncée de manière détournée, plus le taux d'erreur de la machine est élevé. 'Quand le taux d'erreur est supérieur à 15 ou 20%, on étiquette les données à la main' Jacques Levy-Vehel, co-fondateur de Case Law Analytics",
+		image: "robot-juriste-enfant-etonne.png",
 		when: answers => !answers.blanks_emploi_duree2 
 	},
 
@@ -246,30 +245,27 @@ const juriste = [
 	{
 		type: "explanation",
 		message: "Plutôt long et fastidieux comme tâche non? C'est la partie 'humaine' de l'intelligence artificielle. Selon la taille de la base de données, l'opération peut prendre plusieurs jours voire plusieurs semaines.",
+		image: "robot-juge-marteau-anime.gif",	
 	},
-	{
-		type: "illustration",
-		src: "robot-juge-marteau-anime.gif",	
-	},	
 
+
+////////////////
+// ROBOT ADO
+////////////////
 
 //Si toutes réponses correctes
 	{
 		type: "explanation",
 		message: "Bravo. Le taux d'erreur de votre algorithme de traitement automatique du langage est inférieur à 15%, vous pourrez donc économiser de longues heures d'étiquetage manuel de vos données. Vous avez maintenant une base de données suffisamment complète pour que {{name}} puisse 'prédire' la probabilité des différents jugements pour un nouveau dossier.",
 		when: answers => answers.blanks_emploi_duree1 && answers.blanks_emploi_duree2,
+		image: "robot-juriste-ado.png",
 	},
 //Sinon
 	{
 		type: "explanation",
 		message: "Vous avez fait trop d'erreurs dans les textes à trous. Votre algorithme de traitement automatique du langage n'est pas assez performant, le taux d'erreur est trop élevé. Vous devez étiqueter vos données manuellement. Vous perdez beaucoup de temps mais vous avez maintenant une base de données suffisamment complète pour que {{name}} puisse 'prédire' les différents jugements possibles et la probabilité qui leur est associée.",
+		image: "robot-juriste-ado-etonne.png",
 		when: answers => !answers.blanks_emploi_duree1 || !answers.blanks_emploi_duree2,
-	},
-
-//Robot ado
-	{
-		type: "illustration",
-		src: "robot-juriste-ado.png",
 	},
 
 //Cas licenciements
@@ -385,6 +381,10 @@ const juriste = [
 		src: "robot-juriste-adulte.png"
 	},
 
+
+////////////////
+// ROBOT ADULTE
+////////////////
 
 //Choix Open source
 	{
