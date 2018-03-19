@@ -114,11 +114,11 @@ const juriste = [
 		choices: [
 			{
 				"value": "Tous les articles de loi",
-				"description": "Quelques 11 000 articles du code du travail et la jurisprudence associée",
+				"description": "Quelque 11 000 articles du code du travail et la jurisprudence associée",
 			},
 			{
 				"value": "Uniquement des décisions similaires",
-				"description": "1 500 décisions prises par vous et vos collègues dans des cas similaires depuis le changement de la loi sur les indemnités en cas de licenciement en septembre 2017",
+				"description": "1 500 décisions prises par vous et vos collègues dans des cas similaires depuis le changement de la loi en septembre 2017",
 			},
 			]
 	},
@@ -126,7 +126,8 @@ const juriste = [
 //Si choix - Tous les articles de loi
 	{	
 		type: "explanation",
-		message: "Vous soumettez un dossier de votre pile pour tester {{ name }}. M. Husson a été victime d'un licenciement abusif après avoir travaillé dix ans dans une entreprise de télécommunication.",
+		title: "Dossier test",
+		message: "Vous soumettez un dossier de votre pile pour tester {{ name }}. M. Husson a été victime d'un licenciement abusif après avoir travaillé 10 ans dans une entreprise de télécommunication.",
 		image: "robot-juge-marteau-anime.gif",
 		when: answers => answers.choice_premiereslois === 'Tous les articles de loi'
 	},
@@ -134,19 +135,25 @@ const juriste = [
 	{
 		type: "explanation",
 		title: "Résultat de l'algorithme :",
-		message: "M. Husson devrait recevoir douze mois de salaire brut en indemnité. Ce n'est plus une fourchette... mais le montant des indemnités est supérieur à ce que prévoit la loi actuelle. L'algorithme a pris en compte toutes les décisions liées aux lois précédentes. Le résultat est faussé.",
+		message: "M. Husson devrait recevoir douze mois de salaire brut en indemnité. Ce n'est plus une fourchette... mais le montant des indemnités est supérieur à ce que prévoit la loi actuelle.",
 		image: "robot-juriste-bebe.png",
 		when: answers => answers.choice_premiereslois === 'Tous les articles de loi',
 	},
 	{
 		type: "explanation",
-		message: "En donnant à l'algorithme trop de textes de lois et trop de jurisprudence vous prenez le risque de prendre en compte des dossiers trop différents de celui que vous souhaitez analyser. De plus, il y a des critères juridiques mais aussi humains dans une décision. La loi ne suffit pas à tous les définir.",
+		message: "L'algorithme a pris en compte toutes les décisions liées aux lois précédentes. Le résultat est faussé.",
 		image: "robot-juriste-bebe.png",
 		when: answers => answers.choice_premiereslois === 'Tous les articles de loi',
 	},
 	{
 		type: "explanation",
-		message: "Définir manuellement les critères qui motivent votre décision va prendre du temps. C'est le côté 'humain' de l'intelligence artificielle. Lorsqu'on soumet à l'algorithme une première base de données, il faut lui indiquer où sont les informations clés. Vous vous attelez à cette tâche.",
+		message: "En donnant à l'algorithme trop de textes de lois et trop de jurisprudence, vous prenez le risque de prendre en compte des dossiers trop différents de celui que vous souhaitez analyser.",
+		image: "robot-juriste-bebe.png",
+		when: answers => answers.choice_premiereslois === 'Tous les articles de loi',
+	},
+	{
+		type: "explanation",
+		message: "Définir manuellement les critères qui motivent votre décision va prendre du temps. C'est le côté «humain» de l'IA.",
 		image: "robot-juriste-bebe.png",
 		when: answers => answers.choice_premiereslois === 'Tous les articles de loi',
 	},
@@ -154,7 +161,8 @@ const juriste = [
 //Si choix - Que des décisions similaires
 	{	
 		type: "explanation",
-		message: "Vous soumettez un dossier de votre pile pour tester {{ name }}. M. Husson a été victime d'un licenciement abusif après avoir travaillé cinq ans dans une entreprise de télécommunication.",
+		title: "Dossier test",
+		message: "M. Husson a été victime d'un licenciement abusif après avoir travaillé 10 ans dans une entreprise de télécommunication.",
 		image: "robot-juge-marteau-anime.gif",
 		when: answers => answers.choice_premiereslois !== 'Tous les articles de loi',
 	},
@@ -162,13 +170,19 @@ const juriste = [
 	{
 		type: "explanation",
 		title: "Résultat de l'algorithme :",
-		message: "M. Husson devrait recevoir trois mois de salaire brut en indemnité. Ce n'est plus une fourchette... mais vous vous rendez compte que l'algorithme n'a pas tenu compte de la zone géographique de votre cour. Vous auriez eu tendance à lui attribuer une indemnité d'au moins 6 mois de salaire brut puisque le chômage est plus élevé dans votre région.",
+		message: "M. Husson devrait recevoir trois mois de salaire brut en indemnités. C'est un résultat précis... mais vous vous rendez compte que {{name}} n'a pas tenu compte de la zone géographique de votre cour.",
 		image: "robot-juriste-bebe.png",
 		when: answers => answers.choice_premiereslois !== 'Tous les articles de loi',
 	},
 	{
 		type: "explanation",
-		message: "La définition manuelle des critères vous prend du temps, mais elle sera plus juste car elle tiendra compte des spécificités des dossiers. C'est le côté 'humain' de l'IA : lorsqu'on soumet une première base de données à l'algorithme, il faut lui indiquer où sont les informations clés.",
+		message: "Vous auriez eu tendance à lui attribuer une indemnité d'au moins 6 mois de salaire brut puisque le chômage est plus élevé dans votre région.",
+		image: "robot-juriste-bebe.png",
+		when: answers => answers.choice_premiereslois !== 'Tous les articles de loi',
+	},
+	{
+		type: "explanation",
+		message: "La définition manuelle des critères vous prend du temps, mais elle sera plus juste, car elle tiendra compte des spécificités des dossiers. C'est le côté «humain» de l'IA.",
 		image: "robot-juriste-bebe.png",
 		when: answers => answers.choice_premiereslois !== 'Tous les articles de loi',
 	},
