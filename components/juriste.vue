@@ -71,6 +71,6 @@ module.exports = {
 	}
 
 	footer {
-		margin-top: 50px;
+		margin-top: 15px;
 	}
 </style>
