@@ -1,8 +1,7 @@
 <template>
 	<section>
-		<audio autoplay>
-		  <source :src="'assets/music/'+content.music.src" type="audio/mp3" :controls="true">
-		  	<!-- content.music.controls -->
+		<audio autoplay :controls="content.music.controls">
+		  <source :src="'assets/music/'+content.music.src" type="audio/mp3" >
 		  Your browser does not support the audio element.
 		</audio> 
 	</section>
