@@ -14,7 +14,7 @@ const musicien = [
 		title: "Vous écoutez : Hello World",
 		message: "Un morceau composé à l'aide d'une intelligence artificielle.",
 		music: {
-			controls: false,
+			controls: true,
 			src: "robot-musicien-spotify.mp3"
 		}
 	},
