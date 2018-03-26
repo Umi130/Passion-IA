@@ -12,7 +12,10 @@ const musicien = [
 
 	{
 		message: "Hello World music",
-		music: "robot-musicien-spotify.mp3",
+		music: {
+			controls: false,
+			src: "robot-musicien-spotify.mp3"
+		}
 	},
 
 	{

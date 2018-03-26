@@ -1,8 +1,9 @@
 <template>
 	<section class="choices d-flex flex-column">
 		<div class="choice d-flex flex-column justify-content-center" v-for="choice in content.choices" :key="choice.value" @click="$emit('select', { name: content.name, value: choice.value, points: choice.points })">
-			<h4>{{ choice.value }}</h4>
+			<h4 v-if="choice.value">{{ choice.value }}</h4>
 			<p v-if="choice.description">{{ choice.description }}</p>
+			<img v-if="choice.image" :src="'assets/images/'+choice.image" class="img-fluid">
 		</div>
 	</section>
 </template>
