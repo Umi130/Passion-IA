@@ -1,13 +1,13 @@
 <template>
 	<main>
-		<explanation v-if="currentStep.type === 'explanation'" :content="currentStep" :answers="answers"></explanation>
+		<explanation v-if="currentStep.title || currentStep.message" :content="currentStep" :answers="answers"></explanation>
 
 		<illustration v-if="currentStep.image" :content="currentStep"></illustration>
 
-		<choices class="container-fluid" v-if="currentStep.type === 'choices'" :content="currentStep" v-on:select="selectChoice" :answers="answers"></choices>
-		<blanks class="container-fluid" v-if="currentStep.type === 'blanks'" :content="currentStep" v-on:fill="fillBlanks"></blanks>
+		<choices v-if="currentStep.choices" :content="currentStep" v-on:select="selectChoice" :answers="answers"></choices>
+		<blanks v-if="currentStep.blanks" :content="currentStep" v-on:fill="fillBlanks"></blanks>
 
-		<footer class="container-fluid text-center pb-2">
+		<footer class="text-center pb-2" v-if="!currentStep.choices && !currentStep.blanks">
 			<router-link :to="`/musicien/${current + 1}`" v-if="displayNextButton()" class="btn btn-primary btn-block">
 				SUIVANT
 			</router-link>
@@ -18,7 +18,7 @@
 <script>
 
 module.exports = {
-	name: 'musicien',
+	name: 'juriste',
 	components: {
 		Explanation: httpVueLoader('./explanation.vue'),
 		Illustration: httpVueLoader('./illustration.vue'),
@@ -28,7 +28,19 @@ module.exports = {
 	data () {
 		return {
 			story: musicien,
-			answers: {}
+			answers: {
+				points: 0
+			}
+		}
+	},
+	watch: {
+		answers (newVal) {
+			localStorage.setItem('passion-ia-juriste', JSON.stringify(newVal))
+		}
+	},
+	mounted () {
+		if (localStorage.getItem('passion-ia-juriste')) {
+			this.answers = JSON.parse(localStorage.getItem('passion-ia-juriste'))
 		}
 	},
 	computed: {
@@ -47,6 +59,9 @@ module.exports = {
 	},
 	methods: {
 		selectChoice (choice) {
+			if (choice.points) {
+				this.answers.points = this.answers.points + choice.points;
+			}
 			this.$set(this.answers, choice.name, choice.value)
 			this.nextStep()
 		},
@@ -55,7 +70,7 @@ module.exports = {
 			this.nextStep()
 		},
 		nextStep () {
-			this.$router.push({ path: `/musicien/${this.current + 1}` })
+			this.$router.push({ path: `/juriste/${this.current + 1}` })
 		},
 		displayNextButton(){
 			return ['choices', 'blanks'].indexOf(this.currentStep.type) === -1  && 

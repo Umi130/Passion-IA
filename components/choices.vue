@@ -1,13 +1,8 @@
 <template>
-	<section>
-		<header>
-			<p class="message">{{ formattedMessage }}</p>
-		</header>
-		<div class="choices d-flex flex-column">
-			<div class="choice d-flex flex-column justify-content-center" v-for="choice in content.choices" :key="choice.value" @click="$emit('select', { name: content.name, value: choice.value, points: choice.points })">
-				<h4>{{ choice.value }}</h4>
-				<p v-if="choice.description">{{ choice.description }}</p>
-			</div>
+	<section class="choices d-flex flex-column">
+		<div class="choice d-flex flex-column justify-content-center" v-for="choice in content.choices" :key="choice.value" @click="$emit('select', { name: content.name, value: choice.value, points: choice.points })">
+			<h4>{{ choice.value }}</h4>
+			<p v-if="choice.description">{{ choice.description }}</p>
 		</div>
 	</section>
 </template>
@@ -25,25 +20,6 @@ module.exports = {
 </script>
 
 <style scoped>
-section {
-	padding: 0px;
-}
-
-header {
-	background-color: #1c1840;
-	color: white;
-	padding: 24px;
-	text-align: center;
-	font-weight: bolder;
-	font-size: 1.5em;
-	margin-bottom: 30px;
-}
-
-h4 {
-	text-transform: uppercase;
-	font-weight: bolder;
-}
-
 	.choices {
 		flex: 1;
 			padding: 15px;
@@ -58,5 +34,9 @@ h4 {
 	.choice:hover {
 		border: 1px solid #1c1840;
 		cursor: pointer;
+	}
+	.choice h4 {
+		text-transform: uppercase;
+		font-weight: bolder;
 	}
 </style>
