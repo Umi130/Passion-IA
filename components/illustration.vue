@@ -1,3 +1,7 @@
+////////////
+//OBSOLETE//
+////////////
+
 <template>
 	<section :style="{ 'background-image': 'url(./assets/images/' + content.src + ')' }">
 	</section>
