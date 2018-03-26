@@ -22,10 +22,10 @@
 				<p><img :src="imageFor('juriste')" alt="Symbole Juriste" class="img-fluid" /></p>
 				<p>Juge</p>
 			</div>
-			<div :class="{ active: story === 'assistant' }" @click="story = 'assistant'">
+<!--			<div :class="{ active: story === 'assistant' }" @click="story = 'assistant'">
 				<p><img :src="imageFor('assistant')" alt="Symbole Assistant" class="img-fluid" /></p>
 				<p>Assistant</p>
-			</div>
+			</div>< -->
 		</footer>
 	</main>
 </template>
