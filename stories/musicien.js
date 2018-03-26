@@ -30,7 +30,7 @@ const musicien = [
 	{
 		type: "explanation",
 		title: "Vous décidez de créer une musique en vous aidant d'une IA.",
-		message: "Vous contactez Robin Meier, un musicien qui utilise des programmes informatiques pour composer. Pour la musique du spectacle Frankenstein, il a utilisé un algorithme en accès libre sur internet.",
+		message: "Vous contactez Robin Meier, un musicien qui utilise des programmes informatiques pour composer. Pour la musique du spectacle La Fabrique des Monstres, il a utilisé un algorithme en accès libre sur internet.",
 		image: "experts-musicien-meier.jpg",
 	},
 
