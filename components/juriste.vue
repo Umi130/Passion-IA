@@ -4,10 +4,10 @@
 
 		<illustration v-if="currentStep.image" :content="currentStep"></illustration>
 
-		<choices class="container-fluid" v-if="currentStep.type === 'choices'" :content="currentStep" v-on:select="selectChoice" :answers="answers"></choices>
-		<blanks class="container-fluid" v-if="currentStep.type === 'blanks'" :content="currentStep" v-on:fill="fillBlanks"></blanks>
+		<choices v-if="currentStep.type === 'choices'" :content="currentStep" v-on:select="selectChoice" :answers="answers"></choices>
+		<blanks v-if="currentStep.type === 'blanks'" :content="currentStep" v-on:fill="fillBlanks"></blanks>
 
-		<footer class="container-fluid text-center pb-2">
+		<footer class="text-center pb-2">
 			<router-link :to="`/juriste/${current + 1}`" v-if="displayNextButton()" class="btn btn-primary btn-block">
 				SUIVANT
 			</router-link>
@@ -28,7 +28,19 @@ module.exports = {
 	data () {
 		return {
 			story: juriste,
-			answers: {}
+			answers: {
+				points: 0
+			}
+		}
+	},
+	watch: {
+		answers (newVal) {
+			localStorage.setItem('passion-ia-juriste', JSON.stringify(newVal))
+		}
+	},
+	mounted () {
+		if (localStorage.getItem('passion-ia-juriste')) {
+			this.answers = JSON.parse(localStorage.getItem('passion-ia-juriste'))
 		}
 	},
 	computed: {
@@ -47,6 +59,9 @@ module.exports = {
 	},
 	methods: {
 		selectChoice (choice) {
+			if (choice.points) {
+				this.answers.points = this.answers.points + choice.points;
+			}
 			this.$set(this.answers, choice.name, choice.value)
 			this.nextStep()
 		},
