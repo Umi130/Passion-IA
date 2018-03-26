@@ -157,7 +157,7 @@ const musicien = [
 	{
 		title: "Bonne réponse !",
 		message: "Vous avez appris à {{name}} à reconnaître ces notes.",
-		image: "robot-musicien-enfant.png",
+		image: "robot-musicien-bebe.png",
 
 		when: answers => answers.choice_mode_composition === "Celle de François Pachet" && answers.blanks_debut_gamme1,
 	},
@@ -165,7 +165,7 @@ const musicien = [
 	{
 		title: "Mauvaise réponse !",
 		message: "Il fallait répondre Ré & Mi.",
-		image: "robot-musicien-enfant-etonne.png",
+		image: "robot-musicien-bebe-etonne.png",
 
 		when: answers => answers.choice_mode_composition === "Celle de François Pachet" && !answers.blanks_debut_gamme1,
 	},
@@ -197,17 +197,124 @@ const musicien = [
 	{
 		title: "Bonne réponse !",
 		message: "Vous avez appris à {{name}} à reconnaître ces notes.",
-		image: "robot-musicien-enfant.png",
+		image: "robot-musicien-bebe.png",
 
 		when: answers => answers.choice_mode_composition === "Celle de François Pachet" && answers.blanks_debut_gamme2,
 	},
 //Si réponse incorrecte
 	{
 		title: "Mauvaise réponse !",
-		message: "Il fallait répondre Ré & Mi.",
-		image: "robot-musicien-enfant-etonne.png",
+		message: "Il fallait répondre La & La.",
+		image: "robot-musicien-bebe-etonne.png",
 
 		when: answers => answers.choice_mode_composition === "Celle de François Pachet" && !answers.blanks_debut_gamme2,
 	},
+
+//Exercice 3
+	{
+		name: "blanks_debut_gamme3",
+		title: "Remplissez le texte à trous",
+		image: "robot-musicien-portee-3.png",
+		blanks: [
+			{
+				"value": "Quelles sont les notes manquantes ?"
+			},
+			{
+				"value": "word_1",
+				"type": "input",
+				"answers": ['Mi', 'mi']
+			},
+			{
+				"value": "word_2",
+				"type": "input",
+				"answers": ['Re', 'Ré', 're', 'ré']
+			},
+		],	
+		when: answers => answers.choice_mode_composition === "Celle de François Pachet",
+	},
+
+//Si réponse correcte
+	{
+		title: "Bonne réponse !",
+		message: "Vous avez appris à {{name}} à reconnaître ces notes.",
+		image: "robot-musicien-bebe.png",
+
+		when: answers => answers.choice_mode_composition === "Celle de François Pachet" && answers.blanks_debut_gamme3,
+	},
+//Si réponse incorrecte
+	{
+		title: "Mauvaise réponse !",
+		message: "Il fallait répondre Mi & Ré.",
+		image: "robot-musicien-bebe-etonne.png",
+
+		when: answers => answers.choice_mode_composition === "Celle de François Pachet" && !answers.blanks_debut_gamme3,
+	},
+
+//Fin du premier mini jeu
+	{
+		title: "Programmation achevée !",
+		message: "Les gammes, les intervalles et les bémols n’ont plus aucun secret pour {{name}}. Vous pouvez lui soumettre une première base de données et il s’en inspirera pour composer un morceau dans le même style.",
+		image: "robot-musicien-bebe.png",
+
+		when: answers => answers.choice_mode_composition === "Celle de François Pachet",
+	},
+
+// Robot devient enfant
+
+
+	{
+		message: "{{name}} a grandi !",
+		image: "robot-musicien-enfant.png",
+	},
+
+
+
+	{
+		title: "Vous remplissez votre base de données.",
+		message: "João Felipe, un doctorant à l’INRS, a travaillé à partir d’une bibliothèque de 14.000 morceaux de musique irlandaise traditionnelle. Vous soumettez cette base de données en libre accès à {{name}}.",
+		image: "experts-musicien-felipe.jpg",
+
+		when: answers => answers.choice_mode_composition === "Celle de François Pachet",
+	},
+
+	{
+		title: "Voici le résultat obtenu par João Felipe...",
+		message: "«Quand j’ai commencé, la machine ne savait pas terminer un morceau harmonieusement. J’avais mal formaté mon set de données.»",
+		image: "experts-musicien-felipe.jpg",
+		music: {
+			controls: true,
+			src: "robot-musicien-felipe.mp3",
+		},
+
+		when: answers => answers.choice_mode_composition === "Celle de François Pachet",
+
+	},	
+   
+	{
+		title: "Un deuxième round d’entraînement s’impose.",
+		message: "",
+		image: "robot-musicien-enfant.png",
+
+		when: answers => answers.choice_mode_composition === "Celle de François Pachet",
+	},
+
+
+{
+		name: "choix_reconnaitre_1",
+		message: "Quel exemple représente le début de la Marche Turque de W.A Mozart ?",
+		choices: [
+			{
+				"value": " ",
+				"image": "robot-musicien-reconnaitre-1a.jpg",
+				"points": 1,
+			},
+			{
+				"value": "   ",
+				"image": "robot-musicien-reconnaitre-1b.jpg",
+				"points": 1
+			},
+		]
+	},
+
 
 ]

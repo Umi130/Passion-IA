@@ -1,5 +1,5 @@
 <template>
-	<section>
+	<section class="d-flex flex-column">
 		<audio autoplay :controls="content.music.controls">
 		  <source :src="'assets/music/'+content.music.src" type="audio/mp3" >
 		  Your browser does not support the audio element.
