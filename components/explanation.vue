@@ -1,7 +1,7 @@
 <template>
 	<header>
 		<h4 v-if="content.title">{{ content.title }}</h4>
-		<p>{{ formattedMessage }}</p>
+		<p v-if="content.message">{{ formattedMessage }}</p>
 	</header>
 </template>
 

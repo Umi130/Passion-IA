@@ -1,24 +1,20 @@
 <template>
-	<section>
-		<header>
-			<h4>Entrez les mots manquants</h4>
-		</header>
-
+	<section class="d-flex flex-column">
 		<form>
-				{{ content.message }}
-				<span class="blank" v-for="blank in content.blanks" :key="blank.value" >
-					<span v-if="blank.type === 'input'">
-						<input v-model="answers[blank.value]" type="text" class="form-control">
-					</span>
-					<span v-else>
-						{{ blank.value }}
-					</span>
-				</span>			
-
+			<span class="blank" v-for="blank in content.blanks" :key="blank.value" >
+				<span v-if="blank.type === 'input'">
+					<input v-model="answers[blank.value]" type="text" class="form-control">
+				</span>
+				<span v-else>
+					{{ blank.value }}
+				</span>
+			</span>
+		</form>
+		<div>
 			<button class="btn btn-primary btn-block" @click="fill" type="submit" :disabled="filledValuesCount !== inputsCount">
 				Je valide
 			</button>
-		</form>
+		</div>
 	</section>
 </template>
 
@@ -61,28 +57,17 @@ module.exports = {
 </script>
 
 <style scoped>
-section {
-	padding: 0px;
-    position: absolute;
-    min-height:100%;
-}
-header {
-	background-color: #1c1840;
-	color: white;
-	padding: 24px;
-	text-align: center;
-	font-weight: bolder;
-	font-size: 1.5em;
-	margin-bottom: 30px;
-}
-
-input {
+	form {
+		flex: 1;
+		padding: 20px 24px;
+	}
+	input {
 		margin:0 0.5em;
 		width: 6em;
 		display: inline-block;
 	}
 
-button {
+	button {
 	text-transform: uppercase;
 	}
 </style>
