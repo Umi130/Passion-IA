@@ -1,5 +1,6 @@
 // Todo : image must be anchored on bottom, not top
 // Todo : don't shift text box for Blanks
+// Todo : votre intelligence artificielle grandit ! when logo changes
 
 // Todo : add close box to go back to main menu
 // Todo : texte devient tableau pour aller à la ligne
