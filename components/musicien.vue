@@ -19,7 +19,7 @@
 <script>
 
 module.exports = {
-	name: 'juriste',
+	name: 'musicien',
 	components: {
 		Explanation: httpVueLoader('./explanation.vue'),
 		Illustration: httpVueLoader('./illustration.vue'),
@@ -37,12 +37,12 @@ module.exports = {
 	},
 	watch: {
 		answers (newVal) {
-			localStorage.setItem('passion-ia-juriste', JSON.stringify(newVal))
+			localStorage.setItem('passion-ia-musicien', JSON.stringify(newVal))
 		}
 	},
 	mounted () {
-		if (localStorage.getItem('passion-ia-juriste')) {
-			this.answers = JSON.parse(localStorage.getItem('passion-ia-juriste'))
+		if (localStorage.getItem('passion-ia-musicien')) {
+			this.answers = JSON.parse(localStorage.getItem('passion-ia-musicien'))
 		}
 	},
 	computed: {
@@ -72,7 +72,7 @@ module.exports = {
 			this.nextStep()
 		},
 		nextStep () {
-			this.$router.push({ path: `/juriste/${this.current + 1}` })
+			this.$router.push({ path: `/musicien/${this.current + 1}` })
 		},
 		displayNextButton(){
 			return ['choices', 'blanks'].indexOf(this.currentStep.type) === -1  && 

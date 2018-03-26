@@ -11,7 +11,8 @@ const musicien = [
 	},
 
 	{
-		message: "Hello World music",
+		title: "Vous écoutez : Hello World",
+		message: "Un morceau composé à l'aide d'une intelligence artificielle.",
 		music: {
 			controls: false,
 			src: "robot-musicien-spotify.mp3"
@@ -70,7 +71,7 @@ const musicien = [
 
 	{
 		title: "Premier test de l'algorithme...",
-		message: "Il vous suffit de rentrer la durée du morceau que vous souhaitez faire composer par {{name}} ainsi que sa tonalité. Vous tentez : 4 minutes et 33 secondes / sol majeur.",
+		message: "Il vous suffit de rentrer la durée du morceau que vous souhaitez faire composer par {{name}} ainsi que sa tonalité. Vous tentez : 4 minutes et 33 secondes & sol majeur.",
 		image: "robot-musicien-bebe.png",
 	},
 
@@ -126,32 +127,87 @@ const musicien = [
 		image: "robot-musicien-bebe.png",
 		when: answers => answers.choice_mode_composition === "Celle de François Pachet",
 	},
-	{
-		title: "Apprendre le solfège",
-		message: "Si vous voulez utiliser des partitions, il faut d’abord apprendre à {{name}} à les lire. Commençons par la base du solfège : les notes.",
-		image: "robot-musicien-bebe.png",
-		when: answers => answers.choice_mode_composition === "Celle de François Pachet",
-	},
 
-//INPUT OLIVIER FERRAND 
+
+//INPUT PORTEES
+//Exercice 1
 	{
-		name: "blanks_emploi_duree1",
-		message: "M. Olivier Ferrand a travaillé",
+		name: "blanks_debut_gamme1",
+		title: "Remplissez le texte à trous",
+		image: "robot-musicien-portee-1.png",
 		blanks: [
+			{
+				"value": "Quelles sont les notes manquantes ?"
+			},
 			{
 				"value": "word_1",
 				"type": "input",
-				"answers": ['pendant', 'durant', 'Pendant', 'Durant']
-			},
-			{
-				"value": " 10 ",
+				"answers": ['Re', 'Ré', 're', 'ré']
 			},
 			{
 				"value": "word_2",
 				"type": "input",
-				"answers": ['ans', 'années', 'Ans', 'Années']
+				"answers": ['Mi', 'mi']
 			},
-		]
+		],	
+		when: answers => answers.choice_mode_composition === "Celle de François Pachet",
+	},
+
+//Si réponse correcte
+	{
+		title: "Bonne réponse !",
+		message: "Vous avez appris à {{name}} à reconnaître ces notes.",
+		image: "robot-musicien-enfant.png",
+
+		when: answers => answers.choice_mode_composition === "Celle de François Pachet" && answers.blanks_debut_gamme1,
+	},
+//Si réponse incorrecte
+	{
+		title: "Mauvaise réponse !",
+		message: "Il fallait répondre Ré & Mi.",
+		image: "robot-musicien-enfant-etonne.png",
+
+		when: answers => answers.choice_mode_composition === "Celle de François Pachet" && !answers.blanks_debut_gamme1,
+	},
+
+//Exercice 2
+	{
+		name: "blanks_debut_gamme2",
+		title: "Remplissez le texte à trous",
+		image: "robot-musicien-portee-2.png",
+		blanks: [
+			{
+				"value": "Quelles sont les notes manquantes ?"
+			},
+			{
+				"value": "word_1",
+				"type": "input",
+				"answers": ['La', 'la']
+			},
+			{
+				"value": "word_2",
+				"type": "input",
+				"answers": ['La', 'la']
+			},
+		],	
+		when: answers => answers.choice_mode_composition === "Celle de François Pachet",
+	},
+
+//Si réponse correcte
+	{
+		title: "Bonne réponse !",
+		message: "Vous avez appris à {{name}} à reconnaître ces notes.",
+		image: "robot-musicien-enfant.png",
+
+		when: answers => answers.choice_mode_composition === "Celle de François Pachet" && answers.blanks_debut_gamme2,
+	},
+//Si réponse incorrecte
+	{
+		title: "Mauvaise réponse !",
+		message: "Il fallait répondre Ré & Mi.",
+		image: "robot-musicien-enfant-etonne.png",
+
+		when: answers => answers.choice_mode_composition === "Celle de François Pachet" && !answers.blanks_debut_gamme2,
 	},
 
 ]
