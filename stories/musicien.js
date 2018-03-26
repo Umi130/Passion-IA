@@ -494,16 +494,39 @@ const musicien = [
 				"points": 1,
 			},
 			{
-				"value": "   ",
+				"value": "  ",
 				"image": "robot-musicien-pochette2.jpg",
 				"points": 1,
 			},
 			{
-				"value": "    ",
+				"value": "   ",
 				"image": "robot-musicien-pochette3.jpg",
 				"points": 1,
 			},
 		],
+	},
+
+	
+// Montrer la bonne pochette
+	{
+		title: "Et voilà le résultat !",
+		image: "robot-musicien-pochette1-dream.jpg",
+
+		when: answers => answers.choix_pochettealbum === " ",
+	},
+		
+	{
+		title: "Et voilà le résultat !",
+		image: "robot-musicien-pochette2-dream.jpg",
+
+		when: answers => answers.choix_pochettealbum === "  ",
+	},
+
+		{
+		title: "Et voilà le résultat !",
+		image: "robot-musicien-pochette3-dream.jpg",
+
+		when: answers => answers.choix_pochettealbum === "   ",
 	},
 
 ]
