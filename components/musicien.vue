@@ -3,6 +3,7 @@
 		<explanation v-if="currentStep.title || currentStep.message" :content="currentStep" :answers="answers"></explanation>
 
 		<illustration v-if="currentStep.image" :content="currentStep"></illustration>
+		<audio-player v-if="currentStep.music" :content="currentStep"></audio-player>
 
 		<choices v-if="currentStep.choices" :content="currentStep" v-on:select="selectChoice" :answers="answers"></choices>
 		<blanks v-if="currentStep.blanks" :content="currentStep" v-on:fill="fillBlanks"></blanks>
@@ -23,7 +24,8 @@ module.exports = {
 		Explanation: httpVueLoader('./explanation.vue'),
 		Illustration: httpVueLoader('./illustration.vue'),
 		Choices: httpVueLoader('./choices.vue'),
-		Blanks: httpVueLoader('./blanks.vue')
+		Blanks: httpVueLoader('./blanks.vue'),
+		AudioPlayer: httpVueLoader('./audio-player.vue')
 	},
 	data () {
 		return {

@@ -12,7 +12,7 @@ const musicien = [
 
 	{
 		message: "Hello World music",
-		image: "illust-musicien-spotify.jpg",
+		music: "robot-musicien-spotify.mp3",
 	},
 
 	{
