@@ -1,10 +1,8 @@
 <template>
 	<main>
-		<header>
-			<explanation v-if="currentStep.type === 'explanation'" :content="currentStep" :answers="answers"></explanation>
-		</header>
+		<explanation v-if="currentStep.type === 'explanation'" :content="currentStep" :answers="answers"></explanation>
 
-//		<illustration class="container-fluid" v-if="currentStep.type === 'illustration'" :content="currentStep"></illustration>
+		<illustration v-if="currentStep.image" :content="currentStep"></illustration>
 
 		<choices class="container-fluid" v-if="currentStep.type === 'choices'" :content="currentStep" v-on:select="selectChoice" :answers="answers"></choices>
 		<blanks class="container-fluid" v-if="currentStep.type === 'blanks'" :content="currentStep" v-on:fill="fillBlanks"></blanks>
