@@ -59,15 +59,18 @@ const juriste = [
 		choices: [
 			{
 				"value": "Ross",
-				"description": "Robot juriste star aux États-Unis"
+				"description": "Robot juriste star aux États-Unis",
+				"points": 0
 			},
 			{
 				"value": "Agatha",
-				"description": "Personnage pré-cognitif de Minority Report"
+				"description": "Personnage pré-cognitif de Minority Report",
+				"points": 0
 			},
 			{
 				"value": "Justum",
-				"description": "Nominatif neutre : ce qui est juste en latin"
+				"description": "Nominatif neutre : ce qui est juste en latin",
+				"points": 1
 			}
 		]
 	},
@@ -122,7 +125,7 @@ const juriste = [
 				"value": "Uniquement des décisions similaires",
 				"description": "1 500 décisions prises par vous et vos collègues dans des cas similaires depuis le changement de la loi en septembre 2017",
 			},
-			]
+		]
 	},
 
 //Si choix - Tous les articles de loi

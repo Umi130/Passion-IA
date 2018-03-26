@@ -4,7 +4,7 @@
 		<p class="message">{{ formattedMessage }}</p>
 	</header>
 		<div class="choices d-flex flex-column">
-			<div class="choice d-flex flex-column justify-content-center" v-for="choice in content.choices" :key="choice.value" @click="$emit('select', { name: content.name, value: choice.value })">
+			<div class="choice d-flex flex-column justify-content-center" v-for="choice in content.choices" :key="choice.value" @click="$emit('select', { name: content.name, value: choice.value, points: choice.points })">
 				<h4>{{ choice.value }}</h4>
 				<p v-if="choice.description">{{ choice.description }}</p>
 			</div>
