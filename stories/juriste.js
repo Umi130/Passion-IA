@@ -46,7 +46,7 @@ const juriste = [
 		image: "robot-juriste-bebe.png",
 	},
 
-		{
+	{
 		type: "explanation",
 		message: "Ce ne sont que quelques lignes de code, mais vous vous prenez déjà d'affection pour ce super-assistant qui va faire diminuer la pile de dossiers sur votre bureau. Vous décidez de lui donner un prénom.",
 		image: "robot-juriste-bebe.png"
@@ -100,12 +100,12 @@ const juriste = [
 		title: "Vous demandez conseil.",
 		message: "Jacques Levy Vehel, le co-fondateur de Case Law Analytics, vous assiste.",
 			image: "experts-juriste-vehel.jpg",
-},
-{
+	},
+	{
 		type: "explanation",
 		message:"«L'intelligence artificielle calcule ces probabilités grâce à un algorithme: à condition qu'on lui donne assez d'exemples, elle pourra simuler les différentes décisions possibles pour un cas particulier.»",
 			image: "experts-juriste-vehel.jpg",
-}, 
+	}, 
 
 	{
 		type: "explanation",
