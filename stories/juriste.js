@@ -1,16 +1,19 @@
-// Todo : image must be anchored on bottom, not top
-// Todo : don't shift text box for Blanks
+// Tech todo: obsolete illustration.vue
+
+// Todo: fond couleur différent programmatique quand faux
+//       (container d-flex flex-column justify-content-center align-items-center)
+
+// Todo: compte bonne réponses à incrémenter, then show as percentage
+
+// Todo : Blanks to finish (don't shift text box)
 // Todo : votre intelligence artificielle grandit ! when logo changes
+// Todo : valign image robot (image must be anchored on bottom, not top)
+// Todo : bouton SUIVANT ancré en bas
 
 // Todo : add close box to go back to main menu
-// Todo : texte devient tableau pour aller à la ligne
-// Todo : bouton SUIVANT ancré en bas
-// Illustration: Taille images variable desktop/smartphone?
 
-// Explanation: fond couleur différent programmatique quand faux (container d-flex flex-column justify-content-center align-items-center)
-// Quand il y a résultat : i; faudrait que ce soit dans une bulle qui sort de la bouche du robot, pour séparer le résultat de l'explication qui suit. 
-// 
-// 
+// Optional Todo : texte devient tableau pour aller à la ligne
+// Optional Todo: Illustrations -- Taille images variable desktop/smartphone?
 
 const juriste = [
 	{
