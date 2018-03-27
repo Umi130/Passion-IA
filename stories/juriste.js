@@ -70,7 +70,7 @@ const juriste = [
 	{
 		title: "Premier dossier",
 		message: "Mme Laurent a été victime d'un licenciement abusif après avoir travaillé cinq ans dans un petit magasin.",
-		image: "robot-juge-marteau-anime.gif",
+		image: "robot-juriste-marteau-anime.gif",
 //		when: answers => answers.name !== 'Justum'
 	},
 	
@@ -118,7 +118,7 @@ const juriste = [
 	{	
 		title: "Deuxième dossier",
 		message: "Vous soumettez un dossier de votre pile pour tester {{ name }}. M. Husson a été victime d'un licenciement abusif après avoir travaillé 10 ans dans une entreprise de télécommunication.",
-		image: "robot-juge-marteau-anime.gif",
+		image: "robot-juriste-marteau-anime.gif",
 		when: answers => answers.choice_premiereslois === 'Tous les articles de loi'
 	},
 
@@ -148,7 +148,7 @@ const juriste = [
 	{	
 		title: "Deuxième dossier",
 		message: "M. Husson a été victime d'un licenciement abusif après avoir travaillé 10 ans dans une entreprise de télécommunication.",
-		image: "robot-juge-marteau-anime.gif",
+		image: "robot-juriste-marteau-anime.gif",
 		when: answers => answers.choice_premiereslois !== 'Tous les articles de loi',
 	},
 
@@ -280,7 +280,7 @@ const juriste = [
 	{
 		title: "Une tâche longue et fastidieuse...",
 		message: "C'est la partie «humaine» de l'intelligence artificielle. Selon la taille de la base de données, l'opération peut prendre plusieurs jours, voire plusieurs semaines.",
-		image: "robot-juge-marteau-anime.gif",	
+		image: "robot-juriste-marteau-anime.gif",	
 	},
 
 
@@ -350,7 +350,7 @@ const juriste = [
 	{
 		title: "Votre algorithme est maintenant bien entraîné !",
 		message:"Vous lui soumettez un nouveau dossier : M. Olivier a été victime d'un licenciement abusif après avoir travaillé pendant 1 an dans une start-up.", 
-		image: "robot-juge-marteau-anime.gif",
+		image: "robot-juriste-marteau-anime.gif",
 	},
 
 ////////////////

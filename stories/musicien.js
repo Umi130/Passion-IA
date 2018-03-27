@@ -1,8 +1,9 @@
 
 const musicien = [
 	{
-		message: "ADD SOUND ICON Pour la suite de ce parcours, nous vous conseillons d'activer le son.",
-		image: "robot-musicien-bebe.png",
+		title: "Ce parcours utilise de la musique"
+		message: "Nous vous conseillons d'activer le son ou d'utiliser des écouteurs.",
+		image: "element-son.png",
 	},
 
 	{
