@@ -1,14 +1,16 @@
 
 const musicien = [
 	{
+		message: "ADD SOUND ICON Pour la suite de ce parcours, nous vous conseillons d'activer le son.",
+		image: "robot-musicien-bebe.png",
+	},
+
+	{
 		title: "Vous êtes un musicien...",
 		message: "et plus rien ne vous inspire, pas même votre dernière rupture amoureuse. C’est le syndrome de la page blanche. Vous traînez sur Spotify en quête d’inspiration et tombez par hasard sur l’album Hello World.",
 		image: "robot-musicien-bebe.png",
 	},
-	{
-		message: "Pour la suite de ce parcours, nous vous recommandons d'activer le son.",
-		image: "robot-musicien-bebe.png",
-	},
+
 
 	{
 		title: "Vous écoutez : Hello World",

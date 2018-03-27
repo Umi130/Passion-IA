@@ -10,9 +10,9 @@
 			</router-link>
 		</section>
 		<footer class="d-flex justify-content-around text-center" id="parcours">
-			<div :class="{ active: story === 'voiture' }" @click="story = 'voiture'">
-				<p><img :src="imageFor('voiture')" alt="Symbole Voiture" class="img-fluid"/></p>
-				<p>Voiture</p>
+			<div :class="{ active: story === 'conducteur' }" @click="story = 'conducteur'">
+				<p><img :src="imageFor('conducteur')" alt="Symbole Conducteur" class="img-fluid"/></p>
+				<p>Conducteur</p>
 			</div>
 			<div :class="{ active: story === 'musicien' }" @click="story = 'musicien'">
 				<p><img :src="imageFor('musicien')" alt="Symbole Musicien" class="img-fluid" /></p>
