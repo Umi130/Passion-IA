@@ -1,7 +1,7 @@
 
 const musicien = [
 	{
-		title: "Ce parcours utilise de la musique"
+		title: "Ce parcours utilise de la musique",
 		message: "Nous vous conseillons d'activer le son ou d'utiliser des écouteurs.",
 		image: "element-son.png",
 	},
