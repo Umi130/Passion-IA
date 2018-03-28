@@ -1,8 +1,8 @@
 <template>
 	<main>
 		<header class="container text-center mt-4">
-				<h1>L'école des IA</h1>
-				<p class="lead">Tentez d’amener votre bébé IA le plus loin possible.</p>
+				<h1>L'école des Intelligences Artificielles</h1>
+				<p class="lead">Choisissez un profil :</p>
 		</header>
 		<section class="container text-center d-flex flex-column justify-content-end" id="robot-image":style="{ 'background-image': story === null ? 'url(./assets/images/Robot.png)' : 'url(' + storyImage + ')'  }">
 			<router-link :to="storyLink" class="btn btn-primary" v-if="story !== null">

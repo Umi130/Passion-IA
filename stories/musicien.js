@@ -15,7 +15,7 @@ const musicien = [
 
 	{
 		title: "Vous écoutez : Hello World",
-		message: "Un morceau composé à l'aide d'une intelligence artificielle.",
+		message: "Une chanson composée à l'aide d'une intelligence artificielle.",
 		music: {
 			controls: true,
 			src: "robot-musicien-spotify.mp3"
@@ -23,8 +23,8 @@ const musicien = [
 	},
 
 	{
-		title: "Composé à l'aide d'une intelligence artificielle ?",
-		message: "La chanson Hello World ressemble pourtant au style de Stromae. Vous faites une petite recherche...",
+		title: "Hello World, chanson composée à l'aide d'une intelligence artificielle ?",
+		message: "Elle ressemble pourtant au style de Stromae. Vous faites une petite recherche...",
 		image: "illust-musicien-stromae.jpg",
 	},
 
