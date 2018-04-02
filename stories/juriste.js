@@ -98,11 +98,6 @@ const juriste = [
 		message:"«L'intelligence artificielle calcule ces probabilités grâce à un algorithme: à condition qu'on lui donne assez d'exemples, elle pourra simuler les différentes décisions possibles pour un cas particulier.»",
 			image: "experts-juriste-vehel.jpg",
 	}, 
-
-	{
-		message: "Votre algorithme a donc besoin de plus de précisions quant aux critères qui motivent votre décision.",
-		image: "robot-juriste-bebe.png",
-	},
 	{
 		name: "choice_premiereslois",
 		message: "Vous choisissez de nourrir {{ name }} avec :",
@@ -186,7 +181,11 @@ const juriste = [
 		image: "robot-juriste-enfant.png",
 	},
 	{
-		message: "C'est en multipliant les exemples que {{name}} finit par comprendre où se situe l'information-clé dans une phrase, en fonction des mots qui l'entourent. Pour nos dossiers, {{ name }}  doit repérer l'ancienneté d'un salarié dans l'entreprise, critère décisif pour définir le montant des indemnités. On essaye ?",
+		message: "C'est en multipliant les exemples que {{name}} finit par comprendre où se situe l'information-clé dans une phrase, en fonction des mots qui l'entourent.",
+		image: "robot-juriste-enfant.png",
+	},
+	{
+		message: "Pour nos dossiers, {{ name }}  doit repérer l'ancienneté d'un salarié dans l'entreprise, critère décisif pour définir le montant des indemnités. On essaye ?",
 		image: "robot-juriste-enfant.png",
 	},
 
@@ -555,7 +554,7 @@ const juriste = [
 	},
 
 	{
-		message: "En fonction de vos réponses tout au long de l’éducation de (NOM), essayons de voir si vous avez adopté les bons réflexes.",
+		message: "En fonction de vos réponses tout au long de l’éducation de {{name}}, essayons de voir si vous avez adopté les bons réflexes.",
 	},
 
 	//Score mauvaise attitude --> Mini nouvelle sur l'avenir pessimiste de l'IA dans la justice 
