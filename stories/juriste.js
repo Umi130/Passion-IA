@@ -201,7 +201,7 @@ const juriste = [
 			{
 				"value": "word_1",
 				"type": "input",
-				"answers": ['pendant', 'durant', 'Pendant', 'Durant']
+				"answers": ['pendant', 'durant', 'Pendant', 'Durant', 'pendant ', 'durant ', 'Pendant ', 'Durant ']
 			},
 			{
 				"value": " 10 ",
@@ -209,21 +209,21 @@ const juriste = [
 			{
 				"value": "word_2",
 				"type": "input",
-				"answers": ['ans', 'années', 'Ans', 'Années']
+				"answers": ['ans', 'années', 'Ans', 'Années', 'ans ', 'années ', 'Ans ', 'Années ']
 			},
 		]
 	},
 //Si réponse correcte
 	{
 		title: "Bonne réponse !",
-		message: "Ici, l'information-clé est le nombre d'années passées dans l'entreprise. Pour repérer cette information, qui varie selon les salariés, {{name}} doit identifier les mots contextuels 'pendant' et 'ans' qui précèdent et suivent cette information.",
+		message: "Ici, l'information-clé est le nombre d'années passées dans l'entreprise. Pour repérer cette information, qui varie selon les salariés, {{name}} doit identifier les mots contextuels «pendant» et «ans» qui précèdent et suivent cette information.",
 		image: "robot-juriste-enfant.png",
 		when: answers => answers.blanks_emploi_duree1 
 	},
 //Si réponse incorrecte
 	{
 		title: "Mauvaise réponse !",
-		message: "Ici, l'information-clé est le nombre d'années passées dans l'entreprise. Pour repérer cette information, qui varie selon les salariés, {{name}} doit reconnaître les mots contextuels 'pendant' et 'ans' qui précèdent et suivent cette information.",
+		message: "Ici, l'information-clé est le nombre d'années passées dans l'entreprise. Pour repérer cette information, qui varie selon les salariés, {{name}} doit reconnaître les mots contextuels «pendant» et «ans» qui précèdent et suivent cette information.",
 		image: "robot-juriste-enfant-etonne.png",
 		when: answers => !answers.blanks_emploi_duree1 
 	},
@@ -236,7 +236,7 @@ const juriste = [
 			{
 				"value": "word_1",
 				"type": "input",
-				"answers": ['embauchée', 'engagée', 'recrutée', 'Embauchée', 'Engagée', 'Recrutée']
+				"answers": ['embauchée', 'engagée', 'recrutée', 'Embauchée', 'Engagée', 'Recrutée', 'embauchée ', 'engagée ', 'recrutée ', 'Embauchée ', 'Engagée ', 'Recrutée ']
 			},
 			{
 				"value": " dans l'entreprise en 2013.",
@@ -246,14 +246,14 @@ const juriste = [
 //Si réponse correcte
 	{
 		title: "Bonne réponse !",
-		message: "Ici, trois réponses étaient possibles : 'embauchée', 'recrutée' ou 'engagée'. Plus il y a de manières d'exprimer une idée, plus {{name}} mettra du temps à reconnaître l'information.",
+		message: "Ici, trois réponses étaient possibles : «embauchée», «recrutée» ou «engagée». Plus il y a de manières d'exprimer une idée, plus {{name}} mettra du temps à reconnaître l'information.",
 		image: "robot-juriste-enfant.png",
 		when: answers => answers.blanks_emploi_duree2 
 	},
 //Si réponse incorrecte
 	{
 		title: "Mauvaise réponse !",
-		message: "Ici, trois réponses étaient possibles : 'embauchée', 'recrutée' ou 'engagée'. Plus il y a de manières d'exprimer une idée, plus {{name}} mettra du temps à reconnaître l'information.",
+		message: "Ici, trois réponses étaient possibles : «embauchée», «recrutée» ou «engagée». Plus il y a de manières d'exprimer une idée, plus {{name}} mettra du temps à reconnaître l'information.",
 		image: "robot-juriste-enfant-etonne.png",
 		when: answers => !answers.blanks_emploi_duree2 
 },
@@ -261,7 +261,7 @@ const juriste = [
 //Si toutes réponses correctes
 	{
 		title: "Bravo !",
-		message: "Le taux d'erreur de {{name}} est inférieur à 15%, vous pourrez donc économiser de longues heures d'étiquetage manuel de vos données. Vous avez maintenant une base de données suffisamment complète pour que {{name}} puisse 'prédire' la probabilité des différents jugements pour un nouveau dossier.",
+		message: "Le taux d'erreur de {{name}} est inférieur à 15%, vous pourrez donc économiser de longues heures d'étiquetage manuel de vos données. Vous avez maintenant une base de données suffisamment complète pour que {{name}} puisse «prédire» la probabilité des différents jugements pour un nouveau dossier.",
 		when: answers => answers.blanks_emploi_duree1 && answers.blanks_emploi_duree2,
 		image: "robot-juriste-ado.png",
 	},
@@ -339,7 +339,7 @@ const juriste = [
 //Réponse correcte 3
 	{
 		title: "Bravo !",
-		message: "Depuis 2017, les indemnités diffèrent en fonction du nombre de salarié dans l'entreprise. Il faut donc augmenter le poid de ce critère lorsque {{name}} apprend à reconnaître les informations clés d’un dossier.",
+		message: "Depuis 2017, les indemnités diffèrent en fonction du nombre de salarié dans l'entreprise. Il faut donc augmenter le poids de ce critère lorsque {{name}} apprend à reconnaître les informations clés d’un dossier.",
 		image: "robot-juriste-ado.png",
 		when: answers => answers.choice_critereneglige === 'Nombre de salariés dans entreprise',
 	},
@@ -547,7 +547,7 @@ const juriste = [
 	},
 
 	{
-		message: "Le député Cedric Villani a écrit un rapport intitulé “Donner un sens à l’intelligence artificielle” Ces quelques 240 pages recommandent la création d’un corps d’experts qui pourrait être saisi pour enquêter sur une prise de décision algorithmique.",
+		message: "Le député Cédric Villani a écrit un rapport intitulé «Donner un sens à l’intelligence artificielle». Ces quelques 240 pages recommandent la création d’un corps d’experts qui pourrait être saisi pour enquêter sur une prise de décision algorithmique.",
 		image: "robot-juriste-adulte.png",
 	},
 	{
