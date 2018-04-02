@@ -547,7 +547,7 @@ const juriste = [
 	},
 
 	{
-		message: "Le député Cedric Villani a écrit un rapport intitulé “Donner un sens à l’intelligence artificielle” Ces quelques 240 pages recommandent la création d’un corps d’experts qui pourrait être saisi pour enquêter sur une prise de décision algorithmique.",
+		message: "Le député Cédric Villani a écrit un rapport intitulé “Donner un sens à l’intelligence artificielle”. Ces quelques 240 pages recommandent la création d’un corps d’experts qui pourrait être saisi pour enquêter sur une prise de décision algorithmique.",
 		image: "robot-juriste-adulte.png",
 	},
 	{
