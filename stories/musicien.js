@@ -32,7 +32,7 @@ const musicien = [
 
 	{
 		title: "Vous décidez de créer une musique en vous aidant d'une IA.",
-		message: "Vous contactez Robin Meier, un musicien qui utilise des programmes informatiques pour composer. Pour la musique du spectacle La Fabrique des Monstres, il a utilisé un algorithme en accès libre sur internet.",
+		message: "Vous contactez Robin Meier, un musicien qui utilise des programmes informatiques pour composer. Pour la musique du spectacle «La Fabrique des Monstres», il a utilisé un algorithme en accès libre sur Internet.",
 		image: "experts-musicien-meier.jpg",
 	},
 
@@ -259,7 +259,7 @@ const musicien = [
 //Fin du premier mini jeu
 	{
 		title: "Programmation achevée !",
-		message: "Les gammes, les intervalles et les bémols n’ont plus aucun secret pour {{name}}. Vous pouvez lui soumettre une première base de données et il s’en inspirera pour composer un morceau dans le même style.",
+		message: "Les gammes, les intervalles et les bémols n’ont plus aucun secret pour {{name}}. Vous pouvez lui soumettre une première base de données et l'IA s’en inspirera pour composer un morceau dans le même style.",
 		image: "robot-musicien-bebe.png",
 
 		when: answers => answers.choice_mode_composition === "Celle de François Pachet",
@@ -689,9 +689,10 @@ const musicien = [
 			{
 				"value": "word_1",
 				"type": "input",
-				"answers": ['chat', 'Chat', 'chat ', 'Chat ']
+				"answers": ['chat', 'Chat', 'chat ', 'Chat '],
 			},
-		]
+		],
+		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
 	},
 // Bonne réponse
 	{	
@@ -723,7 +724,7 @@ const musicien = [
 			{
 				"value": "word_1",
 				"type": "input",
-				"answers": ['aspirateur', 'Aspirateur', 'aspirateur ', 'Aspirateur ']
+				"answers": ['aspirateur', 'Aspirateur', 'aspirateur ', 'Aspirateur '],
 			},
 		]
 	},
@@ -757,9 +758,10 @@ const musicien = [
 			{
 				"value": "word_1",
 				"type": "input",
-				"answers": ['pluie', 'Pluie', 'pluie ', 'Pluie ']
+				"answers": ['pluie', 'Pluie', 'pluie ', 'Pluie '],
 			},
-		]
+		],
+		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
 	},
 // Bonne réponse
 	{	
@@ -807,14 +809,14 @@ const musicien = [
 	},
 
 	{
-		message: "Pour son projet «La fabrique de monstres», Robin Meier a mixé l’intégrale d’une chanteuse soprano, des livres audio pour la voix parlée, et des bandes-son de films pour les bruitages.",
+		message: "Pour son projet «La Fabrique des Monstres», Robin Meier a mixé l’intégrale d’une chanteuse soprano, des livres audio pour la voix parlée, et des bandes-son de films pour les bruitages.",
 		image: "experts-musicien-meier.jpg",
 		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
 	},
 
 	{
 		title: "On écoute le résultat ?",
-		message: "Vous écoutez «La fabrique de monstres» de Robin Meier.",
+		message: "Vous écoutez «La Fabrique des Monstres» de Robin Meier.",
 		music: {
 			controls: true,
 			src: "robot-musicien-meier.mp3",
@@ -952,8 +954,94 @@ const musicien = [
 	},
 
 	{
-		message: "Il est maintenant temps de lister les noms que vous allez mentionner dans les crédits de l’album.",
+		title: "La SACEM n'a pour l'instant pas pris position",
+		message: "sur les questions de droits d’auteur liées à la création avec l’intelligence artificielle. Pour le moment, le détenteur des droits ne peut être qu’une personne physique. Mais ce n’est pas pour autant que l’algorithme ne doit pas être reconnu dans le processus de création.",
+		image: "experts-musicien-sacem.jpg",
+	},	
+
+	{
+		message: "Sans compter que le label «intelligence artificielle» attise souvent la curiosité des amateurs de musique.",
 		image: "robot-musicien-adulte.png",
 	},	
 
+// Bon album: montrer la bonne pochette
+	{
+		title: "Votre album remporte un succès immédiat !",
+		message: "Plusieurs producteurs vous contactent. Votre algorithme permettrait en effet de réduire considérablement les coûts de production d’un morceau.",
+		image: "robot-musicien-pochette1-dream.jpg",
+
+		when: answers => answers.choix_pochettealbum === " ",
+	},
+		
+	{
+		title: "Votre album remporte un succès immédiat !",
+		message: "Plusieurs producteurs vous contactent. Votre algorithme permettrait en effet de réduire considérablement les coûts de production d’un morceau.",
+		image: "robot-musicien-pochette2-dream.jpg",
+
+		when: answers => answers.choix_pochettealbum === "  ",
+	},
+
+		{
+		title: "Votre album remporte un succès immédiat !",
+		message: "Plusieurs producteurs vous contactent. Votre algorithme permettrait en effet de réduire considérablement les coûts de production d’un morceau.",
+		image: "robot-musicien-pochette3-dream.jpg",
+
+		when: answers => answers.choix_pochettealbum === "   ",
+	},
+// Bon album: montrer la bonne pochette
+
+
+/////////////////////////
+//CHOIX RADIO COMPOSITION
+/////////////////////////
+
+	{
+		name: "musicien_commanderadio",
+		title: "Vous recevez une commande d’une radio",
+		message: "pour produire une centaine de chansons à partir des goûts de ses auditeurs.",
+		choices: [
+			{
+				"value": "Vous l’acceptez",
+				"description": "",
+				"points": 0
+			},
+			{
+				"value": "Vous la refusez",
+				"description": "",
+				"points": 1
+			},
+			]
+	},
+
+
+////////////
+//CHOIX RADIO COMPOSITION:
+//Chemin accepté
+////////////
+
+	{
+		title: "Avec l’IA, plus besoin d’être musicien pour composer de la musique",
+		message: "De plus, cette proposition n’est pas très valorisante pour votre profession : elle part du principe que vous pouvez composer de manière automatique.",
+		image: "robot-musicien-adulte-etonne.png",
+		when: answers => answers.musicien_commanderadio === "Vous l’acceptez",
+	},
+	{
+		title: "Avec l’IA, plus besoin d’être musicien pour composer de la musique",
+		message: "«On pourrait très bien alimenter une base de données et faire de la musique au kilomètre pour des supermarchés et des films commerciaux, c’est facile. On pourrait acheter des morceaux pour quelques dollars sans connaître l’algorithme en détail», précise Robin Meyer.",
+		image: "experts-musicien-meier.jpg",
+		when: answers => answers.musicien_commanderadio === "Vous l’acceptez",
+	},
+	{
+		title: "Attention aussi à la contrainte imposée par le producteur",
+		message: "Composer de la musique uniquement en fonction des goûts des auditeurs pourrait conduire à une uniformisation des musiques diffusées à la radio. L’intérêt d’écouter une radio est aussi de pouvoir découvrir de nouveaux styles.",
+		image: "robot-musicien-adulte-etonne.png",
+		when: answers => answers.musicien_commanderadio === "Vous l’acceptez",
+	},	
+
+////////////
+//CHOIX RADIO COMPOSITION:
+//Chemin refusé
+////////////
+
 ]
+
