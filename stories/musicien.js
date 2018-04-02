@@ -450,11 +450,176 @@ const musicien = [
 		when: answers => answers.choice_mode_composition === "Celle de François Pachet",
 	},
 
-		{
+	{
 		message: "Comme François Pachet l’expliquait sur France Culture, la partition produite par l’algorithme a besoin d’être réarrangée et retravaillée. Pour l’album Hello World, les compositeurs et artistes ont activement participé à la finalisation des chansons.",
 		image: "experts-musicien-pachet.jpg",
 
 		when: answers => answers.choice_mode_composition === "Celle de François Pachet",
+	},
+
+
+////////////////////////////
+///CHEMIN ROBIN MEIER    ///
+////////////////////////////
+
+	{
+		title: "Analyse des ondes sonores",
+		message: "Pour que {{name}} puisse manier des sons à sa guise, il doit apprendre à analyser les ondes sonores. Cela passe par un processus complexe de numérisation de ces ondes.",
+		image: "robot-musicien-bebe.png",
+		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
+	},
+
+	{
+		message: "Il faut d’abord que {{name}} apprenne des sons existants. En leur attribuant un label, on pourra ensuite mélanger plusieurs ondes pour créer de nouveaux sons.",
+		image: "robot-musicien-bebe.png",
+		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
+	},
+
+	{
+		message: "Commençons par apprendre à {{name}} à reconnaître le son des instruments.",
+		image: "experts-musicien-instruments.jpg",
+		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
+	},
+
+////////////////////////////////
+//JEU RECONNAITRE INSTRUMENTS //
+////////////////////////////////
+
+//Jeu instruments 1/3
+	{
+		name: "choix_nominstrument1",
+		title: "Quel instrument produit ce son ?",
+		music: {
+			controls: true,
+			src: "robot-musicien-son-clarinette.mp3",
+		},
+		choices: [
+			{
+				"value": "Une flûte",
+				"description": "",
+				"points": 0,
+			},
+			{
+				"value": "Un hautbois",
+				"description": "",
+				"points": 0,
+			},
+			{
+				"value": "Une clarinette",
+				"description": "",
+				"points": 1,
+			}
+		],
+		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
+	},
+// Bonne ou mauvaise réponse jeu instruments 1
+	{
+		title: "Bravo !",
+		message: "C'était bien le son d'une clarinette.",
+		image: "robot-musicien-bebe.png",
+		when: answers => answers.choice_mode_composition === "Celle de Robin Meier" && answers.choix_nominstrument1 === "Une clarinette",
+	},
+	{
+		title: "Mauvaise réponse !",
+		message: "C'était le son d'une clarinette...",
+		image: "robot-musicien-bebe-etonne.png",
+		when: answers => answers.choice_mode_composition === "Celle de Robin Meier" && answers.choix_nominstrument1 !== "Une clarinette",
+	},
+
+// Jeu instruments 2/3
+	{
+		name: "choix_nominstrument2",
+		title: "Quel instrument produit ce son ?",
+		music: {
+			controls: true,
+			src: "robot-musicien-son-harpe.mp3",
+		},
+		choices: [
+			{
+				"value": "Une guitare",
+				"description": "",
+				"points": 0,
+			},
+			{
+				"value": "Une harpe",
+				"description": "",
+				"points": 1,
+			},
+			{
+				"value": "Un piano",
+				"description": "",
+				"points": 0,
+			}
+		],
+		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
+	},
+// Bonne ou mauvaise réponse jeu instruments 2
+	{
+		title: "Bravo !",
+		message: "C'était bien le son d'une harpe.",
+		image: "robot-musicien-bebe.png",
+		when: answers => answers.choice_mode_composition === "Celle de Robin Meier" && answers.choix_nominstrument2 === "Une harpe",
+	},
+	{
+		title: "Mauvaise réponse !",
+		message: "C'était le son d'une harpe...",
+		image: "robot-musicien-bebe-etonne.png",
+		when: answers => answers.choice_mode_composition === "Celle de Robin Meier" && answers.choix_nominstrument2 !== "Une harpe",
+	},
+
+// Jeu instruments 3/3
+	{
+		name: "choix_nominstrument3",
+		title: "Quel instrument produit ce son ?",
+		music: {
+			controls: true,
+			src: "robot-musicien-son-cor.mp3",
+		},
+		choices: [
+			{
+				"value": "Une trompette",
+				"description": "",
+				"points": 0,
+			},
+			{
+				"value": "Un cor",
+				"description": "",
+				"points": 1,
+			},
+			{
+				"value": "Un trombone",
+				"description": "",
+				"points": 0,
+			}
+		],
+		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
+	},
+// Bonne ou mauvaise réponse jeu instruments 3
+	{
+		title: "Bravo !",
+		message: "C'était bien le son d'un cor.",
+		image: "robot-musicien-bebe.png",
+		when: answers => answers.choice_mode_composition === "Celle de Robin Meier" && answers.choix_nominstrument3 === "Un cor",
+	},
+	{
+		title: "Mauvaise réponse !",
+		message: "C'était le son d'un cor...",
+		image: "robot-musicien-bebe-etonne.png",
+		when: answers => answers.choice_mode_composition === "Celle de Robin Meier" && answers.choix_nominstrument3 !== "Un cor",
+	},
+
+// CONCLUSION DU JEU INSTRUMENTS
+// Bonne réponse
+	{	title: "C'est un succès !",
+		message: "Vous avez pu vous constituer une bibliothèque de sons que vous allez pouvoir mélanger pour créer de nouveaux instruments.",
+		image: "robot-musicien-bebe-etonne.png",
+		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
+	},
+// Mauvaise réponse
+	{	title: "C'est un succès !",
+		message: "Vous avez pu vous constituer une bibliothèque de sons que vous allez pouvoir mélanger pour créer de nouveaux instruments.",
+		image: "robot-musicien-bebe-etonne.png",
+		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
 	},
 
 

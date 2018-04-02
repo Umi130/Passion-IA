@@ -255,6 +255,7 @@ const juriste = [
 		title: "Mauvaise réponse !",
 		message: "Ici, trois réponses étaient possibles : 'embauchée', 'recrutée' ou 'engagée'. Plus il y a de manières d'exprimer une idée, plus {{name}} mettra du temps à reconnaître l'information.",
 		image: "robot-juriste-enfant-etonne.png",
+		when: answers => !answers.blanks_emploi_duree2 
 },
 
 //Si toutes réponses correctes
@@ -299,8 +300,9 @@ const juriste = [
 
 //TODO TABLEAU
 	{
-		message: "Mme Petit : 29 ans, 10 ans d'ancienneté, ouvrière, entreprise de 10 salariés. Indemnité selon l'IA : 2,5 mois de salaire brut. M. Martin : 62 ans, 10 ans d'ancienneté, cadre technique, entreprise de 25 salariés. Indemnité selon le corpus de décisions témoin : 3 mois de salaire brut.",
-		image: "robot-juriste-ado.png",
+		title: "Voici deux dossiers similaires... En apparence.",
+//		message: "Mme Petit : 29 ans, 10 ans d'ancienneté, ouvrière, entreprise de 10 salariés. Indemnité selon l'IA : 2,5 mois de salaire brut. M. Martin : 62 ans, 10 ans d'ancienneté, cadre technique, entreprise de 25 salariés. Indemnité selon le corpus de décisions témoin : 3 mois de salaire brut.",
+		image: "robot-juriste-dossier-analyse.png",
 	},
 	{
 		title: "Le montant des indemnités est différent...",
