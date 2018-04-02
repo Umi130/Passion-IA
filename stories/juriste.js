@@ -18,20 +18,20 @@
 const juriste = [
 	{
 		title: "Vous êtes assis·e à votre bureau...",
-		message: "Vous contemplez la centaine de dossiers en attente de jugement. Vous êtes notamment en charge des recours en cas de licenciement abusif.",
+		message: "Vous contemplez la centaine de dossiers en attente de jugement. Vous êtes en charge des affaires de recours en cas de licenciement abusif.",
 		image: "robot-juriste-bebe.png",
 	},
 	{
-		message: "Comme la plupart des tribunaux français, le vôtre est encombré. Vous avez entendu parler d'outils d'intelligence artificielle pour traiter plus rapidement des dossiers.",
+		message: "Comme la plupart des tribunaux français, le vôtre est encombré. Vous avez entendu parler d'outils d'intelligence artificielle (IA) pour traiter plus rapidement des dossiers.",
 		image: "robot-juriste-bebe.png",
 	},
 	{
-		message: "Vous vous inspirez de Case Law Analytics et de Predictice, deux entreprises françaises qui proposent ce genre de services à des avocats. Vous vous associez avec un ingénieur pour écrire un algorithme adapté aux magistrats.",
+		message: "Vous vous inspirez de Case Law Analytics et de Predictice, deux entreprises françaises qui proposent des outils d'IA à des avocats. Vous vous associez avec un ingénieur pour écrire un algorithme adapté aux magistrats.",
 		image: "robot-juriste-bebe.png",
 	},
 	{
 		title: "Qu'est-ce qu'un algorithme ?",
-		message: "Ce sont les instructions qui commandent un programme informatique. C'est un peu comme une recette de cuisine. Les ingrédients sont les données ; votre plat, ce sont les différents jugements.",
+		message: "Ce sont les instructions qui commandent un programme informatique. C'est un peu comme une recette de cuisine. Les ingrédients sont les données des dossiers ; votre plat, ce sont les différents jugements.",
 		image: "robot-juriste-bebe.png",
 	},
 	{
@@ -66,6 +66,10 @@ const juriste = [
 			}
 		]
 	},
+	{
+		message: "Vous décidez de tester votre algorithme en lui soumettant un premier dossier.",
+		image: "robot-juriste-bebe.png"
+	},
 
 	{
 		title: "Premier dossier",
@@ -87,8 +91,8 @@ const juriste = [
 	},
 	{
 		title: "Vous demandez conseil.",
-		message: "Jacques Levy Vehel, le co-fondateur de Case Law Analytics, vous assiste.",
-			image: "experts-juriste-vehel.jpg",
+		message: "L'algorithme a besoin de plus de précisions quant aux critères qui motivent votre décision. Jacques Levy Vehel, le co-fondateur de Case Law Analytics, vous assiste.",
+					image: "experts-juriste-vehel.jpg",
 	},
 	{
 		message:"«L'intelligence artificielle calcule ces probabilités grâce à un algorithme: à condition qu'on lui donne assez d'exemples, elle pourra simuler les différentes décisions possibles pour un cas particulier.»",
@@ -105,7 +109,7 @@ const juriste = [
 		choices: [
 			{
 				"value": "Tous les articles de loi",
-				"description": "Quelque 11 000 articles du code du travail et la jurisprudence associée",
+				"description": "Les 11 000 articles du code du travail et la jurisprudence associée",
 			},
 			{
 				"value": "Uniquement des décisions similaires",
@@ -334,7 +338,7 @@ const juriste = [
 //Réponse correcte 3
 	{
 		title: "Bravo !",
-		message: "Depuis 2017, les indemnités diffèrent en fonction du nombre de salarié dans l'entreprise. ",
+		message: "Depuis 2017, les indemnités diffèrent en fonction du nombre de salarié dans l'entreprise. Il faut donc augmenter le poid de ce critère lorsque {{name}} apprend à reconnaître les informations clés d’un dossier.",
 		image: "robot-juriste-ado.png",
 		when: answers => answers.choice_critereneglige === 'Nombre de salariés dans entreprise',
 	},
@@ -363,7 +367,7 @@ const juriste = [
 		image: "robot-juriste-adulte.png",
 	},
 	{
-		title: "Les dossiers s'enchaînent...",
+		title: "L'algorithme enchaîne les dossiers",
 		message: "La pile fond comme neige au soleil. Vous avez beaucoup plus de temps à consacrer aux dossiers compliqués.",
 		image: "robot-juriste-adulte.png",
 },
@@ -400,7 +404,7 @@ const juriste = [
 	},
 //Si mauvaise réponse
 	{
-		title: "Vous faites bien...",
+		title: "Vous faîtes bien...",
 		message: "Même sur les dossiers les plus simples, les décisions ne peuvent être prises automatiquement car cela va à l'encontre de la nature même d'une procédure judiciaire. {{name}} ne peut être qu'un outil d'aide à la décision.",
 		image: "robot-juriste-adulte.png",
 		when: answers => answers.choice_critereneglige_automatise === 'Non',
@@ -476,7 +480,7 @@ const juriste = [
 //Si bonne réponse
 	{
 		title: "Bonne réponse !",
-		message: "Le raisonnement est plutôt logique, car les contestations concernent des dossiers similaires, dans lesquels les femmes touchent autant que les hommes.",
+		message: "Le raisonnement paraît logique,mais vous ne vous êtes pas fait·e avoir: les dossiers dont on parle sont similaires en termes de salaire.",
 		image: "robot-juriste-adulte.png",
 		when: answers => answers.choice_indemniteshommefemme === "Argument invalide",
 	},
@@ -526,7 +530,7 @@ const juriste = [
 //Si mauvaise réponse
 	{
 		title: "Mauvaise réponse !",
-		message: "Si vous voulez utiliser l'intelligence artificielle dans d'autres domaines que celui des indemnités de licenciement, il vous faudra répéter cette manipulation à chaque fois que vous trouverez un biais issu de la base de données et mal interprété par le système de traitement automatique du langage.",
+		message: "Si vous voulez utiliser l'intelligence artificielle dans d'autres domaines, il vous faudra répéter cette manipulation à chaque fois que vous trouverez un biais issu de la base de données et mal interprété par le système de traitement automatique du langage. Il vaut mieux anonymiser les données.",
 		image: "robot-juriste-adulte-etonne.png",
 		when: answers => answers.choice_indemniteshommefemme_biais !== "Anonymiser les décisions",
 	},
@@ -542,12 +546,16 @@ const juriste = [
 	},
 
 	{
-		message: "CITATION PHILOSOPHIQUE A TROUVER SUR L'AVENIR DE LA JUSTICE AVEC L'INTELLIGENCE ARTIFICIELLE",
+		message: "Le député Cedric Villani a écrit un rapport intitulé “Donner un sens à l’intelligence artificielle” Ces quelques 240 pages recommandent la création d’un corps d’experts qui pourrait être saisi pour enquêter sur une prise de décision algorithmique.",
+		image: "robot-juriste-adulte.png",
+	},
+	{
+		message: "Il préconise des études d’impact pour éviter les discriminations dont pourrait se rendre coupable l’intelligence artificielle, notamment dans le domaine de la justice. La sensibilisation des concepteurs d’intelligence artificielle à l’éthique est donc essentielle.",
 		image: "robot-juriste-adulte.png",
 	},
 
 	{
-		message: "Mais concentrons-nous sur l'avenir de l'intelligence artificielle dans la justice en fonction des décisions que vous avez prises tout au long de ce parcours. Notre algorithme va calculer votre score.",
+		message: "En fonction de vos réponses tout au long de l’éducation de (NOM), essayons de voir si vous avez adopté les bons réflexes.",
 	},
 
 	//Score mauvaise attitude --> Mini nouvelle sur l'avenir pessimiste de l'IA dans la justice 
