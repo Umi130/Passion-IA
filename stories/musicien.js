@@ -340,7 +340,7 @@ const musicien = [
 		message: "La première image était la bonne. Parce que bla bla",
 		image: "robot-musicien-enfant.png",
 
-		when: answers => answers.choice_mode_composition === "Celle de François Pachet" && answers.choix_reconnaitre_1 !== " ",
+		when: answers => answers.choice_mode_composition === "Celle de François Pachet" && answers.choix_reconnaitre_1 === "  ",
 	},
 
 // Test 2/2
@@ -376,7 +376,7 @@ const musicien = [
 		message: "La première image était la bonne. Parce que bla bla",
 		image: "robot-musicien-enfant.png",
 
-		when: answers => answers.choice_mode_composition === "Celle de François Pachet" && answers.choix_reconnaitre_1 !== " ",
+		when: answers => answers.choice_mode_composition === "Celle de François Pachet" && answers.choix_reconnaitre_1 === "  ",
 	},
 
 	//TODO COMPTE BONNES MAUVAISES REPONSES
@@ -780,7 +780,7 @@ const musicien = [
 ///////////////
 
 	{
-		title: "Vous utilisez AI Experiments à nouveau...",
+		title: "Vous utilisez AI Experiments, le logiciel de Google, à nouveau...",
 		message: "Voici le mix entre le son d’un chat et celui d’une harpe. Plutôt prometteur, non ?",
 		music: {
 			controls: true,
