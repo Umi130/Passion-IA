@@ -558,6 +558,12 @@ const juriste = [
 	},
 
 	//Score mauvaise attitude --> Mini nouvelle sur l'avenir pessimiste de l'IA dans la justice 
+	{
+		message: "Remerciements : Jacques Levy-Vehel (co-fondateur de Case Law Analytics et chercheur à l'Institut national de recherche en informatique et en automatique), Joachim Herrera (doctorant à l'Ecole de droit de Sciences Po)",
+	},
+	{
+		message: "Antoine Garapon (magistrat et juriste; Secrétaire général de l'Institut des hautes études sur la Justice), Lise Damelet (avocate chez Orrick, Herrington & Sutcliffe, cofondatrice de l'Incubateur du barreau de Paris), Dipty Chander (Présidente E-mma France)",
+	},
 
 
 ]
