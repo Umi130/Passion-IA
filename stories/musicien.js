@@ -1,3 +1,4 @@
+// TODO: points qui permettent de vérifier succès des mini-jeux
 
 const musicien = [
 	{
@@ -7,8 +8,8 @@ const musicien = [
 	},
 
 	{
-		title: "Vous êtes un musicien...",
-		message: "et plus rien ne vous inspire, pas même votre dernière rupture amoureuse. C’est le syndrome de la page blanche. Vous traînez sur Spotify en quête d’inspiration et tombez par hasard sur l’album Hello World.",
+		title: "Vous êtes un musicien et plus rien ne vous inspire...",
+		message: "Pas même votre dernière rupture amoureuse. C’est le syndrome de la page blanche. Vous traînez sur Spotify en quête d’inspiration et tombez par hasard sur l’album Hello World.",
 		image: "robot-musicien-bebe.png",
 	},
 
@@ -97,7 +98,7 @@ const musicien = [
 	},
 
 	{
-		title: "Vous avez oublié une étape cruciale !",
+		title: "Vous avez oublié une étape cruciale",
 		message: "Nourrir la machine de vos influences : «Pour mes projets, je pars avec une base de données d’au moins 4h de son», précise Robin Meier.",
 		image: "experts-musicien-meier.jpg",
 	},
@@ -267,6 +268,7 @@ const musicien = [
 	{
 		message: "{{name}} a grandi !",
 		image: "robot-musicien-enfant.png",
+		when: answers => answers.choice_mode_composition === "Celle de François Pachet",
 	},
 //
 
@@ -610,18 +612,189 @@ const musicien = [
 
 // CONCLUSION DU JEU INSTRUMENTS
 // Bonne réponse
-	{	title: "C'est un succès !",
+	{	
+		title: "C'est un succès !",
 		message: "Vous avez pu vous constituer une bibliothèque de sons que vous allez pouvoir mélanger pour créer de nouveaux instruments.",
-		image: "robot-musicien-bebe-etonne.png",
+		image: "robot-musicien-bebe.png",
 		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
 	},
 // Mauvaise réponse
-	{	title: "C'est un succès !",
-		message: "Vous avez pu vous constituer une bibliothèque de sons que vous allez pouvoir mélanger pour créer de nouveaux instruments.",
+	{	
+		title: "C'est plutôt un échec...",
+		message: "Il va vous falloir passer un peu plus de temps sur la labellisation des instruments pour que votre bibliothèque soit complète.",
 		image: "robot-musicien-bebe-etonne.png",
 		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
 	},
 
+	{	
+		title: "Google peut vous aider avec un logiciel : AI Experiments.",
+		message: "Il permet de mixer le son de deux instruments. Le code est disponible en open source.",
+		image: "experts-musicien-google-experiments.jpg",
+		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
+	},
+
+	{	
+		title: "On écoute le résultat ?",
+		message: "Voici un mix entre une harpe et une clarinette.",
+		music: {
+			controls: true,
+			src: "robot-musicien-son-google.mp3",
+		},
+		image: "experts-musicien-google-experiments.jpg",
+		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
+	},
+
+// Robot devient enfant
+	{
+		message: "{{name}} a grandi !",
+		image: "robot-musicien-enfant.png",
+	},
+//
+
+	{
+		title: "De nombreux compositeurs ont essayé de retranscrire toutes sortes de sons.",
+		message: "Chez Debussy ou Vivaldi, l’eau est un élément récurrent. Dans Pierre et le Loup de Prokofiev, chaque instrument est associé à un animal.",
+		music: {
+			controls: true,
+			src: "robot-musicien-son-google.mp3",
+		},
+		image: "experts-musicien-google-experiments.jpg",
+		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
+	},
+
+///////////////////////////
+// JEU TEXTE A TROUS SON //
+///////////////////////////
+
+	{
+		name: "Reconnaître des sons",
+		message: "Et si on apprenait à {{name}} à reconnaître toutes sortes de sons pour les mélanger à des sonorités instrumentales ?",
+		image: "element-son.png",
+		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
+	},
+
+// Jeu 1 son
+	{
+		name: "blanks_sons_1",
+		title: "Entrez le nom du son entendu",
+		music: {
+			controls: true,
+			src: "robot-musicien-son-chat.mp3",
+		},
+		blanks: [
+			{
+				"value": "Il s'agit du son produit par un"
+			},
+			{
+				"value": "word_1",
+				"type": "input",
+				"answers": ['chat', 'Chat', 'chat ', 'Chat ']
+			},
+		]
+	},
+// Bonne réponse
+	{	
+		title: "Bravo !",
+		message: "C'était bien le son d'un chat.",
+		image: "experts-musicien-son-chat.jpg",
+		when: answers => answers.blanks_sons_1 && answers.choice_mode_composition === "Celle de Robin Meier",
+	},
+// Mauvaise réponse
+	{	
+		title: "Faux !",
+		message: "C'était le son d'un chat.",
+		image: "experts-musicien-son-chat.jpg",
+		when: answers => !answers.blanks_sons_1 && answers.choice_mode_composition === "Celle de Robin Meier",
+	},
+
+// Jeu 2 son
+	{
+		name: "blanks_sons_2",
+		title: "Entrez le nom du son entendu",
+		music: {
+			controls: true,
+			src: "robot-musicien-son-aspirateur.mp3",
+		},
+		blanks: [
+			{
+				"value": "Il s'agit du son produit par un"
+			},
+			{
+				"value": "word_1",
+				"type": "input",
+				"answers": ['aspirateur', 'Aspirateur', 'aspirateur ', 'Aspirateur ']
+			},
+		]
+	},
+// Bonne réponse
+	{	
+		title: "Bravo !",
+		message: "C'était bien le son d'un aspirateur.",
+		image: "experts-musicien-son-aspirateur.png",
+		when: answers => answers.blanks_sons_2 && answers.choice_mode_composition === "Celle de Robin Meier",
+	},
+// Mauvaise réponse
+	{	
+		title: "Faux !",
+		message: "C'était le son d'un aspirateur.",
+		image: "experts-musicien-son-aspirateur.png",
+		when: answers => !answers.blanks_sons_2 && answers.choice_mode_composition === "Celle de Robin Meier",
+	},
+
+// Jeu 3 son
+	{
+		name: "blanks_sons_3",
+		title: "Entrez le nom du son entendu",
+		music: {
+			controls: true,
+			src: "robot-musicien-son-pluie.mp3",
+		},
+		blanks: [
+			{
+				"value": "Il s'agit du son produit par la"
+			},
+			{
+				"value": "word_1",
+				"type": "input",
+				"answers": ['pluie', 'Pluie', 'pluie ', 'Pluie ']
+			},
+		]
+	},
+// Bonne réponse
+	{	
+		title: "Bravo !",
+		message: "C'était bien le son de la pluie.",
+		image: "experts-musicien-son-pluie.jpg",
+		when: answers => answers.blanks_sons_3 && answers.choice_mode_composition === "Celle de Robin Meier",
+	},
+// Mauvaise réponse
+	{	
+		title: "Faux !",
+		message: "C'était le son de la pluie.",
+		image: "experts-musicien-son-pluie.jpg",
+		when: answers => !answers.blanks_sons_3 && answers.choice_mode_composition === "Celle de Robin Meier",
+	},
+
+///////////////
+// FIN DU JEU A TROUS
+///////////////
+
+	{
+		title: "Vous utilisez AI Experiments à nouveau...",
+		message: "Voici le mix entre le son d’un chat et celui d’une harpe. Plutôt prometteur, non ?",
+		music: {
+			controls: true,
+			src: "robot-musicien-son-google-mix.mp3",
+		},
+		image: "experts-musicien-google-experiments.jpg",
+		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
+	},
+
+	{
+		message: "En utilisant cette technique, la constitution de la base de données est essentielle pour avoir une idée du résultat que votre IA va produire.",
+		image: "experts-musicien-google-experiments.jpg",
+		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
+	},
 
 ///////////////////////////////
 // BRANCHES MERGING TOGETHER //
