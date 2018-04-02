@@ -201,7 +201,7 @@ const juriste = [
 			{
 				"value": "word_1",
 				"type": "input",
-				"answers": ['pendant', 'durant', 'Pendant', 'Durant']
+				"answers": ['pendant', 'durant', 'Pendant', 'Durant', 'pendant ', 'durant ', 'Pendant ', 'Durant ']
 			},
 			{
 				"value": " 10 ",
@@ -209,7 +209,7 @@ const juriste = [
 			{
 				"value": "word_2",
 				"type": "input",
-				"answers": ['ans', 'années', 'Ans', 'Années']
+				"answers": ['ans', 'années', 'Ans', 'Années', 'ans ', 'années ', 'Ans ', 'Années ']
 			},
 		]
 	},
@@ -236,7 +236,7 @@ const juriste = [
 			{
 				"value": "word_1",
 				"type": "input",
-				"answers": ['embauchée', 'engagée', 'recrutée', 'Embauchée', 'Engagée', 'Recrutée']
+				"answers": ['embauchée', 'engagée', 'recrutée', 'Embauchée', 'Engagée', 'Recrutée', 'embauchée ', 'engagée ', 'recrutée ', 'Embauchée ', 'Engagée ', 'Recrutée ']
 			},
 			{
 				"value": " dans l'entreprise en 2013.",
@@ -339,7 +339,7 @@ const juriste = [
 //Réponse correcte 3
 	{
 		title: "Bravo !",
-		message: "Depuis 2017, les indemnités diffèrent en fonction du nombre de salarié dans l'entreprise. Il faut donc augmenter le poid de ce critère lorsque {{name}} apprend à reconnaître les informations clés d’un dossier.",
+		message: "Depuis 2017, les indemnités diffèrent en fonction du nombre de salarié dans l'entreprise. Il faut donc augmenter le poids de ce critère lorsque {{name}} apprend à reconnaître les informations clés d’un dossier.",
 		image: "robot-juriste-ado.png",
 		when: answers => answers.choice_critereneglige === 'Nombre de salariés dans entreprise',
 	},
