@@ -216,14 +216,14 @@ const juriste = [
 //Si réponse correcte
 	{
 		title: "Bonne réponse !",
-		message: "Ici, l'information-clé est le nombre d'années passées dans l'entreprise. Pour repérer cette information, qui varie selon les salariés, {{name}} doit identifier les mots contextuels 'pendant' et 'ans' qui précèdent et suivent cette information.",
+		message: "Ici, l'information-clé est le nombre d'années passées dans l'entreprise. Pour repérer cette information, qui varie selon les salariés, {{name}} doit identifier les mots contextuels «pendant» et «ans» qui précèdent et suivent cette information.",
 		image: "robot-juriste-enfant.png",
 		when: answers => answers.blanks_emploi_duree1 
 	},
 //Si réponse incorrecte
 	{
 		title: "Mauvaise réponse !",
-		message: "Ici, l'information-clé est le nombre d'années passées dans l'entreprise. Pour repérer cette information, qui varie selon les salariés, {{name}} doit reconnaître les mots contextuels 'pendant' et 'ans' qui précèdent et suivent cette information.",
+		message: "Ici, l'information-clé est le nombre d'années passées dans l'entreprise. Pour repérer cette information, qui varie selon les salariés, {{name}} doit reconnaître les mots contextuels «pendant» et «ans» qui précèdent et suivent cette information.",
 		image: "robot-juriste-enfant-etonne.png",
 		when: answers => !answers.blanks_emploi_duree1 
 	},
@@ -246,14 +246,14 @@ const juriste = [
 //Si réponse correcte
 	{
 		title: "Bonne réponse !",
-		message: "Ici, trois réponses étaient possibles : 'embauchée', 'recrutée' ou 'engagée'. Plus il y a de manières d'exprimer une idée, plus {{name}} mettra du temps à reconnaître l'information.",
+		message: "Ici, trois réponses étaient possibles : «embauchée», «recrutée» ou «engagée». Plus il y a de manières d'exprimer une idée, plus {{name}} mettra du temps à reconnaître l'information.",
 		image: "robot-juriste-enfant.png",
 		when: answers => answers.blanks_emploi_duree2 
 	},
 //Si réponse incorrecte
 	{
 		title: "Mauvaise réponse !",
-		message: "Ici, trois réponses étaient possibles : 'embauchée', 'recrutée' ou 'engagée'. Plus il y a de manières d'exprimer une idée, plus {{name}} mettra du temps à reconnaître l'information.",
+		message: "Ici, trois réponses étaient possibles : «embauchée», «recrutée» ou «engagée». Plus il y a de manières d'exprimer une idée, plus {{name}} mettra du temps à reconnaître l'information.",
 		image: "robot-juriste-enfant-etonne.png",
 		when: answers => !answers.blanks_emploi_duree2 
 },
@@ -261,7 +261,7 @@ const juriste = [
 //Si toutes réponses correctes
 	{
 		title: "Bravo !",
-		message: "Le taux d'erreur de {{name}} est inférieur à 15%, vous pourrez donc économiser de longues heures d'étiquetage manuel de vos données. Vous avez maintenant une base de données suffisamment complète pour que {{name}} puisse 'prédire' la probabilité des différents jugements pour un nouveau dossier.",
+		message: "Le taux d'erreur de {{name}} est inférieur à 15%, vous pourrez donc économiser de longues heures d'étiquetage manuel de vos données. Vous avez maintenant une base de données suffisamment complète pour que {{name}} puisse «prédire» la probabilité des différents jugements pour un nouveau dossier.",
 		when: answers => answers.blanks_emploi_duree1 && answers.blanks_emploi_duree2,
 		image: "robot-juriste-ado.png",
 	},
