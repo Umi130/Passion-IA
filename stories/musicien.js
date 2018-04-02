@@ -15,11 +15,12 @@ const musicien = [
 
 
 	{
-		title: "Vous écoutez : Hello World",
+		title: "Vous écoutez : «Hello World»",
 		message: "Une chanson composée à l'aide d'une intelligence artificielle.",
+		image: "experts-musicien-spotify.png",
 		music: {
 			controls: true,
-			src: "robot-musicien-spotify.mp3"
+			src: "robot-musicien-spotify.mp3",
 		}
 	},
 
@@ -453,7 +454,7 @@ const musicien = [
 	},
 
 	{
-		message: "Comme François Pachet l’expliquait sur France Culture, la partition produite par l’algorithme a besoin d’être réarrangée et retravaillée. Pour l’album Hello World, les compositeurs et artistes ont activement participé à la finalisation des chansons.",
+		message: "Comme François Pachet l’expliquait sur France Culture, la partition produite par l’algorithme a besoin d’être réarrangée et retravaillée. Pour l’album «Hello World», les compositeurs et artistes ont activement participé à la finalisation des chansons.",
 		image: "experts-musicien-pachet.jpg",
 
 		when: answers => answers.choice_mode_composition === "Celle de François Pachet",
@@ -518,13 +519,13 @@ const musicien = [
 	{
 		title: "Bravo !",
 		message: "C'était bien le son d'une clarinette.",
-		image: "robot-musicien-bebe.png",
+		image: "experts-musicien-instrument-clarinette.jpg",
 		when: answers => answers.choice_mode_composition === "Celle de Robin Meier" && answers.choix_nominstrument1 === "Une clarinette",
 	},
 	{
 		title: "Mauvaise réponse !",
 		message: "C'était le son d'une clarinette...",
-		image: "robot-musicien-bebe-etonne.png",
+		image: "experts-musicien-instrument-clarinette.jpg",
 		when: answers => answers.choice_mode_composition === "Celle de Robin Meier" && answers.choix_nominstrument1 !== "Une clarinette",
 	},
 
@@ -559,13 +560,13 @@ const musicien = [
 	{
 		title: "Bravo !",
 		message: "C'était bien le son d'une harpe.",
-		image: "robot-musicien-bebe.png",
+		image: "experts-musicien-instrument-harpe.png",
 		when: answers => answers.choice_mode_composition === "Celle de Robin Meier" && answers.choix_nominstrument2 === "Une harpe",
 	},
 	{
 		title: "Mauvaise réponse !",
 		message: "C'était le son d'une harpe...",
-		image: "robot-musicien-bebe-etonne.png",
+		image: "experts-musicien-instrument-harpe.png",
 		when: answers => answers.choice_mode_composition === "Celle de Robin Meier" && answers.choix_nominstrument2 !== "Une harpe",
 	},
 
@@ -600,13 +601,13 @@ const musicien = [
 	{
 		title: "Bravo !",
 		message: "C'était bien le son d'un cor.",
-		image: "robot-musicien-bebe.png",
+		image: "experts-musicien-instrument-cor.png",
 		when: answers => answers.choice_mode_composition === "Celle de Robin Meier" && answers.choix_nominstrument3 === "Un cor",
 	},
 	{
 		title: "Mauvaise réponse !",
 		message: "C'était le son d'un cor...",
-		image: "robot-musicien-bebe-etonne.png",
+		image: "experts-musicien-instrument-cor.png",
 		when: answers => answers.choice_mode_composition === "Celle de Robin Meier" && answers.choix_nominstrument3 !== "Un cor",
 	},
 
@@ -652,11 +653,11 @@ const musicien = [
 //
 
 	{
-		title: "De nombreux compositeurs ont essayé de retranscrire toutes sortes de sons.",
-		message: "Chez Debussy ou Vivaldi, l’eau est un élément récurrent. Dans Pierre et le Loup de Prokofiev, chaque instrument est associé à un animal.",
+		title: "Vous écoutez : «Pierre et le loup», de Prokofiev",
+		message: "Chaque instrument est associé à un animal (ici, le loup). De nombreux compositeurs ont essayé de retranscrire toutes sortes de sons : chez Debussy ou Vivaldi, l’eau est un élément récurrent.",
 		music: {
 			controls: true,
-			src: "robot-musicien-son-google.mp3",
+			src: "robot-musicien-prokofiev.mp3",
 		},
 		image: "experts-musicien-google-experiments.jpg",
 		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
@@ -779,8 +780,17 @@ const musicien = [
 // FIN DU JEU A TROUS
 ///////////////
 
+// Robot devient ado
 	{
-		title: "Vous utilisez AI Experiments, le logiciel de Google, à nouveau...",
+		message: "{{name}} a grandi !",
+		image: "robot-musicien-ado.png",
+
+		when: answers => answers.choice_mode_composition === "Celle de François Robin Meyer!",
+	},
+//
+
+	{
+		title: "Vous utilisez AI Experiments (le logiciel de Google) à nouveau",
 		message: "Voici le mix entre le son d’un chat et celui d’une harpe. Plutôt prometteur, non ?",
 		music: {
 			controls: true,
@@ -791,8 +801,57 @@ const musicien = [
 	},
 
 	{
-		message: "En utilisant cette technique, la constitution de la base de données est essentielle pour avoir une idée du résultat que votre IA va produire.",
+		message: "En utilisant cette technique, la constitution de la base de données est essentielle pour avoir une idée du résultat que {{name}} va produire.",
 		image: "experts-musicien-google-experiments.jpg",
+		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
+	},
+
+	{
+		message: "Pour son projet «La fabrique de monstres», Robin Meier a mixé l’intégrale d’une chanteuse soprano, des livres audio pour la voix parlée, et des bandes-son de films pour les bruitages.",
+		image: "experts-musicien-meier.jpg",
+		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
+	},
+
+	{
+		title: "On écoute le résultat ?",
+		message: "Vous écoutez «La fabrique de monstres» de Robin Meier.",
+		music: {
+			controls: true,
+			src: "robot-musicien-meier.mp3",
+		},
+		image: "experts-musicien-meier.jpg",
+		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
+	},
+
+	{
+		title: "Vous pouvez pondérer le poids des différents sons que vous voulez mixer !",
+		message: "En s’inspirant des formes d’ondes, {{name}} n’a besoin que d’une fraction de seconde de son pour se lancer. L’algorithme prédira ensuite la courbe de l’onde en fonction de ce qu’il aura appris avec la base de données.",
+		image: "robot-musicien-ado.png",
+		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
+	},
+
+	{
+		message: "Cette technique est beaucoup plus lente que lorsque la machine apprend à partir de partitions puisque les ondes sonores sont plus longues à analyser.",
+		image: "robot-musicien-ado.png",
+		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
+	},
+
+	{
+		title: "L'analyse peut prendre des semaines...",
+		message: "en fonction de la taille de la base de données. C’est aussi une technique dont le résultat est très aléatoire et peu modifiable.",
+		image: "robot-musicien-ado.png",
+		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
+	},
+
+	{
+		message: "«Les résultats ont été légèrement montés. Principalement des enchaînements de passages qui nous plaisaient bien ainsi que des superpositions», précise Robin Meyer.",
+		image: "experts-musicien-meier.jpg",
+		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
+	},
+
+	{
+		message: "Il ajoute : «On peut imaginer des choses, on peut avoir une intuition mais le résultat n’est pas totalement prévisible. On essaie des choses, il y a un aller-retour, on est dans l’expérimentation plus que dans la programmation.»",
+		image: "experts-musicien-meier.jpg",
 		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
 	},
 
@@ -814,13 +873,13 @@ const musicien = [
 
 	{
 		title: "Vous avez réussi à composer un album entier !",
-		message: "Mais {{name}} ne peut pas générer de pochette d'album. Heureusement, Il existe un algorithme de Google qui permet de générer une image à partir d’une base de donnée et d’une inspiration que vous lui soumettez.",
+		message: "{{name}} ne peut pas générer de pochette d'album. Mais il existe un algorithme de Google, Deep Dream, qui permet de générer une image à partir d’une base de données et d’une inspiration que vous lui soumettez.",
 		image: "robot-musicien-adulte.png",
 	},
 
 	{
-		title: "Vous utilisez Google Deep Dream pour créer la pochette de votre album",
-		message: "Vous pouvez lui soumettre une image dont l’algorithme va s’inspirer.",
+		title: "Vous utilisez Google Deep Dream",
+		message: "Il vous permettra de créer la pochette de votre album. Vous pouvez lui soumettre une image dont l’algorithme va s’inspirer.",
 		image: "robot-musicien-adulte.png",
 	},
 
@@ -869,5 +928,32 @@ const musicien = [
 
 		when: answers => answers.choix_pochettealbum === "   ",
 	},
+
+	{
+		message: "Il est maintenant temps de lister les noms que vous allez mentionner dans les crédits de l’album.",
+		image: "robot-musicien-adulte.png",
+	},
+
+	{
+		name: "musicien_donnercredits",
+		title: "Que décidez-vous ?",
+		choices: [
+			{
+				"value": "Créditer l'algorithme",
+				"description": "à la manière de François Pachet et son équipe sur l’album «Hello World»",
+				"points": 1
+			},
+			{
+				"value": "Ne pas créditer l'algorithme",
+				"description": "mais uniquement l’ensemble des personnes qui ont travaillé avec vous sur cet album. Tout comme les musiciens ne créditent pas leur instrument, l’algorithme n’a été qu’un assistant",
+				"points": 1
+			}
+			]
+	},
+
+	{
+		message: "Il est maintenant temps de lister les noms que vous allez mentionner dans les crédits de l’album.",
+		image: "robot-musicien-adulte.png",
+	},	
 
 ]
