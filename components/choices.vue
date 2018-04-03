@@ -1,9 +1,15 @@
 <template>
 	<section class="choices d-flex flex-column">
-		<div class="choice d-flex flex-column justify-content-center" v-for="choice in content.choices" :key="choice.value" @click="$emit('select', { name: content.name, value: choice.value, points: choice.points })">
+		<div
+			class="choice d-flex flex-column justify-content-center"
+			v-for="choice in content.choices"
+			:key="choice.value"
+			@click="$emit('select', { name: content.name, value: choice.value, points: choice.points })"
+			:style="{
+				'background-image': choice.image ? 'url(./assets/images/'+choice.image+')' : null
+			}">
 			<h4 v-if="choice.value">{{ choice.value }}</h4>
 			<p v-if="choice.description">{{ choice.description }}</p>
-			<img v-if="choice.image" :src="'assets/images/'+choice.image" class="img-fluid">
 		</div>
 	</section>
 </template>
@@ -23,7 +29,7 @@ module.exports = {
 <style scoped>
 	.choices {
 		flex: 1;
-			padding: 15px;
+		padding: 15px;
 	}
 	.choice {
 		flex: 1;
@@ -31,6 +37,9 @@ module.exports = {
 		margin: 5px 5px 5px 5px;
 		border: 1px solid transparent;
 		border-color: #7299de;
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center center;
 	}
 	.choice:hover {
 		border: 1px solid #1c1840;
