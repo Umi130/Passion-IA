@@ -566,6 +566,8 @@ const juriste = [
 	},
 	{
 		message: "Antoine Garapon (magistrat et juriste; Secrétaire général de l'Institut des hautes études sur la Justice), Lise Damelet (avocate chez Orrick, Herrington & Sutcliffe, cofondatrice de l'Incubateur du barreau de Paris), Dipty Chander (Présidente E-mma France)",
+
+	// Mettre Jules & Pierre dans les crédits
 	},
 
 
