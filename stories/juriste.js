@@ -194,6 +194,7 @@ const juriste = [
 	{
 		name: "blanks_emploi_duree1",
 		title: "Entrez les mots manquants",
+		points: 1,
 		blanks: [
 			{
 				"value": "M. Olivier Ferrand a travaillé"
@@ -201,7 +202,7 @@ const juriste = [
 			{
 				"value": "word_1",
 				"type": "input",
-				"answers": ['pendant', 'durant', 'Pendant', 'Durant', 'pendant ', 'durant ', 'Pendant ', 'Durant ']
+				"answers": ['pendant', 'durant', 'Pendant', 'Durant']
 			},
 			{
 				"value": " 10 ",
@@ -209,7 +210,7 @@ const juriste = [
 			{
 				"value": "word_2",
 				"type": "input",
-				"answers": ['ans', 'années', 'Ans', 'Années', 'ans ', 'années ', 'Ans ', 'Années ']
+				"answers": ['ans', 'années', 'Ans', 'Années']
 			},
 		]
 	},
@@ -218,14 +219,14 @@ const juriste = [
 		title: "Bonne réponse !",
 		message: "Ici, l'information-clé est le nombre d'années passées dans l'entreprise. Pour repérer cette information, qui varie selon les salariés, {{name}} doit identifier les mots contextuels «pendant» et «ans» qui précèdent et suivent cette information.",
 		image: "robot-juriste-enfant.png",
-		when: answers => answers.blanks_emploi_duree1 
+		when: answers => answers.blanks_emploi_duree1
 	},
 //Si réponse incorrecte
 	{
 		title: "Mauvaise réponse !",
 		message: "Ici, l'information-clé est le nombre d'années passées dans l'entreprise. Pour repérer cette information, qui varie selon les salariés, {{name}} doit reconnaître les mots contextuels «pendant» et «ans» qui précèdent et suivent cette information.",
 		image: "robot-juriste-enfant-etonne.png",
-		when: answers => !answers.blanks_emploi_duree1 
+		when: answers => !answers.blanks_emploi_duree1
 	},
 
 //INPUT CORINNE DUTEIL

@@ -71,13 +71,16 @@ module.exports = {
 			this.nextStep()
 		},
 		fillBlanks (answer) {
+			if (answer.value === true) {
+				this.answers.points = this.answers.points + this.currentStep.points;
+			}
 			this.$set(this.answers, answer.name, answer.value)
 			this.nextStep()
 		},
 		nextStep () {
 			this.$router.push({ path: `/juriste/${this.current + 1}` })
 		},
-		displayNextButton(){
+		displayNextButton() {
 			return ['choices', 'blanks'].indexOf(this.currentStep.type) === -1  && 
 				this.current < this.filteredStory.length - 1;
 		}

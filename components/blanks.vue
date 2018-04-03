@@ -3,7 +3,7 @@
 		<form>
 			<span class="blank" v-for="blank in content.blanks" :key="blank.value" >
 				<span v-if="blank.type === 'input'">
-					<input v-model="answers[blank.value]" type="text" class="form-control">
+					<input v-model.trim="answers[blank.value]" type="text" class="form-control">
 				</span>
 				<span v-else>
 					{{ blank.value }}
@@ -45,11 +45,12 @@ module.exports = {
 	},
 	methods: {
 		fill() {
-			return this.$emit('fill', { 
-				name: this.content.name, 
-				value: this.inputsCount === this.filledValues.filter(blank => {
-					return blank.answers.indexOf(this.answers[blank.value]) > -1
-				}).length
+			const goodResponses = this.filledValues.filter(blank => {
+				return blank.answers.indexOf(this.answers[blank.value]) > -1
+			}).length
+			return this.$emit('fill', {
+				name: this.content.name,
+				value: this.inputsCount === goodResponses
 			})
 		}
 	}

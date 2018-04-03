@@ -73,6 +73,9 @@ module.exports = {
 			this.nextStep()
 		},
 		fillBlanks (answer) {
+			if (answer.value === true) {
+				this.answers.points = this.answers.points + this.currentStep.points;
+			}
 			this.$set(this.answers, answer.name, answer.value)
 			this.nextStep()
 		},
