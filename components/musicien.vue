@@ -1,5 +1,10 @@
 <template>
 	<main>
+		<div id="back">
+			<router-link to="/">
+				<img src="./assets/images/element-fermer.png" alt="Back" />
+			</router-link>
+		</div>
 		<explanation v-if="currentStep.title || currentStep.message" :content="currentStep" :answers="answers"></explanation>
 
 		<illustration v-if="currentStep.image" :content="currentStep"></illustration>
@@ -83,6 +88,16 @@ module.exports = {
 </script>
 
 <style scoped>
+	main {
+		position: relative;
+	}
+
+	#back {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+
 	section {
 		flex: 1;
 	}
