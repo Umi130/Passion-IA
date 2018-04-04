@@ -75,8 +75,13 @@ const musicien = [
 	},
 
 	{
+<<<<<<< HEAD
 		title: "Premier test de l'algorithme...",
 		message: "Il vous suffit de rentrer la durée du morceau que vous souhaitez faire composer par {{name}} ainsi que sa tonalité. Vous tentez : 4 minutes et 33 secondes, en sol majeur.",
+=======
+		title: "Vous décidez de tester l'algorithme...",
+		message: "Il vous suffit de rentrer la durée du morceau que {{name}} doit composer. Vous tentez : 4 minutes et 33 secondes.",
+>>>>>>> bec87d05f7426ed9a9269ff8a0cba5c6a9554fa5
 		image: "robot-musicien-bebe.png",
 	},
 
@@ -94,13 +99,22 @@ const musicien = [
 
 	{
 		title: "Cela ne résout pas votre problème...",
+<<<<<<< HEAD
 		message: "Vous écoutez les conseils de François Pachet, qui dirige le Creator Technology Research Lab de Spotify. «La première chose qu’on fait, c’est donner de la musique dont on veut s’inspirer au système», a-t-il dit sur France Culture.",
+=======
+		message: "Peu importe la durée que vous lui imposez, la machine ne vous sort que du silence. Vous écoutez les conseils de François Pachet, qui dirige le Creator Technology Research Lab de Spotify. Il a dit sur France Culture : «La première chose qu’on fait, c’est donner de la musique dont on veut s’inspirer au système.»",
+>>>>>>> bec87d05f7426ed9a9269ff8a0cba5c6a9554fa5
 		image: "experts-musicien-pachet.jpg",
 	},
 
 	{
+<<<<<<< HEAD
 		title: "Vous avez oublié une étape cruciale :",
 		message: "Nourrir la machine de vos influences. «Pour mes projets, je pars avec une base de données d’au moins 4h de son», précise Robin Meier.",
+=======
+		title: "Vous avez oublié une étape cruciale",
+		message: "Nourrir la machine de vos influences : «Pour mes projets, je pars avec une base de données d’au moins 4h de son», précise Robin Meier. D'autres, comme François Pachet, n'utilisent pas directement le son mais les partitions des morceaux pour que l'IA les analyse.",
+>>>>>>> bec87d05f7426ed9a9269ff8a0cba5c6a9554fa5
 		image: "experts-musicien-meier.jpg",
 	},
 
@@ -127,7 +141,11 @@ const musicien = [
 ////////////////////////////
 
 	{
+<<<<<<< HEAD
 		title: "Formation musicale",
+=======
+		title: "Apprendre les bases de la formation musicale",
+>>>>>>> bec87d05f7426ed9a9269ff8a0cba5c6a9554fa5
 		message: "Si vous voulez utiliser des partitions, il faut d’abord apprendre à {{name}} à les lire. Commençons par la base du solfège : les notes.",
 		image: "robot-musicien-bebe.png",
 		when: answers => answers.choice_mode_composition === "Celle de François Pachet",
@@ -148,12 +166,12 @@ const musicien = [
 			{
 				"value": "word_1",
 				"type": "input",
-				"answers": ['Re', 'Ré', 're', 'ré']
+				"answers": ['Re', 'Ré', 're', 'ré', 'Re ', 'Ré ', 're ', 'ré ']
 			},
 			{
 				"value": "word_2",
 				"type": "input",
-				"answers": ['Mi', 'mi']
+				"answers": ['Mi', 'mi', 'mi ', 'Mi ']
 			},
 		],	
 		when: answers => answers.choice_mode_composition === "Celle de François Pachet",
@@ -188,12 +206,12 @@ const musicien = [
 			{
 				"value": "word_1",
 				"type": "input",
-				"answers": ['La', 'la']
+				"answers": ['La', 'la', 'La ', 'la ']
 			},
 			{
 				"value": "word_2",
 				"type": "input",
-				"answers": ['La', 'la']
+				"answers": ['La', 'la', 'La ', 'la ']
 			},
 		],	
 		when: answers => answers.choice_mode_composition === "Celle de François Pachet",
@@ -228,12 +246,12 @@ const musicien = [
 			{
 				"value": "word_1",
 				"type": "input",
-				"answers": ['Mi', 'mi']
+				"answers": ['Mi', 'mi', 'Mi ', 'mi ']
 			},
 			{
 				"value": "word_2",
 				"type": "input",
-				"answers": ['Re', 'Ré', 're', 'ré']
+				"answers": ['Re', 'Ré', 're', 'ré', 'Re ', 'Ré ', 're ', 'ré ']
 			},
 		],	
 		when: answers => answers.choice_mode_composition === "Celle de François Pachet",
@@ -258,8 +276,13 @@ const musicien = [
 
 //Fin du premier mini jeu
 	{
+<<<<<<< HEAD
 		title: "Programmation des notes achevée",
 		message: "Les gammes, les intervalles et les bémols n’ont plus aucun secret pour {{name}}. Vous pouvez lui soumettre une première base de données et l'IA s’en inspirera pour composer un morceau dans le même style.",
+=======
+		title: "Programmation achevée !",
+		message: "Les gammes, les accords et les bémols n’ont plus aucun secret pour {{name}}. Vous pouvez lui soumettre une première base de données et l'IA s’en inspirera pour composer un morceau dans le même style.",
+>>>>>>> bec87d05f7426ed9a9269ff8a0cba5c6a9554fa5
 		image: "robot-musicien-bebe.png",
 
 		when: answers => answers.choice_mode_composition === "Celle de François Pachet",
@@ -276,7 +299,11 @@ const musicien = [
 
 
 	{
+<<<<<<< HEAD
 		title: "Vous remplissez maintenant votre base de données.",
+=======
+		title: "Vous créez une base de données.",
+>>>>>>> bec87d05f7426ed9a9269ff8a0cba5c6a9554fa5
 		message: "João Felipe, un doctorant à l’INRS, a travaillé à partir d’une bibliothèque de 14.000 morceaux de musique irlandaise traditionnelle. Vous soumettez cette base de données en libre accès à {{name}}.",
 		image: "experts-musicien-felipe.jpg",
 
@@ -299,7 +326,7 @@ const musicien = [
    
 	{
 		title: "Un deuxième round d’entraînement s’impose.",
-		message: "",
+		message: "Vous devez apprendre à {{name}} à reconnaître le début et la fin d'un morceau. Sans la structure, les notes ne servent pas à grand chose.",
 		image: "robot-musicien-enfant.png",
 
 		when: answers => answers.choice_mode_composition === "Celle de François Pachet",
@@ -339,7 +366,11 @@ const musicien = [
 
 	{
 		title: "Mauvaise réponse !",
+<<<<<<< HEAD
 		message: "La première image était la bonne : le début d'une partition a toujours une indication de rythme, absente sur la seconde image.",
+=======
+		message: "La première image était la bonne. C'est l'indication chiffrée au début de la portée qui vous l'indiquait et non pas le nombre de dièses à la clé.",
+>>>>>>> bec87d05f7426ed9a9269ff8a0cba5c6a9554fa5
 		image: "robot-musicien-enfant.png",
 
 		when: answers => answers.choice_mode_composition === "Celle de François Pachet" && answers.choix_reconnaitre_1 === "  ",
@@ -375,7 +406,11 @@ const musicien = [
 
 	{
 		title: "Mauvaise réponse !",
+<<<<<<< HEAD
 		message: "La première image était la bonne. Les deux points après la double barre indiquent que la partition se poursuit.",
+=======
+		message: "La première image était la bonne. La double barre signifie la fin d'un morceau. Les deux points indiquent une reprise du morceau.",
+>>>>>>> bec87d05f7426ed9a9269ff8a0cba5c6a9554fa5
 		image: "robot-musicien-enfant.png",
 
 		when: answers => answers.choice_mode_composition === "Celle de François Pachet" && answers.choix_reconnaitre_1 === "  ",
@@ -392,7 +427,11 @@ const musicien = [
 
 	{
 		title: "Moins de 6 bonnes réponses sur 8",
+<<<<<<< HEAD
 		message: "Vos données ont besoin d’être mieux labellisées. Heureusement, vous avez fait appel à un musicologue qui vous a aidé.",
+=======
+		message: "Vos données ont besoin d’être mieux labellisées, vous faîtes appel à un.e musicologue pour vous aider.",
+>>>>>>> bec87d05f7426ed9a9269ff8a0cba5c6a9554fa5
 		image: "robot-musicien-enfant.png",
 
 		when: answers => answers.choice_mode_composition === "Celle de François Pachet",
@@ -407,8 +446,13 @@ const musicien = [
 	},
 
 	{
+<<<<<<< HEAD
 		message: "Comme François Pachet lorsqu’il travaillait sur le programme FlowMachines avec Sony, vous constituez une base de données avec les œuvres de J.S. Bach.",
 		image: "experts-musicien-bach.jpg",
+=======
+		message: "Comme François Pachet et son équipe lorsqu’ils travaillaient sur le programme FlowMachines avec Sony, vous constituez une base de données avec les œuvres du compositeur baroque Jean-Sebastien Bach.",
+		image: "experts-musicien-pachet.jpg",
+>>>>>>> bec87d05f7426ed9a9269ff8a0cba5c6a9554fa5
 
 		when: answers => answers.choice_mode_composition === "Celle de François Pachet",
 	},
@@ -445,7 +489,7 @@ const musicien = [
 
 	{
 		title: "Voici le résultat obtenu par François Pachet",
-		message: "et par son équipe après quelques arrangements.",
+		message: "et par son équipe lorsqu'ils ont demandé à l'IA de composer un morceau dans le style des Beatles. La partition a été arrangée pour être interprétée.",
 		music: {
 			controls: true,
 			src: "robot-musicien-beatles.mp3",
@@ -652,12 +696,18 @@ const musicien = [
 		title: "Quoi ?",
 		message: "{{name}} a grandi !",
 		image: "robot-musicien-enfant.png",
+	
 	},
 //
 
 	{
+<<<<<<< HEAD
 		title: "Vous écoutez : «Pierre et le Loup» de Prokofiev",
 		message: "Dans ce morceau, chaque instrument est associé à un animal (ici, le loup). Et d’autres compositeurs ont également essayé de retranscrire toutes sortes de sons : chez Debussy ou Vivaldi, l’eau est un élément récurrent.",
+=======
+		title: "Vous écoutez : «Pierre et le loup», de Prokofiev",
+		message: "Chaque instrument est associé à un animal. De nombreux compositeurs ont essayé de retranscrire toutes sortes de sons : les animaux chez Prokofiev, l'eau chez Debussy ou Vivaldi.",
+>>>>>>> bec87d05f7426ed9a9269ff8a0cba5c6a9554fa5
 		music: {
 			controls: true,
 			src: "robot-musicien-prokofiev.mp3",
@@ -695,7 +745,7 @@ const musicien = [
 				"answers": ['chat', 'Chat', 'chat ', 'Chat '],
 			},
 		],
-		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
+		
 	},
 // Bonne réponse
 	{	
@@ -732,6 +782,7 @@ const musicien = [
 				"answers": ['aspirateur', 'Aspirateur', 'aspirateur ', 'Aspirateur '],
 			},
 		]
+		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
 	},
 // Bonne réponse
 	{	
@@ -886,7 +937,11 @@ const musicien = [
 
 	{
 		title: "Vous avez réussi à composer un album entier !",
+<<<<<<< HEAD
 		message: "Mais {{name}} ne peut pas générer de pochette d'album. Heureusement, il existe un algorithme de Google, Deep Dream, qui permet de générer une image à partir d’une base de données et d’une inspiration que vous lui soumettez.",
+=======
+		message: "Il vous faut maintenant trouver une image pour la pochette. Il existe un algorithme de Google, Deep Dream, qui permet de générer une image à partir d’une base de données et d’une inspiration que vous lui soumettez. Deep Dream utilise l'intelligence artificielle.",
+>>>>>>> bec87d05f7426ed9a9269ff8a0cba5c6a9554fa5
 		image: "robot-musicien-adulte.png",
 	},
 
@@ -959,6 +1014,9 @@ const musicien = [
 			{
 				"value": "Ne pas créditer l'algorithme",
 				"description": "mais uniquement l’ensemble des personnes qui ont travaillé avec vous sur cet album. L'algorithme n'a été qu'un outil",
+=======
+				"description": "mais uniquement l’ensemble des personnes qui ont travaillé avec vous sur cet album. Less musiciens ne créditent pas leur instrument: l’algorithme n’a été qu’un assistant dans la composition.",
+>>>>>>> bec87d05f7426ed9a9269ff8a0cba5c6a9554fa5
 				"points": 1
 			}
 			]
