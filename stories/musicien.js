@@ -10,7 +10,7 @@ const musicien = [
 	{
 		title: "Vous êtes un musicien et plus rien ne vous inspire...",
 		message: "Pas même votre dernière rupture amoureuse. C’est le syndrome de la page blanche. Vous traînez sur Spotify en quête d’inspiration et tombez par hasard sur l’album Hello World.",
-		image: "robot-musicien-bebe.png",
+		image: "robot-musicien-dodo.png",
 	},
 
 
@@ -44,7 +44,7 @@ const musicien = [
 
 	{
 		message: "C’est un peu comme une recette de cuisine. Le plat, c’est le morceau, les ingrédients, vos influences. Sur les conseils de Robin Meier, vous téléchargez l’algorithme.",
-		image: "robot-musicien-bebe.png",
+		image: "robot-musicien-dodo.png",
 	},
 
 	{
@@ -153,7 +153,7 @@ const musicien = [
 			{
 				"value": "word_2",
 				"type": "input",
-				"answers": ['Mi', 'mi', 'mi ', 'Mi ']
+				"answers": ['Mi', 'mi', 'Mi ', 'mi ']
 			},
 		],	
 		when: answers => answers.choice_mode_composition === "Celle de François Pachet",
@@ -315,12 +315,12 @@ const musicien = [
 		message: "Sélectionnez le début de la Marche Turque de W.A. Mozart.",
 		choices: [
 			{
-				"value": " ",
+				"value": "1.",
 				"image": "robot-musicien-reconnaitre-1a.jpg",
 				"points": 1,
 			},
 			{
-				"value": "   ",
+				"value": "2.",
 				"image": "robot-musicien-reconnaitre-1b.jpg",
 				"points": 0,
 			},
@@ -334,15 +334,15 @@ const musicien = [
 		message: "Vous avez appris à {{name}} à reconnaître le début d'une partition.",
 		image: "robot-musicien-enfant.png",
 
-		when: answers => answers.choice_mode_composition === "Celle de François Pachet" && answers.choix_reconnaitre_1 === " ",
+		when: answers => answers.choice_mode_composition === "Celle de François Pachet" && answers.choix_reconnaitre_1 === "1.",
 	},
 
 	{
 		title: "Mauvaise réponse !",
 		message: "La première image était la bonne. C'était l'indication chiffrée de rythme au début d'une partition qui vous l'indiquait.",
-		image: "robot-musicien-enfant.png",
+		image: "robot-musicien-enfant-etonne.png",
 
-		when: answers => answers.choice_mode_composition === "Celle de François Pachet" && answers.choix_reconnaitre_1 === "  ",
+		when: answers => answers.choice_mode_composition === "Celle de François Pachet" && answers.choix_reconnaitre_1 === "2.",
 	},
 
 // Test 2/2
@@ -351,12 +351,12 @@ const musicien = [
 		message: "Sélectionnez la fin du morceau.",
 		choices: [
 			{
-				"value": " ",
+				"value": "1.",
 				"image": "robot-musicien-reconnaitre-2a.jpg",
 				"points": 1,
 			},
 			{
-				"value": "   ",
+				"value": "2.",
 				"image": "robot-musicien-reconnaitre-2b.jpg",
 				"points": 0,
 			},
@@ -370,15 +370,15 @@ const musicien = [
 		message: "Vous avez appris à {{name}} à reconnaître la fin d'une partition.",
 		image: "robot-musicien-enfant.png",
 
-		when: answers => answers.choice_mode_composition === "Celle de François Pachet" && answers.choix_reconnaitre_1 === " ",
+		when: answers => answers.choice_mode_composition === "Celle de François Pachet" && answers.choix_reconnaitre_1 === "2.",
 	},
 
 	{
 		title: "Mauvaise réponse !",
-		message: "La première image était la bonne. La double barre signifie la fin d'un morceau. Les deux points indiquent une reprise du morceau.",
-		image: "robot-musicien-enfant.png",
+		message: "La seconde image était la bonne. La double barre signifie la fin d'un morceau. Les deux points indiquent une reprise du morceau.",
+		image: "robot-musicien-enfant-etonne.png",
 
-		when: answers => answers.choice_mode_composition === "Celle de François Pachet" && answers.choix_reconnaitre_1 === "  ",
+		when: answers => answers.choice_mode_composition === "Celle de François Pachet" && answers.choix_reconnaitre_1 === "1.",
 	},
 
 	//TODO COMPTE BONNES MAUVAISES REPONSES
@@ -420,7 +420,7 @@ const musicien = [
 			controls: true,
 			src: "robot-musicien-bach.mp3",
 		},
-		image: "experts-musicien-bach.jpg",
+		image: "robot-musicien-enfant.png",
 
 		when: answers => answers.choice_mode_composition === "Celle de François Pachet",
 	},
@@ -652,7 +652,7 @@ const musicien = [
 		title: "Quoi ?",
 		message: "{{name}} a grandi !",
 		image: "robot-musicien-enfant.png",
-	
+		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
 	},
 //
 
@@ -673,7 +673,7 @@ const musicien = [
 
 	{
 		title: "Reconnaître des sons",
-		message: "Mais Prokofiev n'avait pas d'algorithmes à sa disposition. Et si on apprenait à {{name}} à reconnaître toutes sortes de sons pour les mélanger à des sonorités instrumentales ?",
+		message: "Mais Prokofiev n'avait pas d'algorithme à sa disposition. Et si on apprenait à {{name}} à reconnaître toutes sortes de sons pour les mélanger à des sonorités instrumentales ?",
 		image: "element-son.png",
 		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
 	},
@@ -687,7 +687,6 @@ const musicien = [
 			src: "robot-musicien-son-chat.mp3",
 		},
 		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
-
 		blanks: [
 			{
 				"value": "Il s'agit du son produit par un"
@@ -726,7 +725,6 @@ const musicien = [
 			src: "robot-musicien-son-aspirateur.mp3",
 		},
 		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
-
 		blanks: [
 			{
 				"value": "Il s'agit du son produit par un"
@@ -743,7 +741,7 @@ const musicien = [
 	{	
 		title: "Bravo !",
 		message: "C’était bien le son d'un aspirateur.",
-		image: "experts-musicien-son-aspirateur.png",
+		image: "experts-musicien-son-aspirateur.jpg",
 		when: answers => answers.blanks_sons_2 && answers.choice_mode_composition === "Celle de Robin Meier",
 		"points": 1,	
 	},
@@ -751,7 +749,7 @@ const musicien = [
 	{	
 		title: "Faux !",
 		message: "C’était le son d'un aspirateur.",
-		image: "experts-musicien-son-aspirateur.png",
+		image: "experts-musicien-son-aspirateur.jpg",
 		when: answers => !answers.blanks_sons_2 && answers.choice_mode_composition === "Celle de Robin Meier",
 		"points": 0,
 	},
@@ -1073,13 +1071,13 @@ const musicien = [
 ////////////
 	{
 		title: "Vous refusez.",
-		message: "«On pourrait très bien alimenter une base de données et faire de la musique au kilomètre pour des supermarchés et des films commerciaux, c’est facile. On pourrait acheter des morceaux pour quelques dollars sans connaître l’algorithme en détail», précise Robin Meier.",
-		image: "experts-musicien-meier.jpg",
+		message: "Vous avez choisi de ne pas céder à la tentation et de préserver la réputation de votre profession : la création artistique, c’est sacré.",
+		image: "robot-musicien-adulte.png",
 		when: answers => answers.musicien_commanderadio === "Vous la refusez",
 	},
 	{
-		message: "Vous avez donc choisi de ne pas céder à la tentation et de préserver la réputation de votre profession : la création artistique, c’est sacré.",
-		image: "robot-musicien-adulte.png",
+		message: "«On pourrait très bien alimenter une base de données et faire de la musique au kilomètre pour des supermarchés et des films commerciaux, c’est facile. On pourrait acheter des morceaux pour quelques dollars sans connaître l’algorithme en détail», précise Robin Meier.",
+		image: "experts-musicien-meier.jpg",
 		when: answers => answers.musicien_commanderadio === "Vous la refusez",
 	},
 	{
@@ -1120,14 +1118,14 @@ const musicien = [
 // Compte des points gagné > 70%
 	{
 		title: "Producteur de tubes",
-		message: "Bravo, vous avez répondu juste à la majorité des questions. Votre algorithme sait repérer la structure d’un morceau ou les sons qui composent les tubes planétaires. Vous seriez un producteur de génie. // COURONNE ROBOT",
+		message: "Bravo, vous avez répondu juste à la majorité des questions ! Votre algorithme sait repérer la structure d’un morceau ou les sons qui composent les tubes planétaires. Vous seriez un producteur de génie. // COURONNE ROBOT",
 		image: "robot-musicien-adulte.png",
 	},
 
 // Compte des points perdu < 70%
 	{
 		title: "Artiste incompris",
-		message: "Vous n’avez pas su apprendre à l’algorithme à reconnaître les sons, les notes ou la structure d’un morceau… Les résultats produits par la machine risquent d’être… originaux. Vous ne composerez peut-être pas le prochain tube planétaire, mais votre musique aura l’avantage d’être… différente !",
+		message: "Vous n’avez pas su apprendre à l’algorithme à reconnaître les sons, les notes ou la structure d’un morceau… Les résultats produits par la machine risquent d’être… originaux. Vous ne composerez peut-être pas le prochain tube planétaire, mais votre musique aura l’avantage d’être… différente ! // ROBOT TRISTE",
 		image: "robot-musicien-adulte-etonne.png",
 	},
 

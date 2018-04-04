@@ -19,35 +19,29 @@ const juriste = [
 	{
 		title: "Vous êtes assis·e à votre bureau...",
 		message: "Vous contemplez la centaine de dossiers en attente de jugement. Vous êtes en charge des affaires de recours en cas de licenciement abusif.",
-		image: "robot-juriste-bebe.png",
+		image: "robot-juriste-dodo.png",
 	},
 	{
-		message: "Comme la plupart des tribunaux français, le vôtre est encombré. Vous avez entendu parler d'outils d'intelligence artificielle (IA) pour traiter plus rapidement des dossiers.",
-		image: "robot-juriste-bebe.png",
+		message: "Comme la plupart des tribunaux français, le vôtre est encombré. Vous avez entendu parler d’outils d'intelligence artificielle (IA) pour traiter plus rapidement des dossiers.",
+		image: "robot-juriste-dodo.png",
 	},
 	{
 		message: "Vous vous inspirez de Case Law Analytics et de Predictice, deux entreprises françaises qui proposent des outils d'IA à des avocats. Vous vous associez avec un ingénieur pour écrire un algorithme adapté aux magistrats.",
-		image: "robot-juriste-bebe.png",
+		image: "robot-juriste-dodo.png",
 	},
 	{
 		title: "Qu'est-ce qu'un algorithme ?",
 		message: "Ce sont les instructions qui commandent un programme informatique. C'est un peu comme une recette de cuisine. Les ingrédients sont les données des dossiers ; votre plat, ce sont les différents jugements.",
-		image: "robot-juriste-bebe.png",
+		image: "robot-juriste-dodo.png",
 	},
 	{
-		title: "L'ingrédient principal",
-		message: "Votre algorithme doit se nourrir de la loi qui détermine le montant des indemnités de licenciement d'un salarié.",
-		image: "robot-juriste-bebe.png",
-	},
-
-	{
-		message: "Ce ne sont que quelques lignes de code, mais vous vous prenez déjà d'affection pour ce super-assistant qui va faire diminuer la pile de dossiers sur votre bureau. Vous décidez de lui donner un prénom.",
+		message: "Ce ne sont que quelques lignes de code, mais vous vous prenez déjà d’affection pour ce super-assistant qui va faire diminuer la pile de dossiers sur votre bureau. Vous décidez de lui donner un prénom.",
 		image: "robot-juriste-bebe.png"
 	},
 
 	{
 		name: "name",
-		message: "Vous l'appelez...",
+		message: "Vous l’appelez...",
 		choices: [
 			{
 				"value": "Ross",
@@ -66,6 +60,13 @@ const juriste = [
 			}
 		]
 	},
+
+	{
+		title: "L'ingrédient principal",
+		message: "Votre algorithme doit se nourrir de la loi qui détermine le montant des indemnités de licenciement d'un salarié.",
+		image: "robot-juriste-bebe.png",
+	},
+
 	{
 		message: "Vous décidez de tester votre algorithme en lui soumettant un premier dossier.",
 		image: "robot-juriste-bebe.png"
@@ -79,7 +80,7 @@ const juriste = [
 	},
 	
 	{ 
-		title: "L'algorithme vous dit :",
+		title: "L’algorithme vous dit :",
 		message: "Mme Laurent a droit à une indemnité comprise entre 1,5 et 6 mois de salaire brut.",
 		image: "robot-juriste-bebe.png",
 	},
@@ -87,15 +88,15 @@ const juriste = [
 		type: "explanation",
         title: "Vous êtes complètement déçu·e…",
 		message: "{{name}} n’a fait que répéter ce qui est écrit dans la loi. Vous n’êtes pas très avancé·e, car vous souhaitez avoir un montant précis et pas seulement une fourchette.",
-		image: "robot-juriste-bebe.png",
+		image: "robot-juriste-bebe-etonne.png",
 	},
 	{
 		title: "Vous demandez conseil.",
-		message: "L'algorithme a besoin de plus de précisions quant aux critères qui motivent votre décision. Jacques Levy Vehel, le co-fondateur de Case Law Analytics, vous assiste.",
+		message: "L’algorithme a besoin de plus de précisions quant aux critères qui motivent votre décision. Jacques Levy Vehel, le co-fondateur de Case Law Analytics, vous assiste.",
 					image: "experts-juriste-vehel.jpg",
 	},
 	{
-		message:"«L'intelligence artificielle calcule ces probabilités grâce à un algorithme: à condition qu'on lui donne assez d'exemples, elle pourra simuler les différentes décisions possibles pour un cas particulier.»",
+		message:"«L’intelligence artificielle calcule ces probabilités grâce à un algorithme: à condition qu'on lui donne assez d'exemples, elle pourra simuler les différentes décisions possibles pour un cas particulier.»",
 			image: "experts-juriste-vehel.jpg",
 	}, 
 	{
@@ -123,12 +124,12 @@ const juriste = [
 
 	{
 		title: "Résultat de l'algorithme :",
-		message: "M. Husson devrait recevoir douze mois de salaire brut en indemnité. Ce n'est plus une fourchette... mais le montant des indemnités est supérieur à ce que prévoit la loi actuelle.",
+		message: "M. Husson devrait recevoir douze mois de salaire brut en indemnité. Ce n’est plus une fourchette... mais le montant des indemnités est supérieur à ce que prévoit la loi actuelle.",
 		image: "robot-juriste-bebe.png",
 		when: answers => answers.choice_premiereslois === 'Tous les articles de loi',
 	},
 	{
-		message: "L'algorithme a pris en compte toutes les décisions liées aux lois précédentes. Le résultat est faussé.",
+		message: "L’algorithme a pris en compte toutes les décisions liées aux lois précédentes. Le résultat est faussé.",
 		image: "robot-juriste-bebe.png",
 		when: answers => answers.choice_premiereslois === 'Tous les articles de loi',
 	},
@@ -146,7 +147,7 @@ const juriste = [
 //Si choix - Que des décisions similaires
 	{	
 		title: "Deuxième dossier",
-		message: "M. Husson a été victime d'un licenciement abusif après avoir travaillé 10 ans dans une entreprise de télécommunication.",
+		message: "M. Husson a été victime d’un licenciement abusif après avoir travaillé 10 ans dans une entreprise de télécommunication.",
 		image: "robot-juriste-marteau-anime.gif",
 		when: answers => answers.choice_premiereslois !== 'Tous les articles de loi',
 	},
@@ -154,7 +155,7 @@ const juriste = [
 	{
 		title: "Résultat de l'algorithme :",
 		message: "M. Husson devrait recevoir trois mois de salaire brut en indemnités. C'est un résultat précis... mais vous vous rendez compte que {{name}} n'a pas tenu compte de la zone géographique de votre cour.",
-		image: "robot-juriste-bebe.png",
+		image: "robot-juriste-bebe-etonne.png",
 		when: answers => answers.choice_premiereslois !== 'Tous les articles de loi',
 	},
 	{
@@ -170,8 +171,16 @@ const juriste = [
 ////////////////
 // ROBOT ENFANT
 ////////////////
+
+// Robot devient enfant
 	{
-		title: "Conseil de l'ingénieur",
+		title: "Quoi ?",
+		message: "{{name}} a grandi !",
+		image: "robot-juriste-enfant.png",
+	},
+//
+	{
+		title: "Création d’une base de données intelligente",
 		message: "Pour que {{ name }} puisse reconnaître les données importantes dans toutes les futures décisions que vous ajouterez à la base de données, il faut recourir aux techniques de traitement automatique du langage naturel.",
 		image: "robot-juriste-enfant.png",
 	},
@@ -181,11 +190,11 @@ const juriste = [
 		image: "robot-juriste-enfant.png",
 	},
 	{
-		message: "C'est en multipliant les exemples que {{name}} finit par comprendre où se situe l'information-clé dans une phrase, en fonction des mots qui l'entourent.",
+		message: "C’est en multipliant les exemples que {{name}} finit par comprendre où se situe l'information-clé dans une phrase, en fonction des mots qui l'entourent.",
 		image: "robot-juriste-enfant.png",
 	},
 	{
-		message: "Pour nos dossiers, {{ name }}  doit repérer l'ancienneté d'un salarié dans l'entreprise, critère décisif pour définir le montant des indemnités. On essaye ?",
+		message: "Pour nos dossiers, {{ name }}  doit repérer l’ancienneté d'un salarié dans l'entreprise, critère décisif pour définir le montant des indemnités. On essaye ?",
 		image: "robot-juriste-enfant.png",
 	},
 
@@ -212,35 +221,49 @@ const juriste = [
 				"type": "input",
 				"answers": ['ans', 'années', 'Ans', 'Années']
 			},
+			{
+				"value": " au sein de l’entreprise.",
+			},			
 		]
 	},
 //Si réponse correcte
 	{
 		title: "Bonne réponse !",
-		message: "Ici, l'information-clé est le nombre d'années passées dans l'entreprise. Pour repérer cette information, qui varie selon les salariés, {{name}} doit identifier les mots contextuels «pendant» et «ans» qui précèdent et suivent cette information.",
+		message: "Ici, l’information-clé est le nombre d’années passées dans l’entreprise. Pour repérer cette information, qui varie selon les salariés, {{name}} doit identifier les mots contextuels «pendant» et «ans» qui précèdent et suivent cette information.",
 		image: "robot-juriste-enfant.png",
 		when: answers => answers.blanks_emploi_duree1
 	},
 //Si réponse incorrecte
 	{
 		title: "Mauvaise réponse !",
-		message: "Ici, l'information-clé est le nombre d'années passées dans l'entreprise. Pour repérer cette information, qui varie selon les salariés, {{name}} doit reconnaître les mots contextuels «pendant» et «ans» qui précèdent et suivent cette information.",
+		message: "Ici, l’information-clé est le nombre d’années passées dans l’entreprise. Pour repérer cette information, qui varie selon les salariés, {{name}} doit reconnaître les mots contextuels «pendant» et «ans» qui précèdent et suivent cette information.",
 		image: "robot-juriste-enfant-etonne.png",
 		when: answers => !answers.blanks_emploi_duree1
+	},
+
+//Transition
+	{
+		message: "Tentons un second exemple.",
+		image: "robot-juriste-enfant.png",
+		when: answers => answers.blanks_emploi_duree1
 	},
 
 //INPUT CORINNE DUTEIL
 	{
 		name: "blanks_emploi_duree2",
-		message: "Mme Corinne Duteil a été victime d'un licenciement abusif. Elle avait été ",
+		title: "Entrez les mots manquants",
+		message: "",
 		blanks: [
+			{
+				"value": "Mme Corinne Duteil a été victime d’un licenciement abusif. L'entreprise l'avait "
+			},
 			{
 				"value": "word_1",
 				"type": "input",
 				"answers": ['embauchée', 'engagée', 'recrutée', 'Embauchée', 'Engagée', 'Recrutée', 'embauchée ', 'engagée ', 'recrutée ', 'Embauchée ', 'Engagée ', 'Recrutée ']
 			},
 			{
-				"value": " dans l'entreprise en 2013.",
+				"value": " en 2013.",
 			},
 		]
 	},
@@ -257,12 +280,12 @@ const juriste = [
 		message: "Ici, trois réponses étaient possibles : «embauchée», «recrutée» ou «engagée». Plus il y a de manières d'exprimer une idée, plus {{name}} mettra du temps à reconnaître l'information.",
 		image: "robot-juriste-enfant-etonne.png",
 		when: answers => !answers.blanks_emploi_duree2 
-},
+	},
 
 //Si toutes réponses correctes
 	{
 		title: "Bravo !",
-		message: "Le taux d'erreur de {{name}} est inférieur à 15%, vous pourrez donc économiser de longues heures d'étiquetage manuel de vos données. Vous avez maintenant une base de données suffisamment complète pour que {{name}} puisse «prédire» la probabilité des différents jugements pour un nouveau dossier.",
+		message: "Le taux d’erreur de {{name}} est inférieur à 15%, vous pourrez donc économiser de longues heures d’étiquetage manuel de vos données. Vous avez maintenant une base de données suffisamment complète pour que {{name}} puisse «prédire» la probabilité des différents jugements pour un nouveau dossier.",
 		when: answers => answers.blanks_emploi_duree1 && answers.blanks_emploi_duree2,
 		image: "robot-juriste-ado.png",
 	},
@@ -276,7 +299,7 @@ const juriste = [
 
 {
 		title: "",
-		message: "«Quand le taux d'erreur est supérieur à 15 ou 20%, on étiquette les données à la main.» (Jacques Levy-Vehel, co-fondateur de Case Law Analytics)",
+		message: "«Quand le taux d’erreur est supérieur à 15 ou 20%, on étiquette les données à la main.» (Jacques Levy-Vehel, co-fondateur de Case Law Analytics)",
 		image: "experts-juriste-vehel.jpg",
 	},
 
@@ -284,8 +307,8 @@ const juriste = [
 //TODO Ajouter compte des bonnes & mauvaises réponses
 	{
 		title: "Une tâche longue et fastidieuse...",
-		message: "C'est la partie «humaine» de l'intelligence artificielle. Selon la taille de la base de données, l'opération peut prendre plusieurs jours, voire plusieurs semaines.",
-		image: "robot-juriste-marteau-anime.gif",	
+		message: "C'est la partie «humaine» de l’intelligence artificielle. Selon la taille de la base de données, l’opération peut prendre plusieurs jours, voire plusieurs semaines.",
+		image: "robot-juriste-enfant.png",	
 	},
 
 
@@ -293,25 +316,32 @@ const juriste = [
 // ROBOT ADO
 ////////////////
 
+// Robot devient ado
+	{
+		title: "Quoi ?",
+		message: "{{name}} a grandi !",
+		image: "robot-juriste-ado.png",
+	},
+//
+
 //Cas licenciements
 	{
-		message: "Avant d'utiliser {{name}}, il faut vérifier si ses prédictions reflètent la réalité des décisions que vous avez prises par le passé. Case Law Analytics vous conseille de comparer les statistiques générées par {{name}} à un corpus de décisions «témoin».",
+		message: "Avant d’utiliser {{name}}, il faut vérifier si ses prédictions reflètent la réalité des décisions que vous avez prises par le passé. Case Law Analytics vous conseille de comparer les statistiques générées par {{name}} à un groupe de décisions «témoin».",
 			image: "robot-juriste-ado.png",
 	},
 
 //TODO TABLEAU
 	{
 		title: "Voici deux dossiers similaires... En apparence.",
-//		message: "Mme Petit : 29 ans, 10 ans d'ancienneté, ouvrière, entreprise de 10 salariés. Indemnité selon l'IA : 2,5 mois de salaire brut. M. Martin : 62 ans, 10 ans d'ancienneté, cadre technique, entreprise de 25 salariés. Indemnité selon le corpus de décisions témoin : 3 mois de salaire brut.",
 		image: "robot-juriste-dossier-analyse.png",
 	},
 	{
 		title: "Le montant des indemnités est différent...",
-		message: "Vous ne comprenez pas pourquoi : Mme Petit et M. Martin ont pourtant travaillé tous deux 10 ans dans l'entreprise.",
+		message: "Vous ne comprenez pas pourquoi : Mme Petit et M. Martin ont pourtant travaillé tous deux 10 ans dans l’entreprise.",
 			image: "robot-juriste-ado-etonne.png",
 	},
 	{
-		message: "Vous aviez pourtant programmé {{name}} pour calculer le montant des indemnités en fonction de l'ancienneté du salarié.",
+		message: "Vous aviez pourtant programmé {{name}} pour calculer le montant des indemnités en fonction de l’ancienneté du salarié.",
 		image: "robot-juriste-ado-etonne.png",
 	},
 //Choix proposé
@@ -328,7 +358,7 @@ const juriste = [
 				"description": ""
 			},
 			{
-				"value": "Nombre de salariés dans entreprise",
+				"value": "Nombre de salariés dans l’entreprise",
 				"description": ""
 			},
 			{
@@ -340,37 +370,46 @@ const juriste = [
 //Réponse correcte 3
 	{
 		title: "Bravo !",
-		message: "Depuis 2017, les indemnités diffèrent en fonction du nombre de salarié dans l'entreprise. Il faut donc augmenter le poids de ce critère lorsque {{name}} apprend à reconnaître les informations clés d’un dossier.",
+		message: "Depuis 2017, les indemnités diffèrent en fonction du nombre de salarié dans l’entreprise. Il faut donc augmenter le poids de ce critère lorsque {{name}} apprend à reconnaître les informations clés d’un dossier.",
 		image: "robot-juriste-ado.png",
-		when: answers => answers.choice_critereneglige === 'Nombre de salariés dans entreprise',
+		when: answers => answers.choice_critereneglige === 'Nombre de salariés dans l’entreprise',
 	},
 //Si mauvaise réponse
 	{
 		title: "Mauvaise réponse !",
-		message: "Les indemnités diffèrent en fonction du nombre de salariés dans l'entreprise. Il faut donc augmenter le poids de ce critère lorsque {{name}} apprend à reconnaître les informations-clés d'un dossier.",
+		message: "Les indemnités diffèrent en fonction du nombre de salariés dans l’entreprise. Il faut donc augmenter le poids de ce critère lorsque {{name}} apprend à reconnaître les informations-clés d'un dossier.",
 		image: "robot-juriste-ado-etonne.png",
-		when: answers => answers.choice_critereneglige !== 'Nombre de salariés dans entreprise',
+		when: answers => answers.choice_critereneglige !== 'Nombre de salariés dans l’entreprise',
 	},
 
 // Etape commune 	
 	{
 		title: "Votre algorithme est maintenant bien entraîné !",
-		message:"Vous lui soumettez un nouveau dossier : M. Olivier a été victime d'un licenciement abusif après avoir travaillé pendant 1 an dans une start-up.", 
+		message:"Vous lui soumettez un nouveau dossier. M. Olivier a été victime d’un licenciement abusif après avoir travaillé pendant 1 an dans une start-up.", 
 		image: "robot-juriste-marteau-anime.gif",
+	},
+
+	{
+		title: "Résultat de l’algorithme :",
+		message: "M. Olivier devrait avoir 1 mois de salaire brut d’indemnité. C'est exactement ce que vous auriez décidé en étudiant vous-même le dossier.",
+		image: "robot-juriste-ado.png",
 	},
 
 ////////////////
 // ROBOT ADULTE
 ////////////////
 
+// Robot devient adulte
 	{
-		title: "Résultat de l'algorithme :",
-		message: "M. Olivier devrait avoir 1 mois de salaire brut d'indemnité. C'est exactement ce que vous auriez décidé en étudiant vous-même le dossier.",
+		title: "Quoi ?",
+		message: "{{name}} a grandi !",
 		image: "robot-juriste-adulte.png",
 	},
+//
+
 	{
-		title: "L'algorithme enchaîne les dossiers",
-		message: "La pile fond comme neige au soleil. Vous avez beaucoup plus de temps à consacrer aux dossiers compliqués.",
+		title: "Les dossiers s'enchaînent...",
+		message: "Grâce à {{name}}, la pile fond comme neige au soleil. Vous avez beaucoup plus de temps à consacrer aux dossiers compliqués.",
 		image: "robot-juriste-adulte.png",
 },
 	{
@@ -380,7 +419,8 @@ const juriste = [
 //Nouveau choix proposé
 	{
 		name: "choice_critereneglige_automatise",
-		message: "Vous décidez d'automatiser vos décisions sur les dossiers les plus simples, afin de consacrer plus de temps aux dossiers complexes.",
+		title: "Vous décidez d'automatiser vos décisions",
+		message: "sur les dossiers les plus simples, afin de consacrer plus de temps aux dossiers complexes.",
 		choices: [
 			{
 				"value": "Oui",
@@ -395,34 +435,35 @@ const juriste = [
 //Si bonne réponse
 	{
 		title: "Attention !",
-		message: "Vous risquez d'être sanctionné si vous oubliez le côté «humain» de la justice. Une décision ne peut se baser uniquement sur un algorithme : {{name}} ne peut être qu'un outil d'aide à la décision.",
+		message: "Vous risquez d'être sanctionné si vous oubliez le côté «humain» de la justice. Une décision ne peut se baser uniquement sur un algorithme : {{name}} ne peut être qu'un outil d’aide à la décision.",
 		image: "robot-juriste-adulte-etonne.png",
 		when: answers => answers.choice_critereneglige_automatise === 'Oui',
 	},
 		{
-		message: "Mieux vaut prendre le temps d'étudier chaque propositions de l'intelligence artificielle à la lumière des spécificités des dossiers, et de la chambre chargée de les traiter.",
+		message: "Mieux vaut prendre le temps d’étudier chaque propositions de l’intelligence artificielle à la lumière des spécificités des dossiers, et de la chambre chargée de les traiter.",
 		image: "robot-juriste-adulte-etonne.png",
 		when: answers => answers.choice_critereneglige_automatise === 'Oui',
 	},
 //Si mauvaise réponse
 	{
 		title: "Vous faîtes bien...",
-		message: "Même sur les dossiers les plus simples, les décisions ne peuvent être prises automatiquement car cela va à l'encontre de la nature même d'une procédure judiciaire. {{name}} ne peut être qu'un outil d'aide à la décision.",
+		message: "Même sur les dossiers les plus simples, les décisions ne peuvent être prises automatiquement car cela va à l’encontre de la nature même d'une procédure judiciaire. {{name}} ne peut être qu'un outil d'aide à la décision.",
 		image: "robot-juriste-adulte.png",
 		when: answers => answers.choice_critereneglige_automatise === 'Non',
 	},
 
 // commun à tous 
 	{
-		title: "La situation aux Etats-Unis",
-		message: "Le logiciel Compas permet d'évaluer le risque de récidive d'un criminel. Mais les juges qui ne se basaient que sur ce programme ont été contraints de revoir leur jugement, et de justifier leur décision par un raisonnement humain et non informatique.",
+		title: "La situation aux États-Unis",
+		message: "Le logiciel Compas permet d’évaluer le risque de récidive d'un criminel. Mais les juges qui ne se basaient que sur ce programme ont été contraints de revoir leur jugement, et de justifier leur décision par un raisonnement humain et non informatique.",
 		image: "experts-juriste-compas.jpg",
 	},
 
 //Choix Open source
 	{
 		name: "choice_opensource",
-		message: "Plusieurs juges sont intéressés par votre outil. Vous décidez de :",
+		title: "Plusieurs juges sont intéressés par votre outil",
+		message: "Vous décidez de :",
 		choices: [
 			{
 				"value": "Le rendre accessible en Open source",
@@ -436,8 +477,8 @@ const juriste = [
 	},
 //Si bonne réponse
 	{
-		title: "Bonne réponse !",
-		message: "Vous prenez le risque que {{name}} soit modifié, mais l'Open Source permettra à chacun d'apprécier les fondements de la décision prise par le juge qui l'utilise. En le rendant gratuit, vous évitez la création de nouvelles inégalités entre les professionnels de la justice qui pourraient se l'offrir et ceux qui ne le pourraient pas.",
+		title: "Sage décision !",
+		message: "Vous prenez le risque que {{name}} soit modifié, mais l'Open source permettra à chacun d'apprécier les fondements de la décision prise par le juge qui l'utilise. En le rendant gratuit, vous évitez la création de nouvelles inégalités entre les professionnels de la justice qui pourraient se l'offrir et ceux qui ne le pourraient pas.",
 		image: "robot-juriste-adulte.png",
 		when: answers => answers.choice_opensource === 'Le rendre accessible en Open source',
 	},
@@ -451,7 +492,7 @@ const juriste = [
 //Si mauvaise réponse
 
 	{
-		title: "Mauvaise réponse !",
+		title: "Mauvaise idée...",
 		message: "En rendant le code de {{name}} secret, vous exposez les juges qui l'utiliseront à des contestations : il faut que ceux-ci sachent sur quels critères se basent {{name}}. Pour assurer la transparence d'une décision, il faut que l'outil que vous utilisez le soit aussi.",
 		image: "robot-juriste-adulte-etonne.png",
 		when: answers => answers.choice_opensource !== 'Le rendre accessible en Open source',
@@ -467,7 +508,8 @@ const juriste = [
 //Indemnités homme/femme
 	{
 		name: "choice_indemniteshommefemme",
-		message: "Les indemnités sont calculées en fonction du salaire. Puisque le salaire des femmes est moins élevé, les indemnités seront moins élevées.",
+		title: "Les indemnités sont calculées en fonction du salaire",
+		message: "Puisque le salaire des femmes est moins élevé, les indemnités seront moins élevées.",
 		choices: [
 			{
 				"value": "Argument valide",
@@ -482,7 +524,7 @@ const juriste = [
 //Si bonne réponse
 	{
 		title: "Bonne réponse !",
-		message: "Le raisonnement paraît logique,mais vous ne vous êtes pas fait·e avoir: les dossiers dont on parle sont similaires en termes de salaire.",
+		message: "Le raisonnement paraît logique, mais vous ne vous êtes pas fait·e avoir : les dossiers dont on parle sont similaires en termes de salaire.",
 		image: "robot-juriste-adulte.png",
 		when: answers => answers.choice_indemniteshommefemme === "Argument invalide",
 	},
@@ -497,12 +539,12 @@ const juriste = [
 
 	{
 		title: "Biais de traitement",
-		message: "Des études montrent également que dans certains domaines du droit, il y a une différence de traitement entre les femmes et les hommes. Ces derniers écopent par exemple de peines de prison plus lourdes.",
+		message: "Des études montrent également que dans certains domaines du droit, il y a une différence de traitement entre les femmes et les hommes. Les hommes écopent par exemple de peines de prison plus lourdes.",
 		image: "robot-juriste-adulte.png",
 	},
 
 	{
-		message: "Le biais peut donc se situer dans l'appréciation personnelle des juges et se refléter dans la base de données soumise à l'algorithme.",
+		message: "Le biais peut donc se situer dans l’appréciation personnelle des juges. Il risque de se refléter dans la base de données soumise à l'algorithme.",
 		image: "robot-juriste-adulte.png",
 	},
 
@@ -510,10 +552,11 @@ const juriste = [
 //Biais indemnités homme/femme
 	{
 		name: "choice_indemniteshommefemme_biais",
-		message: "Comment corriger ce biais ?",
+		title: "Comment corriger ce biais ?",
+		message: "",
 		choices: [
 			{
-				"value": "Corriger le programme",
+				"value": "Modifier le programme",
 				"description": "pour que le mot «Madame» ne soit pas associé à des indemnités plus faibles que celles des hommes."
 			},
 			{
@@ -525,45 +568,58 @@ const juriste = [
 //Si bonne réponse
 	{
 		title: "Bonne réponse !",
-		message: "En prenant l'habitude d'anonymiser vos données, vous éviterez les biais liés au sexe des individus dans tous les domaines du droit que vous souhaitez couvrir avec votre intelligence artificielle.",
+		message: "En prenant l’habitude d'anonymiser vos données, vous éviterez les biais liés au sexe des individus dans tous les domaines du droit que vous souhaitez couvrir avec votre intelligence artificielle.",
 		image: "robot-juriste-adulte.png",
 		when: answers => answers.choice_indemniteshommefemme_biais === "Anonymiser les décisions",
 	},
 //Si mauvaise réponse
 	{
 		title: "Mauvaise réponse !",
-		message: "Si vous voulez utiliser l'intelligence artificielle dans d'autres domaines, il vous faudra répéter cette manipulation à chaque fois que vous trouverez un biais issu de la base de données et mal interprété par le système de traitement automatique du langage. Il vaut mieux anonymiser les données.",
+		message: "Si vous voulez utiliser l’intelligence artificielle dans d’autres domaines, il vous faudra répéter cette manipulation à chaque fois que vous trouverez un biais issu de la base de données et mal interprété par le système de traitement automatique du langage. Il vaut mieux anonymiser les données.",
 		image: "robot-juriste-adulte-etonne.png",
 		when: answers => answers.choice_indemniteshommefemme_biais !== "Anonymiser les décisions",
 	},
 
 	{
-		title: "L'anonymisation des données est un enjeu-clé",
-		message: "Depuis le vote de la loi pour une République Numérique en octobre 2016, et la publication du rapport Cadiet sur l'open data dans le monde de la justice, les professionnels du secteur attendent une décision sur la question.",
+		title: "L’anonymisation des données est un enjeu clé",
+		message: "Depuis le vote de la loi pour une République Numérique en octobre 2016, et la publication du rapport Cadiet sur l’open data dans le monde de la justice, les professionnels du secteur attendent une décision sur la question.",
 		image: "robot-juriste-adulte.png",
 	},
 	{
-		message: "Avocats, juristes et magistrats sont nombreux à s'inquiéter d'une intelligence artificielle qui utiliserait des données non anonymisées, notamment dans le cadre de procédure pénale.",
+		message: "Avocats, juristes et magistrats sont nombreux à s’inquiéter d’une intelligence artificielle qui utiliserait des données non anonymisées, notamment dans le cadre de procédure pénale.",
 		image: "robot-juriste-adulte.png",
 	},
 
 	{
-		message: "Le député Cédric Villani a écrit un rapport intitulé «Donner un sens à l’intelligence artificielle». Ces quelques 240 pages recommandent la création d’un corps d’experts qui pourrait être saisi pour enquêter sur une prise de décision algorithmique.",
-		image: "robot-juriste-adulte.png",
+		message: "Le député Cédric Villani a rendu un rapport intitulé «Donner un sens à l’intelligence artificielle». Ces quelque 240 pages recommandent la création d’un corps d’experts qui pourrait être saisi pour enquêter sur une prise de décision algorithmique.",
+		image: "experts-juriste-villani.jpg",
 	},
+
 	{
 		message: "Il préconise des études d’impact pour éviter les discriminations dont pourrait se rendre coupable l’intelligence artificielle, notamment dans le domaine de la justice. La sensibilisation des concepteurs d’intelligence artificielle à l’éthique est donc essentielle.",
+		image: "experts-juriste-villani.jpg",
+	},
+
+	{
+		title: "Votre score",
+		message: "En fonction de vos réponses tout au long de l’éducation de {{name}}, essayons de voir si vous avez adopté les bons réflexes.",
 		image: "robot-juriste-adulte.png",
 	},
 
+// Compte des points gagné > 70%
 	{
-		message: "En fonction de vos réponses tout au long de l’éducation de {{name}}, essayons de voir si vous avez adopté les bons réflexes.",
+		title: "Bon",
+		message: " // COURONNE ROBOT",
+		image: "robot-juriste-adulte.png",
 	},
 
-	//Score mauvaise attitude --> Mini nouvelle sur l'avenir pessimiste de l'IA dans la justice 
+// Compte des points perdu < 70% - Mini nouvelle sur l'avenir pessimiste de l'IA dans la justice
 	{
-		message: "Remerciements : Jacques Levy-Vehel (co-fondateur de Case Law Analytics et chercheur à l'Institut national de recherche en informatique et en automatique), Joachim Herrera (doctorant à l'Ecole de droit de Sciences Po)",
+		title: "Pas bon",
+		message: " // ROBOT TRISTE",
+		image: "robot-musicien-adulte-etonne.png",
 	},
+
 ]
 
 //GENERIQUE
