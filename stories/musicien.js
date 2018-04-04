@@ -741,13 +741,7 @@ const musicien = [
 				"type": "input",
 				"answers": ['aspirateur', 'Aspirateur', 'aspirateur ', 'Aspirateur '],
 			},
-<<<<<<< HEAD
 		],
-		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
-=======
-		]
-
->>>>>>> 05ec12de2e0906072e2ac89465c34ee0707c19bb
 	},
 // Bonne réponse
 	{	
@@ -975,11 +969,7 @@ const musicien = [
 			},
 			{
 				"value": "Ne pas créditer l'algorithme",
-<<<<<<< HEAD
-				"description": "mais uniquement l’ensemble des personnes qui ont travaillé avec vous sur cet album. Tout comme les musiciens ne créditent pas leur instrument, l’algorithme n’a été qu’un assistant",
-=======
 				"description": "mais uniquement l’ensemble des personnes qui ont travaillé avec vous sur cet album. L'algorithme n'a été qu'un outil",
->>>>>>> 05ec12de2e0906072e2ac89465c34ee0707c19bb
 				"points": 1
 			}
 			]
