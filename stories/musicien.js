@@ -10,7 +10,7 @@ const musicien = [
 	{
 		title: "Vous êtes un musicien et plus rien ne vous inspire...",
 		message: "Pas même votre dernière rupture amoureuse. C’est le syndrome de la page blanche. Vous traînez sur Spotify en quête d’inspiration et tombez par hasard sur l’album Hello World.",
-		image: "robot-musicien-bebe.png",
+		image: "robot-musicien-dodo.png",
 	},
 
 
@@ -43,18 +43,18 @@ const musicien = [
 	},
 
 	{
-		message: "C'est un peu comme une recette de cuisine. Le plat c’est le morceau, les ingrédients sont vos influences. Sur les conseils de Robin Meier, vous téléchargez l’algorithme.",
-		image: "robot-musicien-bebe.png",
+		message: "C’est un peu comme une recette de cuisine. Le plat, c’est le morceau, les ingrédients, vos influences. Sur les conseils de Robin Meier, vous téléchargez l’algorithme.",
+		image: "robot-musicien-dodo.png",
 	},
 
 	{
-		message: "Ce ne sont que quelques lignes de codes mais vous vous prenez déjà d'affection pour ce petit compositeur en herbe. Vous décidez de lui donner un prénom.",
+		message: "Ce ne sont que quelques lignes de codes mais vous vous prenez déjà d’affection pour ce petit compositeur en herbe. Vous décidez de lui donner un prénom.",
 		image: "robot-musicien-bebe.png",
 	},
 
 	{
 		name: "name",
-		message: "Vous l'appelez...",
+		message: "Vous l’appelez...",
 		choices: [
 			{
 				"value": "Johnny Hallgorithme",
@@ -83,7 +83,7 @@ const musicien = [
 
 	{
 		title: "Quelle déception...",
-		message: "Silence pendant 4 minutes et 33 secondes. Plutôt intéressant comme concept, mais vous risquez d’être accusé de plagiat puisque le compositeur de musique expérimentale John Cage l’a déjà fait avant vous. Le titre de son morceau? 4′33″.",
+		message: "Silence pendant 4 minutes et 33 secondes. Plutôt intéressant comme concept, mais vous risquez d’être accusé de plagiat puisque le compositeur de musique expérimentale John Cage l’a déjà fait avant vous. Le titre de son morceau ? 4′33″.",
 		image: "robot-musicien-bebe.png",
 	},
 
@@ -94,13 +94,13 @@ const musicien = [
 
 	{
 		title: "Cela ne résout pas votre problème...",
-		message: "Peu importe la durée que vous lui imposez, la machine ne vous sort que du silence. Vous écoutez les conseils de François Pachet, qui dirige le Creator Technology Research Lab de Spotify. Il a dit sur France Culture : «La première chose qu’on fait, c’est donner de la musique dont on veut s’inspirer au système.»",
+		message: "Vous écoutez les conseils de François Pachet, qui dirige le Creator Technology Research Lab de Spotify. «La première chose qu’on fait, c’est donner de la musique dont on veut s’inspirer au système», a-t-il dit sur France Culture.",
 		image: "experts-musicien-pachet.jpg",
 	},
 
 	{
-		title: "Vous avez oublié une étape cruciale",
-		message: "Nourrir la machine de vos influences : «Pour mes projets, je pars avec une base de données d’au moins 4h de son», précise Robin Meier. D'autres, comme François Pachet, n'utilisent pas directement le son mais les partitions des morceaux pour que l'IA les analyse.",
+		title: "Vous avez oublié une étape cruciale :",
+		message: "Nourrir la machine de vos influences. «Pour mes projets, je pars avec une base de données d’au moins 4h de son», précise Robin Meier. D'autres, comme François Pachet, n'utilisent pas directement le son mais les partitions des morceaux pour que l'IA les analyse.",
 		image: "experts-musicien-meier.jpg",
 	},
 
@@ -153,7 +153,7 @@ const musicien = [
 			{
 				"value": "word_2",
 				"type": "input",
-				"answers": ['Mi', 'mi', 'mi ', 'Mi ']
+				"answers": ['Mi', 'mi', 'Mi ', 'mi ']
 			},
 		],	
 		when: answers => answers.choice_mode_composition === "Celle de François Pachet",
@@ -210,7 +210,7 @@ const musicien = [
 //Si réponse incorrecte
 	{
 		title: "Mauvaise réponse !",
-		message: "Il fallait répondre La & La.",
+		message: "C'était deux fois la même note ! Il fallait répondre La & La.",
 		image: "robot-musicien-bebe-etonne.png",
 
 		when: answers => answers.choice_mode_composition === "Celle de François Pachet" && !answers.blanks_debut_gamme2,
@@ -258,7 +258,7 @@ const musicien = [
 
 //Fin du premier mini jeu
 	{
-		title: "Programmation achevée !",
+		title: "Programmation des notes achevée !",
 		message: "Les gammes, les accords et les bémols n’ont plus aucun secret pour {{name}}. Vous pouvez lui soumettre une première base de données et l'IA s’en inspirera pour composer un morceau dans le même style.",
 		image: "robot-musicien-bebe.png",
 
@@ -267,6 +267,7 @@ const musicien = [
 
 // Robot devient enfant
 	{
+		title: "Quoi ?",
 		message: "{{name}} a grandi !",
 		image: "robot-musicien-enfant.png",
 		when: answers => answers.choice_mode_composition === "Celle de François Pachet",
@@ -275,7 +276,7 @@ const musicien = [
 
 
 	{
-		title: "Vous créez une base de données.",
+		title: "Vous créez maintenant une base de données.",
 		message: "João Felipe, un doctorant à l’INRS, a travaillé à partir d’une bibliothèque de 14.000 morceaux de musique irlandaise traditionnelle. Vous soumettez cette base de données en libre accès à {{name}}.",
 		image: "experts-musicien-felipe.jpg",
 
@@ -314,12 +315,12 @@ const musicien = [
 		message: "Sélectionnez le début de la Marche Turque de W.A. Mozart.",
 		choices: [
 			{
-				"value": " ",
+				"value": "1.",
 				"image": "robot-musicien-reconnaitre-1a.jpg",
 				"points": 1,
 			},
 			{
-				"value": "   ",
+				"value": "2.",
 				"image": "robot-musicien-reconnaitre-1b.jpg",
 				"points": 0,
 			},
@@ -333,15 +334,15 @@ const musicien = [
 		message: "Vous avez appris à {{name}} à reconnaître le début d'une partition.",
 		image: "robot-musicien-enfant.png",
 
-		when: answers => answers.choice_mode_composition === "Celle de François Pachet" && answers.choix_reconnaitre_1 === " ",
+		when: answers => answers.choice_mode_composition === "Celle de François Pachet" && answers.choix_reconnaitre_1 === "1.",
 	},
 
 	{
 		title: "Mauvaise réponse !",
-		message: "La première image était la bonne. C'est l'indication chiffrée au début de la portée qui vous l'indiquait et non pas le nombre de dièses à la clé.",
-		image: "robot-musicien-enfant.png",
+		message: "La première image était la bonne. C'était l'indication chiffrée de rythme au début d'une partition qui vous l'indiquait.",
+		image: "robot-musicien-enfant-etonne.png",
 
-		when: answers => answers.choice_mode_composition === "Celle de François Pachet" && answers.choix_reconnaitre_1 === "  ",
+		when: answers => answers.choice_mode_composition === "Celle de François Pachet" && answers.choix_reconnaitre_1 === "2.",
 	},
 
 // Test 2/2
@@ -350,12 +351,12 @@ const musicien = [
 		message: "Sélectionnez la fin du morceau.",
 		choices: [
 			{
-				"value": " ",
+				"value": "1.",
 				"image": "robot-musicien-reconnaitre-2a.jpg",
 				"points": 1,
 			},
 			{
-				"value": "   ",
+				"value": "2.",
 				"image": "robot-musicien-reconnaitre-2b.jpg",
 				"points": 0,
 			},
@@ -369,21 +370,21 @@ const musicien = [
 		message: "Vous avez appris à {{name}} à reconnaître la fin d'une partition.",
 		image: "robot-musicien-enfant.png",
 
-		when: answers => answers.choice_mode_composition === "Celle de François Pachet" && answers.choix_reconnaitre_1 === " ",
+		when: answers => answers.choice_mode_composition === "Celle de François Pachet" && answers.choix_reconnaitre_1 === "2.",
 	},
 
 	{
 		title: "Mauvaise réponse !",
-		message: "La première image était la bonne. La double barre signifie la fin d'un morceau. Les deux points indiquent une reprise du morceau.",
-		image: "robot-musicien-enfant.png",
+		message: "La seconde image était la bonne. La double barre signifie la fin d'un morceau. Les deux points indiquent une reprise du morceau.",
+		image: "robot-musicien-enfant-etonne.png",
 
-		when: answers => answers.choice_mode_composition === "Celle de François Pachet" && answers.choix_reconnaitre_1 === "  ",
+		when: answers => answers.choice_mode_composition === "Celle de François Pachet" && answers.choix_reconnaitre_1 === "1.",
 	},
 
 	//TODO COMPTE BONNES MAUVAISES REPONSES
 	{
 		title: "Au moins 6 bonnes réponses sur 8 !",
-		message: "Bravo, vous avez réussi l’étape de labellisation des symboles musicaux.",
+		message: "Bravo, vous avez réussi l’étape de labellisation des symboles musicaux. Quelle efficacité !",
 		image: "robot-musicien-enfant.png",
 
 		when: answers => answers.choice_mode_composition === "Celle de François Pachet",
@@ -391,7 +392,7 @@ const musicien = [
 
 	{
 		title: "Moins de 6 bonnes réponses sur 8",
-		message: "Vos données ont besoin d’être mieux labellisées, vous faîtes appel à un.e musicologue pour vous aider.",
+		message: "Vos données ont besoin d’être mieux labellisées. Heureusement, vous avez fait appel à un musicologue pour vous aider.",
 		image: "robot-musicien-enfant.png",
 
 		when: answers => answers.choice_mode_composition === "Celle de François Pachet",
@@ -406,8 +407,8 @@ const musicien = [
 	},
 
 	{
-		message: "Comme François Pachet et son équipe lorsqu’ils travaillaient sur le programme FlowMachines avec Sony, vous constituez une base de données avec les œuvres du compositeur baroque Jean-Sebastien Bach.",
-		image: "experts-musicien-pachet.jpg",
+		message: "Comme François Pachet et son équipe lorsqu’ils travaillaient sur le programme FlowMachines avec Sony, vous constituez une base de données avec les œuvres du compositeur baroque Jean-Sébastien Bach.",
+		image: "experts-musicien-bach.jpg",
 
 		when: answers => answers.choice_mode_composition === "Celle de François Pachet",
 	},
@@ -419,20 +420,28 @@ const musicien = [
 			controls: true,
 			src: "robot-musicien-bach.mp3",
 		},
-		image: "robot-musicien-bach.png",
+		image: "robot-musicien-beatles.jpg",
 
 		when: answers => answers.choice_mode_composition === "Celle de François Pachet",
 	},
 
 // Robot devient ado
 	{
-		message: "{{name}} a grandi et abandonne la musique classique. Vous constituez une troisième base de données. Vous fournissez à {{name}} des centaines de partitions rock, de Led Zeppelin à Queen, en passant par les Beatles.",
+		title: "Quoi ?",
+		message: "{{name}} a grandi ! Et il abandonne la musique classique...",
 		image: "robot-musicien-ado.png",
 
 		when: answers => answers.choice_mode_composition === "Celle de François Pachet",
 	},
 //
 
+	{
+		title: "Vous constituez une troisième base de données",
+		message: "Vous fournissez à {{name}} des centaines de partitions rock, de Led Zeppelin à Queen, en passant par les Beatles.",
+		image: "robot-musicien-ado.png",
+
+		when: answers => answers.choice_mode_composition === "Celle de François Pachet",
+	},
 	{
 		message: "Avec d’aussi bonnes références, vous êtes plutôt sûr d’obtenir un super morceau.",
 		image: "robot-musicien-ado.png",
@@ -448,7 +457,7 @@ const musicien = [
 			controls: true,
 			src: "robot-musicien-beatles.mp3",
 		},
-		image: "robot-musicien-beatles.png",
+		image: "robot-musicien-beatles.jpg",
 
 		when: answers => answers.choice_mode_composition === "Celle de François Pachet",
 	},
@@ -518,13 +527,13 @@ const musicien = [
 // Bonne ou mauvaise réponse jeu instruments 1
 	{
 		title: "Bravo !",
-		message: "C'était bien le son d'une clarinette.",
+		message: "C’était bien le son d'une clarinette.",
 		image: "experts-musicien-instrument-clarinette.jpg",
 		when: answers => answers.choice_mode_composition === "Celle de Robin Meier" && answers.choix_nominstrument1 === "Une clarinette",
 	},
 	{
 		title: "Mauvaise réponse !",
-		message: "C'était le son d'une clarinette...",
+		message: "C’était le son d'une clarinette...",
 		image: "experts-musicien-instrument-clarinette.jpg",
 		when: answers => answers.choice_mode_composition === "Celle de Robin Meier" && answers.choix_nominstrument1 !== "Une clarinette",
 	},
@@ -559,13 +568,13 @@ const musicien = [
 // Bonne ou mauvaise réponse jeu instruments 2
 	{
 		title: "Bravo !",
-		message: "C'était bien le son d'une harpe.",
+		message: "C’était bien le son d'une harpe.",
 		image: "experts-musicien-instrument-harpe.png",
 		when: answers => answers.choice_mode_composition === "Celle de Robin Meier" && answers.choix_nominstrument2 === "Une harpe",
 	},
 	{
 		title: "Mauvaise réponse !",
-		message: "C'était le son d'une harpe...",
+		message: "C’était le son d'une harpe...",
 		image: "experts-musicien-instrument-harpe.png",
 		when: answers => answers.choice_mode_composition === "Celle de Robin Meier" && answers.choix_nominstrument2 !== "Une harpe",
 	},
@@ -600,13 +609,13 @@ const musicien = [
 // Bonne ou mauvaise réponse jeu instruments 3
 	{
 		title: "Bravo !",
-		message: "C'était bien le son d'un cor.",
+		message: "C’était bien le son d'un cor.",
 		image: "experts-musicien-instrument-cor.png",
 		when: answers => answers.choice_mode_composition === "Celle de Robin Meier" && answers.choix_nominstrument3 === "Un cor",
 	},
 	{
 		title: "Mauvaise réponse !",
-		message: "C'était le son d'un cor...",
+		message: "C’était le son d'un cor...",
 		image: "experts-musicien-instrument-cor.png",
 		when: answers => answers.choice_mode_composition === "Celle de Robin Meier" && answers.choix_nominstrument3 !== "Un cor",
 	},
@@ -614,14 +623,14 @@ const musicien = [
 // CONCLUSION DU JEU INSTRUMENTS
 // Bonne réponse
 	{	
-		title: "C'est un succès !",
+		title: "C’est un succès !",
 		message: "Vous avez pu vous constituer une bibliothèque de sons que vous allez pouvoir mélanger pour créer de nouveaux instruments.",
 		image: "robot-musicien-bebe.png",
 		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
 	},
 // Mauvaise réponse
 	{	
-		title: "C'est plutôt un échec...",
+		title: "C’est plutôt un échec...",
 		message: "Il va vous falloir passer un peu plus de temps sur la labellisation des instruments pour que votre bibliothèque soit complète.",
 		image: "robot-musicien-bebe-etonne.png",
 		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
@@ -629,7 +638,7 @@ const musicien = [
 
 	{	
 		title: "Google peut vous aider avec un logiciel : AI Experiments.",
-		message: "Il permet de mixer le son de deux instruments. Le code est disponible en open source.",
+		message: "Il permet de mixer le son de deux instruments. Le code est disponible en open source. Vous décidez de l’utiliser.",
 		image: "experts-musicien-google-experiments.jpg",
 		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
 	},
@@ -647,6 +656,7 @@ const musicien = [
 
 // Robot devient enfant
 	{
+		title: "Quoi ?",
 		message: "{{name}} a grandi !",
 		image: "robot-musicien-enfant.png",
 		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
@@ -654,13 +664,13 @@ const musicien = [
 //
 
 	{
-		title: "Vous écoutez : «Pierre et le loup», de Prokofiev",
-		message: "Chaque instrument est associé à un animal. De nombreux compositeurs ont essayé de retranscrire toutes sortes de sons : les animaux chez Prokofiev, l'eau chez Debussy ou Vivaldi.",
+		title: "Vous écoutez : «Pierre et le Loup» de Prokofiev",
+		message: "Dans ce morceau, chaque instrument est associé à un animal. Et d’autres compositeurs ont essayé de retranscrire toutes sortes de sons : chez Debussy ou Vivaldi, l’eau est un élément récurrent.",
 		music: {
 			controls: true,
 			src: "robot-musicien-prokofiev.mp3",
 		},
-		image: "experts-musicien-google-experiments.jpg",
+		image: "experts-musicien-prokofiev.jpg",
 		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
 	},
 
@@ -669,8 +679,8 @@ const musicien = [
 ///////////////////////////
 
 	{
-		name: "Reconnaître des sons",
-		message: "Et si on apprenait à {{name}} à reconnaître toutes sortes de sons pour les mélanger à des sonorités instrumentales ?",
+		title: "Reconnaître des sons",
+		message: "Mais Prokofiev n'avait pas d'algorithme à sa disposition. Et si on apprenait à {{name}} à reconnaître toutes sortes de sons pour les mélanger à des sonorités instrumentales ?",
 		image: "element-son.png",
 		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
 	},
@@ -683,6 +693,7 @@ const musicien = [
 			controls: true,
 			src: "robot-musicien-son-chat.mp3",
 		},
+		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
 		blanks: [
 			{
 				"value": "Il s'agit du son produit par un"
@@ -698,16 +709,18 @@ const musicien = [
 // Bonne réponse
 	{	
 		title: "Bravo !",
-		message: "C'était bien le son d'un chat.",
+		message: "C’était bien le son d'un chat.",
 		image: "experts-musicien-son-chat.jpg",
 		when: answers => answers.blanks_sons_1 && answers.choice_mode_composition === "Celle de Robin Meier",
+		"points": 1,
 	},
 // Mauvaise réponse
 	{	
 		title: "Faux !",
-		message: "C'était le son d'un chat.",
+		message: "C’était le son d'un chat.",
 		image: "experts-musicien-son-chat.jpg",
 		when: answers => !answers.blanks_sons_1 && answers.choice_mode_composition === "Celle de Robin Meier",
+		"points": 0,
 	},
 
 // Jeu 2 son
@@ -718,6 +731,7 @@ const musicien = [
 			controls: true,
 			src: "robot-musicien-son-aspirateur.mp3",
 		},
+		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
 		blanks: [
 			{
 				"value": "Il s'agit du son produit par un"
@@ -727,22 +741,29 @@ const musicien = [
 				"type": "input",
 				"answers": ['aspirateur', 'Aspirateur', 'aspirateur ', 'Aspirateur '],
 			},
+<<<<<<< HEAD
 		],
 		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
+=======
+		]
+
+>>>>>>> 05ec12de2e0906072e2ac89465c34ee0707c19bb
 	},
 // Bonne réponse
 	{	
 		title: "Bravo !",
-		message: "C'était bien le son d'un aspirateur.",
-		image: "experts-musicien-son-aspirateur.png",
+		message: "C’était bien le son d'un aspirateur.",
+		image: "experts-musicien-son-aspirateur.jpg",
 		when: answers => answers.blanks_sons_2 && answers.choice_mode_composition === "Celle de Robin Meier",
+		"points": 1,	
 	},
 // Mauvaise réponse
 	{	
 		title: "Faux !",
-		message: "C'était le son d'un aspirateur.",
-		image: "experts-musicien-son-aspirateur.png",
+		message: "C’était le son d'un aspirateur.",
+		image: "experts-musicien-son-aspirateur.jpg",
 		when: answers => !answers.blanks_sons_2 && answers.choice_mode_composition === "Celle de Robin Meier",
+		"points": 0,
 	},
 
 // Jeu 3 son
@@ -753,6 +774,7 @@ const musicien = [
 			controls: true,
 			src: "robot-musicien-son-pluie.mp3",
 		},
+		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
 		blanks: [
 			{
 				"value": "Il s'agit du son produit par la"
@@ -763,21 +785,23 @@ const musicien = [
 				"answers": ['pluie', 'Pluie', 'pluie ', 'Pluie '],
 			},
 		],
-		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
+//		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
 	},
 // Bonne réponse
 	{	
 		title: "Bravo !",
-		message: "C'était bien le son de la pluie.",
+		message: "C’était bien le son de la pluie.",
 		image: "experts-musicien-son-pluie.jpg",
 		when: answers => answers.blanks_sons_3 && answers.choice_mode_composition === "Celle de Robin Meier",
+		"points": 1,
 	},
 // Mauvaise réponse
 	{	
 		title: "Faux !",
-		message: "C'était le son de la pluie.",
+		message: "C’était le son de la pluie.",
 		image: "experts-musicien-son-pluie.jpg",
 		when: answers => !answers.blanks_sons_3 && answers.choice_mode_composition === "Celle de Robin Meier",
+		"points": 0,
 	},
 
 ///////////////
@@ -786,16 +810,17 @@ const musicien = [
 
 // Robot devient ado
 	{
+		title: "Quoi ?",
 		message: "{{name}} a grandi !",
 		image: "robot-musicien-ado.png",
 
-		when: answers => answers.choice_mode_composition === "Celle de François Robin Meyer!",
+		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
 	},
 //
 
 	{
 		title: "Vous utilisez AI Experiments (le logiciel de Google) à nouveau",
-		message: "Voici le mix entre le son d’un chat et celui d’une harpe. Plutôt prometteur, non ?",
+		message: "Voici le mélange du son d’un chat et celui d’une harpe. Plutôt prometteur, non ?",
 		music: {
 			controls: true,
 			src: "robot-musicien-son-google-mix.mp3",
@@ -805,7 +830,7 @@ const musicien = [
 	},
 
 	{
-		message: "En utilisant cette technique, la constitution de la base de données est essentielle pour avoir une idée du résultat que {{name}} va produire.",
+		message: "En utilisant cette technique, la constitution d'une base de données est essentielle pour avoir une idée du résultat que {{name}} va produire.",
 		image: "experts-musicien-google-experiments.jpg",
 		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
 	},
@@ -817,8 +842,8 @@ const musicien = [
 	},
 
 	{
-		title: "On écoute le résultat ?",
-		message: "Vous écoutez «La Fabrique des Monstres» de Robin Meier.",
+		title: "Et voici le résultat...",
+		message: "Vous écoutez «La Fabrique des Monstres» de Robin Meier",
 		music: {
 			controls: true,
 			src: "robot-musicien-meier.mp3",
@@ -848,7 +873,7 @@ const musicien = [
 	},
 
 	{
-		message: "«Les résultats ont été légèrement montés. Principalement des enchaînements de passages qui nous plaisaient bien ainsi que des superpositions», précise Robin Meyer.",
+		message: "Faisant référence à son œuvre, Robin Meier précise que «les résultats ont été légèrement montés. Principalement des enchaînements de passages qui nous plaisaient bien ainsi que des superpositions».",
 		image: "experts-musicien-meier.jpg",
 		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
 	},
@@ -870,6 +895,7 @@ const musicien = [
 
 // Robot devient adulte
 	{
+		title: "Quoi ?",
 		message: "{{name}} a grandi !",
 		image: "robot-musicien-adulte.png",
 	},
@@ -949,7 +975,11 @@ const musicien = [
 			},
 			{
 				"value": "Ne pas créditer l'algorithme",
+<<<<<<< HEAD
 				"description": "mais uniquement l’ensemble des personnes qui ont travaillé avec vous sur cet album. Tout comme les musiciens ne créditent pas leur instrument, l’algorithme n’a été qu’un assistant",
+=======
+				"description": "mais uniquement l’ensemble des personnes qui ont travaillé avec vous sur cet album. L'algorithme n'a été qu'un outil",
+>>>>>>> 05ec12de2e0906072e2ac89465c34ee0707c19bb
 				"points": 1
 			}
 			]
@@ -1000,7 +1030,7 @@ const musicien = [
 	{
 		name: "musicien_commanderadio",
 		title: "Vous recevez une commande d’une radio",
-		message: "pour produire une centaine de chansons à partir des goûts de ses auditeurs.",
+		message: "pour produire 100 chansons à partir des goûts de ses auditeurs.",
 		choices: [
 			{
 				"value": "Vous l’acceptez",
@@ -1022,14 +1052,13 @@ const musicien = [
 ////////////
 
 	{
-		title: "Avec l’IA, plus besoin d’être musicien pour composer de la musique",
-		message: "De plus, cette proposition n’est pas très valorisante pour votre profession : elle part du principe que vous pouvez composer de manière automatique.",
+		title: "Avec l’IA, plus besoin d’être musicien pour composer de la musique !",
+		message: "Mais cette proposition n’est pas très valorisante pour votre profession : elle part du principe que vous pouvez composer automatiquement.",
 		image: "robot-musicien-adulte-etonne.png",
 		when: answers => answers.musicien_commanderadio === "Vous l’acceptez",
 	},
 	{
-		title: "Avec l’IA, plus besoin d’être musicien pour composer de la musique",
-		message: "«On pourrait très bien alimenter une base de données et faire de la musique au kilomètre pour des supermarchés et des films commerciaux, c’est facile. On pourrait acheter des morceaux pour quelques dollars sans connaître l’algorithme en détail», précise Robin Meyer.",
+		message: "«On pourrait très bien alimenter une base de données et faire de la musique au kilomètre pour des supermarchés et des films commerciaux, c’est facile. On pourrait acheter des morceaux pour quelques dollars sans connaître l’algorithme en détail», précise Robin Meier.",
 		image: "experts-musicien-meier.jpg",
 		when: answers => answers.musicien_commanderadio === "Vous l’acceptez",
 	},
@@ -1039,11 +1068,133 @@ const musicien = [
 		image: "robot-musicien-adulte-etonne.png",
 		when: answers => answers.musicien_commanderadio === "Vous l’acceptez",
 	},	
+	{
+		title: "En même temps...",
+		message: "La composition avec l’intelligence artificielle ouvrirait un champ infini de possibilités, par exemple pour les vidéastes qui n’ont pas les moyens d’illustrer leurs contenus avec des musiques trop chères.",
+		image: "robot-musicien-adulte.png",
+		when: answers => answers.musicien_commanderadio === "Vous l’acceptez",
+	},	
+	{
+		title: "Composer 100 chansons de bonne qualité vous semble difficilement réalisable...",
+		message: "Si la radio vous presse et que vous manquez de temps, vous ne serez sans doute pas fier de l’intégralité de vos morceaux.",
+		image: "robot-musicien-adulte-etonne.png",
+		when: answers => answers.musicien_commanderadio === "Vous l’acceptez",
+	},			
 
 ////////////
 //CHOIX RADIO COMPOSITION:
 //Chemin refusé
 ////////////
+	{
+		title: "Vous refusez.",
+		message: "Vous avez choisi de ne pas céder à la tentation et de préserver la réputation de votre profession : la création artistique, c’est sacré.",
+		image: "robot-musicien-adulte.png",
+		when: answers => answers.musicien_commanderadio === "Vous la refusez",
+	},
+	{
+		message: "«On pourrait très bien alimenter une base de données et faire de la musique au kilomètre pour des supermarchés et des films commerciaux, c’est facile. On pourrait acheter des morceaux pour quelques dollars sans connaître l’algorithme en détail», précise Robin Meier.",
+		image: "experts-musicien-meier.jpg",
+		when: answers => answers.musicien_commanderadio === "Vous la refusez",
+	},
+	{
+		title: "L'intelligence artificielle est un bon outil",
+		message: "Mais ce n'est qu'un moyen de trouver de nouvelles pistes d’exploration. Vous préférez garder le contrôle sur vos créations. ",
+		image: "robot-musicien-adulte.png",
+		when: answers => answers.musicien_commanderadio === "Vous la refusez",
+	},
+	{
+		title: "Composer 100 chansons de bonne qualité vous semble difficilement réalisable...",
+		message: "Si la radio vous presse et que vous manquez de temps, vous ne serez sans doute pas fier de l’intégralité de vos morceaux.",
+		image: "robot-musicien-adulte.png",
+		when: answers => answers.musicien_commanderadio === "Vous la refusez",
+	},
+	{
+		message: "Composer de la musique uniquement en fonction des goûts des auditeurs pourrait conduire à une uniformisation des musiques diffusées à la radio. L’intérêt d’écouter une radio est aussi de pouvoir découvrir de nouveaux styles.",
+		image: "robot-musicien-adulte.png",
+		when: answers => answers.musicien_commanderadio === "Vous la refusez",
+	},
+
+////////////
+//CONCLUSION
+////////////
+
+	{
+		title: "Utiliser un algorithme vous permettra de gagner du temps",
+		message: "Mais tout comme l’intelligence artificielle n’est pas encore capable d’imiter nos cerveaux, {{name}} est incapable de reproduire le processus de création qui anime un artiste.",
+		image: "robot-musicien-adulte.png",
+	},
+
+// Compte des points
+	{
+		title: "Votre score",
+		message: "À la lumière des choix que vous avez effectués, essayons de définir le type d’artiste que vous seriez si vous travailliez avec l’intelligence artificielle.",
+		image: "robot-musicien-adulte.png",
+	},
+
+// Compte des points gagné > 70%
+	{
+		title: "Producteur de tubes",
+		message: "Bravo, vous avez répondu juste à la majorité des questions ! Votre algorithme sait repérer la structure d’un morceau ou les sons qui composent les tubes planétaires. Vous seriez un producteur de génie. // COURONNE ROBOT",
+		image: "robot-musicien-adulte.png",
+	},
+
+// Compte des points perdu < 70%
+	{
+		title: "Artiste incompris",
+		message: "Vous n’avez pas su apprendre à l’algorithme à reconnaître les sons, les notes ou la structure d’un morceau… Les résultats produits par la machine risquent d’être… originaux. Vous ne composerez peut-être pas le prochain tube planétaire, mais votre musique aura l’avantage d’être… différente ! // ROBOT TRISTE",
+		image: "robot-musicien-adulte-etonne.png",
+	},
 
 ]
 
+//GENERIQUE
+//
+//
+// Graphisme : Julie Zentkowski
+// 
+// Merci tout particulièrement à Jules Bonnard et Pierre Romera de l'AFP pour leur aide précieuse en code
+//
+//
+// Remerciements : 
+// Robin Meier, Daniele Ghisi, João Felipe, Anthony Rival, Dipty Chander 
+//
+// Hello Shadow 
+// Composed by Stromae, SKYGGE, The Bionix with Flow Machines, inspired by Cape Verdian music, Audio stems generated: choirs, rhythm guitar, Lyrics: Kiesza
+// Vocals: Kiesza, All instruments performed by Stromae, The Bionix and SKYGGE
+// Mixed by Lionel Capouillez, Produced by The Bionix
+
+// Sons NSynth
+// License / Copyright 2017 Google Inc.
+
+// DeepBach: harmonization in the style of Bach generated using deep learning
+// DeepBach is developed by Gaëtan Hadjeres,  Sony CSL and LIP6 (UPMC/CNRS).
+// Performed by Emmanuel Deruty using Küng recorders. Flow Machines project is funded by the European Research Council under the Seventh Framework Programme / ERC Grant Agreement n. 291156
+
+// Daddy's Car: a song composed by Artificial Intelligence - in the style of the Beatles 
+// Composed with Flow Machines and 45 songs of The Beatles. Scientists at SONY CSL Research Lab  have created the first-ever entire songs composed by Artificial Intelligence: "Daddy's Car" and "Mister Shadow". "Daddy's Car"  is composed in the style of The Beatles. French composer Benoît Carré arranged and produced the songs, and wrote the lyrics. 
+
+// Jimmy O'Corlan
+// João Felipe, char-rnn composes Irish Folk music. Samples generated by char-rnn when trained on ~14k Irish Folk tunes (downloaded from thesession.org).
+// http://www.seaandsailor.com ; https://twitter.com/seaandsailor 
+
+// As the lights fade out 
+// Daniele Ghisi, Robin Meier, Commissioned by IRCAM-Centre Pompidou, Used, in part, in "La fabrique de monstres", a theatrical piece by Jean-François Peyret.
+// With the help of Philippe Esling, Léopold Créstel, Mattia Bergomi, Giorgio Presti, NaMi Lab
+// Obtained via a modified version of the SampleRNN model (Soroush Mehri et al. link), followed by a selection of results and a rough montage.
+
+// La Marche Turque
+// W.A. Mozart
+
+// Pierre et le Loup
+// Sergueï Prokofiev
+
+// Emission SOFT POWER  par Frédéric Martel et Zoé Sfez - France Culture 
+// Invité François Pachet, Director of Spotify Creator Technology Research Lab
+// “À l'occasion des Grammys Awards 2018, Soft Power s'intéresse aux mutations du secteur musical et à l'impact de l'intelligence artificielle sur la création. L'IA remplacera-t-elle les artistes ?”
+// https://www.franceculture.fr/emissions/soft-power/soft-power-dimanche-28-janvier-2018  
+
+// Stromae et d'autres artistes composent "Hello World" avec... de l'intelligence artificielle
+// Par Culturebox (avec AFP) @Culturebox
+// https://culturebox.francetvinfo.fr/musique/evenements/stromae-et-kiesza-dans-un-album-realise-avec-de-l-intelligence-artificielle-266239 
+
+// Images Deep Dream générées à partir de http://psychic-vr-lab.com/deepdream/ 
