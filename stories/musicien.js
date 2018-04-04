@@ -649,6 +649,7 @@ const musicien = [
 	{
 		message: "{{name}} a grandi !",
 		image: "robot-musicien-enfant.png",
+		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
 	},
 //
 
@@ -727,6 +728,7 @@ const musicien = [
 				"answers": ['aspirateur', 'Aspirateur', 'aspirateur ', 'Aspirateur '],
 			},
 		]
+		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
 	},
 // Bonne réponse
 	{	
@@ -875,7 +877,7 @@ const musicien = [
 
 	{
 		title: "Vous avez réussi à composer un album entier !",
-		message: "{{name}} ne peut pas générer de pochette d'album. Mais il existe un algorithme de Google, Deep Dream, qui permet de générer une image à partir d’une base de données et d’une inspiration que vous lui soumettez.",
+		message: "Il vous faut maintenant trouver une image pour la pochette. Il existe un algorithme de Google, Deep Dream, qui permet de générer une image à partir d’une base de données et d’une inspiration que vous lui soumettez. Deep Dream utilise l'intelligence artificielle.",
 		image: "robot-musicien-adulte.png",
 	},
 
@@ -947,7 +949,7 @@ const musicien = [
 			},
 			{
 				"value": "Ne pas créditer l'algorithme",
-				"description": "mais uniquement l’ensemble des personnes qui ont travaillé avec vous sur cet album. Tout comme les musiciens ne créditent pas leur instrument, l’algorithme n’a été qu’un assistant",
+				"description": "mais uniquement l’ensemble des personnes qui ont travaillé avec vous sur cet album. Less musiciens ne créditent pas leur instrument: l’algorithme n’a été qu’un assistant dans la composition.",
 				"points": 1
 			}
 			]
