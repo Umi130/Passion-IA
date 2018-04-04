@@ -11,8 +11,8 @@ module.exports = {
 
 <style scoped>
 	section {
-		/*200px originally*/
-		background-size: 300px auto;
+		/*200px originally, now 300px*/
+		background-size: auto 300px;
 		background-position: bottom center;
 		background-repeat: no-repeat;
 	}
