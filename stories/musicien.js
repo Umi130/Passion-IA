@@ -420,7 +420,7 @@ const musicien = [
 			controls: true,
 			src: "robot-musicien-bach.mp3",
 		},
-		image: "robot-musicien-enfant.png",
+		image: "robot-musicien-beatles.jpg",
 
 		when: answers => answers.choice_mode_composition === "Celle de François Pachet",
 	},
@@ -428,13 +428,20 @@ const musicien = [
 // Robot devient ado
 	{
 		title: "Quoi ?",
-		message: "{{name}} a grandi ! Et il abandonne la musique classique. Vous constituez une troisième base de données. Vous fournissez à {{name}} des centaines de partitions rock, de Led Zeppelin à Queen, en passant par les Beatles.",
+		message: "{{name}} a grandi ! Et il abandonne la musique classique...",
 		image: "robot-musicien-ado.png",
 
 		when: answers => answers.choice_mode_composition === "Celle de François Pachet",
 	},
 //
 
+	{
+		title: "Vous constituez une troisième base de données",
+		message: "Vous fournissez à {{name}} des centaines de partitions rock, de Led Zeppelin à Queen, en passant par les Beatles.",
+		image: "robot-musicien-ado.png",
+
+		when: answers => answers.choice_mode_composition === "Celle de François Pachet",
+	},
 	{
 		message: "Avec d’aussi bonnes références, vous êtes plutôt sûr d’obtenir un super morceau.",
 		image: "robot-musicien-ado.png",
