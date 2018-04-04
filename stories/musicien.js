@@ -728,7 +728,7 @@ const musicien = [
 				"answers": ['aspirateur', 'Aspirateur', 'aspirateur ', 'Aspirateur '],
 			},
 		]
-		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
+		
 	},
 // Bonne réponse
 	{	
