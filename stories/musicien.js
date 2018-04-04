@@ -686,6 +686,8 @@ const musicien = [
 			controls: true,
 			src: "robot-musicien-son-chat.mp3",
 		},
+		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
+
 		blanks: [
 			{
 				"value": "Il s'agit du son produit par un"
@@ -723,6 +725,8 @@ const musicien = [
 			controls: true,
 			src: "robot-musicien-son-aspirateur.mp3",
 		},
+		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
+
 		blanks: [
 			{
 				"value": "Il s'agit du son produit par un"
@@ -733,7 +737,7 @@ const musicien = [
 				"answers": ['aspirateur', 'Aspirateur', 'aspirateur ', 'Aspirateur '],
 			},
 		]
-		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
+
 	},
 // Bonne réponse
 	{	
@@ -760,6 +764,7 @@ const musicien = [
 			controls: true,
 			src: "robot-musicien-son-pluie.mp3",
 		},
+		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
 		blanks: [
 			{
 				"value": "Il s'agit du son produit par la"
@@ -770,7 +775,7 @@ const musicien = [
 				"answers": ['pluie', 'Pluie', 'pluie ', 'Pluie '],
 			},
 		],
-		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
+//		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
 	},
 // Bonne réponse
 	{	
@@ -799,7 +804,7 @@ const musicien = [
 		message: "{{name}} a grandi !",
 		image: "robot-musicien-ado.png",
 
-		when: answers => answers.choice_mode_composition === "Celle de François Robin Meyer!",
+		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
 	},
 //
 
@@ -858,7 +863,7 @@ const musicien = [
 	},
 
 	{
-		message: "Faisant référence à son œuvre, Robin Meyer précise que «les résultats ont été légèrement montés. Principalement des enchaînements de passages qui nous plaisaient bien ainsi que des superpositions».",
+		message: "Faisant référence à son œuvre, Robin Meier précise que «les résultats ont été légèrement montés. Principalement des enchaînements de passages qui nous plaisaient bien ainsi que des superpositions».",
 		image: "experts-musicien-meier.jpg",
 		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
 	},
@@ -889,7 +894,6 @@ const musicien = [
 	{
 		title: "Vous avez réussi à composer un album entier !",
 		message: "Il vous faut maintenant trouver une image pour la pochette. Il existe un algorithme de Google, Deep Dream, qui permet de générer une image à partir d’une base de données et d’une inspiration que vous lui soumettez. Deep Dream utilise l'intelligence artificielle.",
->>>>>>> bec87d05f7426ed9a9269ff8a0cba5c6a9554fa5
 		image: "robot-musicien-adulte.png",
 	},
 
@@ -1040,7 +1044,7 @@ const musicien = [
 		when: answers => answers.musicien_commanderadio === "Vous l’acceptez",
 	},
 	{
-		message: "«On pourrait très bien alimenter une base de données et faire de la musique au kilomètre pour des supermarchés et des films commerciaux, c’est facile. On pourrait acheter des morceaux pour quelques dollars sans connaître l’algorithme en détail», précise Robin Meyer.",
+		message: "«On pourrait très bien alimenter une base de données et faire de la musique au kilomètre pour des supermarchés et des films commerciaux, c’est facile. On pourrait acheter des morceaux pour quelques dollars sans connaître l’algorithme en détail», précise Robin Meier.",
 		image: "experts-musicien-meier.jpg",
 		when: answers => answers.musicien_commanderadio === "Vous l’acceptez",
 	},
@@ -1069,7 +1073,7 @@ const musicien = [
 ////////////
 	{
 		title: "Vous refusez.",
-		message: "«On pourrait très bien alimenter une base de données et faire de la musique au kilomètre pour des supermarchés et des films commerciaux, c’est facile. On pourrait acheter des morceaux pour quelques dollars sans connaître l’algorithme en détail», précise Robin Meyer.",
+		message: "«On pourrait très bien alimenter une base de données et faire de la musique au kilomètre pour des supermarchés et des films commerciaux, c’est facile. On pourrait acheter des morceaux pour quelques dollars sans connaître l’algorithme en détail», précise Robin Meier.",
 		image: "experts-musicien-meier.jpg",
 		when: answers => answers.musicien_commanderadio === "Vous la refusez",
 	},
