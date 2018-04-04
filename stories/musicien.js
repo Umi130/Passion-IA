@@ -649,7 +649,7 @@ const musicien = [
 	{
 		message: "{{name}} a grandi !",
 		image: "robot-musicien-enfant.png",
-		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
+	
 	},
 //
 
@@ -693,7 +693,7 @@ const musicien = [
 				"answers": ['chat', 'Chat', 'chat ', 'Chat '],
 			},
 		],
-		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
+		
 	},
 // Bonne réponse
 	{	
