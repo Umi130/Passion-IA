@@ -593,7 +593,7 @@ const musicien = [
 				"value": "Un trombone",
 				"description": "",
 				"points": 0,
-			}
+			},
 		],
 		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
 	},
@@ -649,7 +649,7 @@ const musicien = [
 	{
 		message: "{{name}} a grandi !",
 		image: "robot-musicien-enfant.png",
-	
+		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
 	},
 //
 
@@ -693,7 +693,7 @@ const musicien = [
 				"answers": ['chat', 'Chat', 'chat ', 'Chat '],
 			},
 		],
-		
+		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
 	},
 // Bonne réponse
 	{	
@@ -727,7 +727,7 @@ const musicien = [
 				"type": "input",
 				"answers": ['aspirateur', 'Aspirateur', 'aspirateur ', 'Aspirateur '],
 			},
-		]
+		],
 		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
 	},
 // Bonne réponse
@@ -949,7 +949,7 @@ const musicien = [
 			},
 			{
 				"value": "Ne pas créditer l'algorithme",
-				"description": "mais uniquement l’ensemble des personnes qui ont travaillé avec vous sur cet album. Less musiciens ne créditent pas leur instrument: l’algorithme n’a été qu’un assistant dans la composition.",
+				"description": "mais uniquement l’ensemble des personnes qui ont travaillé avec vous sur cet album. Tout comme les musiciens ne créditent pas leur instrument, l’algorithme n’a été qu’un assistant",
 				"points": 1
 			}
 			]
