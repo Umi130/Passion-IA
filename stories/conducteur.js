@@ -33,7 +33,7 @@ const conducteur = [
 	},
 
 	{
-		message: "Sur les conseils d’Erik Coelingh, vous commencez à travailler sur votre algorithme conducteur. Ce ne sont que quelques lignes de code, mais vous vous prenez déjà d’affection pour ce·tte petit·e conducteur·rice en herbe. Vous décidez de lui donner un prénom.",
+		message: "Sur les conseils d’Erik Coelingh, vous commencez à travailler sur votre algorithme. Ce ne sont que quelques lignes de code, mais vous vous prenez déjà d’affection pour ce·tte petit·e conducteur·rice en herbe. Vous décidez de lui donner un prénom.",
 		image: "robot-conducteur-bebe.png",
 	},	
 
@@ -64,6 +64,7 @@ const conducteur = [
 		title: "Vous êtes impatient·e de tester votre nouvelle voiture !",
 		message: "Vous tournez la clé et le moteur vrombit. Mais rien ne se passe...",
 		image: "robot-conducteur-bebe-etonne.png",
+
 	},	
 
 	{
@@ -115,47 +116,69 @@ const conducteur = [
 
 	{
 		title: "Est-ce un passage piéton ? (1/11)",
-		image: "robot-conducteur-reconnaitre-passage-1.jpg",
+		message: "Score : -",
+		largeimage: "robot-conducteur-reconnaitre-passage-1.jpg",
+		yesno: {}
 	},
 	{
 		title: "Est-ce un passage piéton ? (2/11)",
-		image: "robot-conducteur-reconnaitre-passage-2.jpg",
+		message: "Score : -",
+		largeimage: "robot-conducteur-reconnaitre-passage-2.jpg",
+		yesno: {}
 	},
 	{
 		title: "Est-ce un passage piéton ? (3/11)",
-		image: "robot-conducteur-reconnaitre-passage-3.jpg",
+		message: "Score : -",
+		largeimage: "robot-conducteur-reconnaitre-passage-3.jpg",
+		yesno: {}
 	},
 	{
 		title: "Est-ce un passage piéton ? (4/11)",
-		image: "robot-conducteur-reconnaitre-passage-4.jpg",
+		message: "Score : -",
+		largeimage: "robot-conducteur-reconnaitre-passage-4.jpg",
+		yesno: {}
 	},
 	{
 		title: "Est-ce un passage piéton ? (5/11)",
-		image: "robot-conducteur-reconnaitre-passage-5.jpg",
+		message: "Score : -",
+		largeimage: "robot-conducteur-reconnaitre-passage-5.jpg",
+		yesno: {}
 	},
 	{
 		title: "Est-ce un passage piéton ? (6/11)",
-		image: "robot-conducteur-reconnaitre-passage-6.jpg",
+		message: "Score : -",
+		largeimage: "robot-conducteur-reconnaitre-passage-6.jpg",
+		yesno: {}
 	},
 	{
 		title: "Est-ce un passage piéton ? (7/11)",
-		image: "robot-conducteur-reconnaitre-passage-7.jpg",
+		message: "Score : -",
+		largeimage: "robot-conducteur-reconnaitre-passage-7.jpg",
+		yesno: {}
 	},
 	{
 		title: "Est-ce un passage piéton ? (8/11)",
-		image: "robot-conducteur-reconnaitre-passage-8.jpg",
+		message: "Score : -",
+		largeimage: "robot-conducteur-reconnaitre-passage-8.jpg",
+		yesno: {}
 	},
 	{
 		title: "Est-ce un passage piéton ? (9/11)",
-		image: "robot-conducteur-reconnaitre-passage-9.jpg",
+		message: "Score : -",
+		largeimage: "robot-conducteur-reconnaitre-passage-9.jpg",
+		yesno: {}
 	},
 	{
 		title: "Est-ce un passage piéton ? (10/11)",
-		image: "robot-conducteur-reconnaitre-passage-10.jpg",
+		message: "Score : -",
+		largeimage: "robot-conducteur-reconnaitre-passage-10.jpg",
+		yesno: {}
 	},								
 	{
 		title: "Est-ce un passage piéton ? (11/11)",
-		image: "robot-conducteur-reconnaitre-passage-11.jpg",
+		message: "Score : -",
+		largeimage: "robot-conducteur-reconnaitre-passage-11.jpg",
+		yesno: {}
 	},	
 //////////////
 // FIN MINI-JEU 1/4
@@ -182,7 +205,7 @@ const conducteur = [
 //
 
 	{
-		message: "Maintenant que votre voiture sait reconnaître les passages piétons, vos ingénieurs vont s’occuper de lui apprendre à reconnaître les voitures, les camions, et ainsi de suite.",
+		message: "Maintenant que {{name}} sait reconnaître les passages piétons, vos ingénieurs vont s’occuper de lui apprendre à reconnaître les voitures, les camions, et ainsi de suite.",
 		image: "robot-conducteur-enfant.png",
 	},
 	{
@@ -197,32 +220,38 @@ const conducteur = [
 // YES-NO
 //////////////
 	{
-		title: "Des personnes sont-ils sur la route ? (1/7)",
-		image: "robot-conducteur-reconnaitre-route-1.jpg",
+		title: "Des personnes sont-elles sur la route ? (1/7)",
+		largeimage: "robot-conducteur-reconnaitre-route-1.jpg",
+		yesno: {}
 	},
 	{
-		title: "Des personnes sont-ils sur la route ? (2/7)",
-		image: "robot-conducteur-reconnaitre-route-2.jpg",
+		title: "Des personnes sont-elles sur la route ? (2/7)",
+		largeimage: "robot-conducteur-reconnaitre-route-2.jpg",
+		yesno: {}
 	},
 	{
-		title: "Des personnes sont-ils sur la route ? (3/7)",
-		image: "robot-conducteur-reconnaitre-route-3.jpg",
+		title: "Des personnes sont-elles sur la route ? (3/7)",
+		largeimage: "robot-conducteur-reconnaitre-route-3.jpg",
+		yesno: {}
 	},
 	{
-		title: "Des personnes sont-ils sur la route ? (4/7)",
-		image: "robot-conducteur-reconnaitre-route-4.jpg",
+		title: "Des personnes sont-elles sur la route ? (4/7)",
+		largeimage: "robot-conducteur-reconnaitre-route-4.jpg",
+		yesno: {}
 	},
 	{
-		title: "Des personnes sont-ils sur la route ? (5/7)",
-		image: "robot-conducteur-reconnaitre-route-5.jpg",
+		title: "Des personnes sont-elles sur la route ? (5/7)",
+		largeimage: "robot-conducteur-reconnaitre-route-5.jpg",
+		yesno: {}
 	},
 	{
-		title: "Des personnes sont-ils sur la route ? (6/7)",
-		image: "robot-conducteur-reconnaitre-route-6.jpg",
+		title: "Des personnes sont-elles sur la route ? (6/7)",
+		largeimage: "robot-conducteur-reconnaitre-route-6.jpg",
 	},
 	{
-		title: "Des personnes sont-ils sur la route ? (7/7)",
-		image: "robot-conducteur-reconnaitre-route-7.jpg",
+		title: "Des personnes sont-elles sur la route ? (7/7)",
+		largeimage: "robot-conducteur-reconnaitre-route-7.jpg",
+		yesno: {}
 	},
 //////////////
 // FIN MINI-JEU 2/4

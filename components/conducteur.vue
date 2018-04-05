@@ -13,7 +13,7 @@
 
 		<yesno v-if="currentStep.yesno" :content="currentStep" v-on:select="selectChoice" :answers="answers"></yesno>
 
-		<footer class="text-center pb-2" v-if="!currentStep.choices && !currentStep.blanks & !currentStep.YesNo">
+		<footer class="text-center pb-2" v-if="!currentStep.choices && !currentStep.yesno">
 			<router-link :to="`/conducteur/${current + 1}`" v-if="displayNextButton()" class="btn btn-primary btn-block">
 				SUIVANT
 			</router-link>
@@ -29,7 +29,7 @@ module.exports = {
 		Explanation: httpVueLoader('./explanation.vue'),
 		Illustration: httpVueLoader('./illustration.vue'),
 		Choices: httpVueLoader('./choices.vue'),
-		YesNo: httpVueLoader('./yesnos.vue')
+		yesno: httpVueLoader('./yesno.vue')
 	},
 	data () {
 		return {
@@ -71,18 +71,11 @@ module.exports = {
 			this.$set(this.answers, choice.name, choice.value)
 			this.nextStep()
 		},
-		fillBlanks (answer) {
-			if (answer.value === true) {
-				this.answers.points = this.answers.points + this.currentStep.points;
-			}
-			this.$set(this.answers, answer.name, answer.value)
-			this.nextStep()
-		},
 		nextStep () {
 			this.$router.push({ path: `/conducteur/${this.current + 1}` })
 		},
 		displayNextButton(){
-			return ['choices', 'blanks'].indexOf(this.currentStep.type) === -1  && 
+			return ['choices', 'yesno'].indexOf(this.currentStep.type) === -1  && 
 				this.current < this.filteredStory.length - 1;
 		}
 	}
