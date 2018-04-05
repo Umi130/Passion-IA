@@ -9,13 +9,13 @@ const musicien = [
 
 	{
 		title: "Vous êtes un musicien et plus rien ne vous inspire...",
-		message: "Pas même votre dernière rupture amoureuse. C’est le syndrome de la page blanche. Vous traînez sur Spotify en quête d’inspiration et tombez par hasard sur l’album Hello World.",
+		message: "Pas même votre dernière rupture amoureuse. C’est le syndrome de la page blanche. Vous traînez sur Spotify en quête d’inspiration et tombez par hasard sur l’album «Hello World».",
 		image: "robot-musicien-dodo.png",
 	},
 
 
 	{
-		title: "Vous écoutez : «Hello World»",
+		title: "Vous écoutez : «Hello Shadow»",
 		message: "Une chanson composée à l'aide d'une intelligence artificielle.",
 		image: "experts-musicien-spotify.png",
 		music: {
@@ -25,7 +25,7 @@ const musicien = [
 	},
 
 	{
-		title: "Hello World, chanson composée à l'aide d'une intelligence artificielle ?",
+		title: "Hello Shadow, chanson composée à l'aide d'une intelligence artificielle ?",
 		message: "Elle ressemble pourtant au style de Stromae. Vous faites une petite recherche...",
 		image: "illust-musicien-stromae.jpg",
 	},
@@ -370,7 +370,7 @@ const musicien = [
 		message: "Vous avez appris à {{name}} à reconnaître la fin d'une partition.",
 		image: "robot-musicien-enfant.png",
 
-		when: answers => answers.choice_mode_composition === "Celle de François Pachet" && answers.choix_reconnaitre_1 === "2.",
+		when: answers => answers.choice_mode_composition === "Celle de François Pachet" && answers.choix_reconnaitre_2 === "2.",
 	},
 
 	{
@@ -378,7 +378,7 @@ const musicien = [
 		message: "La seconde image était la bonne. La double barre signifie la fin d'un morceau. Les deux points indiquent une reprise du morceau.",
 		image: "robot-musicien-enfant-etonne.png",
 
-		when: answers => answers.choice_mode_composition === "Celle de François Pachet" && answers.choix_reconnaitre_1 === "1.",
+		when: answers => answers.choice_mode_composition === "Celle de François Pachet" && answers.choix_reconnaitre_2 === "1.",
 	},
 
 	//TODO COMPTE BONNES MAUVAISES REPONSES
@@ -476,7 +476,7 @@ const musicien = [
 
 	{
 		title: "Analyse des ondes sonores",
-		message: "Pour que {{name}} puisse manier des sons à sa guise, il doit apprendre à analyser les ondes sonores. Cela passe par un processus complexe de numérisation de ces ondes.",
+		message: "Pour que {{name}} puisse manier des sons à sa guise, il faut d'abord lui apprendre à analyser les ondes sonores. Cela passe par un processus complexe de numérisation de ces ondes.",
 		image: "robot-musicien-bebe.png",
 		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
 	},
@@ -964,7 +964,7 @@ const musicien = [
 		choices: [
 			{
 				"value": "Créditer l'algorithme",
-				"description": "à la manière de François Pachet et son équipe sur l’album «Hello World»",
+				"description": "à la manière de François Pachet et son équipe sur l’album «Hello Shadow",
 				"points": 1
 			},
 			{
@@ -1178,7 +1178,7 @@ const musicien = [
 // Pierre et le Loup
 // Sergueï Prokofiev
 
-// Emission SOFT POWER  par Frédéric Martel et Zoé Sfez - France Culture 
+// Emission SOFT POWER par Frédéric Martel et Zoé Sfez - France Culture 
 // Invité François Pachet, Director of Spotify Creator Technology Research Lab
 // “À l'occasion des Grammys Awards 2018, Soft Power s'intéresse aux mutations du secteur musical et à l'impact de l'intelligence artificielle sur la création. L'IA remplacera-t-elle les artistes ?”
 // https://www.franceculture.fr/emissions/soft-power/soft-power-dimanche-28-janvier-2018  

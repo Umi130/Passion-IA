@@ -306,7 +306,7 @@ const juriste = [
 
 //TODO Ajouter compte des bonnes & mauvaises réponses
 	{
-		title: "Une tâche longue et fastidieuse...",
+		title: "L'étiquetage des données est une tâche longue et fastidieuse...",
 		message: "C'est la partie «humaine» de l’intelligence artificielle. Selon la taille de la base de données, l’opération peut prendre plusieurs jours, voire plusieurs semaines.",
 		image: "robot-juriste-enfant.png",	
 	},
