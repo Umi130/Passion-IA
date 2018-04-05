@@ -600,41 +600,42 @@ const juriste = [
 		image: "experts-juriste-villani.jpg",
 	},
 
+//
+// CONCLUSION
+// Compte des points
+//
 	{
 		title: "Votre score",
 		message: "En fonction de vos réponses tout au long de l’éducation de {{name}}, essayons de voir si vous avez adopté les bons réflexes.",
 		image: "robot-juriste-adulte.png",
 	},
 
-// Compte des points gagné > 70%
+// Victoire
+// Compte des points gagnés > 70%
 	{
-		title: "Bon",
-		message: " // COURONNE ROBOT",
-		image: "robot-juriste-adulte.png",
+		title: "La justice 2.0 vous tend les bras !",
+		message: "Vous avez su entraîner {{name}} pour que l’intelligence artificielle soit techniquement performante et moralement irréprochable... ou presque.",
+		image: "robot-juriste-gagne.png",
 	},
+	{
+		title: "La justice 2.0 vous tend les bras !",
+		message: "Si elle est bien maîtrisée, l’intelligence artificielle peut être très utile à la justice, notamment pour désengorger les tribunaux.",
+	},	
 
-// Compte des points perdu < 70% - Mini nouvelle sur l'avenir pessimiste de l'IA dans la justice
+// Défaite
+// Compte des points perdus < 70%
 	{
-		title: "Pas bon",
-		message: " // ROBOT TRISTE",
-		image: "robot-musicien-adulte-etonne.png",
+		title: "La justice 2.0, ce n’est pas pour tout de suite...",
+		message: "{{name}} n’est pas encore assez performant au niveau technique, et certains de vos choix «moraux» nuisent à l’équité des jugements rendus.",
+		image: "robot-musicien-perdu.png",
 	},
+	{
+		title: "La justice 2.0, ce n’est pas pour tout de suite...",
+		message: "Pour utiliser l’intelligence artificielle dans le domaine de la justice, il faut d'abord que l’algorithme et les bases de données soient irréprochables.",
+		image: "robot-musicien-perdu.png",
+	},	
 
 ]
-
-//SI succès : 
-
-// La justice 2.0 vous tend les bras. Vous avez su entraîner {{name}} pour que l’intelligence artificielle soit techniquement performante et moralement presque irréprochable. 
-
-// Si elle est bien maîtrisée, l’intelligence artificielle peut être très utile à la justice, notamment pour désengorger les tribunaux. 
-
-// SI Fail 
-
-// La justice 2.0 ce n’est pas pour tout de suite. {{name}} n’est pas encore assez performant au niveau technique et certains de vos choix «moraux» nuire à l’équité des jugements rendus. 
-
-// Pour utiliser l’intelligence artificielle dans le domaine de la justice, il faut que l’algorithme et les bases de données soient irréprochables. 
-
-
 
 //GENERIQUE
 //

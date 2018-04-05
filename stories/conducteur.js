@@ -462,19 +462,23 @@ const conducteur = [
 		image: "robot-conducteur-moralmachine.jpg",
 	},
 
+//
+// CONCLUSION
+// Compte des points
+//
+
 	{
+		title: "Votre score",
 		message: "Mais avant de penser à tout cela, voyons si votre véhicule pourrait rouler, en fonction de vos réponses tout au long du parcours.",
 		image: "robot-conducteur-adulte.png",
 	},
 
+/// Victoire
+/// Parcours véhicule opérationnel (26 points ou plus) 
 
-/// ETAPE CALCUL DES POINTS A AJOUTER /// 
-
-/// VICTOIRE
-/// Parcours véhicule opérationnel (26 points ou plus) WHEN à rajouter IMAGE a rajouter/// 
 	{
 		title: "Votre véhicule autonome est prometteur !",
-		image: "robot-conducteur-adulte.png",
+		image: "robot-conducteur-gagne.png",
 	},
 	{
 		title: "Mais le manque de législation vous empêche de le commercialiser",
@@ -483,16 +487,16 @@ const conducteur = [
 	},
 	{
 		message: "En attendant, cela vous laisse du temps pour continuer à améliorer {{name}}, notamment en vous penchant sur les enjeux moraux que soulève votre technologie.",
-		image: "robot-conducteur-adulte.png",
+		image: "robot-conducteur-gagne.png",
 	},
 
 /// Échec
-/// Parcours véhicule non opérationnel (moins de 26 points) WHEN ET IMAGE FIN DU SCENARIO à ajouter ///
+/// Parcours véhicule non opérationnel (moins de 26 points)
 
 	{
 		title: "Votre véhicule autonome n'est vraiment pas prêt...",
 		message: "L’accident avec le scooter vous l’a montré, {{name}} n’est pas encore totalement opérationnelle.",
-		image: "robot-conducteur-adulte-etonne.png",
+		image: "robot-conducteur-perdu.png",
 	},
 	{
 		message: "En attendant, le député Cédric Villani a proposé dans un rapport de mars 2018 la création d’un comité éthique pour étudier les questions morales liés aux accidents de voitures autonomes.",
@@ -500,7 +504,7 @@ const conducteur = [
 	},
 	{
 		message: "Pour l’instant, votre objectif de base - réduire le nombre de morts sur la route - n’est pas encore atteint. Il va vous falloir davantage travailler sur votre voiture autonome.",
-		image: "robot-conducteur-adulte-etonne.png",
+		image: "robot-conducteur-perdu.png",
 	},
 
 ]

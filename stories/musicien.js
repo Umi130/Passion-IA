@@ -1107,25 +1107,30 @@ const musicien = [
 		image: "robot-musicien-adulte.png",
 	},
 
+//
+// CONCLUSION
 // Compte des points
+//
 	{
 		title: "Votre score",
 		message: "À la lumière des choix que vous avez effectués, essayons de définir le type d’artiste que vous seriez si vous travailliez avec l’intelligence artificielle.",
 		image: "robot-musicien-adulte.png",
 	},
 
-// Compte des points gagné > 70%
+// Victoire
+// Compte des points gagnés > 70%
 	{
 		title: "Producteur de tubes",
-		message: "Bravo, vous avez répondu juste à la majorité des questions ! Votre algorithme sait repérer la structure d’un morceau ou les sons qui composent les tubes planétaires. Vous seriez un producteur de génie. // COURONNE ROBOT",
-		image: "robot-musicien-adulte.png",
+		message: "Bravo, vous avez répondu juste à la majorité des questions ! Votre algorithme sait repérer la structure d’un morceau ou les sons qui composent les tubes planétaires. Vous seriez un producteur de génie.",
+		image: "robot-musicien-gagne.png",
 	},
 
-// Compte des points perdu < 70%
+// Défaite
+// Compte des points perdus < 70%
 	{
 		title: "Artiste incompris",
-		message: "Vous n’avez pas su apprendre à l’algorithme à reconnaître les sons, les notes ou la structure d’un morceau… Les résultats produits par la machine risquent d’être… originaux. Vous ne composerez peut-être pas le prochain tube planétaire, mais votre musique aura l’avantage d’être… différente ! // ROBOT TRISTE",
-		image: "robot-musicien-adulte-etonne.png",
+		message: "Vous n’avez pas su apprendre à l’algorithme à reconnaître les sons, les notes ou la structure d’un morceau… Les résultats produits par la machine risquent d’être… originaux. Vous ne composerez peut-être pas le prochain tube planétaire, mais votre musique aura l’avantage d’être… différente !",
+		image: "robot-musicien-perdu.png",
 	},
 
 ]
