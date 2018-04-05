@@ -41,7 +41,7 @@ const juriste = [
 
 	{
 		name: "name",
-		message: "Vous l’appelez...",
+		title: "Vous l’appelez...",
 		choices: [
 			{
 				"value": "Ross",
@@ -446,7 +446,7 @@ const juriste = [
 	},
 //Si mauvaise réponse
 	{
-		title: "Vous faîtes bien...",
+		title: "Vous faites bien...",
 		message: "Même sur les dossiers les plus simples, les décisions ne peuvent être prises automatiquement car cela va à l’encontre de la nature même d'une procédure judiciaire. {{name}} ne peut être qu'un outil d'aide à la décision.",
 		image: "robot-juriste-adulte.png",
 		when: answers => answers.choice_critereneglige_automatise === 'Non',
@@ -636,6 +636,8 @@ const juriste = [
 //Antoine Garapon (magistrat et juriste; Secrétaire général de l'Institut des hautes études sur la Justice)
 //Lise Damelet (avocate chez Orrick, Herrington & Sutcliffe, cofondatrice de l'Incubateur du barreau de Paris)
 //Dipty Chander (Présidente E-mma France)
+//
+// Icône « iMac » par Vladimir Belochkin, de thenounproject.com
 //
 //
 //

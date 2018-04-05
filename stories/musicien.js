@@ -54,7 +54,7 @@ const musicien = [
 
 	{
 		name: "name",
-		message: "Vous l’appelez...",
+		title: "Vous l’appelez...",
 		choices: [
 			{
 				"value": "Johnny Hallgorithme",
@@ -420,7 +420,7 @@ const musicien = [
 			controls: true,
 			src: "robot-musicien-bach.mp3",
 		},
-		image: "robot-musicien-beatles.jpg",
+		image: "element-musique.jpg",
 
 		when: answers => answers.choice_mode_composition === "Celle de François Pachet",
 	},
@@ -1170,6 +1170,8 @@ const musicien = [
 
 // Pierre et le Loup
 // Sergueï Prokofiev
+
+// Icône « iMac » par Vladimir Belochkin, de thenounproject.com
 
 // Emission SOFT POWER par Frédéric Martel et Zoé Sfez - France Culture 
 // Invité François Pachet, Director of Spotify Creator Technology Research Lab
