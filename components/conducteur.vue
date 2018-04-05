@@ -28,9 +28,7 @@ module.exports = {
 		Explanation: httpVueLoader('./explanation.vue'),
 		Illustration: httpVueLoader('./illustration.vue'),
 		Choices: httpVueLoader('./choices.vue'),
-		Blanks: httpVueLoader('./blanks.vue'),
-		AudioPlayer: httpVueLoader('./audio-player.vue')
-	},
+		Blanks: httpVueLoader('./blanks.vue'),	},
 	data () {
 		return {
 			story: conducteur,
