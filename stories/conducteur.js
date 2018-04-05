@@ -1,10 +1,9 @@
-// TODO: points qui permettent de vérifier succès des mini-jeux
 
 const conducteur = [
 	{
 		title: "Ce parcours utilise de la musique",
 		message: "Nous vous conseillons d'activer le son ou d'utiliser des écouteurs.",
-		image: "element-son.png",
+		image: "robot-conducteur-dodo.png",
 	},
 
 	{

@@ -26,7 +26,7 @@ const musicien = [
 
 	{
 		title: "Hello Shadow, chanson composée à l'aide d'une intelligence artificielle ?",
-		message: "Elle ressemble pourtant au style de Stromae. Vous faites une petite recherche...",
+		message: "Elle ressemble pourtant au style de Stromae. Vous faites une petite recherche sur Internet...",
 		image: "illust-musicien-stromae.jpg",
 	},
 
@@ -148,12 +148,12 @@ const musicien = [
 			{
 				"value": "word_1",
 				"type": "input",
-				"answers": ['Re', 'Ré', 're', 'ré', 'Re ', 'Ré ', 're ', 'ré ']
+				"answers": ['Re', 'Ré', 're', 'ré', 'Re ', 'Ré ', 're ', 'ré ', 'RE', 'RE ']
 			},
 			{
 				"value": "word_2",
 				"type": "input",
-				"answers": ['Mi', 'mi', 'Mi ', 'mi ']
+				"answers": ['Mi', 'mi', 'Mi ', 'mi ', 'MI', 'MI ']
 			},
 		],	
 		when: answers => answers.choice_mode_composition === "Celle de François Pachet",
@@ -188,12 +188,12 @@ const musicien = [
 			{
 				"value": "word_1",
 				"type": "input",
-				"answers": ['La', 'la', 'La ', 'la ']
+				"answers": ['La', 'la', 'La ', 'la ', 'LA']
 			},
 			{
 				"value": "word_2",
 				"type": "input",
-				"answers": ['La', 'la', 'La ', 'la ']
+				"answers": ['La', 'la', 'La ', 'la ', 'LA', 'LA ']
 			},
 		],	
 		when: answers => answers.choice_mode_composition === "Celle de François Pachet",
@@ -233,7 +233,7 @@ const musicien = [
 			{
 				"value": "word_2",
 				"type": "input",
-				"answers": ['Re', 'Ré', 're', 'ré', 'Re ', 'Ré ', 're ', 'ré ']
+				"answers": ['Re', 'Ré', 're', 'ré', 'Re ', 'Ré ', 're ', 'ré ', 'RE', 'RE ']
 			},
 		],	
 		when: answers => answers.choice_mode_composition === "Celle de François Pachet",
@@ -415,7 +415,7 @@ const musicien = [
 
 	{
 		title: "Voici le résultat obtenu par FlowMachines",
-		message: "Plutôt pas mal, non? Mais il n’y a que quatre portées de notes et d’accords. Il vous faudrait l’arranger pour qu’elle puisse être interprétée par un orchestre entier.",
+		message: "Plutôt pas mal, non? Mais il vous faudrait l’arranger pour qu’elle puisse être interprétée par un orchestre.",
 		music: {
 			controls: true,
 			src: "robot-musicien-bach.mp3",
@@ -437,18 +437,11 @@ const musicien = [
 
 	{
 		title: "Vous constituez une troisième base de données",
-		message: "Vous fournissez à {{name}} des centaines de partitions rock, de Led Zeppelin à Queen, en passant par les Beatles.",
+		message: "Vous fournissez à {{name}} des centaines de partitions rock, de Led Zeppelin à Queen, en passant par les Beatles. Avec d’aussi bonnes références, vous êtes plutôt sûr d’obtenir un super morceau.",
 		image: "robot-musicien-ado.png",
 
 		when: answers => answers.choice_mode_composition === "Celle de François Pachet",
 	},
-	{
-		message: "Avec d’aussi bonnes références, vous êtes plutôt sûr d’obtenir un super morceau.",
-		image: "robot-musicien-ado.png",
-
-		when: answers => answers.choice_mode_composition === "Celle de François Pachet",
-	},
-
 
 	{
 		title: "Voici le résultat obtenu par François Pachet",
@@ -665,7 +658,7 @@ const musicien = [
 
 	{
 		title: "Vous écoutez : «Pierre et le Loup» de Prokofiev",
-		message: "Dans ce morceau, chaque instrument est associé à un animal. Et d’autres compositeurs ont essayé de retranscrire toutes sortes de sons : chez Debussy ou Vivaldi, l’eau est un élément récurrent.",
+		message: "Dans ce morceau, chaque instrument est associé à un animal. De nombreux compositeurs ont essayé de retranscrire en musique toutes sortes de sons : les animaux chez Prokofiev, l'eau chez Debussy ou Vivaldi.",
 		music: {
 			controls: true,
 			src: "robot-musicien-prokofiev.mp3",
@@ -701,7 +694,7 @@ const musicien = [
 			{
 				"value": "word_1",
 				"type": "input",
-				"answers": ['chat', 'Chat', 'chat ', 'Chat '],
+				"answers": ['chat', 'Chat', 'chat ', 'Chat ', 'CHAT', 'CHAT '],
 			},
 		],
 		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
@@ -739,7 +732,7 @@ const musicien = [
 			{
 				"value": "word_1",
 				"type": "input",
-				"answers": ['aspirateur', 'Aspirateur', 'aspirateur ', 'Aspirateur '],
+				"answers": ['aspirateur', 'Aspirateur', 'aspirateur ', 'Aspirateur ', 'ASPIRATEUR', 'ASPIRATEUR '],
 			},
 		],
 	},
@@ -776,7 +769,7 @@ const musicien = [
 			{
 				"value": "word_1",
 				"type": "input",
-				"answers": ['pluie', 'Pluie', 'pluie ', 'Pluie '],
+				"answers": ['pluie', 'Pluie', 'pluie ', 'Pluie ', 'PLUIE', 'PLUIE '],
 			},
 		],
 //		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
@@ -837,7 +830,7 @@ const musicien = [
 
 	{
 		title: "Et voici le résultat...",
-		message: "Vous écoutez «La Fabrique des Monstres» de Robin Meier",
+		message: "Vous écoutez «As the lights fade out», un morceau composé avec une intelligence artificielle et réarrangé par Robin Meier et Daniele Ghisi.",
 		music: {
 			controls: true,
 			src: "robot-musicien-meier.mp3",
@@ -847,7 +840,7 @@ const musicien = [
 	},
 
 	{
-		title: "Vous pouvez pondérer le poids des différents sons que vous voulez mixer !",
+		title: "Avec cette technique, vous pouvez choisir les sons que vous voulez mettre en valeur",
 		message: "En s’inspirant des formes d’ondes, {{name}} n’a besoin que d’une fraction de seconde de son pour se lancer. L’algorithme prédira ensuite la courbe de l’onde en fonction de ce qu’il aura appris avec la base de données.",
 		image: "robot-musicien-ado.png",
 		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
