@@ -622,6 +622,20 @@ const juriste = [
 
 ]
 
+//SI succès : 
+
+// La justice 2.0 vous tend les bras. Vous avez su entraîner {{name}} pour que l’intelligence artificielle soit techniquement performante et moralement presque irréprochable. 
+
+// Si elle est bien maîtrisée, l’intelligence artificielle peut être très utile à la justice, notamment pour désengorger les tribunaux. 
+
+// SI Fail 
+
+// La justice 2.0 ce n’est pas pour tout de suite. {{name}} n’est pas encore assez performant au niveau technique et certains de vos choix «moraux» nuire à l’équité des jugements rendus. 
+
+// Pour utiliser l’intelligence artificielle dans le domaine de la justice, il faut que l’algorithme et les bases de données soient irréprochables. 
+
+
+
 //GENERIQUE
 //
 //
