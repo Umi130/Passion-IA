@@ -9,7 +9,7 @@ const musicien = [
 
 	{
 		title: "Vous êtes un musicien et plus rien ne vous inspire...",
-		message: "Pas même votre dernière rupture amoureuse. C’est le syndrome de la page blanche. Vous traînez sur Spotify en quête d’inspiration et tombez par hasard sur l’album «Hello World».",
+		message: "Pas même votre dernière rupture amoureuse. C’est le syndrome de la page blanche. Vous traînez sur Spotify en quête d’inspiration et tombez par hasard sur la chanson «Hello Shadow».",
 		image: "robot-musicien-dodo.png",
 	},
 
@@ -25,7 +25,7 @@ const musicien = [
 	},
 
 	{
-		title: "Hello Shadow, chanson composée à l'aide d'une intelligence artificielle ?",
+		title: "«Hello Shadow», composée à l'aide d'une intelligence artificielle ?",
 		message: "Elle ressemble pourtant au style de Stromae. Vous faites une petite recherche sur Internet...",
 		image: "illust-musicien-stromae.jpg",
 	},
