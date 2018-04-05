@@ -10,11 +10,11 @@
 				</span>
 			</span>
 		</form>
-		<div>
+		<footer class="text-center pb-2">
 			<button class="btn btn-primary btn-block" @click="fill" type="submit" :disabled="filledValuesCount !== inputsCount">
 				Je valide
 			</button>
-		</div>
+		</footer>
 	</section>
 </template>
 
