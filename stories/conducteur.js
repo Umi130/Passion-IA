@@ -115,78 +115,78 @@ const conducteur = [
 //////////////
 
 	{
-		title: "Est-ce un passage piéton ? (1/11)",
-		message: "Score : -",
+		title: "Est-ce un passage piéton ?",
+		message: "Score : -  |  Étape 1/11",
 		largeimage: "robot-conducteur-reconnaitre-passage-1.jpg",
 		yesno: {}
 		//YES
 	},
 	{
-		title: "Est-ce un passage piéton ? (2/11)",
-		message: "Score : -",
+		title: "Est-ce un passage piéton ?",
+		message: "Score : -  |  Étape 2/11",
 		largeimage: "robot-conducteur-reconnaitre-passage-2.jpg",
 		yesno: {}
 		//YES
 	},
 	{
-		title: "Est-ce un passage piéton ? (3/11)",
-		message: "Score : -",
+		title: "Est-ce un passage piéton ?",
+		message: "Score : -  |  Étape 3/11",
 		largeimage: "robot-conducteur-reconnaitre-passage-3.jpg",
 		yesno: {}
 		//NO
 	},
 	{
-		title: "Est-ce un passage piéton ? (4/11)",
-		message: "Score : -",
+		title: "Est-ce un passage piéton ?",
+		message: "Score : -  |  Étape 4/11",
 		largeimage: "robot-conducteur-reconnaitre-passage-4.jpg",
 		yesno: {}
 		//YES
 	},
 	{
-		title: "Est-ce un passage piéton ? (5/11)",
-		message: "Score : -",
+		title: "Est-ce un passage piéton ?",
+		message: "Score : -  |  Étape 5/11",
 		largeimage: "robot-conducteur-reconnaitre-passage-5.jpg",
 		yesno: {}
 		//NO
 	},
 	{
-		title: "Est-ce un passage piéton ? (6/11)",
-		message: "Score : -",
+		title: "Est-ce un passage piéton ?",
+		message: "Score : -  |  Étape 6/11",
 		largeimage: "robot-conducteur-reconnaitre-passage-6.jpg",
 		yesno: {}
 		//NO
 	},
 	{
-		title: "Est-ce un passage piéton ? (7/11)",
-		message: "Score : -",
+		title: "Est-ce un passage piéton ?",
+		message: "Score : -  |  Étape 7/11",
 		largeimage: "robot-conducteur-reconnaitre-passage-7.jpg",
 		yesno: {}
 		//YES
 	},
 	{
-		title: "Est-ce un passage piéton ? (8/11)",
-		message: "Score : -",
+		title: "Est-ce un passage piéton ?",
+		message: "Score : -  |  Étape 8/11",
 		largeimage: "robot-conducteur-reconnaitre-passage-8.jpg",
 		yesno: {}
 		//YES
 	},
 	{
-		title: "Est-ce un passage piéton ? (9/11)",
-		message: "Score : -",
+		title: "Est-ce un passage piéton ?",
+		message: "Score : -  |  Étape 9/11",
 		largeimage: "robot-conducteur-reconnaitre-passage-9.jpg",
 		yesno: {}
 		//NO
 	},
 	{
-		title: "Est-ce un passage piéton ? (10/11)",
-		message: "Score : -",
+		title: "Est-ce un passage piéton ?",
+		message: "Score : -  |  Étape 10/11",
 		largeimage: "robot-conducteur-reconnaitre-passage-10.jpg",
 		yesno: {}
 		//YES
 	},								
 	{
-		title: "Est-ce un passage piéton ? (11/11)",
-		message: "Score : -",
+		title: "Est-ce un passage piéton ?",
+		message: "Score : -  |  Étape 11/11",
 		largeimage: "robot-conducteur-reconnaitre-passage-11.jpg",
 		yesno: {}
 		//YES
@@ -231,50 +231,50 @@ const conducteur = [
 // YES-NO
 //////////////
 	{
-		title: "Des personnes sont-elles sur la route ? (1/7)",
-		message: "Score : -",
+		title: "Des personnes sont-elles sur la route ?",
+		message: "Score : -  |  Étape 1/7",
 		largeimage: "robot-conducteur-reconnaitre-route-1.jpg",
 		yesno: {}
 		//YES
 	},
 	{
-		title: "Des personnes sont-elles sur la route ? (2/7)",
-		message: "Score : -",
+		title: "Des personnes sont-elles sur la route ?",
+		message: "Score : -  |  Étape 2/7",
 		largeimage: "robot-conducteur-reconnaitre-route-2.jpg",
 		yesno: {}
 		//YES
 	},
 	{
-		title: "Des personnes sont-elles sur la route ? (3/7)",
-		message: "Score : -",
+		title: "Des personnes sont-elles sur la route ?",
+		message: "Score : -  |  Étape 3/7",
 		largeimage: "robot-conducteur-reconnaitre-route-3.jpg",
 		yesno: {}
 		//YES
 	},
 	{
-		title: "Des personnes sont-elles sur la route ? (4/7)",
-		message: "Score : -",
+		title: "Des personnes sont-elles sur la route ?",
+		message: "Score : -  |  Étape 4/7",
 		largeimage: "robot-conducteur-reconnaitre-route-4.jpg",
 		yesno: {}
 		//YES
 	},
 	{
 		title: "Des personnes sont-elles sur la route ? (5/7)",
-		message: "Score : -",
+		message: "Score : -  |  Étape 5/7",
 		largeimage: "robot-conducteur-reconnaitre-route-5.jpg",
 		yesno: {}
 		//NO
 	},
 	{
 		title: "Des personnes sont-elles sur la route ? (6/7)",
-		message: "Score : -",
+		message: "Score : -  |  Étape 6/7",
 		largeimage: "robot-conducteur-reconnaitre-route-6.jpg",
 		yesno: {}
 		//YES
 	},
 	{
 		title: "Des personnes sont-elles sur la route ? (7/7)",
-		message: "Score : -",
+		message: "Score : -  |  Étape 7/7",
 		largeimage: "robot-conducteur-reconnaitre-route-7.jpg",
 		yesno: {}
 		//NO
@@ -367,19 +367,19 @@ const conducteur = [
 	{
 		name: "jeu_panneaux1",
 		title: "Quel est ce panneau ?",
-		message: "Score : -  |  étape 1/10",
-		image: "robot-conducteur-reconnaitre-panneau-1.jpg",
+		message: "Score : -  |  Étape 1/10",
+		image: "robot-conducteur-reconnaitre-panneau-1.png",
 		choices: [
 			{
-				"value": "Sens interdit",
+				"description": "Sens interdit",
 				"points": 1
 			},
 			{
-				"value": "Interdit de stationner",
+				"description": "Interdit de stationner",
 				"points": 0
 			},
 			{
-				"value": "Stop",
+				"description": "Stop",
 				"points": 0
 			}		
 		]
@@ -387,9 +387,9 @@ const conducteur = [
 
 	{
 		name: "jeu_panneaux2",
-		title: "Que signifie ce panneau ?",
-		message: "Score : -  |  étape 1/10",
-		image: "robot-conducteur-reconnaitre-panneau-2.jpg",
+		title: "Quel est ce panneau ?",
+		message: "Score : -  |  Étape 2/10",
+		image: "robot-conducteur-reconnaitre-panneau-2.png",
 		choices: [
 			{
 				"description": "Passage d'animaux domestiques",
@@ -402,22 +402,18 @@ const conducteur = [
 			{
 				"description": "Proximité d'un pont mobile",
 				"points": 1
-			},
-			{
-				"description": "Vent latéral",
-				"points": 0
-			},			
+			},		
 		]
 	},
 
 	{
 		name: "jeu_panneaux3",
-		title: "Quel est ce panneau ? (3/10)",
-		message: "Score : -",
-		image: "robot-conducteur-reconnaitre-panneau-3.jpg",
+		title: "Quel est ce panneau ?",
+		message: "Score : -  |  Étape 3/10",
+		image: "robot-conducteur-reconnaitre-panneau-3.png",
 		choices: [
 			{
-				"value": "Fin d'interdiction",
+				"description": "Fin d'interdiction",
 				"points": 0
 			},
 			{
@@ -425,40 +421,164 @@ const conducteur = [
 				"points": 0
 			},
 			{
-				"value": "Sortie d'aire pétionne",
-				"points": 0
-			},
-			{
 				"value": "Fin du caractère prioritaire d'une route",
-				"points": 0
+				"points": 1
 			},			
 		]
 	},	
 
 	{
 		name: "jeu_panneaux4",
-		title: "Que signifie ce panneau ? (4/10)",
-		message: "Score : -",
-		image: "robot-conducteur-reconnaitre-panneau-4.jpg",
+		title: "Quel est ce panneau ?",
+		message: "Score : -  |  Étape 4/10",
+		image: "robot-conducteur-reconnaitre-panneau-4.png",
 		choices: [
 			{
-				"value": "Passage d'animaux domestiques",
-				"points": 1
-			},
-			{
-				"value": "Passage à niveau",
+				"description": "Pizza flottante",
 				"points": 0
 			},
 			{
-				"value": "Proximité d'un pont mobile",
+				"value": "Accès à une rocade",
 				"points": 1
 			},
 			{
-				"value": "Vent latéral",
+				"value": "Passage piéton surélevé",
 				"points": 0
 			},			
 		]
 	},	
+
+	{
+		name: "jeu_panneaux5",
+		title: "Quel est ce panneau ?",
+		message: "Score : -  |  Étape 5/10",
+		image: "robot-conducteur-reconnaitre-panneau-5.png",
+		choices: [
+			{
+				"description": "Risque de chute de pierres",
+				"points": 1
+			},
+			{
+				"value": "Succession de virages",
+				"points": 0
+			},
+			{
+				"value": "Descente dangereuse",
+				"points": 0
+			},			
+		]
+	},
+
+	{
+		name: "jeu_panneaux6",
+		title: "Quel est ce panneau ?",
+		message: "Score : -  |  Étape 6/10",
+		image: "robot-conducteur-reconnaitre-panneau-6.png",
+		choices: [
+			{
+				"description": "Circulation à sens unique",
+				"points": 0
+			},
+			{
+				"value": "Interdiction de dépasser",
+				"points": 1
+			},
+			{
+				"value": "Lieu aménagé pour le stationnement",
+				"points": 0
+			},			
+		]
+	},
+
+	{
+		name: "jeu_panneaux7",
+		title: "Quel est ce panneau ?",
+		message: "Score : -  |  Étape 7/10",
+		image: "robot-conducteur-reconnaitre-panneau-7.png",
+		choices: [
+			{
+				"description": "Obligation d'aller tout droit",
+				"points": 0
+			},
+			{
+				"value": "Vous avez la priorité",
+				"points": 0
+			},
+			{
+				"value": "Cédez le passage aux véhicules en sens inverse",
+				"points": 1
+			},			
+		]
+	},
+
+	{
+		name: "jeu_panneaux8",
+		title: "Quel est ce panneau ?",
+		message: "Score : -  |  Étape 8/10",
+		image: "robot-conducteur-reconnaitre-panneau-8.png",
+		choices: [
+			{
+				"description": "Entrée sur une rocade",
+				"points": 1
+			},
+			{
+				"value": "Début d'une section d'autoroute",
+				"points": 1
+			},
+			{
+				"value": "Intersection",
+				"points": 0
+			},			
+		]
+	},
+
+	{
+		name: "jeu_panneaux9",
+		title: "Quel est ce panneau ?",
+		message: "Score : -  |  Étape 9/10",
+		image: "robot-conducteur-reconnaitre-panneau-9.png",
+		choices: [
+			{
+				"description": "Fin d'interdiction",
+				"points": 0
+			},
+			{
+				"value": "Stationnement interdit",
+				"points": 1
+			},
+			{
+				"value": "Arrêt et stationnement interdits",
+				"points": 0
+			},			
+		]
+	},
+
+	{
+		name: "jeu_panneaux10",
+		title: "Quel est ce panneau ?",
+		message: "Score : -  |  Étape 10/10",
+		image: "robot-conducteur-reconnaitre-panneau-10.png",
+		choices: [
+			{
+				"description": "Arrêt à l'intersection",
+				"points": 1
+			},
+			{
+				"value": "Air réservée à l'auto-stop",
+				"points": 0
+			},
+			{
+				"value": "Arrivée dans la ville de Stop (Loire-et-Cher)",
+				"points": 0
+			},			
+		]
+	},
+
+	{
+		title: "Apprentissage du code de la route achevée !",
+		message: "Vous êtes fin prêt·e à tester {{name}} sur l’un des circuits de Vroumvroum.",
+		image: "robot-conducteur-ado.png",
+	},
 
 //////////////
 // FIN MINI-JEU 3/4
@@ -476,14 +596,14 @@ const conducteur = [
 
 
 //MINI-JEU 3 & 4 > CONCLUSION
-//SI 5 BONNES REPONSES OU PLUS:
+//SI 80% BONNES REPONSES OU PLUS:
 	{
 		title: "C'est un succès !",
 		message: "Bravo, {{name}} a passé avec succès cette première phase de test !",
 		image: "robot-conducteur-ado.png",
 	},
 //MINI-JEU 3 & 4 > CONCLUSION
-//SI MOINS DE 5 BONNES REPONSES:
+//SI MOINS DE 80% BONNES REPONSES:
 	{
 		title: "C'est plutôt un échec...",
 		message: "Il vous faut encore faire un effort. Vous continuez à faire tester {{name}}.",
