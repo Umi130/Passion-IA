@@ -392,7 +392,7 @@ const conducteur = [
 		image: "robot-conducteur-reconnaitre-panneau-2.png",
 		choices: [
 			{
-				"description": "Passage d'animaux domestiques",
+				"description": "Passage d’animaux domestiques",
 				"points": 0
 			},
 			{
@@ -413,15 +413,15 @@ const conducteur = [
 		image: "robot-conducteur-reconnaitre-panneau-3.png",
 		choices: [
 			{
-				"description": "Fin d'interdiction",
+				"description": "Fin d’interdiction",
 				"points": 0
 			},
 			{
-				"value": "Intersection",
+				"description": "Intersection",
 				"points": 0
 			},
 			{
-				"value": "Fin du caractère prioritaire d'une route",
+				"description": "Fin du caractère prioritaire d’une route",
 				"points": 1
 			},			
 		]
@@ -438,11 +438,11 @@ const conducteur = [
 				"points": 0
 			},
 			{
-				"value": "Accès à une rocade",
+				"description": "Accès à une rocade",
 				"points": 1
 			},
 			{
-				"value": "Passage piéton surélevé",
+				"description": "Passage piéton surélevé",
 				"points": 0
 			},			
 		]
@@ -459,11 +459,11 @@ const conducteur = [
 				"points": 1
 			},
 			{
-				"value": "Succession de virages",
+				"description": "Succession de virages",
 				"points": 0
 			},
 			{
-				"value": "Descente dangereuse",
+				"description": "Descente dangereuse",
 				"points": 0
 			},			
 		]
@@ -480,11 +480,11 @@ const conducteur = [
 				"points": 0
 			},
 			{
-				"value": "Interdiction de dépasser",
+				"description": "Interdiction de dépasser",
 				"points": 1
 			},
 			{
-				"value": "Lieu aménagé pour le stationnement",
+				"description": "Lieu aménagé pour le stationnement",
 				"points": 0
 			},			
 		]
@@ -497,15 +497,15 @@ const conducteur = [
 		image: "robot-conducteur-reconnaitre-panneau-7.png",
 		choices: [
 			{
-				"description": "Obligation d'aller tout droit",
+				"description": "Obligation d’aller tout droit",
 				"points": 0
 			},
 			{
-				"value": "Vous avez la priorité",
+				"description": "Vous avez la priorité",
 				"points": 0
 			},
 			{
-				"value": "Cédez le passage aux véhicules en sens inverse",
+				"description": "Cédez le passage aux véhicules en sens inverse",
 				"points": 1
 			},			
 		]
@@ -522,11 +522,11 @@ const conducteur = [
 				"points": 1
 			},
 			{
-				"value": "Début d'une section d'autoroute",
+				"description": "Début d'une section d’autoroute",
 				"points": 1
 			},
 			{
-				"value": "Intersection",
+				"description": "Intersection",
 				"points": 0
 			},			
 		]
@@ -543,11 +543,11 @@ const conducteur = [
 				"points": 0
 			},
 			{
-				"value": "Stationnement interdit",
+				"description": "Stationnement interdit",
 				"points": 1
 			},
 			{
-				"value": "Arrêt et stationnement interdits",
+				"description": "Arrêt et stationnement interdits",
 				"points": 0
 			},			
 		]
@@ -564,11 +564,11 @@ const conducteur = [
 				"points": 1
 			},
 			{
-				"value": "Air réservée à l'auto-stop",
+				"description": "Air réservée à l'auto-stop",
 				"points": 0
 			},
 			{
-				"value": "Arrivée dans la ville de Stop (Loire-et-Cher)",
+				"description": "Ville de Stop (Loire-et-Cher)",
 				"points": 0
 			},			
 		]
