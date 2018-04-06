@@ -602,18 +602,35 @@ const conducteur = [
 		image: "robot-conducteur-test-1.jpg",
 		choices: [
 			{
+				"value": "",
 				"description": "Avancer",
 				"points": 1
 			},
 			{
+				"value": " ",
 				"description": "Les laisser passer",
 				"points": 0
 			},
 			{
+				"value": "  ",
 				"description": "Klaxonner : les piétons devraient être sur le trottoir",
 				"points": 0
 			},			
 		]
+	},
+//Si réponse correcte
+	{
+		title: "Bonne réponse !",
+		message: "Il fallait bien choisir de continuer à avancer.",
+		image: "robot-conducteur-ado.png",
+		when: answers => answers.jeu_route1 === "",
+	},
+//Si réponse incorrecte
+	{
+		title: "Mauvaise réponse !",
+		message: "Il fallait choisir de continuer à avancer.",
+		image: "robot-conducteur-ado-etonne.png",
+		when: answers => answers.jeu_route1 !== "",
 	},
 
 	{
@@ -622,19 +639,36 @@ const conducteur = [
 		image: "robot-conducteur-test-2.jpg",
 		choices: [
 			{
+				"value": " ",				
 				"description": "Mettre un coup de volant pour l’éviter",
 				"points": 0
 			},
 			{
+				"value": "",				
 				"description": "Freiner pour éviter de le percuter",
 				"points": 1
 			},
 			{
+				"value": "  ",
 				"description": "Continuer à rouler normalement",
 				"points": 0
 			},			
 		]
 	},	
+//Si réponse correcte
+	{
+		title: "Bonne réponse !",
+		message: "Il fallait bien choisir de freiner.",
+		image: "robot-conducteur-ado.png",
+		when: answers => answers.jeu_route2 === "",
+	},
+//Si réponse incorrecte
+	{
+		title: "Mauvaise réponse !",
+		message: "Il fallait choisir de freiner.",
+		image: "robot-conducteur-ado-etonne.png",
+		when: answers => answers.jeu_route2 !== "",
+	},
 
 	{
 		name: "jeu_route3",
@@ -642,19 +676,36 @@ const conducteur = [
 		image: "robot-conducteur-test-2.jpg",
 		choices: [
 			{
+				"value": " ",
 				"description": "Ralentir",
 				"points": 0
 			},
 			{
+				"value": "  ",
 				"description": "S'arrêter",
 				"points": 0
 			},
 			{
+				"value": "",
 				"description": "Continuer à rouler normalement",
 				"points": 1
 			},			
 		]
 	},	
+//Si réponse correcte
+	{
+		title: "Bonne réponse !",
+		message: "Il fallait bien choisir de continuer à rouler normalement.",
+		image: "robot-conducteur-ado.png",
+		when: answers => answers.jeu_route3 === "",
+	},
+//Si réponse incorrecte
+	{
+		title: "Mauvaise réponse !",
+		message: "Il fallait choisir de continuer à rouler normalement.",
+		image: "robot-conducteur-ado-etonne.png",
+		when: answers => answers.jeu_route3 !== "",
+	},
 
 	{
 		name: "jeu_route4",
@@ -662,19 +713,36 @@ const conducteur = [
 		image: "robot-conducteur-test-4.jpg",
 		choices: [
 			{
+				"value": " ",
 				"description": "Rebrousser chemin en marche arrière",
 				"points": 0
 			},
 			{
+				"value": "  ",
 				"description": "Continuer à rouler normalement",
 				"points": 0
 			},
 			{
+				"value": "",
 				"description": "Faire demi-tour en trois temps",
 				"points": 1
 			},			
 		]
 	},	
+//Si réponse correcte
+	{
+		title: "Bonne réponse !",
+		message: "Il fallait bien choisir de faire demi-tour.",
+		image: "robot-conducteur-ado.png",
+		when: answers => answers.jeu_route4 === "",
+	},
+//Si réponse incorrecte
+	{
+		title: "Mauvaise réponse !",
+		message: "Il fallait choisir de faire demi-tour.",
+		image: "robot-conducteur-ado-etonne.png",
+		when: answers => answers.jeu_route4 !== "",
+	},
 
 	{
 		name: "jeu_route5",
@@ -682,19 +750,36 @@ const conducteur = [
 		image: "robot-conducteur-test-5.jpg",
 		choices: [
 			{
+				"value": " ",
 				"description": "Rouler dessus : c’est un simple sac plastique",
 				"points": 0
 			},
 			{
+				"value": "  ",
 				"description": "L'éviter : c'est un rocher",
 				"points": 0
 			},
 			{
+				"value": "",
 				"description": "Ralentir tout en s’approchant : permet d’identifier l’obstacle",
 				"points": 1
 			},			
 		]
 	},	
+//Si réponse correcte
+	{
+		title: "Bonne réponse !",
+		message: "Il fallait bien choisir de ralentir.",
+		image: "robot-conducteur-ado.png",
+		when: answers => answers.jeu_route5 === "",
+	},
+//Si réponse incorrecte
+	{
+		title: "Mauvaise réponse !",
+		message: "Il fallait choisir de ralentir.",
+		image: "robot-conducteur-ado-etonne.png",
+		when: answers => answers.jeu_route5 !== "",
+	},
 
 	{
 		name: "jeu_route6",
@@ -702,33 +787,42 @@ const conducteur = [
 		image: "robot-conducteur-test-6.jpg",
 		choices: [
 			{
+				"value": " ",				
 				"description": "Continuer sans ralentir : c’est à lui de regarder la route",
 				"points": 0
 			},
 			{
+				"value": "",
 				"description": "Ralentir en attendant de voir ce qu'il va faire",
 				"points": 1
 			},
 			{
+				"value": "  ",
 				"description": "Klaxonner pour signaler sa présence",
 				"points": 0
 			},			
 		]
 	},	
+//Si réponse correcte
+	{
+		title: "Bonne réponse !",
+		message: "Il fallait bien choisir de ralentir.",
+		image: "robot-conducteur-ado.png",
+		when: answers => answers.jeu_route6 === "",
+	},
+//Si réponse incorrecte
+	{
+		title: "Mauvaise réponse !",
+		message: "Il fallait choisir de ralentir.",
+		image: "robot-conducteur-ado-etonne.png",
+		when: answers => answers.jeu_route6 !== "",
+	},
 
 //////////////
 // FIN MINI-JEU 4/4
 // RECONNAISSANCE situation route
 // Choix
 //////////////
-
-
-//////////////////////////////
-//////////////////////////////
-//////////////////////////////
-//////////////////////////////
-//////////////////////////////
-//////////////////////////////
 
 
 //MINI-JEU 3 & 4 > CONCLUSION
