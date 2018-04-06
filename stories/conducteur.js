@@ -573,6 +573,11 @@ const conducteur = [
 			},			
 		]
 	},
+//////////////
+// FIN MINI-JEU 3/4
+// RECONNAISSANCE noms panneaux
+// Choix
+//////////////
 
 	{
 		title: "Apprentissage du code de la route achevée !",
@@ -580,9 +585,140 @@ const conducteur = [
 		image: "robot-conducteur-ado.png",
 	},
 
+	{
+		title: "Apprentissage des situations de conduite",
+		message: "{{name}} doit maintenant apprendre à réagir en fonction de ce qui est vu : par exemple, si {{name}} voit qu’un piéton traverse, il faudra ralentir pour le laisser passer.",
+		image: "robot-conducteur-ado.png",
+	},	
+
 //////////////
-// FIN MINI-JEU 3/4
-// RECONNAISSANCE noms panneaux
+// MINI-JEU 4/4
+// RECONNAISSANCE situation route
+// Choix
+//////////////
+	{
+		name: "jeu_route1",
+		message: "Le feu est vert, mais les piétons sont sur la route. Que faire ? (1/6)",
+		image: "robot-conducteur-test-1.jpg",
+		choices: [
+			{
+				"description": "Avancer",
+				"points": 1
+			},
+			{
+				"description": "Les laisser passer",
+				"points": 0
+			},
+			{
+				"description": "Klaxonner : les piétons devraient être sur le trottoir",
+				"points": 0
+			},			
+		]
+	},
+
+	{
+		name: "jeu_route2",
+		message: "Un animal surgit sur la route. Que faire ? (2/6)",
+		image: "robot-conducteur-test-2.jpg",
+		choices: [
+			{
+				"description": "Mettre un coup de volant pour l’éviter",
+				"points": 0
+			},
+			{
+				"description": "Freiner pour éviter de le percuter",
+				"points": 1
+			},
+			{
+				"description": "Continuer à rouler normalement",
+				"points": 0
+			},			
+		]
+	},	
+
+	{
+		name: "jeu_route3",
+		message: "Le feu est vert. Que faire ? (3/6)",
+		image: "robot-conducteur-test-2.jpg",
+		choices: [
+			{
+				"description": "Ralentir",
+				"points": 0
+			},
+			{
+				"description": "S'arrêter",
+				"points": 0
+			},
+			{
+				"description": "Continuer à rouler normalement",
+				"points": 1
+			},			
+		]
+	},	
+
+	{
+		name: "jeu_route4",
+		message: "La route est bloquée. Que faire ? (4/6)",
+		image: "robot-conducteur-test-4.jpg",
+		choices: [
+			{
+				"description": "Rebrousser chemin en marche arrière",
+				"points": 0
+			},
+			{
+				"description": "Continuer à rouler normalement",
+				"points": 0
+			},
+			{
+				"description": "Faire demi-tour en trois temps",
+				"points": 1
+			},			
+		]
+	},	
+
+	{
+		name: "jeu_route5",
+		message: "La voiture détecte un obstacle sur la route. Que faire ? (5/6)",
+		image: "robot-conducteur-test-5.jpg",
+		choices: [
+			{
+				"description": "Rouler dessus : c’est un simple sac plastique",
+				"points": 0
+			},
+			{
+				"description": "L'éviter : c'est un rocher",
+				"points": 0
+			},
+			{
+				"description": "Ralentir tout en s’approchant : permet d’identifier l’obstacle",
+				"points": 1
+			},			
+		]
+	},	
+
+	{
+		name: "jeu_route6",
+		message: "Le garçon veut visiblement traverser, mais vous ne savez pas s'il a vu la voiture. Que faire ? (6/6)",
+		image: "robot-conducteur-test-6.jpg",
+		choices: [
+			{
+				"description": "Continuer sans ralentir : c’est à lui de regarder la route",
+				"points": 0
+			},
+			{
+				"description": "Ralentir en attendant de voir ce qu'il va faire",
+				"points": 1
+			},
+			{
+				"description": "Klaxonner pour signaler sa présence",
+				"points": 0
+			},			
+		]
+	},	
+
+//////////////
+// FIN MINI-JEU 4/4
+// RECONNAISSANCE situation route
 // Choix
 //////////////
 

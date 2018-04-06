@@ -26,12 +26,12 @@ const juriste = [
 		image: "robot-juriste-dodo.png",
 	},
 	{
-		message: "Vous vous inspirez de Case Law Analytics et de Predictice, deux entreprises françaises qui proposent des outils d'IA à des avocats. Vous vous associez avec un ingénieur pour écrire un algorithme adapté aux magistrats.",
+		message: "Vous vous inspirez de Case Law Analytics et de Predictice, deux entreprises françaises qui proposent des outils d’IA à des avocats. Vous vous associez avec un ingénieur pour écrire un algorithme adapté aux magistrats.",
 		image: "robot-juriste-dodo.png",
 	},
 	{
-		title: "Qu'est-ce qu'un algorithme ?",
-		message: "Ce sont les instructions qui commandent un programme informatique. C'est un peu comme une recette de cuisine. Les ingrédients sont les données des dossiers ; votre plat, ce sont les différents jugements.",
+		title: "Qu'est-ce qu’un algorithme ?",
+		message: "Ce sont les instructions qui commandent un programme informatique. C’est un peu comme une recette de cuisine. Les ingrédients sont les données des dossiers ; votre plat, ce sont les différents jugements.",
 		image: "robot-juriste-dodo.png",
 	},
 	{
