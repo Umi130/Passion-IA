@@ -400,7 +400,7 @@ const conducteur = [
 				"points": 0
 			},
 			{
-				"description": "Proximité d'un pont mobile",
+				"description": "Proximité d’un pont mobile",
 				"points": 1
 			},		
 		]
@@ -522,7 +522,7 @@ const conducteur = [
 				"points": 1
 			},
 			{
-				"description": "Début d'une section d’autoroute",
+				"description": "Début d’une section d’autoroute",
 				"points": 1
 			},
 			{
@@ -539,7 +539,7 @@ const conducteur = [
 		image: "robot-conducteur-reconnaitre-panneau-9.png",
 		choices: [
 			{
-				"description": "Fin d'interdiction",
+				"description": "Fin d’interdiction",
 				"points": 0
 			},
 			{
@@ -560,11 +560,11 @@ const conducteur = [
 		image: "robot-conducteur-reconnaitre-panneau-10.png",
 		choices: [
 			{
-				"description": "Arrêt à l'intersection",
+				"description": "Arrêt à l’intersection",
 				"points": 1
 			},
 			{
-				"description": "Air réservée à l'auto-stop",
+				"description": "Air réservée à l’auto-stop",
 				"points": 0
 			},
 			{
