@@ -366,8 +366,8 @@ const conducteur = [
 //////////////
 	{
 		name: "jeu_panneaux1",
-		title: "Quel est ce panneau ? (1/10)",
-		message: "Score : -",
+		title: "Quel est ce panneau ?",
+		message: "Score : -  |  étape 1/10",
 		image: "robot-conducteur-reconnaitre-panneau-1.jpg",
 		choices: [
 			{
@@ -387,24 +387,24 @@ const conducteur = [
 
 	{
 		name: "jeu_panneaux2",
-		title: "Que signifie ce panneau ? (2/10)",
-		message: "Score : -",
+		title: "Que signifie ce panneau ?",
+		message: "Score : -  |  étape 1/10",
 		image: "robot-conducteur-reconnaitre-panneau-2.jpg",
 		choices: [
 			{
-				"value": "Passage d'animaux domestiques",
-				"points": 1
-			},
-			{
-				"value": "Passage à niveau",
+				"description": "Passage d'animaux domestiques",
 				"points": 0
 			},
 			{
-				"value": "Proximité d'un pont mobile",
+				"description": "Passage à niveau",
+				"points": 0
+			},
+			{
+				"description": "Proximité d'un pont mobile",
 				"points": 1
 			},
 			{
-				"value": "Vent latéral",
+				"description": "Vent latéral",
 				"points": 0
 			},			
 		]
