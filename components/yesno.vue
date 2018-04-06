@@ -31,7 +31,7 @@ methods: {
 
 <style scoped>
 	section {
-		background-size: auto 500px;
+		background-size: auto 400px;
 		background-position: center;
 		background-repeat: no-repeat;
 	}

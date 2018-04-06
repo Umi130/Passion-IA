@@ -85,7 +85,7 @@ const conducteur = [
 	},
 	{
 		title: "La voiture est désormais équipée !",
-		message: "{{name}} peut maintenant voir la route, et même mieux que vous ! Seulement, il y a encore un problème à résoudre : {{name}} voit, mais elle ne sait pas encore ce qu’elle voit.",
+		message: "{{name}} peut maintenant voir la route, et même mieux que vous ! Seulement, il y a encore un problème à résoudre : {{name}} voit, mais ne sait pas encore reconnaître ce qui est vu.",
 		image: "robot-conducteur-bebe.png",
 	},
 	{
@@ -332,11 +332,11 @@ const conducteur = [
 	},
 	{
 		title: "La physique est importante pour l'intelligence artificielle des voitures",
-		message: "Sa compréhension va permettre d’anticiper la trajectoire des véhicules alentours.",
+		message: "Sa compréhension permet d’anticiper la trajectoire des véhicules alentours.",
 		image: "robot-conducteur-enfant.png",
 	},
 	{
-		message: "Ainsi, si le camion derrière vous va trop vite pour pouvoir s’arrêter en cas de freinage d’urgence, {{name}} pourra choisir de se déporter.",
+		message: "Mettons qu'un camion derrière vous aille trop vite pour pouvoir s’arrêter en cas de freinage d’urgence. {{name}} pourra alors choisir de se déporter.",
 		image: "robot-conducteur-enfant.png",
 	},
 
@@ -347,16 +347,125 @@ const conducteur = [
 // Robot devient ado
 	{
 		title: "Quoi ?",
-		message: "{{name}} a grandi ! Elle va bientôt pouvoir rouler par elle-même, mais il lui manque encore quelques données.",
+		message: "{{name}} a grandi ! La voiture va bientôt pouvoir rouler par elle-même, mais il lui faut encore apprendre de nouvelles données.",
 		image: "robot-conducteur-ado.png",
 	},
 //
 
 	{
 		title: "Apprentissage du code de la route",
-		message: "Il faut aider {{name}} à reconnaître les panneaux de signalisation routière.",
+		message: "Vous aidez {{name}} à reconnaître les panneaux de signalisation routière.",
 		image: "robot-conducteur-ado.png",
 	},
+
+
+//////////////
+// MINI-JEU 3/4
+// RECONNAISSANCE noms panneaux
+// Choix
+//////////////
+	{
+		name: "jeu_panneaux1",
+		title: "Quel est ce panneau ? (1/10)",
+		message: "Score : -",
+		image: "robot-conducteur-reconnaitre-panneau-1.jpg",
+		choices: [
+			{
+				"value": "Sens interdit",
+				"points": 1
+			},
+			{
+				"value": "Interdit de stationner",
+				"points": 0
+			},
+			{
+				"value": "Stop",
+				"points": 0
+			}		
+		]
+	},
+
+	{
+		name: "jeu_panneaux2",
+		title: "Que signifie ce panneau ? (2/10)",
+		message: "Score : -",
+		image: "robot-conducteur-reconnaitre-panneau-2.jpg",
+		choices: [
+			{
+				"value": "Passage d'animaux domestiques",
+				"points": 1
+			},
+			{
+				"value": "Passage à niveau",
+				"points": 0
+			},
+			{
+				"value": "Proximité d'un pont mobile",
+				"points": 1
+			},
+			{
+				"value": "Vent latéral",
+				"points": 0
+			},			
+		]
+	},
+
+	{
+		name: "jeu_panneaux3",
+		title: "Quel est ce panneau ? (3/10)",
+		message: "Score : -",
+		image: "robot-conducteur-reconnaitre-panneau-3.jpg",
+		choices: [
+			{
+				"value": "Fin d'interdiction",
+				"points": 0
+			},
+			{
+				"value": "Intersection",
+				"points": 0
+			},
+			{
+				"value": "Sortie d'aire pétionne",
+				"points": 0
+			},
+			{
+				"value": "Fin du caractère prioritaire d'une route",
+				"points": 0
+			},			
+		]
+	},	
+
+	{
+		name: "jeu_panneaux4",
+		title: "Que signifie ce panneau ? (4/10)",
+		message: "Score : -",
+		image: "robot-conducteur-reconnaitre-panneau-4.jpg",
+		choices: [
+			{
+				"value": "Passage d'animaux domestiques",
+				"points": 1
+			},
+			{
+				"value": "Passage à niveau",
+				"points": 0
+			},
+			{
+				"value": "Proximité d'un pont mobile",
+				"points": 1
+			},
+			{
+				"value": "Vent latéral",
+				"points": 0
+			},			
+		]
+	},	
+
+//////////////
+// FIN MINI-JEU 3/4
+// RECONNAISSANCE noms panneaux
+// Choix
+//////////////
+
 
 //////////////////////////////
 //////////////////////////////
@@ -364,6 +473,22 @@ const conducteur = [
 //////////////////////////////
 //////////////////////////////
 //////////////////////////////
+
+
+//MINI-JEU 3 & 4 > CONCLUSION
+//SI 5 BONNES REPONSES OU PLUS:
+	{
+		title: "C'est un succès !",
+		message: "Bravo, {{name}} a passé avec succès cette première phase de test !",
+		image: "robot-conducteur-ado.png",
+	},
+//MINI-JEU 3 & 4 > CONCLUSION
+//SI MOINS DE 5 BONNES REPONSES:
+	{
+		title: "C'est plutôt un échec...",
+		message: "Il vous faut encore faire un effort. Vous continuez à faire tester {{name}}.",
+		image: "robot-conducteur-ado-etonne.png",
+	},
 
 ////////////////
 // ROBOT ADULTE
@@ -388,7 +513,7 @@ const conducteur = [
 		image: "robot-conducteur-adulte-etonne.png",
 	},
 
-/// Choix responsabilité à compléter ///
+/// Choix responsabilité ///
 /// Pas de bonne ou mauvaise réponse ///
 
 //
