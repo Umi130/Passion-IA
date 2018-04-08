@@ -74,6 +74,72 @@ const musicien = [
 		]
 	},
 
+		{
+		message: "Bel hommage ! Johnny Hallyday a été un symbole pour toute une génération. Johnny Hallgorithme pourrait bien être celui de la suivante.",
+		image: "robot-musicien-bebe.png",
+		when: answers => answers.name === "Johnny Hallgorithme"
+	},	
+
+			{
+		message: "Mais attention, dans le secteur des musiques actuelles, les femmes ne représentent que moins de 10% des auteurs-compositeurs inscrits à la SACEM.",
+		image: "robot-musicien-bebe-etonne.png",
+		when: answers => answers.name === "Johnny Hallgorithme"
+	},
+
+	{
+		message: "Votre robot, contrairement à un bébé, n’est pas genré. Le nom que vous lui avez choisi, lui, l’est. Il définit donc la manière dont le robot sera perçu par les utilisateurs et le public.",
+		image: "robot-musicien-bebe.png",
+		when: answers => answers.name === "Johnny Hallgorithme"
+	},	
+
+	{
+		message: "Il faudra éduquer Johhny Hallgorithme pour qu’il ne reproduise pas les schémas actuels qui font que les femmes sont sous représentées dans la musique, faute de modèle à qui elles peuvent s’identifier.",
+		image: "robot-musicien-bebe.png",
+		when: answers => answers.name === "Johnny Hallgorithme"
+	},	
+
+		{
+		message: "Bel hommage ! Nina Simone est l’une des voix emblématiques de la soul mais aussi du mouvement des droits civiques en Amérique. Mais son timbre a souvent été comparé… à celui d’un homme.",
+		image: "robot-musicien-bebe-etonne.png",
+		when: answers => answers.name === "Nina Sibot"
+	},	
+
+	{
+		message: "Votre robot, contrairement à un bébé, n’est pas genré. Le nom que vous lui avez choisi, lui, l’est. Il définit donc la manière dont le robot sera perçu par les utilisateurs et le public.",
+		image: "robot-musicien-bebe.png",
+		when: answers => answers.name === "Nina Sibot"
+	},	
+
+	{
+		message: "Dans la musique comme dans la technologie, les femmes représentent moins de 10% des effectifs. Donner un nom féminin à votre IA permettra peut-être de créer un modèle auquel les jeunes compositrices pourront s’identifier.",
+		image: "robot-musicien-bebe.png",
+		when: answers => answers.name === "Nina Sibot"
+	},	
+
+		{
+		message: "Yumi n’est pas un chef d’orchestre comme les autres : il n’a que deux bras et pas de tête. Mais alors… on pourrait aussi dire que Yumi n’est pas une cheffe d’orchestre comme les autres : elle n’a que deux bras et pas de tête.",
+		image: "robot-musicien-bebe.png",
+		when: answers => answers.name === "YuMi"
+	},	
+
+	{
+		message: "« On veut donner à ces robots des caractéristiques humaines alors que les IA, c’est loin de n’être que ça ! », explique Dipty Chander, présidente de l’association E-mma qui promeut la mixité dans le domaine du numérique.",
+		image: "Dipty.png",
+		when: answers => answers.name === "YuMi"
+	},	
+
+	{
+		message: "Votre robot, contrairement à un bébé, n’est pas genré. Le nom que vous lui avez choisi, lui, l’est. Il définit donc la manière dont le robot sera perçu par les utilisateurs et le public.",
+		image: "robot-musicien-bebe.png",
+		when: answers => answers.name === "YuMi"
+	},	
+	{
+		message: "Aujourd’hui, les femmes représentent 6% des chefs d’orchestre. Choisir un nom neutre, c’est montrer que la fibre artistique n’a pas de sexe.",
+		image: "robot-musicien-bebe.png",
+		when: answers => answers.name === "YuMi"
+	},	
+
+
 	{
 		title: "Vous décidez de tester l'algorithme...",
 		message: "Il vous suffit de rentrer la durée du morceau que {{name}} doit composer. Vous tentez : 4 minutes et 33 secondes.",

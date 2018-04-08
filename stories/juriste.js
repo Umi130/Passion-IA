@@ -61,6 +61,74 @@ const juriste = [
 		]
 	},
 
+		{
+		message: "En choisissant d’appeler votre robot Ross, vous rendez hommage à un algorithme qui fait fureur dans les cabinets d’avocats américains. Ce logiciel est payant… mais une version gratuite existe : elle s’appelle Eva.",
+		image: "robot-juriste-bebe-etonne.png",
+		when: answers => answers.name === "Ross"
+	},	
+
+	{
+		message: "Votre robot, contrairement à un bébé, n’est pas genré. Le nom que vous lui avez choisi, lui, l’est. Il définit donc la manière dont le robot sera perçu par les utilisateurs et le public.",
+		image: "robot-juriste-bebe.png",
+		when: answers => answers.name === "Ross"
+	},	
+
+	{
+		message: "« C’est la façon dont les hommes construisent les IA qui risque d’aggraver les stéréotypes », explique Dipty Chander, présidente de l’association E-mma qui promeut la mixité dans le domaine du numérique.",
+		image: "Dipty.png",
+		when: answers => answers.name === "Ross"
+	},	
+
+	{
+		message: "Attention donc à ne pas renforcer, sans le vouloir, les inégalités et les clichés liés au genre dans le secteur juridique. Il faudra donc enseigner à Ross à ne pas reproduire les biais sexistes qui existent dans le milieu du droit.",
+		image: "robot-juriste-bebe.png",
+		when: answers => answers.name === "Ross"
+	},	
+
+
+		{
+		message: "En choisissant d’appeler votre robot Agatha, vous faites référence au film Minority Report et à ses robots capables de prédire les crimes. Mais lui attribuer un nom féminin fait de votre algorithme une minorité au sein du milieu de la tech.",
+		image: "robot-juriste-bebe-etonne.png",
+		when: answers => answers.name === "Agatha"
+	},	
+
+	{
+		message: "Votre robot, contrairement à un bébé, n’est pas genré. Le nom que vous lui avez choisi, lui, l’est. Il définit donc la manière dont le robot sera perçu par les utilisateurs et le public.",
+		image: "robot-juriste-bebe.png",
+		when: answers => answers.name === "Agatha"
+	},	
+
+	{
+		message: "Ne pas définir de genre pour votre algorithme vous autorise à un peu plus de fantaisie. « Au lieu de commencer par se dire « c’est un assistant, donnons lui une voix de femme », qu’est ce qui nous empêche de lui donner une voix d’animal, par exemple, ou un truc qui ne ressemble à rien de réel mais qui soit fun ? » explique Dipty Chander, présidente de l’association E-mma qui promeut la mixité dans le domaine du numérique.",
+		image: "Dipty.png",
+		when: answers => answers.name === "Agatha"
+	},
+
+	{
+		message: "« Sauf qu’en faisant cela, on aggrave le problème, on ne fait qu’enfoncer des stéréotypes, c’est encore pire !» explique Dipty Chander, présidente de l’association E-mma qui promeut la mixité dans le domaine du numérique.",
+		image: "Dipty.png",
+		when: answers => answers.name === "Agatha"
+	},	
+	
+		{
+		message: "En choisissant d’appeler votre robot Justum, vous restez neutre, comme la justice est censée l’être.",
+		image: "robot-juriste-bebe.png",
+		when: answers => answers.name === "Justum"
+	},	
+
+	{
+		message: "Votre robot, contrairement à un bébé, n’est pas genré. Le nom que vous lui avez choisi, lui, l’est. Il définit donc la manière dont le robot sera perçu par les utilisateurs et le public.",
+		image: "robot-juriste-bebe.png",
+		when: answers => answers.name === "Justum"
+	},	
+
+	{
+		message: "Les robots non-genrés sont encore rares. « Si on arrêtait de penser le design en fonction du genre et que l’on se concentrait sur le besoin auquel répond l’IA, les choses fonctionneraient peut être mieux », avance Dipty Chander, présidente de l’association E-mma qui promeut la mixité dans le domaine du numérique.",
+		image: "Dipty.png",
+		when: answers => answers.name === "Justum"
+	},	
+
+
 	{
 		title: "L'ingrédient principal",
 		message: "Votre algorithme doit se nourrir de la loi qui détermine le montant des indemnités de licenciement d'un salarié.",

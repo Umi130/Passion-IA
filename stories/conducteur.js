@@ -67,13 +67,13 @@ const conducteur = [
 
 	{
 		message: "Votre robot, contrairement à un bébé, n’est pas genré. Le nom que vous lui avez choisi, lui, l’est. Il définit donc la manière dont le robot sera perçu par les utilisateurs et le public.",
-		image: "robot-conducteur-bebe-etonne.png",
+		image: "robot-conducteur-bebe.png",
 		when: answers => answers.name === "Hubert"
 	},	
 
 	{
 		message: "Un prénom masculin peut participer à entretenir les préjugés selon lesquels l’automobile est réservée aux hommes.",
-		image: "robot-conducteur-bebe-etonne.png",
+		image: "robot-conducteur-bebe.png",
 		when: answers => answers.name === "Hubert"
 	},	
 
@@ -85,31 +85,31 @@ const conducteur = [
 
 	{
 		message: "Votre robot, contrairement à un bébé, n’est pas genré. Le nom que vous lui avez choisi, lui, l’est. Il définit donc la manière dont le robot sera perçu par les utilisateurs et le public.",
-		image: "robot-conducteur-bebe-etonne.png",
+		image: "robot-conducteur-bebe.png",
 		when: answers => answers.name === "Titine"
 	},	
 
 	{
-		message: "Mais au fait, pourquoi appelle-t-on notre voiture Titine? En posant la question à votre moteur de recherche vous pourrez tomber sur ce genre de réponse... « Je l'appelle « cocotte», c'est mon côté macho et elle, c'est une vraie soumise, elle obéit à tout ce que je lui dis, elle me surprend parfois mais je l'adore... »  Tout le contraire d’une voiture autonome non?",
-		image: "robot-conducteur-bebe-etonne.png",
+		message: "Mais au fait, pourquoi appelle-t-on notre voiture Titine? En posant la question à votre moteur de recherche vous pourrez tomber sur ce genre de réponse... « Je l'appelle «cocotte», c'est mon côté macho et elle, c'est une vraie soumise, elle obéit à tout ce que je lui dis, elle me surprend parfois mais je l'adore... »  Tout le contraire d’une voiture autonome non?",
+		image: "robot-conducteur-bebe.png",
 		when: answers => answers.name === "Titine"
 	},	
 
 		{
 		message: "Les geeks apprécieront la référence, Botmobile peut se vanter d’avoir un nom très cool. Et si votre IA développait les mêmes aptitudes que la voiture de Batman ?",
-		image: "robot-conducteur-bebe-etonne.png",
+		image: "robot-conducteur-bebe.png",
 		when: answers => answers.name === "Botmobile"
 	},	
 
 	{
 		message: "Votre robot, contrairement à un bébé, n’est pas genré. Le nom que vous lui avez choisi, lui, l’est. Il définit donc la manière dont le robot sera perçu par les utilisateurs et le public.",
-		image: "robot-conducteur-bebe-etonne.png",
+		image: "robot-conducteur-bebe.png",
 		when: answers => answers.name === "Botmobile"
 	},	
 
 	{
 		message: "Ne pas définir de genre pour votre algorithme vous autorise à un peu plus de fantaisie. « Au lieu de commencer par se dire « c’est un assistant, donnons lui une voix de femme », qu’est ce qui nous empêche de lui donner une voix d’animal, par exemple, ou un truc qui ne ressemble à rien de réel mais qui soit fun ? » explique Dipty Chander, présidente de l’association E-mma qui promeut la mixité dans le domaine du numérique.",
-		image: "robot-conducteur-bebe-etonne.png",
+		image: "Dipty.png",
 		when: answers => answers.name === "Botmobile"
 	},	
 
