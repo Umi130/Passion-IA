@@ -2,7 +2,7 @@
 	<main>
 		<header class="container text-center mt-4">
 				<h2>L'école des Intelligences Artificielles</h2>
-				<p class="lead">Choisissez un profil à faire grandir :</p>
+				<p class="lead">Choisissez un profil à faire grandir</p>
 
 				<!-- Info button, feel free to optimize -->
 				<dir id="info" style="cursor:pointer; background: rgba(0, 0, 0, 0) url(./assets/images/element-info.png) no-repeat scroll 0% 0%; height: 20px; width: 20px;background-size: contain;left: 50%;position: relative;"></dir>
