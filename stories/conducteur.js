@@ -59,6 +59,23 @@ const conducteur = [
 		]
 	},
 
+	{
+		message: "En choisissant d’appeler votre voiture autonome Hubert, vous prouvez à tout le monde que vous êtes un petit rigolo. Mais un homme dans la mécanique, c’est un peu cliché non ?",
+		image: "robot-conducteur-bebe-etonne.png",
+		when: answers => answers.name === "Hubert"
+	},	
+
+	{
+		message: "Votre robot, contrairement à un bébé, n’est pas genré. Le nom que vous lui avez choisi, lui, l’est. Il définit donc la manière dont le robot sera perçu par les utilisateurs et le public.",
+		image: "robot-conducteur-bebe-etonne.png",
+		when: answers => answers.name === "Hubert"
+	},	
+
+	{
+		message: "Un prénom masculin peut participer à entretenir les préjugés selon lesquels l’automobile est réservée aux hommes.",
+		image: "robot-conducteur-bebe-etonne.png",
+		when: answers => answers.name === "Hubert"
+	},	
 
 	{
 		title: "Vous êtes impatient·e de tester votre nouvelle voiture !",
