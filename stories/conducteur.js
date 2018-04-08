@@ -33,6 +33,11 @@ const conducteur = [
 	},
 
 	{
+		message: "L’algorithme, c’est l’embryon de l’intelligence artificielle, son cerveau. Comme celui d’un bébé à la naissance, il est fonctionnel, mais pas encore prêt à interagir de manière autonome avec son environnement.",
+		image: "robot-juriste-bebe.png",
+	},
+
+	{
 		message: "Sur les conseils d’Erik Coelingh, vous commencez à travailler sur votre algorithme. Ce ne sont que quelques lignes de code, mais vous vous prenez déjà d’affection pour ce·tte petit·e conducteur·rice en herbe. Vous décidez de lui donner un prénom.",
 		image: "robot-conducteur-bebe.png",
 	},	
