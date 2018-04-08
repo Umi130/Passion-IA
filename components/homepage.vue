@@ -5,7 +5,7 @@
 				<p class="lead">Choisissez un profil à faire grandir :</p>
 
 				<!-- Info button, feel free to optimize -->
-				<dir id="info" style="background: rgba(0, 0, 0, 0) url(&quot;./assets/images/element-info.png&quot;) no-repeat scroll 0% 0%; height: 20px; width: 20px;background-size: contain;left: 50%;position: relative;"></dir>
+				<dir id="info" style="cursor:pointer; background: rgba(0, 0, 0, 0) url(./assets/images/element-info.png) no-repeat scroll 0% 0%; height: 20px; width: 20px;background-size: contain;left: 50%;position: relative;"></dir>
 
 				<!-- Modal for informations informations -->
 				<!-- The Modal -->
@@ -13,19 +13,16 @@
 
 				  <!-- Modal content -->
 					<div class="modal-content">
-				    	<p>«Machine learning», «réseaux de neurones», «traitement automatique du langage»... Difficile d’expliquer simplement le fonctionnement d’un algorithme !</p>
+				    	<p><strong>«Machine learning», «réseaux de neurones», «traitement automatique du langage»... Difficile d’expliquer simplement le fonctionnement d’un algorithme !</strong></p>
+						<p>Ce jeu vous propose de devenir «éleveur de robot», pour mieux comprendre le fonctionnement d’une IA.</p>
+						<p><em>Ce projet a été conçu par six étudiants de l’École de journalisme de Sciences Po :</em><br>
+						Lawrence Bekk-Day, Tamara Bouhl, Océane Cornevin, Mathilde Dumazet, Aurore Gayte & Mathilde Saliou</p>
 
-						<p>Ce jeu vous propose de devenir «éleveur de robot» pour mieux comprendre le fonctionnement d’une intelligence artificielle.</p>
-
-<p>Ce projet a été conçu par six étudiants de l’École de journalisme de Sciences Po : <br>
-<p>Lawrence Bekk-Day, Tamara Bouhl, Océane Cornevin, Mathilde Dumazet, Aurore Gayte & Mathilde Saliou</p>
-
-<p>Remerciements tout particuliers à <br>
-Julie Zentkowski pour le graphisme<br>
-Jules Bonnard (AFP) & Pierre Romera (ICIJ) pour leur accompagnement sur la conception du jeu<br>
-Célia Mériguet & Thibaud Vuitton (franceinfo) pour leurs conseils éditoriaux</p>
-
-<p>© 2018 Tous droits réservés</p>
+						<p><em>Remerciements tout particuliers à :</em><br>
+							Julie Zentkowski pour le graphisme<br>
+							Jules Bonnard (AFP) & Pierre Romera (ICIJ) pour leur accompagnement<br>
+						Célia Mériguet & Thibaud Vuitton (franceinfo) pour leurs conseils éditoriaux</p>
+						<p><small>© 2018 Tous droits réservés</small></p>
 
 				    	<span class="close">X</span>
   					</div>
