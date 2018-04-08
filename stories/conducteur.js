@@ -77,6 +77,42 @@ const conducteur = [
 		when: answers => answers.name === "Hubert"
 	},	
 
+		{
+		message: "Beaucoup de français font comme vous le choix de donner un surnom affectueux à leur voiture. Espérons que Titine n’aura pas trop de mal à se faire une place dans le milieu très masculin de l’automobile.",
+		image: "robot-conducteur-bebe-etonne.png",
+		when: answers => answers.name === "Titine"
+	},	
+
+	{
+		message: "Votre robot, contrairement à un bébé, n’est pas genré. Le nom que vous lui avez choisi, lui, l’est. Il définit donc la manière dont le robot sera perçu par les utilisateurs et le public.",
+		image: "robot-conducteur-bebe-etonne.png",
+		when: answers => answers.name === "Titine"
+	},	
+
+	{
+		message: "Mais au fait, pourquoi appelle-t-on notre voiture Titine? En posant la question à votre moteur de recherche vous pourrez tomber sur ce genre de réponse... « Je l'appelle « cocotte», c'est mon côté macho et elle, c'est une vraie soumise, elle obéit à tout ce que je lui dis, elle me surprend parfois mais je l'adore... »  Tout le contraire d’une voiture autonome non?",
+		image: "robot-conducteur-bebe-etonne.png",
+		when: answers => answers.name === "Titine"
+	},	
+
+		{
+		message: "Les geeks apprécieront la référence, Botmobile peut se vanter d’avoir un nom très cool. Et si votre IA développait les mêmes aptitudes que la voiture de Batman ?",
+		image: "robot-conducteur-bebe-etonne.png",
+		when: answers => answers.name === "Botmobile"
+	},	
+
+	{
+		message: "Votre robot, contrairement à un bébé, n’est pas genré. Le nom que vous lui avez choisi, lui, l’est. Il définit donc la manière dont le robot sera perçu par les utilisateurs et le public.",
+		image: "robot-conducteur-bebe-etonne.png",
+		when: answers => answers.name === "Botmobile"
+	},	
+
+	{
+		message: "Ne pas définir de genre pour votre algorithme vous autorise à un peu plus de fantaisie. « Au lieu de commencer par se dire « c’est un assistant, donnons lui une voix de femme », qu’est ce qui nous empêche de lui donner une voix d’animal, par exemple, ou un truc qui ne ressemble à rien de réel mais qui soit fun ? » explique Dipty Chander, présidente de l’association E-mma qui promeut la mixité dans le domaine du numérique.",
+		image: "robot-conducteur-bebe-etonne.png",
+		when: answers => answers.name === "Botmobile"
+	},	
+
 	{
 		title: "Vous êtes impatient·e de tester votre nouvelle voiture !",
 		message: "Vous tournez la clé et le moteur vrombit. Mais rien ne se passe...",
