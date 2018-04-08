@@ -115,80 +115,113 @@ const conducteur = [
 //////////////
 
 	{
+		name: "passagepieton",
 		title: "Est-ce un passage piéton ?",
-		message: "Score : -  |  Étape 1/11",
+		message: "Score : {{ passagepieton }}  |  Étape 1/11",
 		largeimage: "robot-conducteur-reconnaitre-passage-1.jpg",
-		yesno: {}
+		yesno: {
+			answer: true
+		}
 		//YES
 	},
 	{
+		name: "passagepieton",
 		title: "Est-ce un passage piéton ?",
-		message: "Score : -  |  Étape 2/11",
+		message: "Score : {{ passagepieton }}  |  Étape 2/11",
 		largeimage: "robot-conducteur-reconnaitre-passage-2.jpg",
-		yesno: {}
+		yesno: {
+			answer: true
+		}
 		//YES
 	},
 	{
+		name: "passagepieton",
 		title: "Est-ce un passage piéton ?",
-		message: "Score : -  |  Étape 3/11",
+		message: "Score : {{ passagepieton }}  |  Étape 3/11",
 		largeimage: "robot-conducteur-reconnaitre-passage-3.jpg",
-		yesno: {}
+		yesno: {
+			answer: false
+		}
 		//NO
 	},
 	{
+		name: "passagepieton",
 		title: "Est-ce un passage piéton ?",
-		message: "Score : -  |  Étape 4/11",
+		message: "Score : {{ passagepieton }}  |  Étape 4/11",
 		largeimage: "robot-conducteur-reconnaitre-passage-4.jpg",
-		yesno: {}
+		yesno: {
+			answer: true
+		}
 		//YES
 	},
 	{
+		name: "passagepieton",
 		title: "Est-ce un passage piéton ?",
-		message: "Score : -  |  Étape 5/11",
+		message: "Score : {{ passagepieton }}  |  Étape 5/11",
 		largeimage: "robot-conducteur-reconnaitre-passage-5.jpg",
-		yesno: {}
+		yesno: {
+			answer: false
+		}
 		//NO
 	},
 	{
+		name: "passagepieton",
 		title: "Est-ce un passage piéton ?",
-		message: "Score : -  |  Étape 6/11",
+		message: "Score : {{ passagepieton }}  |  Étape 6/11",
 		largeimage: "robot-conducteur-reconnaitre-passage-6.jpg",
-		yesno: {}
+		yesno: {
+			answer: false
+		}
 		//NO
 	},
 	{
+		name: "passagepieton",
 		title: "Est-ce un passage piéton ?",
-		message: "Score : -  |  Étape 7/11",
+		message: "Score : {{ passagepieton }}  |  Étape 7/11",
 		largeimage: "robot-conducteur-reconnaitre-passage-7.jpg",
-		yesno: {}
+		yesno: {
+			answer: true
+		}
 		//YES
 	},
 	{
+		name: "passagepieton",
 		title: "Est-ce un passage piéton ?",
-		message: "Score : -  |  Étape 8/11",
+		message: "Score : {{ passagepieton }}  |  Étape 8/11",
 		largeimage: "robot-conducteur-reconnaitre-passage-8.jpg",
-		yesno: {}
+		yesno: {
+			answer: true
+		}
 		//YES
 	},
 	{
+		name: "passagepieton",
 		title: "Est-ce un passage piéton ?",
-		message: "Score : -  |  Étape 9/11",
+		message: "Score : {{ passagepieton }}  |  Étape 9/11",
 		largeimage: "robot-conducteur-reconnaitre-passage-9.jpg",
-		yesno: {}
+		yesno: {
+			answer: false
+		}
 		//NO
 	},
 	{
+		name: "passagepieton",
 		title: "Est-ce un passage piéton ?",
-		message: "Score : -  |  Étape 10/11",
+		message: "Score : {{ passagepieton }}  |  Étape 10/11",
 		largeimage: "robot-conducteur-reconnaitre-passage-10.jpg",
-		yesno: {}
+		yesno: {
+			answer: true
+		}
 		//YES
 	},								
 	{
+		name: "passagepieton",
 		title: "Est-ce un passage piéton ?",
-		message: "Score : -  |  Étape 11/11",
+		message: "Score : {{ passagepieton }}  |  Étape 11/11",
 		largeimage: "robot-conducteur-reconnaitre-passage-11.jpg",
-		yesno: {}
+		yesno: {
+			answer: true
+		}
 		//YES
 	},	
 //////////////
@@ -231,52 +264,73 @@ const conducteur = [
 // YES-NO
 //////////////
 	{
+		name: "peopleonroad",
 		title: "Des personnes sont-elles sur la route ?",
-		message: "Score : -  |  Étape 1/7",
+		message: "Score : {{peopleonroad}} |  Étape 1/7",
 		largeimage: "robot-conducteur-reconnaitre-route-1.jpg",
-		yesno: {}
+		yesno: {
+			answer: true
+		}
 		//YES
 	},
 	{
+		name: "peopleonroad",
 		title: "Des personnes sont-elles sur la route ?",
-		message: "Score : -  |  Étape 2/7",
+		message: "Score : {{peopleonroad}}  |  Étape 2/7",
 		largeimage: "robot-conducteur-reconnaitre-route-2.jpg",
-		yesno: {}
+		yesno: {
+			answer: true
+		}
 		//YES
 	},
 	{
+		name: "peopleonroad",
 		title: "Des personnes sont-elles sur la route ?",
-		message: "Score : -  |  Étape 3/7",
+		message: "Score : {{peopleonroad}}  |  Étape 3/7",
 		largeimage: "robot-conducteur-reconnaitre-route-3.jpg",
-		yesno: {}
+		yesno: {
+			answer: true
+		}
 		//YES
 	},
 	{
+		name: "peopleonroad",
 		title: "Des personnes sont-elles sur la route ?",
-		message: "Score : -  |  Étape 4/7",
+		message: "Score : {{peopleonroad}}  |  Étape 4/7",
 		largeimage: "robot-conducteur-reconnaitre-route-4.jpg",
-		yesno: {}
+		yesno: {
+			answer: true
+		}
 		//YES
 	},
 	{
+		name: "peopleonroad",
 		title: "Des personnes sont-elles sur la route ? (5/7)",
-		message: "Score : -  |  Étape 5/7",
+		message: "Score : {{peopleonroad}}  |  Étape 5/7",
 		largeimage: "robot-conducteur-reconnaitre-route-5.jpg",
-		yesno: {}
+		yesno: {
+			answer: false
+		}
 		//NO
 	},
 	{
+		name: "peopleonroad",
 		title: "Des personnes sont-elles sur la route ? (6/7)",
-		message: "Score : -  |  Étape 6/7",
+		message: "Score : {{peopleonroad}}  |  Étape 6/7",
 		largeimage: "robot-conducteur-reconnaitre-route-6.jpg",
-		yesno: {}
+		yesno: {
+			answer: true
+		}
 		//YES
 	},
 	{
+		name: "peopleonroad",
 		title: "Des personnes sont-elles sur la route ? (7/7)",
-		message: "Score : -  |  Étape 7/7",
+		message: "Score : {{peopleonroad}}  |  Étape 7/7",
 		largeimage: "robot-conducteur-reconnaitre-route-7.jpg",
-		yesno: {}
+		yesno: {
+			answer: false
+		}
 		//NO
 	},
 //////////////

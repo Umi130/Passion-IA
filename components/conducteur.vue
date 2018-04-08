@@ -11,7 +11,7 @@
 
 		<choices v-if="currentStep.choices" :content="currentStep" v-on:select="selectChoice" :answers="answers"></choices>
 
-		<yesno v-if="currentStep.yesno" :content="currentStep" v-on:select="selectChoice" :answers="answers"></yesno>
+		<yesno v-if="currentStep.yesno" :content="currentStep" v-on:select="selectYesNo" :answers="answers"></yesno>
 
 		<footer class="text-center pb-2" v-if="!currentStep.choices && !currentStep.yesno">
 			<router-link :to="`/conducteur/${current + 1}`" v-if="displayNextButton()" class="btn btn-primary btn-block">
@@ -69,6 +69,11 @@ module.exports = {
 				this.answers.points = this.answers.points + choice.points;
 			}
 			this.$set(this.answers, choice.name, choice.value)
+			this.nextStep()
+		},
+		selectYesNo (choice) {
+			const points = this.answers[choice.name] || 0
+			this.$set(this.answers, choice.name, choice.isCorrect === true ? points + 1 : points)
 			this.nextStep()
 		},
 		nextStep () {
