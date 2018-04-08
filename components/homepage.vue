@@ -2,7 +2,34 @@
 	<main>
 		<header class="container text-center mt-4">
 				<h2>L'école des Intelligences Artificielles</h2>
-				<p class="lead">Bienvenue ! Choisissez un profil à faire grandir :</p>
+				<p class="lead">Choisissez un profil à faire grandir :</p>
+
+				<!-- Info button, feel free to optimize -->
+				<dir id="info" style="background: rgba(0, 0, 0, 0) url(&quot;./assets/images/element-info.png&quot;) no-repeat scroll 0% 0%; height: 20px; width: 20px;background-size: contain;left: 50%;position: relative;"></dir>
+
+				<!-- Modal for informations informations -->
+				<!-- The Modal -->
+				<div id="modalInfo" class="modal">
+
+				  <!-- Modal content -->
+					<div class="modal-content">
+				    	<p>«Machine learning», «réseaux de neurones», «traitement automatique du langage»... Difficile d’expliquer simplement le fonctionnement d’un algorithme !</p>
+
+						<p>Ce jeu vous propose de devenir «éleveur de robot» pour mieux comprendre le fonctionnement d’une intelligence artificielle.</p>
+
+<p>Ce projet a été conçu par six étudiants de l’École de journalisme de Sciences Po : <br>
+<p>Lawrence Bekk-Day, Tamara Bouhl, Océane Cornevin, Mathilde Dumazet, Aurore Gayte & Mathilde Saliou</p>
+
+<p>Remerciements tout particuliers à <br>
+Julie Zentkowski pour le graphisme<br>
+Jules Bonnard (AFP) & Pierre Romera (ICIJ) pour leur accompagnement sur la conception du jeu<br>
+Célia Mériguet & Thibaud Vuitton (franceinfo) pour leurs conseils éditoriaux</p>
+
+<p>© 2018 Tous droits réservés</p>
+
+				    	<span class="close">X</span>
+  					</div>
+				</div>
 		</header>
 		<section class="container text-center d-flex flex-column justify-content-end" id="robot-image":style="{ 'background-image': story === null ? 'url(./assets/images/Robot.png)' : 'url(' + storyImage + ')'  }">
 			<router-link :to="storyLink" class="btn btn-primary" v-if="story !== null">
@@ -25,7 +52,7 @@
 <!--			<div :class="{ active: story === 'assistant' }" @click="story = 'assistant'">
 				<p><img :src="imageFor('assistant')" alt="Symbole Assistant" class="img-fluid" /></p>
 				<p>Assistant</p>
-			</div>< -->
+			</div> -->
 		</footer>
 	</main>
 </template>
@@ -51,6 +78,7 @@ module.exports = {
 		}
 	}
 }
+
 </script>
 
 <style scoped>
