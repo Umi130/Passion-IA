@@ -318,9 +318,8 @@ const juriste = [
 
 //Transition
 	{
-		message: "Tentons  {{points}} un second exemple.",
+		message: "Tentons {{points}} un second exemple.",
 		image: "robot-juriste-enfant.png",
-		when: answers => answers.blanks_emploi_duree1
 	},
 
 //INPUT CORINNE DUTEIL
@@ -502,11 +501,12 @@ const juriste = [
 			{
 				"value": "Oui",
 				"description": "",
-				"points": 1
+
 			},
 			{
 				"value": "Non",
-				"description": ""
+				"description": "",
+				"points": 1				
 			},
 			]
 	},
@@ -530,7 +530,7 @@ const juriste = [
 		when: answers => answers.choice_critereneglige_automatise === 'Non',
 	},
 
-// commun à tous 
+//Commun à tous 
 	{
 		title: "La situation aux États-Unis",
 		message: "Le logiciel Compas permet d’évaluer le risque de récidive d'un criminel. Mais les juges qui ne se basaient que sur ce programme ont été contraints de revoir leur jugement, et de justifier leur décision par un raisonnement humain et non informatique.",
@@ -545,7 +545,8 @@ const juriste = [
 		choices: [
 			{
 				"value": "Le rendre accessible en Open source",
-				"description": "lisible, modifiable et utilisable par tous (magistrats, avocats et juristes) gratuitement"
+				"description": "lisible, modifiable et utilisable par tous (magistrats, avocats et juristes) gratuitement",
+				"points": 1
 			},
 			{
 				"value": "Le diffuser uniquement aux magistrats",
@@ -595,7 +596,8 @@ const juriste = [
 			},
 			{
 				"value": "Argument invalide",
-				"description": ""
+				"description": "",
+				"points": 1	
 			},
 			]
 	},
@@ -639,7 +641,8 @@ const juriste = [
 			},
 			{
 				"value": "Anonymiser les décisions",
-				"description": "de votre base de données."
+				"description": "de votre base de données.",
+				"points": 1
 			},
 			]
 	},
@@ -689,29 +692,33 @@ const juriste = [
 	},
 
 // Victoire
-// Compte des points gagnés > 70%
+// Compte des points gagnés (6 ou plus sur 9)
 	{
 		title: "La justice 2.0 vous tend les bras !",
-		message: "Vous avez su entraîner {{name}} pour que l’intelligence artificielle soit techniquement performante et moralement irréprochable... ou presque.",
+		message: "Vous avez {{points}} points sur un total de 9. Vous avez su entraîner {{name}} pour que l’intelligence artificielle soit techniquement performante et moralement irréprochable... ou presque.",
 		image: "robot-juriste-gagnant.gif",
+		when: answers => answers.points >= 6,
 	},
 	{
 		title: "La justice 2.0 vous tend les bras !",
 		message: "Si elle est bien maîtrisée, l’intelligence artificielle peut être très utile à la justice, notamment pour désengorger les tribunaux.",
 		image: "robot-juriste-gagnant.gif",
+		when: answers => answers.points >= 6,
 	},	
 
 // Défaite
 // Compte des points perdus < 70%
 	{
 		title: "La justice 2.0, ce n’est pas pour tout de suite...",
-		message: "{{name}} n’est pas encore assez performant au niveau technique, et certains de vos choix «moraux» nuisent à l’équité des jugements rendus.",
+		message: "Vous avez {{points}} points sur un total de 9. {{name}} n’est pas encore assez performant au niveau technique, et certains de vos choix «moraux» nuisent à l’équité des jugements rendus.",
 		image: "robot-juriste-echec.gif",
+		when: answers => answers.points < 6,
 	},
 	{
 		title: "La justice 2.0, ce n’est pas pour tout de suite...",
-		message: "Pour utiliser l’intelligence artificielle dans le domaine de la justice, il faut d'abord que l’algorithme et les bases de données soient irréprochables.",
+		message: "Vous avez {{points}} points sur un total de 9. Pour utiliser l’intelligence artificielle dans le domaine de la justice, il faut d'abord que l’algorithme et les bases de données soient irréprochables.",
 		image: "robot-juriste-echec.gif",
+		when: answers => answers.points < 6,
 	},	
 
 ]

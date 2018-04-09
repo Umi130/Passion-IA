@@ -65,7 +65,7 @@ const conducteur = [
 	},
 
 	{
-		message: "En choisissant d’appeler votre voiture autonome Hubert, vous prouvez à tout le monde que vous êtes un petit rigolo. Mais un homme dans la mécanique, c’est un peu cliché non ?",
+		message: "En choisissant d’appeler votre voiture autonome Hubert, vous prouvez à tout le monde que vous êtes un petit rigolo. Mais un homme dans la mécanique, c’est un peu cliché, non ?",
 		image: "robot-conducteur-bebe-etonne.png",
 		when: answers => answers.name === "Hubert"
 	},	
@@ -95,7 +95,7 @@ const conducteur = [
 	},	
 
 	{
-		message: "Mais au fait, pourquoi appelle-t-on notre voiture Titine? En posant la question à votre moteur de recherche vous pourrez tomber sur ce genre de réponse... « Je l'appelle «cocotte», c'est mon côté macho et elle, c'est une vraie soumise, elle obéit à tout ce que je lui dis, elle me surprend parfois mais je l'adore... »  Tout le contraire d’une voiture autonome non?",
+		message: "Mais au fait, pourquoi appelle-t-on notre voiture Titine? Voici la réponse que l’on trouve sur un forum : «Je l'appelle 'cocotte', c'est mon côté macho et elle, c'est une vraie soumise, elle obéit à tout ce que je lui dis, elle me surprend parfois mais je l'adore...» Tout le contraire d’une voiture autonome, non ?",
 		image: "robot-conducteur-bebe.png",
 		when: answers => answers.name === "Titine"
 	},	
