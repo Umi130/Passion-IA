@@ -25,8 +25,8 @@ const musicien = [
 	},
 
 	{
-		title: "Une chanson composée à l'aide d'une intelligence artificielle ?!",
-		message: "Le début ressemble plutôt à une chanson de Stromae. Vous faites une petite recherche sur Internet...",
+		title: "«Hello Shadow», composée à l'aide d'une intelligence artificielle ?",
+		message: "Elle ressemble pourtant au style de Stromae. Vous faites une petite recherche sur Internet...",
 		image: "illust-musicien-stromae.jpg",
 	},
 

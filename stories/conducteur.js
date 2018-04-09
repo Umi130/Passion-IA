@@ -49,17 +49,17 @@ const conducteur = [
 			{
 				"value": "Botmobile",
 				"description": "parce que vous êtes un inconditionnel de BD",
-				"points": 1
+				"points": 0
 			},
 			{
 				"value": "Titine",
 				"description": "parce que ça vous rappelle votre première voiture",
-				"points": 1
+				"points": 0
 			},
 			{
 				"value": "Hubert",
 				"description": "pour la blague",
-				"points": 1
+				"points": 0
 			}
 		]
 	},
@@ -175,7 +175,7 @@ const conducteur = [
 	{
 		name: "passagepieton",
 		title: "Est-ce un passage piéton ?",
-		message: "Score : {{ passagepieton }}  |  Étape 1/11",
+		message: "Score : -  |  Étape 1/11",
 		largeimage: "robot-conducteur-reconnaitre-passage-1.jpg",
 		yesno: {
 			answer: true
@@ -324,7 +324,7 @@ const conducteur = [
 	{
 		name: "peopleonroad",
 		title: "Des personnes sont-elles sur la route ?",
-		message: "Score : {{peopleonroad}} |  Étape 1/7",
+		message: "Score : - |  Étape 1/7",
 		largeimage: "robot-conducteur-reconnaitre-route-1.jpg",
 		yesno: {
 			answer: true
@@ -481,6 +481,7 @@ const conducteur = [
 		title: "Quel est ce panneau ?",
 		message: "Score : -  |  Étape 1/10",
 		image: "robot-conducteur-reconnaitre-panneau-1.png",
+		contextPoints: "jeu_panneaux",
 		choices: [
 			{
 				"description": "Sens interdit",
@@ -500,8 +501,9 @@ const conducteur = [
 	{
 		name: "jeu_panneaux2",
 		title: "Quel est ce panneau ?",
-		message: "Score : -  |  Étape 2/10",
+		message: "Score : {{ contextPoints.jeu_panneaux }}  |  Étape 2/10",
 		image: "robot-conducteur-reconnaitre-panneau-2.png",
+		contextPoints: "jeu_panneaux",
 		choices: [
 			{
 				"description": "Passage d’animaux domestiques",
@@ -521,8 +523,9 @@ const conducteur = [
 	{
 		name: "jeu_panneaux3",
 		title: "Quel est ce panneau ?",
-		message: "Score : -  |  Étape 3/10",
+		message: "Score : {{ contextPoints.jeu_panneaux }}  |  Étape 3/10",
 		image: "robot-conducteur-reconnaitre-panneau-3.png",
+		contextPoints: "jeu_panneaux",
 		choices: [
 			{
 				"description": "Fin d’interdiction",
@@ -542,8 +545,9 @@ const conducteur = [
 	{
 		name: "jeu_panneaux4",
 		title: "Quel est ce panneau ?",
-		message: "Score : -  |  Étape 4/10",
+		message: "Score : {{ contextPoints.jeu_panneaux }}  |  Étape 4/10",
 		image: "robot-conducteur-reconnaitre-panneau-4.png",
+		contextPoints: "jeu_panneaux",
 		choices: [
 			{
 				"description": "Pizza flottante",
@@ -563,8 +567,9 @@ const conducteur = [
 	{
 		name: "jeu_panneaux5",
 		title: "Quel est ce panneau ?",
-		message: "Score : -  |  Étape 5/10",
+		message: "Score : {{ contextPoints.jeu_panneaux }}  |  Étape 5/10",
 		image: "robot-conducteur-reconnaitre-panneau-5.png",
+		contextPoints: "jeu_panneaux",
 		choices: [
 			{
 				"description": "Risque de chute de pierres",
@@ -584,8 +589,9 @@ const conducteur = [
 	{
 		name: "jeu_panneaux6",
 		title: "Quel est ce panneau ?",
-		message: "Score : -  |  Étape 6/10",
+		message: "Score : {{ contextPoints.jeu_panneaux }}  |  Étape 6/10",
 		image: "robot-conducteur-reconnaitre-panneau-6.png",
+		contextPoints: "jeu_panneaux",
 		choices: [
 			{
 				"description": "Circulation à sens unique",
@@ -605,8 +611,9 @@ const conducteur = [
 	{
 		name: "jeu_panneaux7",
 		title: "Quel est ce panneau ?",
-		message: "Score : -  |  Étape 7/10",
+		message: "Score : {{ contextPoints.jeu_panneaux }}  |  Étape 7/10",
 		image: "robot-conducteur-reconnaitre-panneau-7.png",
+		contextPoints: "jeu_panneaux",
 		choices: [
 			{
 				"description": "Obligation d’aller tout droit",
@@ -626,8 +633,9 @@ const conducteur = [
 	{
 		name: "jeu_panneaux8",
 		title: "Quel est ce panneau ?",
-		message: "Score : -  |  Étape 8/10",
+		message: "Score : {{ contextPoints.jeu_panneaux }}  |  Étape 8/10",
 		image: "robot-conducteur-reconnaitre-panneau-8.png",
+		contextPoints: "jeu_panneaux",
 		choices: [
 			{
 				"description": "Entrée sur une rocade",
@@ -647,8 +655,9 @@ const conducteur = [
 	{
 		name: "jeu_panneaux9",
 		title: "Quel est ce panneau ?",
-		message: "Score : -  |  Étape 9/10",
+		message: "Score : {{ contextPoints.jeu_panneaux }}  |  Étape 9/10",
 		image: "robot-conducteur-reconnaitre-panneau-9.png",
+		contextPoints: "jeu_panneaux",
 		choices: [
 			{
 				"description": "Fin d’interdiction",
@@ -668,8 +677,9 @@ const conducteur = [
 	{
 		name: "jeu_panneaux10",
 		title: "Quel est ce panneau ?",
-		message: "Score : -  |  Étape 10/10",
+		message: "Score : {{ contextPoints.jeu_panneaux }}  |  Étape 10/10",
 		image: "robot-conducteur-reconnaitre-panneau-10.png",
+		contextPoints: "jeu_panneaux",
 		choices: [
 			{
 				"description": "Arrêt à l’intersection",
@@ -693,7 +703,7 @@ const conducteur = [
 
 	{
 		title: "Apprentissage du code de la route achevé !",
-		message: "Vous êtes fin prêt·e à tester {{name}} sur l’un des circuits de Vroumvroum.",
+		message: "Score : {{ contextPoints.jeu_panneaux }}/10  |  Vous êtes fin prêt·e à tester {{name}} sur l’un des circuits de Vroumvroum.",
 		image: "robot-conducteur-ado.png",
 	},
 
@@ -947,15 +957,18 @@ const conducteur = [
 //SI 80% BONNES REPONSES OU PLUS:
 	{
 		title: "C'est un succès !",
-		message: "Bravo, {{name}} a passé avec succès cette phase de test !",
+		message: "Avec {{contextPoints.jeu_route}} bonnes réponses sur 6, {{name}} a passé avec succès cette phase de test !",
 		image: "robot-conducteur-ado.png",
+		when: answers => answers.contextPoints.jeu_route >= 4,
+
 	},
 //MINI-JEU 3 & 4 > CONCLUSION
 //SI MOINS DE 80% BONNES REPONSES:
 	{
 		title: "C'est plutôt un échec...",
-		message: "Il vous faut encore faire un effort. Vous continuez à faire tester {{name}}.",
+		message: "Avec {{contextPoints.jeu_route}} bonnes réponses sur 6, il vous faut encore faire un effort. Vous continuez à faire tester {{name}}.",
 		image: "robot-conducteur-ado-etonne.png",
+		when: answers => answers.contextPoints.jeu_route < 4,
 	},
 
 ////////////////
@@ -1118,37 +1131,44 @@ const conducteur = [
 	},
 
 /// Victoire
-/// Parcours véhicule opérationnel (26 points ou plus) 
+/// Parcours véhicule opérationnel (25 points ou plus) 
 
 	{
 		title: "Votre véhicule autonome est prometteur !",
+		message: "Vous avez {{points}} points sur un total de 35.",
 		image: "robot-conducteur-gagnant.gif",
+		when: answers => answers.points >= 25,
 	},
 	{
 		title: "Mais le manque de législation vous empêche de le commercialiser",
 		message: "Justement, le député Cédric Villani a proposé la création d’un comité éthique pour répondre à ces problématiques dans un rapport de mars 2018.",
 		image: "experts-juriste-villani.jpg",
+		when: answers => answers.points >= 25,
 	},
 	{
 		message: "En attendant, cela vous laisse du temps pour continuer à améliorer {{name}}, notamment en vous penchant sur les enjeux moraux que soulève votre technologie.",
 		image: "robot-conducteur-gagnant.gif",
+		when: answers => answers.points >= 25,
 	},
 
 /// Échec
-/// Parcours véhicule non opérationnel (moins de 26 points)
+/// Parcours véhicule non opérationnel (moins de 25 points)
 
 	{
 		title: "Votre véhicule autonome n'est vraiment pas prêt...",
-		message: "L’accident avec le scooter vous l’a montré, {{name}} n’est pas encore totalement opérationnelle.",
+		message: "Vous avez {{points}} points sur un total de 35. L’accident avec le scooter vous l’a montré, {{name}} n’est pas encore totalement opérationnelle.",
 		image: "robot-conducteur-echec.gif",
+		when: answers => answers.points < 25,
 	},
 	{
 		message: "En attendant, le député Cédric Villani a proposé dans un rapport de mars 2018 la création d’un comité éthique pour étudier les questions morales liés aux accidents de voitures autonomes.",
 		image: "experts-juriste-villani.jpg",
+		when: answers => answers.points < 25,
 	},
 	{
 		message: "Pour l’instant, votre objectif de base - réduire le nombre de morts sur la route - n’est pas encore atteint. Il va vous falloir davantage travailler sur votre voiture autonome.",
 		image: "robot-conducteur-echec.gif",
+		when: answers => answers.points < 25,
 	},
 
 ]
