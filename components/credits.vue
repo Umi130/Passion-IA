@@ -72,18 +72,18 @@
 			<div v-else-if="parcours === 'juriste'">			
 				<p>
 					GENERIQUE
-
+					 </br>
 					 Graphisme : Julie Zentkowski
-
+					 </br>
 					 Merci tout particulièrement à Jules Bonnard et Pierre Romera de l'AFP pour leur aide précieuse en code
-					
+					 </br>
 					 Remerciements :
 					 Jacques Levy-Vehel (co-fondateur de Case Law Analytics et chercheur à l'Institut national de recherche en informatique et en automatique)
 					 Joachim Herrera (doctorant à l'Ecole de droit de Sciences Po)
 					 Antoine Garapon (magistrat et juriste; Secrétaire général de l'Institut des hautes études sur la Justice)
 					 Lise Damelet (avocate chez Orrick, Herrington & Sutcliffe, cofondatrice de l'Incubateur du barreau de Paris)
 					 Dipty Chander (Présidente E-mma France)
-
+					 </br>
 					 Icône « iMac » par Vladimir Belochkin, de thenounproject.com
 				</p>
 			</div>
@@ -106,9 +106,6 @@
 						</network>
 					</div>
 				</social-sharing>
-
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua.
 				<div class="text-center mt-4">
 					<router-link to="/" class="btn btn-primary">
 						Refaire une partie
