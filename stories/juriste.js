@@ -62,7 +62,7 @@ const juriste = [
 			{
 				"value": "Justum",
 				"description": "Nominatif neutre : ce qui est juste en latin",
-				"points": 1
+				"points": 0
 			}
 		]
 	},
@@ -159,7 +159,7 @@ const juriste = [
 	},
 	{
 		type: "explanation",
-        title: "Vous êtes complètement déçu·e…",
+        title: "Vous êtes complètement déçu·e...",
 		message: "{{name}} n’a fait que répéter ce qui est écrit dans la loi. Vous n’êtes pas très avancé·e, car vous souhaitez avoir un montant précis et pas seulement une fourchette.",
 		image: "robot-juriste-bebe-etonne.png",
 	},
@@ -179,10 +179,12 @@ const juriste = [
 			{
 				"value": "Tous les articles de loi",
 				"description": "Les 11 000 articles du code du travail et la jurisprudence associée",
+				"points": 0
 			},
 			{
 				"value": "Uniquement des décisions similaires",
 				"description": "1 500 décisions prises par vous et vos collègues dans des cas similaires depuis le changement de la loi en septembre 2017",
+				"points": 1
 			},
 		]
 	},
@@ -316,7 +318,7 @@ const juriste = [
 
 //Transition
 	{
-		message: "Tentons un second exemple.",
+		message: "Tentons  {{points}} un second exemple.",
 		image: "robot-juriste-enfant.png",
 		when: answers => answers.blanks_emploi_duree1
 	},
@@ -326,9 +328,10 @@ const juriste = [
 		name: "blanks_emploi_duree2",
 		title: "Entrez les mots manquants",
 		message: "",
+		points: 1,
 		blanks: [
 			{
-				"value": "Mme Corinne Duteil a été victime d’un licenciement abusif. L'entreprise l'avait "
+				"value": "Mme {{points}} Corinne Duteil a été victime d’un licenciement abusif. L'entreprise l'avait "
 			},
 			{
 				"value": "word_1",
@@ -432,7 +435,8 @@ const juriste = [
 			},
 			{
 				"value": "Nombre de salariés dans l’entreprise",
-				"description": ""
+				"description": "",
+				"points": 1
 			},
 			{
 				"value": "Poste du salarié",
@@ -497,7 +501,8 @@ const juriste = [
 		choices: [
 			{
 				"value": "Oui",
-				"description": ""
+				"description": "",
+				"points": 1
 			},
 			{
 				"value": "Non",

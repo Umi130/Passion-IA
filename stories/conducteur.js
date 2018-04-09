@@ -427,7 +427,7 @@ const conducteur = [
 		title: "Vous faites bien !",
 		message: "Il faut avant tout que la voiture apprenne les lois de la physique élémentaire, surtout en ce qui concerne la vitesse. L’apprentissage du code de la route viendra après.",
 		image: "robot-conducteur-enfant.png",
-		when: answers => answers.choice_basedonnees !== 'Le code de la route',
+		when: answers => answers.choice_basedonnees === 'Les lois de la physique',
 	},
 //Si mauvaise réponse
 	{
@@ -1007,12 +1007,12 @@ const conducteur = [
 			{
 				"value": "Refus de responsabilité",
 				"description": "Vous et Vroumvroum refusez d’endosser la responsabilité de cet accident",
-				"points": 1
+				"points": 0
 			},
 			{
 				"value": "Prise de responsabilité",
 				"description": "Vous et Vroumvoum vous portez responsable",
-				"points": 1
+				"points": 0
 			},
 		]
 	},
@@ -1098,12 +1098,12 @@ const conducteur = [
 			{
 				"value": "Les passagers",
 				"description": "de la voiture",
-				"points": 1
+				"points": 0
 			},
 			{
 				"value": "Les piétons",
 				"description": " ",
-				"points": 1
+				"points": 0
 			}
 			]
 	},
@@ -1155,7 +1155,7 @@ const conducteur = [
 /// Parcours véhicule non opérationnel (moins de 25 points)
 
 	{
-		title: "Votre véhicule autonome n'est vraiment pas prêt...",
+		title: "Votre voiture autonome n'est vraiment pas prête...",
 		message: "Vous avez {{points}} points sur un total de 35. L’accident avec le scooter vous l’a montré, {{name}} n’est pas encore totalement en capacité de rouler en toute sécurité.",
 		image: "robot-conducteur-echec.gif",
 		when: answers => answers.points < 25,
