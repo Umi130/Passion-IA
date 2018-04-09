@@ -1156,7 +1156,7 @@ const conducteur = [
 
 	{
 		title: "Votre véhicule autonome n'est vraiment pas prêt...",
-		message: "Vous avez {{points}} points sur un total de 35. L’accident avec le scooter vous l’a montré, {{name}} n’est pas encore totalement opérationnelle.",
+		message: "Vous avez {{points}} points sur un total de 35. L’accident avec le scooter vous l’a montré, {{name}} n’est pas encore totalement en capacité de rouler en toute sécurité.",
 		image: "robot-conducteur-echec.gif",
 		when: answers => answers.points < 25,
 	},
