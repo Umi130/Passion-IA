@@ -1099,10 +1099,6 @@ const conducteur = [
 		message: "Le site Moral Machine propose à ses utilisateurs de prendre différentes décisions lorsqu'une situation d'accident se présente. Les statistiques récoltées fournissent un aperçu de la position de l’opinion publique sur ces questions.",
 		image: "robot-conducteur-moralmachine.jpg",
 	},
-	{
-		message: "Ces résultats permettent de mettre en lumière les questions morales que les concepteurs de voitures autonomes doivent se poser.",
-		image: "robot-conducteur-moralmachine.jpg",
-	},
 
 //
 // CONCLUSION
