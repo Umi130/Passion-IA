@@ -1,7 +1,7 @@
 
 const conducteur = [
 	{
-		title: "Vous êtes un ingénieur·e automobile",
+		title: "Vous êtes un·e ingénieur·e automobile",
 		message: "Pour la marque Vroumvroum. Depuis toujours, votre rêve est de fabriquer une voiture autonome.",
 		image: "robot-conducteur-dodo.png",
 	},
@@ -162,7 +162,7 @@ const conducteur = [
 	},
 
 	{
-		message: "{{name}} doit maintenant passer elle aussi par cette étape de «labelling». On essaye ?",
+		message: "{{name}} doit maintenant passer par cette étape de «labelling». On essaye ?",
 		image: "robot-conducteur-bebe.png",
 	},
 
@@ -692,7 +692,7 @@ const conducteur = [
 //////////////
 
 	{
-		title: "Apprentissage du code de la route achevée !",
+		title: "Apprentissage du code de la route achevé !",
 		message: "Vous êtes fin prêt·e à tester {{name}} sur l’un des circuits de Vroumvroum.",
 		image: "robot-conducteur-ado.png",
 	},
@@ -785,7 +785,7 @@ const conducteur = [
 	{
 		name: "jeu_route3",
 		message: "Le feu est vert. Que faire ? (3/6)",
-		image: "robot-conducteur-test-2.jpg",
+		image: "robot-conducteur-test-3.jpg",
 		choices: [
 			{
 				"value": " ",
@@ -941,7 +941,7 @@ const conducteur = [
 //SI 80% BONNES REPONSES OU PLUS:
 	{
 		title: "C'est un succès !",
-		message: "Bravo, {{name}} a passé avec succès cette première phase de test !",
+		message: "Bravo, {{name}} a passé avec succès cette phase de test !",
 		image: "robot-conducteur-ado.png",
 	},
 //MINI-JEU 3 & 4 > CONCLUSION
