@@ -1211,7 +1211,7 @@ const musicien = [
 //
 // Graphisme : Julie Zentkowski
 // 
-// Merci tout particulièrement à Jules Bonnard et Pierre Romera de l'AFP pour leur aide précieuse en code
+// Merci tout particulièrement à Jules Bonnard et Pierre Romera de l'AFP pour leur aide précieuse en code.
 //
 //
 // Remerciements : 

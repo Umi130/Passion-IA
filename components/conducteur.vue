@@ -17,6 +17,9 @@
 			<router-link :to="`/conducteur/${current + 1}`" v-if="displayNextButton()" class="btn btn-primary btn-block">
 				SUIVANT
 			</router-link>
+			<router-link to="/credits/conducteur" v-else class="btn btn-primary btn-block">
+				SUIVANT
+			</router-link>
 		</footer>
 	</main>
 </template>

@@ -17,6 +17,9 @@
 			<router-link :to="`/musicien/${current + 1}`" v-if="displayNextButton()" class="btn btn-primary btn-block">
 				SUIVANT
 			</router-link>
+			<router-link to="/credits/musicien" v-else class="btn btn-primary btn-block">
+				SUIVANT
+			</router-link>
 		</footer>
 	</main>
 </template>
@@ -31,6 +34,7 @@ module.exports = {
 		Choices: httpVueLoader('./choices.vue'),
 		Blanks: httpVueLoader('./blanks.vue'),
 		AudioPlayer: httpVueLoader('./audio-player.vue')
+		Credits: httpVueLoader(./credits.vue)
 	},
 	data () {
 		return {
