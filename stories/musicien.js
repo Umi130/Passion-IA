@@ -102,7 +102,7 @@ const musicien = [
 	},	
 
 		{
-		message: "Bel hommage ! Nina Simone est l’une des voix emblématiques de la soul mais aussi du mouvement des droits civiques en Amérique. Mais son timbre a souvent été comparé… à celui d’un homme.",
+		message: "Bel hommage ! Nina Simone est l’une des voix emblématiques de la soul mais aussi du mouvement des droits civiques en Amérique. Mais son timbre a souvent été comparé... à celui d’un homme.",
 		image: "robot-musicien-bebe-etonne.png",
 		when: answers => answers.name === "Nina Sibot"
 	},	
@@ -120,7 +120,7 @@ const musicien = [
 	},	
 
 		{
-		message: "Yumi n’est pas un chef d’orchestre comme les autres : il n’a que deux bras et pas de tête. Mais alors… on pourrait aussi dire que Yumi n’est pas une cheffe d’orchestre comme les autres : elle n’a que deux bras et pas de tête.",
+		message: "YuMi n’est pas un chef d’orchestre comme les autres : il n’a que deux bras et pas de tête. Mais alors... on pourrait aussi dire que Yumi n’est pas une cheffe d’orchestre comme les autres : elle n’a que deux bras et pas de tête.",
 		image: "robot-musicien-bebe.png",
 		when: answers => answers.name === "YuMi"
 	},	
@@ -170,7 +170,7 @@ const musicien = [
 	{
 		title: "Vous avez oublié une étape cruciale :",
 		message: "Nourrir la machine de vos influences. «Pour mes projets, je pars avec une base de données d’au moins 4h de son», précise Robin Meier. D'autres, comme François Pachet, n'utilisent pas directement le son mais les partitions des morceaux pour que l'IA les analyse.",
-		image: "experts-musicien-meier.jpg",
+		image: "robot-musicien-guitare-anime.gif",
 	},
 
 	{
@@ -180,12 +180,12 @@ const musicien = [
 			{
 				"value": "Celle de François Pachet",
 				"description": "Fournir à l’algorithme des partitions et des textes. Il pourra créer un nouveau tube planétaire dans le style que vous lui aurez imposé.",
-				"points": 1
+				"points": 0,
 			},
 			{
 				"value": "Celle de Robin Meier",
 				"description": "Fournir directement des musiques et bruits en tous genres à l’algorithme. Il pourra analyser les formes d’ondes pour créer des sons inédits.",
-				"points": 1
+				"points": 0,
 			},
 		]
 	},
@@ -210,7 +210,7 @@ const musicien = [
 		name: "blanks_debut_gamme1",
 		title: "Remplissez le texte à trous",
 		image: "robot-musicien-portee-1.png",
-		contextPoints: "blanks_debut_gamme",
+		contextPoints: "blanks_minijeu_notes",
 		points: 1,
 		blanks: [
 			{
@@ -252,7 +252,7 @@ const musicien = [
 		name: "blanks_debut_gamme2",
 		title: "Remplissez le texte à trous",
 		image: "robot-musicien-portee-2.png",
-		contextPoints: "blanks_debut_gamme",
+		contextPoints: "blanks_minijeu_notes",
 		points: 1,
 		blanks: [
 			{
@@ -261,7 +261,7 @@ const musicien = [
 			{
 				"value": "word_1",
 				"type": "input",
-				"answers": ['La', 'la', 'La ', 'la ', 'LA']
+				"answers": ['La', 'la', 'La ', 'la ', 'LA', 'LA ']
 			},
 			{
 				"value": "word_2",
@@ -294,7 +294,7 @@ const musicien = [
 		name: "blanks_debut_gamme3",
 		title: "Remplissez le texte à trous",
 		image: "robot-musicien-portee-3.png",
-		contextPoints: "blanks_debut_gamme",
+		contextPoints: "blanks_minijeu_notes",
 		points: 1,
 		blanks: [
 			{
@@ -332,12 +332,21 @@ const musicien = [
 	},
 
 //Fin du premier mini jeu
+//Succès
 	{
 		title: "Programmation des notes achevée !",
 		message: "Les gammes, les accords et les bémols n’ont plus aucun secret pour {{name}}. Vous pouvez lui soumettre une première base de données et l'IA s’en inspirera pour composer un morceau dans le même style.",
 		image: "robot-musicien-bebe.png",
 
-		when: answers => answers.choice_mode_composition === "Celle de François Pachet",
+		when: answers => answers.choice_mode_composition == "Celle de François Pachet" && answers.contextPoints.blanks_minijeu_notes >= 1,
+	},
+//Echec
+	{
+		title: "Un petit retour au Conservatoire s'impose...",
+		message: "Vous faites appel à un spécialiste pour achever la reconnaissance des notes par {{name}}.",
+		image: "robot-musicien-bebe-etonne.png",
+
+		when: answers => answers.choice_mode_composition == "Celle de François Pachet" && !answers.contextPoints.blanks_minijeu_notes >=1,
 	},
 
 // Robot devient enfant
@@ -388,6 +397,7 @@ const musicien = [
 	{
 		name: "choix_reconnaitre_1",
 		message: "Sélectionnez le début de la Marche Turque de W.A. Mozart.",
+		contextPoints: "blanks_minijeu_notes",
 		choices: [
 			{
 				"value": "1.",
@@ -409,7 +419,7 @@ const musicien = [
 		message: "Vous avez appris à {{name}} à reconnaître le début d'une partition.",
 		image: "robot-musicien-enfant.png",
 
-		when: answers => answers.choice_mode_composition === "Celle de François Pachet" && answers.choix_reconnaitre_1 === "1.",
+		when: answers => answers.choice_mode_composition == "Celle de François Pachet" && answers.choix_reconnaitre_1 == "1.",
 	},
 
 	{
@@ -417,24 +427,24 @@ const musicien = [
 		message: "La première image était la bonne. C'était l'indication chiffrée de rythme au début d'une partition qui vous l'indiquait.",
 		image: "robot-musicien-enfant-etonne.png",
 
-		when: answers => answers.choice_mode_composition === "Celle de François Pachet" && answers.choix_reconnaitre_1 === "2.",
+		when: answers => answers.choice_mode_composition == "Celle de François Pachet" && answers.choix_reconnaitre_1 == "2.",
 	},
 
 // Test 2/2
 	{
 		name: "choix_reconnaitre_2",
 		message: "Sélectionnez la fin du morceau.",
-		contextPoints: "blanks_debut_gamme",
+		contextPoints: "blanks_minijeu_notes",
 		choices: [
 			{
 				"value": "1.",
 				"image": "robot-musicien-reconnaitre-2a.jpg",
-				"points": 1,
+				"points": 0,
 			},
 			{
 				"value": "2.",
 				"image": "robot-musicien-reconnaitre-2b.jpg",
-				"points": 0,
+				"points": 1,
 			},
 		],
 
@@ -446,7 +456,7 @@ const musicien = [
 		message: "Vous avez appris à {{name}} à reconnaître la fin d'une partition.",
 		image: "robot-musicien-enfant.png",
 
-		when: answers => answers.choice_mode_composition === "Celle de François Pachet" && answers.choix_reconnaitre_2 === "2.",
+		when: answers => answers.choice_mode_composition == "Celle de François Pachet" && answers.choix_reconnaitre_2 == "2.",
 	},
 
 	{
@@ -454,26 +464,27 @@ const musicien = [
 		message: "La seconde image était la bonne. La double barre signifie la fin d'un morceau. Les deux points indiquent une reprise du morceau.",
 		image: "robot-musicien-enfant-etonne.png",
 
-		when: answers => answers.choice_mode_composition === "Celle de François Pachet" && answers.choix_reconnaitre_2 === "1.",
+		when: answers => answers.choice_mode_composition == "Celle de François Pachet" && answers.choix_reconnaitre_2 == "1.",
 	},
 
-	//TODO COMPTE BONNES MAUVAISES REPONSES
+// MINI JEU NOTES + PARTITIONS COMPTE SCORE SUR 5
+// SUCCES
 	{
-		title: "Au moins 6 bonnes réponses sur 8 !",
-		message: "Bravo, vous avez réussi l’étape de labellisation des symboles musicaux. Quelle efficacité !",
+		title: "Bravo !",
+		message: "Vous avez un score de {{ contextPoints.blanks_minijeu_notes }} sur 5. Vous avez réussi l’étape de labellisation des symboles musicaux. Quelle efficacité !",
 		image: "robot-musicien-enfant.png",
 
-		when: answers => answers.choice_mode_composition === "Celle de François Pachet",
+		when: answers => answers.choice_mode_composition === "Celle de François Pachet" && answers.contextPoints.blanks_minijeu_notes >= 3,
 	},
-
+// MINI JEU NOTES + PARTITIONS COMPTE SCORE SUR 5
+// ECHEC
 	{
-		title: "Moins de 6 bonnes réponses sur 8",
-		message: "Vos données ont besoin d’être mieux labellisées. Heureusement, vous avez fait appel à un musicologue pour vous aider.",
-		image: "robot-musicien-enfant.png",
+		title: "Quel dommage...",
+		message: "Vous n’avez qu’un score de {{ contextPoints.blanks_minijeu_notes }} sur 5. Vos données ont besoin d’être mieux labellisées. Heureusement, vous avez fait appel à un musicologue pour vous aider.",
+		image: "robot-musicien-enfant-etonne.png",
 
-		when: answers => answers.choice_mode_composition === "Celle de François Pachet",
+		when: answers => answers.choice_mode_composition === "Celle de François Pachet" && answers.contextPoints.blanks_minijeu_notes < 3,
 	},
-	//TODO COMPTE BONNES MAUVAISES REPONSES
 
 	{
 		message: "{{name}} peut maintenant reconnaître le début et la fin d’une partition, et composer des morceaux qui auront une structure !",
@@ -570,6 +581,7 @@ const musicien = [
 	{
 		name: "choix_nominstrument1",
 		title: "Quel instrument produit ce son ?",
+		contextPoints: "minijeu_instruments",
 		music: {
 			controls: true,
 			src: "robot-musicien-son-clarinette.mp3",
@@ -611,6 +623,7 @@ const musicien = [
 	{
 		name: "choix_nominstrument2",
 		title: "Quel instrument produit ce son ?",
+		contextPoints: "minijeu_instruments",
 		music: {
 			controls: true,
 			src: "robot-musicien-son-harpe.mp3",
@@ -652,6 +665,7 @@ const musicien = [
 	{
 		name: "choix_nominstrument3",
 		title: "Quel instrument produit ce son ?",
+		contextPoints: "minijeu_instruments",
 		music: {
 			controls: true,
 			src: "robot-musicien-son-cor.mp3",
@@ -693,16 +707,16 @@ const musicien = [
 // Bonne réponse
 	{	
 		title: "C’est un succès !",
-		message: "Vous avez pu vous constituer une bibliothèque de sons que vous allez pouvoir mélanger pour créer de nouveaux instruments.",
+		message: "Avec un score de {{contextPoints.minijeu_instruments}} sur 3, vous avez pu vous constituer une bibliothèque de sons que vous allez pouvoir mélanger pour créer de nouveaux instruments.",
 		image: "robot-musicien-bebe.png",
-		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
+		when: answers => answers.choice_mode_composition === "Celle de Robin Meier" && answers.contextPoints.minijeu_instruments >= 2,
 	},
 // Mauvaise réponse
 	{	
 		title: "C’est plutôt un échec...",
-		message: "Il va vous falloir passer un peu plus de temps sur la labellisation des instruments pour que votre bibliothèque soit complète.",
+		message: "Avec un score de {{contextPoints.minijeu_instruments}} sur 3, il va vous falloir passer un peu plus de temps sur la labellisation des instruments pour que votre bibliothèque soit complète.",
 		image: "robot-musicien-bebe-etonne.png",
-		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
+		when: answers => answers.choice_mode_composition === "Celle de Robin Meier" && answers.contextPoints.minijeu_instruments < 2,
 	},
 
 	{	
@@ -763,6 +777,7 @@ const musicien = [
 			src: "robot-musicien-son-chat.mp3",
 		},
 		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
+		points: 1,
 		blanks: [
 			{
 				"value": "Il s'agit du son produit par un"
@@ -781,7 +796,6 @@ const musicien = [
 		message: "C’était bien le son d'un chat.",
 		image: "experts-musicien-son-chat.jpg",
 		when: answers => answers.blanks_sons_1 && answers.choice_mode_composition === "Celle de Robin Meier",
-		"points": 1,
 	},
 // Mauvaise réponse
 	{	
@@ -789,7 +803,6 @@ const musicien = [
 		message: "C’était le son d'un chat.",
 		image: "experts-musicien-son-chat.jpg",
 		when: answers => !answers.blanks_sons_1 && answers.choice_mode_composition === "Celle de Robin Meier",
-		"points": 0,
 	},
 
 // Jeu 2 son
@@ -801,6 +814,7 @@ const musicien = [
 			src: "robot-musicien-son-aspirateur.mp3",
 		},
 		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
+		points: 1,
 		blanks: [
 			{
 				"value": "Il s'agit du son produit par un"
@@ -818,7 +832,6 @@ const musicien = [
 		message: "C’était bien le son d'un aspirateur.",
 		image: "experts-musicien-son-aspirateur.jpg",
 		when: answers => answers.blanks_sons_2 && answers.choice_mode_composition === "Celle de Robin Meier",
-		"points": 1,	
 	},
 // Mauvaise réponse
 	{	
@@ -826,46 +839,45 @@ const musicien = [
 		message: "C’était le son d'un aspirateur.",
 		image: "experts-musicien-son-aspirateur.jpg",
 		when: answers => !answers.blanks_sons_2 && answers.choice_mode_composition === "Celle de Robin Meier",
-		"points": 0,
 	},
 
-// Jeu 3 son
-	{
-		name: "blanks_sons_3",
-		title: "Entrez le nom du son entendu",
-		music: {
-			controls: true,
-			src: "robot-musicien-son-pluie.mp3",
-		},
-		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
-		blanks: [
-			{
-				"value": "Il s'agit du son produit par la"
-			},
-			{
-				"value": "word_1",
-				"type": "input",
-				"answers": ['pluie', 'Pluie', 'pluie ', 'Pluie ', 'PLUIE', 'PLUIE '],
-			},
-		],
-//		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
-	},
-// Bonne réponse
-	{	
-		title: "Bravo !",
-		message: "C’était bien le son de la pluie.",
-		image: "experts-musicien-son-pluie.jpg",
-		when: answers => answers.blanks_sons_3 && answers.choice_mode_composition === "Celle de Robin Meier",
-		"points": 1,
-	},
-// Mauvaise réponse
-	{	
-		title: "Faux !",
-		message: "C’était le son de la pluie.",
-		image: "experts-musicien-son-pluie.jpg",
-		when: answers => !answers.blanks_sons_3 && answers.choice_mode_composition === "Celle de Robin Meier",
-		"points": 0,
-	},
+// COUPE POUR EGALISATION SCORE.
+// // Jeu 3 son
+// 	{
+// 		name: "blanks_sons_3",
+// 		title: "Entrez le nom du son entendu",
+// 		music: {
+// 			controls: true,
+// 			src: "robot-musicien-son-pluie.mp3",
+// 		},
+// 		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
+//		points: 1,
+// 		blanks: [
+// 			{
+// 				"value": "Il s'agit du son produit par la"
+// 			},
+// 			{
+// 				"value": "word_1",
+// 				"type": "input",
+// 				"answers": ['pluie', 'Pluie', 'pluie ', 'Pluie ', 'PLUIE', 'PLUIE '],
+// 			},
+// 		],
+// //		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
+// 	},
+// // Bonne réponse
+// 	{	
+// 		title: "Bravo !",
+// 		message: "C’était bien le son de la pluie.",
+// 		image: "experts-musicien-son-pluie.jpg",
+// 		when: answers => answers.blanks_sons_3 && answers.choice_mode_composition === "Celle de Robin Meier",
+// 	},
+// // Mauvaise réponse
+// 	{	
+// 		title: "Faux !",
+// 		message: "C’était le son de la pluie.",
+// 		image: "experts-musicien-son-pluie.jpg",
+// 		when: answers => !answers.blanks_sons_3 && answers.choice_mode_composition === "Celle de Robin Meier",
+// 	},
 
 ///////////////
 // FIN DU JEU A TROUS
@@ -984,17 +996,17 @@ const musicien = [
 			{
 				"value": " ",
 				"image": "robot-musicien-pochette1.jpg",
-				"points": 1,
+				"points": 0,
 			},
 			{
 				"value": "  ",
 				"image": "robot-musicien-pochette2.jpg",
-				"points": 1,
+				"points": 0,
 			},
 			{
 				"value": "   ",
 				"image": "robot-musicien-pochette3.jpg",
-				"points": 1,
+				"points": 0,
 			},
 		],
 	},
@@ -1034,12 +1046,12 @@ const musicien = [
 			{
 				"value": "Créditer l'algorithme",
 				"description": "à la manière de François Pachet et son équipe sur l’album «Hello Shadow",
-				"points": 1
+				"points": 0
 			},
 			{
 				"value": "Ne pas créditer l'algorithme",
 				"description": "mais uniquement l’ensemble des personnes qui ont travaillé avec vous sur cet album. L'algorithme n'a été qu'un outil",
-				"points": 1
+				"points": 0
 			}
 			]
 	},
@@ -1194,19 +1206,21 @@ const musicien = [
 	},
 
 // Victoire
-// Compte des points gagnés > 70%
+// Compte des points gagnés supérieur ou égal à 4
 	{
 		title: "Producteur de tubes",
-		message: "Bravo, vous avez répondu juste à la majorité des questions ! Votre algorithme sait repérer la structure d’un morceau ou les sons qui composent les tubes planétaires. Vous seriez un producteur de génie.",
+		message: "Bravo, avec {{points}} points sur un total de 6, vous avez répondu juste à la majorité des questions ! Votre algorithme sait repérer la structure d’un morceau ou les sons qui composent les tubes planétaires. Vous seriez un producteur de génie.",
 		image: "robot-musicien-gagnant.gif",
+		when: answers => answers.points >= 4,
 	},
 
 // Défaite
-// Compte des points perdus < 70%
+// Compte des points perdus inférieur à 4
 	{
 		title: "Artiste incompris",
-		message: "Vous n’avez pas su apprendre à l’algorithme à reconnaître les sons, les notes ou la structure d’un morceau… Les résultats produits par la machine risquent d’être… originaux. Vous ne composerez peut-être pas le prochain tube planétaire, mais votre musique aura l’avantage d’être… différente !",
+		message: "Avec {{points}} points sur un total de 6, vous n’avez pas su apprendre à l’algorithme à reconnaître les sons, les notes ou la structure d’un morceau… Les résultats produits par la machine risquent d’être… originaux. Vous ne composerez peut-être pas le prochain tube planétaire, mais votre musique aura l’avantage d’être… différente !",
 		image: "robot-musicien-echec.gif",
+		when: answers => answers.points < 4,		
 	},
 
 ]

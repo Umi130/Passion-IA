@@ -24,6 +24,12 @@
 
 module.exports = {
 	name: 'juriste',
+	beforeRouteEnter (to, from, next) {
+		if (parseInt(to.params.step) === 0) {
+			localStorage.removeItem('passion-ia-juriste')
+		}
+		next()
+	},	
 	components: {
 		Explanation: httpVueLoader('./explanation.vue'),
 		Illustration: httpVueLoader('./illustration.vue'),
