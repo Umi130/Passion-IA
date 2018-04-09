@@ -290,7 +290,7 @@ const conducteur = [
 
 	{
 		title: "Première phase du «labelling» achevée !",
-		message: "Score : {{ passagepieton }}",
+		message: "Score : {{ passagepieton }}/11",
 		image: "robot-conducteur-bebe.png",
 	},
 
@@ -399,7 +399,7 @@ const conducteur = [
 
 	{
 		title: "Seconde phase du «labelling» achevée !",
-		message: "Score : {{peopleonroad}}  |  {{name}} sait désormais reconnaître les objets et peut les placer sur une image.",
+		message: "Score : {{peopleonroad}}/7  |  {{name}} sait désormais reconnaître les objets et peut les placer sur une image.",
 		image: "robot-conducteur-enfant.png",
 	},
 
