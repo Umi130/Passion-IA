@@ -459,7 +459,7 @@ const conducteur = [
 // Robot devient ado
 	{
 		title: "Level up !",
-		message: "{{name}} a grandi ! Votre intelligence artificielle dispose d’assez de données pour pouvoir analyser les nouvelles informations que vous lui soumettez et adapter son comportement et ses prédictions à toutes les situations. Mais comme un adolescent, elle a besoin de tester ses limites. Elle va bientôt pouvoir rouler par elle-même, mais il lui faut encore apprendre de nouvelles données.",
+		message: "{{name}} a grandi ! Votre intelligence artificielle dispose d’assez de données pour pouvoir analyser les nouvelles informations que vous lui soumettez et adapter son comportement et ses prédictions à toutes les situations. Mais comme un adolescent, elle a besoin de tester ses limites.",
 		image: "robot-conducteur-enfant-ado.gif",
 	},
 //

@@ -191,6 +191,13 @@ const juriste = [
 
 //Si choix - Tous les articles de loi
 	{	
+		title: "C'est un mauvais choix...",
+		message: "Pour comprendre pourquoi, étudions un nouveau dossier.",
+		image: "robot-juriste-bebe-etonne.png",
+		when: answers => answers.choice_premiereslois === 'Tous les articles de loi'
+	},
+
+	{	
 		title: "Deuxième dossier",
 		message: "Vous soumettez un dossier de votre pile pour tester {{ name }}. M. Husson a été victime d'un licenciement abusif après avoir travaillé 10 ans dans une entreprise de télécommunication.",
 		image: "robot-juriste-marteau-anime.gif",
@@ -220,6 +227,13 @@ const juriste = [
 	},
 
 //Si choix - Que des décisions similaires
+	{	
+		title: "C'est un bon choix...",
+		message: "Pour comprendre pourquoi, étudions un nouveau dossier.",
+		image: "robot-juriste-bebe.png",
+		when: answers => answers.choice_premiereslois !== 'Tous les articles de loi'
+	},
+
 	{	
 		title: "Deuxième dossier",
 		message: "M. Husson a été victime d’un licenciement abusif après avoir travaillé 10 ans dans une entreprise de télécommunication.",
@@ -318,7 +332,7 @@ const juriste = [
 
 //Transition
 	{
-		message: "Tentons {{points}} un second exemple.",
+		message: "Tentons un second exemple.",
 		image: "robot-juriste-enfant.png",
 	},
 
@@ -330,7 +344,7 @@ const juriste = [
 		points: 1,
 		blanks: [
 			{
-				"value": "Mme {{points}} Corinne Duteil a été victime d’un licenciement abusif. L'entreprise l'avait "
+				"value": "Mme Corinne Duteil a été victime d’un licenciement abusif. L'entreprise l'avait "
 			},
 			{
 				"value": "word_1",
@@ -707,7 +721,7 @@ const juriste = [
 	},	
 
 // Défaite
-// Compte des points perdus < 70%
+// Compte des points perdus (6 ou plus sur 9)
 	{
 		title: "La justice 2.0, ce n’est pas pour tout de suite...",
 		message: "Vous avez {{points}} points sur un total de 9. {{name}} n’est pas encore assez performant au niveau technique, et certains de vos choix «moraux» nuisent à l’équité des jugements rendus.",
@@ -716,7 +730,7 @@ const juriste = [
 	},
 	{
 		title: "La justice 2.0, ce n’est pas pour tout de suite...",
-		message: "Vous avez {{points}} points sur un total de 9. Pour utiliser l’intelligence artificielle dans le domaine de la justice, il faut d'abord que l’algorithme et les bases de données soient irréprochables.",
+		message: "Pour utiliser l’intelligence artificielle dans le domaine de la justice, il faut d'abord que l’algorithme et les bases de données soient irréprochables.",
 		image: "robot-juriste-echec.gif",
 		when: answers => answers.points < 6,
 	},	
