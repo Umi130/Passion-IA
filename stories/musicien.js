@@ -212,6 +212,8 @@ const musicien = [
 		name: "blanks_debut_gamme1",
 		title: "Remplissez le texte à trous",
 		image: "robot-musicien-portee-1.png",
+		contextPoints: "blanks_debut_gamme",
+		points: 1,
 		blanks: [
 			{
 				"value": "Quelles sont les notes manquantes ?"
@@ -252,6 +254,8 @@ const musicien = [
 		name: "blanks_debut_gamme2",
 		title: "Remplissez le texte à trous",
 		image: "robot-musicien-portee-2.png",
+		contextPoints: "blanks_debut_gamme",
+		points: 1,
 		blanks: [
 			{
 				"value": "Quelles sont les notes manquantes ?"
@@ -292,6 +296,8 @@ const musicien = [
 		name: "blanks_debut_gamme3",
 		title: "Remplissez le texte à trous",
 		image: "robot-musicien-portee-3.png",
+		contextPoints: "blanks_debut_gamme",
+		points: 1,
 		blanks: [
 			{
 				"value": "Quelles sont les notes manquantes ?"
@@ -420,6 +426,7 @@ const musicien = [
 	{
 		name: "choix_reconnaitre_2",
 		message: "Sélectionnez la fin du morceau.",
+		contextPoints: "blanks_debut_gamme",
 		choices: [
 			{
 				"value": "1.",

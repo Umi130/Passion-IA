@@ -25,6 +25,12 @@
 
 module.exports = {
 	name: 'conducteur',
+	beforeRouteEnter (to, from, next) {
+		if (parseInt(to.params.step) === 0) {
+			localStorage.removeItem('passion-ia-conducteur')
+		}
+		next()
+	},
 	components: {
 		Explanation: httpVueLoader('./explanation.vue'),
 		Illustration: httpVueLoader('./illustration.vue'),
@@ -35,13 +41,17 @@ module.exports = {
 		return {
 			story: conducteur,
 			answers: {
-				points: 0
+				points: 0,
+				contextPoints: { }
 			}
 		}
 	},
 	watch: {
-		answers (newVal) {
-			localStorage.setItem('passion-ia-conducteur', JSON.stringify(newVal))
+		answers: {
+			handler (newVal) {
+				localStorage.setItem('passion-ia-musicien', JSON.stringify(newVal))
+			},
+			deep: true
 		}
 	},
 	mounted () {
@@ -67,6 +77,10 @@ module.exports = {
 		selectChoice (choice) {
 			if (choice.points) {
 				this.answers.points = this.answers.points + choice.points;
+			}
+			if (choice.context) {
+				this.answers.contextPoints[choice.context] = this.answers.contextPoints[choice.context] || 0
+				this.answers.contextPoints[choice.context] += choice.points
 			}
 			this.$set(this.answers, choice.name, choice.value)
 			this.nextStep()

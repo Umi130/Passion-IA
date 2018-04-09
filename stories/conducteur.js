@@ -710,6 +710,7 @@ const conducteur = [
 //////////////
 	{
 		name: "jeu_route1",
+		contextPoints: "jeu_route",
 		message: "Le feu est vert, mais les piétons sont sur la route. Que faire ? (1/6)",
 		image: "robot-conducteur-test-1.jpg",
 		choices: [
@@ -747,6 +748,7 @@ const conducteur = [
 
 	{
 		name: "jeu_route2",
+		contextPoints: "jeu_route",
 		message: "Un animal surgit sur la route. Que faire ? (2/6)",
 		image: "robot-conducteur-test-2.jpg",
 		choices: [
@@ -784,6 +786,7 @@ const conducteur = [
 
 	{
 		name: "jeu_route3",
+		contextPoints: "jeu_route",
 		message: "Le feu est vert. Que faire ? (3/6)",
 		image: "robot-conducteur-test-3.jpg",
 		choices: [
@@ -821,6 +824,7 @@ const conducteur = [
 
 	{
 		name: "jeu_route4",
+		contextPoints: "jeu_route",
 		message: "La route est bloquée. Que faire ? (4/6)",
 		image: "robot-conducteur-test-4.jpg",
 		choices: [
@@ -858,7 +862,8 @@ const conducteur = [
 
 	{
 		name: "jeu_route5",
-		message: "La voiture détecte un obstacle sur la route. Que faire ? (5/6)",
+		contextPoints: "jeu_route",
+		message: "La voiture détecte un obstacle sur la route. Que faire ? {{ contextPoints.jeu_route }} (5/6)",
 		image: "robot-conducteur-test-5.jpg",
 		choices: [
 			{
@@ -895,6 +900,7 @@ const conducteur = [
 
 	{
 		name: "jeu_route6",
+		contextPoints: "jeu_route",
 		message: "Le garçon veut visiblement traverser, mais vous ne savez pas s'il a vu la voiture. Que faire ? (6/6)",
 		image: "robot-conducteur-test-6.jpg",
 		choices: [

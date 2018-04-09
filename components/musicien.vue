@@ -36,13 +36,17 @@ module.exports = {
 		return {
 			story: musicien,
 			answers: {
-				points: 0
+				points: 0,
+				contextPoints: { }
 			}
 		}
 	},
 	watch: {
-		answers (newVal) {
-			localStorage.setItem('passion-ia-musicien', JSON.stringify(newVal))
+		answers: {
+			handler (newVal) {
+				localStorage.setItem('passion-ia-musicien', JSON.stringify(newVal))
+			},
+			deep: true
 		}
 	},
 	mounted () {
@@ -69,12 +73,20 @@ module.exports = {
 			if (choice.points) {
 				this.answers.points = this.answers.points + choice.points;
 			}
+			if (choice.context) {
+				this.answers.contextPoints[choice.context] = this.answers.contextPoints[choice.context] || 0
+				this.answers.contextPoints[choice.context] += choice.points || 0
+			}
 			this.$set(this.answers, choice.name, choice.value)
 			this.nextStep()
 		},
 		fillBlanks (answer) {
 			if (answer.value === true) {
 				this.answers.points = this.answers.points + this.currentStep.points;
+				if (answer.context) {
+					this.answers.contextPoints[answer.context] = this.answers.contextPoints[answer.context] || 0
+					this.answers.contextPoints[answer.context] += this.currentStep.points || 0
+				}
 			}
 			this.$set(this.answers, answer.name, answer.value)
 			this.nextStep()
