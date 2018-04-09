@@ -103,7 +103,7 @@ const musicien = [
 
 		{
 		message: "Bel hommage ! Nina Simone est l’une des voix emblématiques de la soul mais aussi du mouvement des droits civiques en Amérique. Mais son timbre a souvent été comparé... à celui d’un homme.",
-		image: "robot-musicien-bebe-etonne.png",
+		image: "robot-musicien-bebe.png",
 		when: answers => answers.name === "Nina Sibot"
 	},	
 
@@ -153,7 +153,7 @@ const musicien = [
 	{
 		title: "Quelle déception...",
 		message: "Silence pendant 4 minutes et 33 secondes. Plutôt intéressant comme concept, mais vous risquez d’être accusé de plagiat puisque le compositeur de musique expérimentale John Cage l’a déjà fait avant vous. Le titre de son morceau ? 4′33″.",
-		image: "robot-musicien-bebe.png",
+		image: "robot-musicien-bebe-etonne.png",
 	},
 
 	{
