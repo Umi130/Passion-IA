@@ -43,7 +43,7 @@ module.exports = {
 	watch: {
 		answers: {
 			handler (newVal) {
-				localStorage.setItem('passion-ia-musicien', JSON.stringify(newVal))
+				localStorage.setItem('passion-ia-juriste', JSON.stringify(newVal))
 			},
 			deep: true
 		}
