@@ -34,6 +34,12 @@ const juriste = [
 		message: "Ce sont les instructions qui commandent un programme informatique. C’est un peu comme une recette de cuisine. Les ingrédients sont les données des dossiers ; votre plat, ce sont les différents jugements.",
 		image: "robot-juriste-dodo.png",
 	},
+
+	{
+		message: "L’algorithme, c’est l’embryon de l’intelligence artificielle, son cerveau. Comme celui d’un bébé à la naissance, il est fonctionnel, mais pas encore prêt à interagir de manière autonome avec son environnement. ",
+		image: "robot-juriste-bebe.png",
+	},
+
 	{
 		message: "Ce ne sont que quelques lignes de code, mais vous vous prenez déjà d’affection pour ce super-assistant qui va faire diminuer la pile de dossiers sur votre bureau. Vous décidez de lui donner un prénom.",
 		image: "robot-juriste-bebe.png"
@@ -242,8 +248,8 @@ const juriste = [
 
 // Robot devient enfant
 	{
-		title: "Quoi ?",
-		message: "{{name}} a grandi !",
+		title: "Level up !",
+		message: "{{name}} a grandi ! L’algorithme, c’est l’embryon de l’intelligence artificielle, son cerveau. Comme celui d’un bébé à la naissance, il est fonctionnel, mais pas encore prêt à interagir de manière autonome avec son environnement.",
 		image: "robot-juriste-enfant.png",
 	},
 //
@@ -386,8 +392,8 @@ const juriste = [
 
 // Robot devient ado
 	{
-		title: "Quoi ?",
-		message: "{{name}} a grandi !",
+		title: "Level up !",
+		message: "{{name}} a grandi ! C’est en écoutant les adultes qu’un bébé apprend à parler. Une fois que l’intelligence artificielle dispose d’une première base de donnée, elle peut commencer à apprendre d’elle-même; comme un enfant qui entre à l’école.",
 		image: "robot-juriste-ado.png",
 	},
 //
@@ -469,8 +475,8 @@ const juriste = [
 
 // Robot devient adulte
 	{
-		title: "Quoi ?",
-		message: "{{name}} a grandi !",
+		title: "Level up !",
+		message: "{{name}} a grandi ! Votre intelligence artificielle dispose d’assez de données pour pouvoir analyser les nouvelles informations que vous lui soumettez et adapter son comportement et ses prédictions à toutes les situations. Mais comme un adolescent, elle a besoin de tester ses limites.",
 		image: "robot-juriste-adulte.png",
 	},
 //

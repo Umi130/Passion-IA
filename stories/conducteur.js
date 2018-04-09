@@ -300,8 +300,8 @@ const conducteur = [
 
 // Robot devient enfant
 	{
-		title: "Quoi ?",
-		message: "{{name}} a grandi !",
+		title: "Level up !",
+		message: "{{name}} a grandi ! C’est en écoutant les adultes qu’un bébé apprend à parler. Une fois que l’intelligence artificielle dispose d’une première base de donnée, elle peut commencer à apprendre d’elle-même; comme un enfant qui entre à l’école.",
 		image: "robot-conducteur-enfant.png",
 	},
 //
@@ -458,8 +458,8 @@ const conducteur = [
 
 // Robot devient ado
 	{
-		title: "Quoi ?",
-		message: "{{name}} a grandi ! La voiture va bientôt pouvoir rouler par elle-même, mais il lui faut encore apprendre de nouvelles données.",
+		title: "Level up !",
+		message: "{{name}} a grandi ! Votre intelligence artificielle dispose d’assez de données pour pouvoir analyser les nouvelles informations que vous lui soumettez et adapter son comportement et ses prédictions à toutes les situations. Mais comme un adolescent, elle a besoin de tester ses limites. Elle va bientôt pouvoir rouler par elle-même, mais il lui faut encore apprendre de nouvelles données.",
 		image: "robot-conducteur-ado.png",
 	},
 //
@@ -958,8 +958,8 @@ const conducteur = [
 
 // Robot devient adulte
 	{
-		title: "Quoi ?",
-		message: "{{name}} a grandi !",
+		title: "Level up !",
+		message: "{{name}} a grandi ! Votre intelligence artificielle est fonctionnelle. Pendant la phase d’apprentissage, nous avons mis de côté les questions éthiques. Mais avec l’autonomie vient aussi les responsabilités morales auxquelles les jeunes adultes sont confrontés.",
 		image: "robot-conducteur-adulte.png",
 	},
 //
