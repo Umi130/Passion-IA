@@ -113,8 +113,8 @@ const conducteur = [
 	},	
 
 	{
-		message: "Ne pas définir de genre pour votre algorithme vous autorise à un peu plus de fantaisie. « Au lieu de commencer par se dire « c’est un assistant, donnons lui une voix de femme », qu’est ce qui nous empêche de lui donner une voix d’animal, par exemple, ou un truc qui ne ressemble à rien de réel mais qui soit fun ? » explique Dipty Chander, présidente de l’association E-mma qui promeut la mixité dans le domaine du numérique.",
-		image: "Dipty.png",
+		message: "Ne pas définir de genre pour votre algorithme vous autorise à un peu plus de fantaisie. «Au lieu de commencer par se dire, c’est un assistant, donnons-lui une voix de femme, qu’est-ce qui nous empêche de lui donner une voix d’animal, par exemple, ou un truc qui ne ressemble à rien de réel, mais qui soit fun ?» explique Dipty Chander, présidente de l’association E-mma qui promeut la mixité dans le domaine du numérique.",
+		image: "experts-dipty.jpg",
 		when: answers => answers.name === "Botmobile"
 	},	
 

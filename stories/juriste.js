@@ -80,8 +80,8 @@ const juriste = [
 	},	
 
 	{
-		message: "« C’est la façon dont les hommes construisent les IA qui risque d’aggraver les stéréotypes », explique Dipty Chander, présidente de l’association E-mma qui promeut la mixité dans le domaine du numérique.",
-		image: "Dipty.png",
+		message: "«C’est la façon dont les hommes construisent les IA qui risque d’aggraver les stéréotypes», explique Dipty Chander, présidente de l’association E-mma qui promeut la mixité dans le domaine du numérique.",
+		image: "experts-dipty.jpg",
 		when: answers => answers.name === "Ross"
 	},	
 
@@ -105,14 +105,14 @@ const juriste = [
 	},	
 
 	{
-		message: "Ne pas définir de genre pour votre algorithme vous autorise à un peu plus de fantaisie. « Au lieu de commencer par se dire « c’est un assistant, donnons lui une voix de femme », qu’est ce qui nous empêche de lui donner une voix d’animal, par exemple, ou un truc qui ne ressemble à rien de réel mais qui soit fun ? » explique Dipty Chander, présidente de l’association E-mma qui promeut la mixité dans le domaine du numérique.",
-		image: "Dipty.png",
+		message: "Ne pas définir de genre pour votre algorithme vous autorise à un peu plus de fantaisie. «Au lieu de commencer par se dire, c’est un assistant, donnons-lui une voix de femme, qu’est ce qui nous empêche de lui donner une voix d’animal, par exemple, ou un truc qui ne ressemble à rien de réel, mais qui soit fun ?» explique Dipty Chander, présidente de l’association E-mma qui promeut la mixité dans le domaine du numérique.",
+		image: "experts-dipty.jpg",
 		when: answers => answers.name === "Agatha"
 	},
 
 	{
-		message: "« Sauf qu’en faisant cela, on aggrave le problème, on ne fait qu’enfoncer des stéréotypes, c’est encore pire !» explique Dipty Chander, présidente de l’association E-mma qui promeut la mixité dans le domaine du numérique.",
-		image: "Dipty.png",
+		message: "«Sauf qu’en faisant cela, on aggrave le problème, on ne fait qu’enfoncer des stéréotypes, c’est encore pire !» explique Dipty Chander, présidente de l’association E-mma qui promeut la mixité dans le domaine du numérique.",
+		image: "experts-dipty.jpg",
 		when: answers => answers.name === "Agatha"
 	},	
 	
@@ -129,8 +129,8 @@ const juriste = [
 	},	
 
 	{
-		message: "Les robots non-genrés sont encore rares. « Si on arrêtait de penser le design en fonction du genre et que l’on se concentrait sur le besoin auquel répond l’IA, les choses fonctionneraient peut être mieux », avance Dipty Chander, présidente de l’association E-mma qui promeut la mixité dans le domaine du numérique.",
-		image: "Dipty.png",
+		message: "Les robots non-genrés sont encore rares. «Si on arrêtait de penser le design en fonction du genre et que l’on se concentrait sur le besoin auquel répond l’IA, les choses fonctionneraient peut être mieux» avance Dipty Chander, présidente de l’association E-mma qui promeut la mixité dans le domaine du numérique.",
+		image: "experts-dipty.jpg",
 		when: answers => answers.name === "Justum"
 	},	
 
@@ -701,12 +701,12 @@ const juriste = [
 	{
 		title: "La justice 2.0, ce n’est pas pour tout de suite...",
 		message: "{{name}} n’est pas encore assez performant au niveau technique, et certains de vos choix «moraux» nuisent à l’équité des jugements rendus.",
-		image: "robot-musicien-echec.gif",
+		image: "robot-juriste-echec.gif",
 	},
 	{
 		title: "La justice 2.0, ce n’est pas pour tout de suite...",
 		message: "Pour utiliser l’intelligence artificielle dans le domaine de la justice, il faut d'abord que l’algorithme et les bases de données soient irréprochables.",
-		image: "robot-musicien-echec.gif",
+		image: "robot-juriste-echec.gif",
 	},	
 
 ]

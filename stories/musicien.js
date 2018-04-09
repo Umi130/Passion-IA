@@ -128,8 +128,8 @@ const musicien = [
 	},	
 
 	{
-		message: "« On veut donner à ces robots des caractéristiques humaines alors que les IA, c’est loin de n’être que ça ! », explique Dipty Chander, présidente de l’association E-mma qui promeut la mixité dans le domaine du numérique.",
-		image: "Dipty.png",
+		message: "«On veut donner à ces robots des caractéristiques humaines alors que les IA, c’est loin de n’être que ça !», explique Dipty Chander, présidente de l’association E-mma qui promeut la mixité dans le domaine du numérique.",
+		image: "experts-dipty.jpg",
 		when: answers => answers.name === "YuMi"
 	},	
 
