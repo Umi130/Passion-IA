@@ -1,5 +1,3 @@
-// TODO: points qui permettent de vérifier succès des mini-jeux
-
 const musicien = [
 	{
 		title: "Ce parcours utilise de la musique",
@@ -64,17 +62,17 @@ const musicien = [
 			{
 				"value": "Johnny Hallgorithme",
 				"description": "parce vous êtes plutôt rock and roll",
-				"points": 1
+				"points": 0
 			},
 			{
 				"value": "Nina Sibot",
 				"description": "parce que vous avez la soul dans le sang",
-				"points": 1
+				"points": 0
 			},
 			{
 				"value": "YuMi",
 				"description": "en hommage au robot qui a dirigé le chanteur Andrea Bocelli et son orchestre",
-				"points": 1
+				"points": 0
 			}
 		]
 	},

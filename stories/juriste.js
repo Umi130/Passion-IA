@@ -68,7 +68,7 @@ const juriste = [
 	},
 
 		{
-		message: "En choisissant d’appeler votre robot Ross, vous rendez hommage à un algorithme qui fait fureur dans les cabinets d’avocats américains. Ce logiciel est payant… mais une version gratuite existe : elle s’appelle Eva.",
+		message: "En choisissant d’appeler votre robot Ross, vous rendez hommage à un algorithme qui fait fureur dans les cabinets d’avocats américains. Ce logiciel est payant... mais une version gratuite existe : elle s’appelle Eva.",
 		image: "robot-juriste-bebe-etonne.png",
 		when: answers => answers.name === "Ross"
 	},	
@@ -91,8 +91,7 @@ const juriste = [
 		when: answers => answers.name === "Ross"
 	},	
 
-
-		{
+	{
 		message: "En choisissant d’appeler votre robot Agatha, vous faites référence au film Minority Report et à ses robots capables de prédire les crimes. Mais lui attribuer un nom féminin fait de votre algorithme une minorité au sein du milieu de la tech.",
 		image: "robot-juriste-bebe-etonne.png",
 		when: answers => answers.name === "Agatha"
@@ -129,7 +128,7 @@ const juriste = [
 	},	
 
 	{
-		message: "Les robots non-genrés sont encore rares. «Si on arrêtait de penser le design en fonction du genre et que l’on se concentrait sur le besoin auquel répond l’IA, les choses fonctionneraient peut être mieux» avance Dipty Chander, présidente de l’association E-mma qui promeut la mixité dans le domaine du numérique.",
+		message: "Les robots non-genrés sont encore rares. «Si on arrêtait de penser le design en fonction du genre, les choses fonctionneraient peut être mieux» avance Dipty Chander, présidente de l’association E-mma qui promeut la mixité dans le domaine du numérique.",
 		image: "experts-dipty.jpg",
 		when: answers => answers.name === "Justum"
 	},	
