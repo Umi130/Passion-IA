@@ -28,7 +28,7 @@
   					</div>
 				</div>
 		</header>
-		<section class="container text-center d-flex flex-column justify-content-end" id="robot-image":style="{ 'background-image': story === null ? 'url(./assets/images/Robot.png)' : 'url(' + storyImage + ')'  }">
+		<section class="container text-center d-flex flex-column justify-content-end" id="robot-image" :style="{ 'background-image': story === null ? 'url(./assets/images/Robot.png)' : 'url(' + storyImage + ')'  }">
 			<router-link :to="storyLink" class="btn btn-primary" v-if="story !== null">
 				JE COMMENCE
 			</router-link>
@@ -107,8 +107,17 @@ module.exports = {
 		background-size: auto 70%;
 		background-position: top center;
 		background-repeat: no-repeat;
-		padding-bottom: 5rem;
+		position: relative;
+		padding-bottom: 4em;
 	}
+
+	#robot-image .btn {
+		position: absolute;
+		bottom: 4em;
+		left: 1em;
+		right: 1em;
+	}
+
 	#parcours {
 		background-color: #4281de;
 		color: white;
@@ -117,10 +126,9 @@ module.exports = {
 	}
 	#parcours div {
 		transform: translateY(-30%);
-
 		padding: 0 4px;
-
 		cursor: pointer;
+		margin-bottom: -2em;
 	}
 	#parcours p {
 		margin-bottom: 0px;
