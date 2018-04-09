@@ -50,7 +50,8 @@ module.exports = {
 			}).length
 			return this.$emit('fill', {
 				name: this.content.name,
-				value: this.inputsCount === goodResponses
+				value: this.inputsCount === goodResponses,
+				context: this.content.contextPoints
 			})
 		}
 	}

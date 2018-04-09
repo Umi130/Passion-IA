@@ -27,6 +27,12 @@
 
 module.exports = {
 	name: 'juriste',
+	beforeRouteEnter (to, from, next) {
+		if (parseInt(to.params.step) === 0) {
+			localStorage.removeItem('passion-ia-juriste')
+		}
+		next()
+	},	
 	components: {
 		Explanation: httpVueLoader('./explanation.vue'),
 		Illustration: httpVueLoader('./illustration.vue'),
@@ -37,13 +43,18 @@ module.exports = {
 		return {
 			story: juriste,
 			answers: {
-				points: 0
+				points: 0,
+				lastStep: 0,
+				contextPoints: { }
 			}
 		}
 	},
 	watch: {
-		answers (newVal) {
-			localStorage.setItem('passion-ia-juriste', JSON.stringify(newVal))
+		answers: {
+			handler (newVal) {
+				localStorage.setItem('passion-ia-juriste', JSON.stringify(newVal))
+			},
+			deep: true
 		}
 	},
 	mounted () {
@@ -67,17 +78,33 @@ module.exports = {
 	},
 	methods: {
 		selectChoice (choice) {
-			if (choice.points) {
-				this.answers.points = this.answers.points + choice.points;
+			if (parseInt(this.$route.params.step) > this.answers.lastStep) {				
+				if (choice.points) {
+					this.answers.points = this.answers.points + choice.points;
+				}
+				if (choice.context) {
+					this.answers.contextPoints[choice.context] = this.answers.contextPoints[choice.context] || 0
+					this.answers.contextPoints[choice.context] += choice.points
+				}
+				this.$set(this.answers, choice.name, choice.value)
+				// Permet de se souvenir tu dernier step
+				this.answers.lastStep = parseInt(this.$route.params.step)
 			}
-			this.$set(this.answers, choice.name, choice.value)
 			this.nextStep()
 		},
 		fillBlanks (answer) {
-			if (answer.value === true) {
-				this.answers.points = this.answers.points + this.currentStep.points;
+			if (parseInt(this.$route.params.step) > this.answers.lastStep) {
+				if (answer.value === true) {
+					this.answers.points = this.answers.points + this.currentStep.points;
+					if (answer.context) {
+						this.answers.contextPoints[answer.context] = this.answers.contextPoints[answer.context] || 0
+						this.answers.contextPoints[answer.context] += this.currentStep.points || 0
+					}
+				}
+				this.$set(this.answers, answer.name, answer.value)
+				// Permet de se souvenir tu dernier step
+				this.answers.lastStep = parseInt(this.$route.params.step)
 			}
-			this.$set(this.answers, answer.name, answer.value)
 			this.nextStep()
 		},
 		nextStep () {

@@ -62,13 +62,13 @@ const juriste = [
 			{
 				"value": "Justum",
 				"description": "Nominatif neutre : ce qui est juste en latin",
-				"points": 1
+				"points": 0
 			}
 		]
 	},
 
 		{
-		message: "En choisissant d’appeler votre robot Ross, vous rendez hommage à un algorithme qui fait fureur dans les cabinets d’avocats américains. Ce logiciel est payant… mais une version gratuite existe : elle s’appelle Eva.",
+		message: "En choisissant d’appeler votre robot Ross, vous rendez hommage à un algorithme qui fait fureur dans les cabinets d’avocats américains. Ce logiciel est payant... mais une version gratuite existe : elle s’appelle Eva.",
 		image: "robot-juriste-bebe-etonne.png",
 		when: answers => answers.name === "Ross"
 	},	
@@ -91,8 +91,7 @@ const juriste = [
 		when: answers => answers.name === "Ross"
 	},	
 
-
-		{
+	{
 		message: "En choisissant d’appeler votre robot Agatha, vous faites référence au film Minority Report et à ses robots capables de prédire les crimes. Mais lui attribuer un nom féminin fait de votre algorithme une minorité au sein du milieu de la tech.",
 		image: "robot-juriste-bebe-etonne.png",
 		when: answers => answers.name === "Agatha"
@@ -129,7 +128,7 @@ const juriste = [
 	},	
 
 	{
-		message: "Les robots non-genrés sont encore rares. «Si on arrêtait de penser le design en fonction du genre et que l’on se concentrait sur le besoin auquel répond l’IA, les choses fonctionneraient peut être mieux» avance Dipty Chander, présidente de l’association E-mma qui promeut la mixité dans le domaine du numérique.",
+		message: "Les robots non-genrés sont encore rares. «Si on arrêtait de penser le design en fonction du genre, les choses fonctionneraient peut être mieux» avance Dipty Chander, présidente de l’association E-mma qui promeut la mixité dans le domaine du numérique.",
 		image: "experts-dipty.jpg",
 		when: answers => answers.name === "Justum"
 	},	
@@ -159,7 +158,7 @@ const juriste = [
 	},
 	{
 		type: "explanation",
-        title: "Vous êtes complètement déçu·e…",
+        title: "Vous êtes complètement déçu·e...",
 		message: "{{name}} n’a fait que répéter ce qui est écrit dans la loi. Vous n’êtes pas très avancé·e, car vous souhaitez avoir un montant précis et pas seulement une fourchette.",
 		image: "robot-juriste-bebe-etonne.png",
 	},
@@ -179,15 +178,24 @@ const juriste = [
 			{
 				"value": "Tous les articles de loi",
 				"description": "Les 11 000 articles du code du travail et la jurisprudence associée",
+				"points": 0
 			},
 			{
 				"value": "Uniquement des décisions similaires",
 				"description": "1 500 décisions prises par vous et vos collègues dans des cas similaires depuis le changement de la loi en septembre 2017",
+				"points": 1
 			},
 		]
 	},
 
 //Si choix - Tous les articles de loi
+	{	
+		title: "C'est un mauvais choix...",
+		message: "Pour comprendre pourquoi, étudions un nouveau dossier.",
+		image: "robot-juriste-bebe-etonne.png",
+		when: answers => answers.choice_premiereslois === 'Tous les articles de loi'
+	},
+
 	{	
 		title: "Deuxième dossier",
 		message: "Vous soumettez un dossier de votre pile pour tester {{ name }}. M. Husson a été victime d'un licenciement abusif après avoir travaillé 10 ans dans une entreprise de télécommunication.",
@@ -219,6 +227,13 @@ const juriste = [
 
 //Si choix - Que des décisions similaires
 	{	
+		title: "C'est un bon choix...",
+		message: "Pour comprendre pourquoi, étudions un nouveau dossier.",
+		image: "robot-juriste-bebe.png",
+		when: answers => answers.choice_premiereslois !== 'Tous les articles de loi'
+	},
+
+	{	
 		title: "Deuxième dossier",
 		message: "M. Husson a été victime d’un licenciement abusif après avoir travaillé 10 ans dans une entreprise de télécommunication.",
 		image: "robot-juriste-marteau-anime.gif",
@@ -248,7 +263,7 @@ const juriste = [
 // Robot devient enfant
 	{
 		title: "Level up !",
-		message: "{{name}} a grandi ! L’algorithme, c’est l’embryon de l’intelligence artificielle, son cerveau. Comme celui d’un bébé à la naissance, il est fonctionnel, mais pas encore prêt à interagir de manière autonome avec son environnement.",
+		message: "{{name}} a grandi ! C’est en écoutant les adultes qu’un bébé apprend à parler. Une fois que l’intelligence artificielle dispose d’une première base de donnée, elle peut commencer à apprendre d’elle-même, comme un enfant qui entre à l’école.",
 		image: "robot-juriste-bebe-enfant.gif",
 	},
 //
@@ -318,7 +333,6 @@ const juriste = [
 	{
 		message: "Tentons un second exemple.",
 		image: "robot-juriste-enfant.png",
-		when: answers => answers.blanks_emploi_duree1
 	},
 
 //INPUT CORINNE DUTEIL
@@ -326,6 +340,7 @@ const juriste = [
 		name: "blanks_emploi_duree2",
 		title: "Entrez les mots manquants",
 		message: "",
+		points: 1,
 		blanks: [
 			{
 				"value": "Mme Corinne Duteil a été victime d’un licenciement abusif. L'entreprise l'avait "
@@ -392,7 +407,7 @@ const juriste = [
 // Robot devient ado
 	{
 		title: "Level up !",
-		message: "{{name}} a grandi ! C’est en écoutant les adultes qu’un bébé apprend à parler. Une fois que l’intelligence artificielle dispose d’une première base de donnée, elle peut commencer à apprendre d’elle-même; comme un enfant qui entre à l’école.",
+		message: "{{name}} a grandi ! Votre intelligence artificielle dispose d’assez de données pour pouvoir analyser les nouvelles informations que vous lui soumettez et adapter son comportement et ses prédictions à toutes les situations. Mais comme un adolescent, elle a besoin de tester ses limites. ",
 		image: "robot-juriste-enfant-ado.gif",
 	},
 //
@@ -432,7 +447,8 @@ const juriste = [
 			},
 			{
 				"value": "Nombre de salariés dans l’entreprise",
-				"description": ""
+				"description": "",
+				"points": 1
 			},
 			{
 				"value": "Poste du salarié",
@@ -475,7 +491,7 @@ const juriste = [
 // Robot devient adulte
 	{
 		title: "Level up !",
-		message: "{{name}} a grandi ! Votre intelligence artificielle dispose d’assez de données pour pouvoir analyser les nouvelles informations que vous lui soumettez et adapter son comportement et ses prédictions à toutes les situations. Mais comme un adolescent, elle a besoin de tester ses limites.",
+		message: "{{name}} a grandi ! Votre intelligence artificielle est fonctionnelle. Pendant la phase d’apprentissage, nous avons mis de côté les questions éthiques. Mais avec l’autonomie vient aussi les responsabilités morales auxquelles les jeunes adultes sont confrontés.",
 		image: "robot-juriste-ado-adulte.gif",
 	},
 //
@@ -497,11 +513,13 @@ const juriste = [
 		choices: [
 			{
 				"value": "Oui",
-				"description": ""
+				"description": "",
+
 			},
 			{
 				"value": "Non",
-				"description": ""
+				"description": "",
+				"points": 1				
 			},
 			]
 	},
@@ -525,7 +543,7 @@ const juriste = [
 		when: answers => answers.choice_critereneglige_automatise === 'Non',
 	},
 
-// commun à tous 
+//Commun à tous 
 	{
 		title: "La situation aux États-Unis",
 		message: "Le logiciel Compas permet d’évaluer le risque de récidive d'un criminel. Mais les juges qui ne se basaient que sur ce programme ont été contraints de revoir leur jugement, et de justifier leur décision par un raisonnement humain et non informatique.",
@@ -540,7 +558,8 @@ const juriste = [
 		choices: [
 			{
 				"value": "Le rendre accessible en Open source",
-				"description": "lisible, modifiable et utilisable par tous (magistrats, avocats et juristes) gratuitement"
+				"description": "lisible, modifiable et utilisable par tous (magistrats, avocats et juristes) gratuitement",
+				"points": 1
 			},
 			{
 				"value": "Le diffuser uniquement aux magistrats",
@@ -590,7 +609,8 @@ const juriste = [
 			},
 			{
 				"value": "Argument invalide",
-				"description": ""
+				"description": "",
+				"points": 1	
 			},
 			]
 	},
@@ -634,7 +654,8 @@ const juriste = [
 			},
 			{
 				"value": "Anonymiser les décisions",
-				"description": "de votre base de données."
+				"description": "de votre base de données.",
+				"points": 1
 			},
 			]
 	},
@@ -684,29 +705,33 @@ const juriste = [
 	},
 
 // Victoire
-// Compte des points gagnés > 70%
+// Compte des points gagnés (6 ou plus sur 9)
 	{
 		title: "La justice 2.0 vous tend les bras !",
-		message: "Vous avez su entraîner {{name}} pour que l’intelligence artificielle soit techniquement performante et moralement irréprochable... ou presque.",
+		message: "Vous avez {{points}} points sur un total de 9. Vous avez su entraîner {{name}} pour que l’intelligence artificielle soit techniquement performante et moralement irréprochable... ou presque.",
 		image: "robot-juriste-gagnant.gif",
+		when: answers => answers.points >= 6,
 	},
 	{
 		title: "La justice 2.0 vous tend les bras !",
 		message: "Si elle est bien maîtrisée, l’intelligence artificielle peut être très utile à la justice, notamment pour désengorger les tribunaux.",
 		image: "robot-juriste-gagnant.gif",
+		when: answers => answers.points >= 6,
 	},	
 
 // Défaite
-// Compte des points perdus < 70%
+// Compte des points perdus (6 ou plus sur 9)
 	{
 		title: "La justice 2.0, ce n’est pas pour tout de suite...",
-		message: "{{name}} n’est pas encore assez performant au niveau technique, et certains de vos choix «moraux» nuisent à l’équité des jugements rendus.",
+		message: "Vous avez {{points}} points sur un total de 9. {{name}} n’est pas encore assez performant au niveau technique, et certains de vos choix «moraux» nuisent à l’équité des jugements rendus.",
 		image: "robot-juriste-echec.gif",
+		when: answers => answers.points < 6,
 	},
 	{
 		title: "La justice 2.0, ce n’est pas pour tout de suite...",
 		message: "Pour utiliser l’intelligence artificielle dans le domaine de la justice, il faut d'abord que l’algorithme et les bases de données soient irréprochables.",
 		image: "robot-juriste-echec.gif",
+		when: answers => answers.points < 6,
 	},	
 
 ]

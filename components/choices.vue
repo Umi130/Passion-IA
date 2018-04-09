@@ -4,7 +4,7 @@
 			class="choice d-flex flex-column justify-content-center"
 			v-for="choice in content.choices"
 			:key="choice.value"
-			@click="$emit('select', { name: content.name, value: choice.value, points: choice.points })"
+			@click="$emit('select', { name: content.name, value: choice.value, points: choice.points, context: content.contextPoints })"
 			:style="{
 				'background-image': choice.image ? 'url(./assets/images/'+choice.image+')' : null
 			}">
