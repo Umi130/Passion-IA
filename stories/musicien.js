@@ -470,7 +470,7 @@ const musicien = [
 // MINI JEU NOTES + PARTITIONS COMPTE SCORE SUR 5
 // SUCCES
 	{
-		title: "Bravo !",
+		title: "Formation musicale achevée",
 		message: "Vous avez un score de {{ contextPoints.blanks_minijeu_notes }} sur 5. Vous avez réussi l’étape de labellisation des symboles musicaux. Quelle efficacité !",
 		image: "robot-musicien-enfant.png",
 
@@ -479,7 +479,7 @@ const musicien = [
 // MINI JEU NOTES + PARTITIONS COMPTE SCORE SUR 5
 // ECHEC
 	{
-		title: "Quel dommage...",
+		title: "Formation musicale achevée",
 		message: "Vous n’avez qu’un score de {{ contextPoints.blanks_minijeu_notes }} sur 5. Vos données ont besoin d’être mieux labellisées. Heureusement, vous avez fait appel à un musicologue pour vous aider.",
 		image: "robot-musicien-enfant-etonne.png",
 
