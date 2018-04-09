@@ -34,7 +34,7 @@ const conducteur = [
 
 	{
 		message: "L’algorithme, c’est l’embryon de l’intelligence artificielle, son cerveau. Comme celui d’un bébé à la naissance, il est fonctionnel, mais pas encore prêt à interagir de manière autonome avec son environnement.",
-		image: "robot-juriste-naissance.png",
+		image: "robot-juriste-naissance.gif",
 	},
 
 	{
@@ -302,7 +302,7 @@ const conducteur = [
 	{
 		title: "Level up !",
 		message: "{{name}} a grandi ! C’est en écoutant les adultes qu’un bébé apprend à parler. Une fois que l’intelligence artificielle dispose d’une première base de donnée, elle peut commencer à apprendre d’elle-même; comme un enfant qui entre à l’école.",
-		image: "robot-conducteur-enfant.png",
+		image: "robot-conducteur-bebe-enfant.gif",
 	},
 //
 
@@ -460,7 +460,7 @@ const conducteur = [
 	{
 		title: "Level up !",
 		message: "{{name}} a grandi ! Votre intelligence artificielle dispose d’assez de données pour pouvoir analyser les nouvelles informations que vous lui soumettez et adapter son comportement et ses prédictions à toutes les situations. Mais comme un adolescent, elle a besoin de tester ses limites. Elle va bientôt pouvoir rouler par elle-même, mais il lui faut encore apprendre de nouvelles données.",
-		image: "robot-conducteur-ado.png",
+		image: "robot-conducteur-enfant-ado.gif",
 	},
 //
 
@@ -960,7 +960,7 @@ const conducteur = [
 	{
 		title: "Level up !",
 		message: "{{name}} a grandi ! Votre intelligence artificielle est fonctionnelle. Pendant la phase d’apprentissage, nous avons mis de côté les questions éthiques. Mais avec l’autonomie vient aussi les responsabilités morales auxquelles les jeunes adultes sont confrontés.",
-		image: "robot-conducteur-adulte.png",
+		image: "robot-conducteur-ado-adulte.gif",
 	},
 //
 
@@ -1120,7 +1120,7 @@ const conducteur = [
 
 	{
 		title: "Votre véhicule autonome est prometteur !",
-		image: "robot-conducteur-gagne.png",
+		image: "robot-conducteur-gagnant.gif",
 	},
 	{
 		title: "Mais le manque de législation vous empêche de le commercialiser",
@@ -1129,7 +1129,7 @@ const conducteur = [
 	},
 	{
 		message: "En attendant, cela vous laisse du temps pour continuer à améliorer {{name}}, notamment en vous penchant sur les enjeux moraux que soulève votre technologie.",
-		image: "robot-conducteur-gagne.png",
+		image: "robot-conducteur-gagnant.gif",
 	},
 
 /// Échec
@@ -1138,7 +1138,7 @@ const conducteur = [
 	{
 		title: "Votre véhicule autonome n'est vraiment pas prêt...",
 		message: "L’accident avec le scooter vous l’a montré, {{name}} n’est pas encore totalement opérationnelle.",
-		image: "robot-conducteur-perdu.png",
+		image: "robot-conducteur-echec.gif",
 	},
 	{
 		message: "En attendant, le député Cédric Villani a proposé dans un rapport de mars 2018 la création d’un comité éthique pour étudier les questions morales liés aux accidents de voitures autonomes.",
@@ -1146,7 +1146,7 @@ const conducteur = [
 	},
 	{
 		message: "Pour l’instant, votre objectif de base - réduire le nombre de morts sur la route - n’est pas encore atteint. Il va vous falloir davantage travailler sur votre voiture autonome.",
-		image: "robot-conducteur-perdu.png",
+		image: "robot-conducteur-echec.gif",
 	},
 
 ]

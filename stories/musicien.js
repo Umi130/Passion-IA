@@ -48,6 +48,11 @@ const musicien = [
 	},
 
 	{
+		message: "L’algorithme, c’est l’embryon de l’intelligence artificielle, son cerveau. Comme celui d’un bébé à la naissance, il est fonctionnel, mais pas encore prêt à interagir de manière autonome avec son environnement.",
+		image: "robot-musicien-naissance.gif",
+	},
+
+	{
 		message: "Ce ne sont que quelques lignes de codes mais vous vous prenez déjà d’affection pour ce petit compositeur en herbe. Vous décidez de lui donner un prénom.",
 		image: "robot-musicien-bebe.png",
 	},
@@ -333,9 +338,9 @@ const musicien = [
 
 // Robot devient enfant
 	{
-		title: "Quoi ?",
-		message: "{{name}} a grandi !",
-		image: "robot-musicien-enfant.png",
+		title: "Level up !",
+		message: "{{name}} a grandi ! C’est en écoutant les adultes qu’un bébé apprend à parler. Une fois que l’intelligence artificielle dispose d’une première base de donnée, elle peut commencer à apprendre d’elle-même; comme un enfant qui entre à l’école.",
+		image: "robot-musicien-bebe-enfant.gif",
 		when: answers => answers.choice_mode_composition === "Celle de François Pachet",
 	},
 //
@@ -493,9 +498,9 @@ const musicien = [
 
 // Robot devient ado
 	{
-		title: "Quoi ?",
-		message: "{{name}} a grandi ! Et il abandonne la musique classique...",
-		image: "robot-musicien-ado.png",
+		title: "Level up !",
+		message: "{{name}} a grandi ! Votre intelligence artificielle dispose d’assez de données pour pouvoir analyser les nouvelles informations que vous lui soumettez et adapter son comportement et ses prédictions à toutes les situations. Mais comme un adolescent, elle a besoin de tester ses limites. Et il abandonne la musique classique...",
+		image: "robot-musicien-enfant-ado.gif",
 
 		when: answers => answers.choice_mode_composition === "Celle de François Pachet",
 	},
@@ -715,9 +720,9 @@ const musicien = [
 
 // Robot devient enfant
 	{
-		title: "Quoi ?",
-		message: "{{name}} a grandi !",
-		image: "robot-musicien-enfant.png",
+		title: "Level up !",
+		message: "{{name}} a grandi ! C’est en écoutant les adultes qu’un bébé apprend à parler. Une fois que l’intelligence artificielle dispose d’une première base de donnée, elle peut commencer à apprendre d’elle-même; comme un enfant qui entre à l’école.",
+		image: "robot-musicien-bebe-enfant.gif",
 		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
 	},
 //
@@ -863,9 +868,9 @@ const musicien = [
 
 // Robot devient ado
 	{
-		title: "Quoi ?",
-		message: "{{name}} a grandi !",
-		image: "robot-musicien-ado.png",
+		title: "Level up !",
+		message: "{{name}} a grandi ! Votre intelligence artificielle dispose d’assez de données pour pouvoir analyser les nouvelles informations que vous lui soumettez et adapter son comportement et ses prédictions à toutes les situations. Mais comme un adolescent, elle a besoin de tester ses limites.",
+		image: "robot-musicien-enfant-ado.gif",
 
 		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
 	},
@@ -948,9 +953,9 @@ const musicien = [
 
 // Robot devient adulte
 	{
-		title: "Quoi ?",
-		message: "{{name}} a grandi !",
-		image: "robot-musicien-adulte.png",
+		title: "Level up !",
+		message: "{{name}} a grandi ! Votre intelligence artificielle est fonctionnelle. Pendant la phase d’apprentissage, nous avons mis de côté les questions éthiques. Mais avec l’autonomie vient aussi les responsabilités morales auxquelles les jeunes adultes sont confrontés.",
+		image: "robot-musicien-ado-adulte.gif",
 	},
 //
 
@@ -1188,7 +1193,7 @@ const musicien = [
 	{
 		title: "Producteur de tubes",
 		message: "Bravo, vous avez répondu juste à la majorité des questions ! Votre algorithme sait repérer la structure d’un morceau ou les sons qui composent les tubes planétaires. Vous seriez un producteur de génie.",
-		image: "robot-musicien-gagne.png",
+		image: "robot-musicien-gagnant.gif",
 	},
 
 // Défaite
@@ -1196,7 +1201,7 @@ const musicien = [
 	{
 		title: "Artiste incompris",
 		message: "Vous n’avez pas su apprendre à l’algorithme à reconnaître les sons, les notes ou la structure d’un morceau… Les résultats produits par la machine risquent d’être… originaux. Vous ne composerez peut-être pas le prochain tube planétaire, mais votre musique aura l’avantage d’être… différente !",
-		image: "robot-musicien-perdu.png",
+		image: "robot-musicien-echec.gif",
 	},
 
 ]

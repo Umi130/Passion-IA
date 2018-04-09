@@ -37,7 +37,7 @@ const juriste = [
 
 	{
 		message: "L’algorithme, c’est l’embryon de l’intelligence artificielle, son cerveau. Comme celui d’un bébé à la naissance, il est fonctionnel, mais pas encore prêt à interagir de manière autonome avec son environnement. ",
-		image: "robot-juriste-bebe.png",
+		image: "robot-juriste-naissance.gif",
 	},
 
 	{
@@ -150,7 +150,6 @@ const juriste = [
 		title: "Premier dossier",
 		message: "Mme Laurent a été victime d'un licenciement abusif après avoir travaillé cinq ans dans un petit magasin.",
 		image: "robot-juriste-marteau-anime.gif",
-//		when: answers => answers.name !== 'Justum'
 	},
 	
 	{ 
@@ -167,11 +166,11 @@ const juriste = [
 	{
 		title: "Vous demandez conseil.",
 		message: "L’algorithme a besoin de plus de précisions quant aux critères qui motivent votre décision. Jacques Levy Vehel, le co-fondateur de Case Law Analytics, vous assiste.",
-					image: "experts-juriste-vehel.jpg",
+		image: "experts-juriste-vehel.jpg",
 	},
 	{
 		message:"«L’intelligence artificielle calcule ces probabilités grâce à un algorithme: à condition qu'on lui donne assez d'exemples, elle pourra simuler les différentes décisions possibles pour un cas particulier.»",
-			image: "experts-juriste-vehel.jpg",
+		image: "experts-juriste-vehel.jpg",
 	}, 
 	{
 		name: "choice_premiereslois",
@@ -250,7 +249,7 @@ const juriste = [
 	{
 		title: "Level up !",
 		message: "{{name}} a grandi ! L’algorithme, c’est l’embryon de l’intelligence artificielle, son cerveau. Comme celui d’un bébé à la naissance, il est fonctionnel, mais pas encore prêt à interagir de manière autonome avec son environnement.",
-		image: "robot-juriste-enfant.png",
+		image: "robot-juriste-bebe-enfant.gif",
 	},
 //
 	{
@@ -361,13 +360,13 @@ const juriste = [
 		title: "Bravo !",
 		message: "Le taux d’erreur de {{name}} est inférieur à 15%, vous pourrez donc économiser de longues heures d’étiquetage manuel de vos données. Vous avez maintenant une base de données suffisamment complète pour que {{name}} puisse «prédire» la probabilité des différents jugements pour un nouveau dossier.",
 		when: answers => answers.blanks_emploi_duree1 && answers.blanks_emploi_duree2,
-		image: "robot-juriste-ado.png",
+		image: "robot-juriste-enfant.png",
 	},
 //Sinon
 	{
 		title: "Vous avez fait trop d'erreurs...",
 		message: "Vous devez étiqueter vos données manuellement. Vous perdez beaucoup de temps, mais vous avez maintenant une base de données suffisamment complète pour que {{name}} puisse «prédire» la probabilité des différents jugements pour un nouveau dossier.",
-		image: "robot-juriste-ado-etonne.png",
+		image: "robot-juriste-enfant-etonne.png",
 		when: answers => !answers.blanks_emploi_duree1 || !answers.blanks_emploi_duree2,
 	},
 
@@ -394,14 +393,14 @@ const juriste = [
 	{
 		title: "Level up !",
 		message: "{{name}} a grandi ! C’est en écoutant les adultes qu’un bébé apprend à parler. Une fois que l’intelligence artificielle dispose d’une première base de donnée, elle peut commencer à apprendre d’elle-même; comme un enfant qui entre à l’école.",
-		image: "robot-juriste-ado.png",
+		image: "robot-juriste-enfant-ado.gif",
 	},
 //
 
 //Cas licenciements
 	{
 		message: "Avant d’utiliser {{name}}, il faut vérifier si ses prédictions reflètent la réalité des décisions que vous avez prises par le passé. Case Law Analytics vous conseille de comparer les statistiques générées par {{name}} à un groupe de décisions «témoin».",
-			image: "robot-juriste-ado.png",
+		image: "robot-juriste-ado.png",
 	},
 
 //TODO TABLEAU
@@ -477,7 +476,7 @@ const juriste = [
 	{
 		title: "Level up !",
 		message: "{{name}} a grandi ! Votre intelligence artificielle dispose d’assez de données pour pouvoir analyser les nouvelles informations que vous lui soumettez et adapter son comportement et ses prédictions à toutes les situations. Mais comme un adolescent, elle a besoin de tester ses limites.",
-		image: "robot-juriste-adulte.png",
+		image: "robot-juriste-ado-adulte.gif",
 	},
 //
 
@@ -689,11 +688,12 @@ const juriste = [
 	{
 		title: "La justice 2.0 vous tend les bras !",
 		message: "Vous avez su entraîner {{name}} pour que l’intelligence artificielle soit techniquement performante et moralement irréprochable... ou presque.",
-		image: "robot-juriste-gagne.png",
+		image: "robot-juriste-gagnant.gif",
 	},
 	{
 		title: "La justice 2.0 vous tend les bras !",
 		message: "Si elle est bien maîtrisée, l’intelligence artificielle peut être très utile à la justice, notamment pour désengorger les tribunaux.",
+		image: "robot-juriste-gagnant.gif",
 	},	
 
 // Défaite
@@ -701,12 +701,12 @@ const juriste = [
 	{
 		title: "La justice 2.0, ce n’est pas pour tout de suite...",
 		message: "{{name}} n’est pas encore assez performant au niveau technique, et certains de vos choix «moraux» nuisent à l’équité des jugements rendus.",
-		image: "robot-musicien-perdu.png",
+		image: "robot-musicien-echec.gif",
 	},
 	{
 		title: "La justice 2.0, ce n’est pas pour tout de suite...",
 		message: "Pour utiliser l’intelligence artificielle dans le domaine de la justice, il faut d'abord que l’algorithme et les bases de données soient irréprochables.",
-		image: "robot-musicien-perdu.png",
+		image: "robot-musicien-echec.gif",
 	},	
 
 ]
