@@ -9,7 +9,7 @@
 					 </br>
 					Graphisme : Julie Zentkowski
 					 </br>
-					 Merci tout particulièrement à Jules Bonnard et Pierre Romera de l'AFP pour leur aide précieuse en code
+					 Merci tout particulièrement à Jules Bonnard et Pierre Romera pour leur aide précieuse en code.
 					 </br>
 					Remerciements : Google Maps, © 2017
 				</p>
@@ -106,7 +106,7 @@
 					 Graphisme : Julie Zentkowski
 					 </br>
 					 </br>
-					 Merci tout particulièrement à Jules Bonnard et Pierre Romera de l'AFP pour leur aide précieuse en code
+					 Merci tout particulièrement à Jules Bonnard et Pierre Romera pour leur aide précieuse en code.
 					 </br>
 					 </br>
 					 Remerciements :
