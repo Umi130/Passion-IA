@@ -5,7 +5,7 @@
 				<p class="lead">Choisissez un profil à faire grandir</p>
 
 				<!-- Info button, feel free to optimize -->
-				<dir id="info" style="cursor:pointer; background: rgba(0, 0, 0, 0) url(./assets/images/element-info.png) no-repeat scroll 0% 0%; height: 20px; width: 20px;background-size: contain;left: 50%;position: relative;"></dir>
+				<dir id="info" style="cursor:pointer; background: rgba(0, 0, 0, 0) url(./assets/images/element-info.png) no-repeat scroll 0% 0%; height: 20px; width: 20px;background-size: contain;left: 49.7%;position: relative;"></dir>
 
 				<!-- Modal for informations informations -->
 				<!-- The Modal -->
