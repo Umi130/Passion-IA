@@ -105,7 +105,7 @@ const juriste = [
 	},	
 
 	{
-		message: "Ne pas définir de genre pour votre algorithme vous autorise à un peu plus de fantaisie. «Au lieu de commencer par se dire, c’est un assistant, donnons-lui une voix de femme, qu’est ce qui nous empêche de lui donner une voix d’animal, par exemple, ou un truc qui ne ressemble à rien de réel, mais qui soit fun ?» explique Dipty Chander, présidente de l’association E-mma qui promeut la mixité dans le domaine du numérique.",
+		message: "«On leur adjoint des problèmes humains : on associe par exemple le travail d’assistant à celui de femmes, résultat, tous les assistants virtuels ont des noms féminins...»",
 		image: "experts-dipty.jpg",
 		when: answers => answers.name === "Agatha"
 	},
@@ -248,7 +248,7 @@ const juriste = [
 // Robot devient enfant
 	{
 		title: "Level up !",
-		message: "{{name}} a grandi ! L’algorithme, c’est l’embryon de l’intelligence artificielle, son cerveau. Comme celui d’un bébé à la naissance, il est fonctionnel, mais pas encore prêt à interagir de manière autonome avec son environnement.",
+		message: "{{name}} a grandi ! C’est en écoutant les adultes qu’un bébé apprend à parler. Une fois que l’intelligence artificielle dispose d’une première base de donnée, elle peut commencer à apprendre d’elle-même; comme un enfant qui entre à l’école.",
 		image: "robot-juriste-bebe-enfant.gif",
 	},
 //
@@ -392,7 +392,7 @@ const juriste = [
 // Robot devient ado
 	{
 		title: "Level up !",
-		message: "{{name}} a grandi ! C’est en écoutant les adultes qu’un bébé apprend à parler. Une fois que l’intelligence artificielle dispose d’une première base de donnée, elle peut commencer à apprendre d’elle-même; comme un enfant qui entre à l’école.",
+		message: "{{name}} a grandi ! Votre intelligence artificielle dispose d’assez de données pour pouvoir analyser les nouvelles informations que vous lui soumettez et adapter son comportement et ses prédictions à toutes les situations. Mais comme un adolescent, elle a besoin de tester ses limites. ",
 		image: "robot-juriste-enfant-ado.gif",
 	},
 //
@@ -475,7 +475,7 @@ const juriste = [
 // Robot devient adulte
 	{
 		title: "Level up !",
-		message: "{{name}} a grandi ! Votre intelligence artificielle dispose d’assez de données pour pouvoir analyser les nouvelles informations que vous lui soumettez et adapter son comportement et ses prédictions à toutes les situations. Mais comme un adolescent, elle a besoin de tester ses limites.",
+		message: "{{name}} a grandi ! Votre intelligence artificielle est fonctionnelle. Pendant la phase d’apprentissage, nous avons mis de côté les questions éthiques. Mais avec l’autonomie vient aussi les responsabilités morales auxquelles les jeunes adultes sont confrontés.",
 		image: "robot-juriste-ado-adulte.gif",
 	},
 //
