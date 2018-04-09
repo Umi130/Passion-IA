@@ -2,16 +2,17 @@
 	<main>
 		<header class="container text-center mt-4">
 				<h2>L'école des Intelligences Artificielles</h2>
-				<p class="lead">Choisissez un profil à faire grandir</p>
-
-				<!-- Info button, feel free to optimize -->
-				<dir id="info" style="cursor:pointer; background: rgba(0, 0, 0, 0) url(./assets/images/element-info.png) no-repeat scroll 0% 0%; height: 20px; width: 20px;background-size: contain;left: 49.7%;position: relative;"></dir>
+				<p class="lead">
+					Choisissez un profil à faire grandir
+					<a class="about-btn" @click="showModal">
+						<img src="./assets/images/element-info.png" alt="About"/>
+					</a>
+				</p>
 
 				<!-- Modal for informations informations -->
 				<!-- The Modal -->
-				<div id="modalInfo" class="modal">
-
-				  <!-- Modal content -->
+				<div id="modalInfo" class="modal" v-if="withModal">
+				  	<!-- Modal content -->
 					<div class="modal-content">
 				    	<p><strong>«Machine learning», «réseaux de neurones», «traitement automatique du langage»... Difficile d’expliquer simplement le fonctionnement d’un algorithme !</strong></p>
 						<p>Ce jeu vous propose de devenir «éleveur de robot», pour mieux comprendre le fonctionnement d’une IA.</p>
@@ -46,10 +47,6 @@
 				<p><img :src="imageFor('juriste')" alt="Symbole Juriste" class="img-fluid" /></p>
 				<p>Juge</p>
 			</div>
-<!--			<div :class="{ active: story === 'assistant' }" @click="story = 'assistant'">
-				<p><img :src="imageFor('assistant')" alt="Symbole Assistant" class="img-fluid" /></p>
-				<p>Assistant</p>
-			</div> -->
 		</footer>
 	</main>
 </template>
@@ -58,12 +55,19 @@
 module.exports = {
 	data: function() {
 		return {
-			story: null
+			story: null,
+			withModal: false
 		}
 	},
 	methods: {
 		imageFor: function(name) {
 			return './assets/images/' + name + (name === this.story ? '-select.png' : '.png')
+		},
+		showModal: function() {
+			this.withModal = true
+		},
+		closeModal: function() {
+			this.withModal = false
 		}
 	},
 	computed: {
@@ -75,27 +79,13 @@ module.exports = {
 		}
 	},
 	mounted: function() {
-		// Adding JS for modale
-		// Get the modal
-		var modal = document.getElementById('modalInfo');
-		// Get the button that opens the modal
-		var btn = document.getElementById("info");
-		// Get the <span> element that closes the modal
-		var span = document.getElementsByClassName("close")[0];
-		// When the user clicks on the button, open the modal 
-		btn.onclick = function() {
-		  modal.style.display = "block";
-		}
-		// When the user clicks on <span> (x), close the modal
-		span.onclick = function() {
-		  modal.style.display = "none";
-		}
 		// When the user clicks anywhere outside of the modal, close it
-		window.onclick = function(event) {
-		  if (event.target == modal) {
-		    modal.style.display = "none";
+		window.onclick = (function(event) {
+		  if (event.target == document.getElementById('modalInfo')) {
+		  	this.closeModal()
+		    this.$nextTick()
 		  }
-		}
+		}).bind(this)
 	}
 }
 
@@ -139,5 +129,9 @@ module.exports = {
 
 	#parcours div:hover img, #parcours div.active img {
 		transform: scale(1.1);
+	}
+
+	.about-btn img {
+		width: 18px;
 	}
 </style>
