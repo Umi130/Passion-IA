@@ -352,7 +352,7 @@ const musicien = [
 // Robot devient enfant
 	{
 		title: "Level up !",
-		message: "{{name}} a grandi ! C’est en écoutant les adultes qu’un bébé apprend à parler. Une fois que l’intelligence artificielle dispose d’une première base de donnée, elle peut commencer à apprendre d’elle-même; comme un enfant qui entre à l’école.",
+		message: "{{name}} a grandi ! C’est en écoutant les adultes qu’un bébé apprend à parler. Une fois que l’intelligence artificielle dispose d’une première base de donnée, elle peut commencer à apprendre d’elle-même, comme un enfant qui entre à l’école.",
 		image: "robot-musicien-bebe-enfant.gif",
 		when: answers => answers.choice_mode_composition === "Celle de François Pachet",
 	},
@@ -740,7 +740,7 @@ const musicien = [
 // Robot devient enfant
 	{
 		title: "Level up !",
-		message: "{{name}} a grandi ! C’est en écoutant les adultes qu’un bébé apprend à parler. Une fois que l’intelligence artificielle dispose d’une première base de donnée, elle peut commencer à apprendre d’elle-même; comme un enfant qui entre à l’école.",
+		message: "{{name}} a grandi ! C’est en écoutant les adultes qu’un bébé apprend à parler. Une fois que l’intelligence artificielle dispose d’une première base de donnée, elle peut commencer à apprendre d’elle-même, comme un enfant qui entre à l’école.",
 		image: "robot-musicien-bebe-enfant.gif",
 		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
 	},
