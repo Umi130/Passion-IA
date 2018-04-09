@@ -8,7 +8,7 @@ const conducteur = [
 	{
 		title: "58 000 accidents de voitures ont lieu chaque année",
 		message: "Cela fait plus de 3 000 victimes. Vous voulez changer les choses !",
-		image: "robot-conducteur-dodo.png",
+		image: "robot-conducteur-cle-anime.gif",
 	},
 	{
 		title: "93 % des accidents sont causés par une erreur humaine",
@@ -78,7 +78,7 @@ const conducteur = [
 
 	{
 		message: "Un prénom masculin peut participer à entretenir les préjugés selon lesquels l’automobile est réservée aux hommes.",
-		image: "robot-conducteur-bebe.png",
+		image: "robot-conducteur-cle-anime.gif",
 		when: answers => answers.name === "Hubert"
 	},	
 
@@ -163,7 +163,7 @@ const conducteur = [
 
 	{
 		message: "{{name}} doit maintenant passer par cette étape de «labelling». On essaye ?",
-		image: "robot-conducteur-bebe.png",
+		image: "robot-conducteur-cle-anime.gif",
 	},
 
 //////////////
@@ -445,7 +445,7 @@ const conducteur = [
 	{
 		title: "La physique est importante pour l'intelligence artificielle des voitures",
 		message: "Sa compréhension permet d’anticiper la trajectoire des véhicules alentours.",
-		image: "robot-conducteur-enfant.png",
+		image: "robot-conducteur-cle-anime.gif",
 	},
 	{
 		message: "Mettons qu'un camion derrière vous aille trop vite pour pouvoir s’arrêter en cas de freinage d’urgence. {{name}} pourra alors choisir de se déporter.",
@@ -1030,7 +1030,7 @@ const conducteur = [
 		when: answers => answers.choice_responsabilite === "Refus de responsabilité",
 	},
 	{
-		title: "Un coup dur pour l'industrie du véhicule autonome...",
+		title: "Un coup dur pour l’industrie du véhicule autonome...",
 		message: "Les constructeurs ont mis en pause leurs tests et l’opinion du public sur les voitures automatiques est maintenant négative.",
 		image: "robot-conducteur-adulte-etonne.png",
 		when: answers => answers.choice_responsabilite === "Refus de responsabilité",
@@ -1043,7 +1043,7 @@ const conducteur = [
 
 	{
 		message: "Puisque vous avez décidé de prendre vos responsabilités, vous allez avoir besoin d’avocats pour vous défendre.",
-		image: "robot-conducteur-adulte.png",
+		image: "robot-conducteur-cle-anime.gif",
 		when: answers => answers.choice_responsabilite !== "Refus de responsabilité",
 	},
 	{
@@ -1108,7 +1108,7 @@ const conducteur = [
 	{
 		title: "Votre score",
 		message: "Mais avant de penser à tout cela, voyons si votre véhicule pourrait rouler, en fonction de vos réponses tout au long du parcours.",
-		image: "robot-conducteur-adulte.png",
+		image: "robot-conducteur-cle-anime.gif",
 	},
 
 /// Victoire

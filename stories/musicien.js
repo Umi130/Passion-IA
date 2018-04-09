@@ -39,7 +39,7 @@ const musicien = [
 	{
 		title: "Un algo-rythme ?",
 		message: "Non, rien à voir avec le tempo. Un algorithme ce sont les instructions qui commandent un programme informatique.",
-		image: "experts-musicien-meier.jpg",
+		image: "robot-musicien-guitare-anime.gif",
 	},
 
 	{
@@ -148,7 +148,7 @@ const musicien = [
 	{
 		title: "Vous décidez de tester l'algorithme...",
 		message: "Il vous suffit de rentrer la durée du morceau que {{name}} doit composer. Vous tentez : 4 minutes et 33 secondes.",
-		image: "robot-musicien-bebe.png",
+		image: "robot-musicien-guitare-anime.gif",
 	},
 
 
@@ -745,7 +745,7 @@ const musicien = [
 	{
 		title: "Reconnaître des sons",
 		message: "Mais Prokofiev n'avait pas d'algorithme à sa disposition. Et si on apprenait à {{name}} à reconnaître toutes sortes de sons pour les mélanger à des sonorités instrumentales ?",
-		image: "element-son.png",
+		image: "robot-musicien-guitare-anime.gif",
 		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
 	},
 
@@ -919,7 +919,7 @@ const musicien = [
 
 	{
 		message: "Cette technique est beaucoup plus lente que lorsque la machine apprend à partir de partitions puisque les ondes sonores sont plus longues à analyser.",
-		image: "robot-musicien-ado.png",
+		image: "robot-musicien-guitare-anime.gif",
 		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
 	},
 
@@ -1131,7 +1131,7 @@ const musicien = [
 	{
 		title: "Composer 100 chansons de bonne qualité vous semble difficilement réalisable...",
 		message: "Si la radio vous presse et que vous manquez de temps, vous ne serez sans doute pas fier de l’intégralité de vos morceaux.",
-		image: "robot-musicien-adulte-etonne.png",
+		image: "robot-musicien-guitare-anime.gif",
 		when: answers => answers.musicien_commanderadio === "Vous l’acceptez",
 	},			
 
@@ -1159,7 +1159,7 @@ const musicien = [
 	{
 		title: "Composer 100 chansons de bonne qualité vous semble difficilement réalisable...",
 		message: "Si la radio vous presse et que vous manquez de temps, vous ne serez sans doute pas fier de l’intégralité de vos morceaux.",
-		image: "robot-musicien-adulte.png",
+		image: "robot-musicien-guitare-anime.gif",
 		when: answers => answers.musicien_commanderadio === "Vous la refusez",
 	},
 	{
@@ -1185,7 +1185,7 @@ const musicien = [
 	{
 		title: "Votre score",
 		message: "À la lumière des choix que vous avez effectués, essayons de définir le type d’artiste que vous seriez si vous travailliez avec l’intelligence artificielle.",
-		image: "robot-musicien-adulte.png",
+		image: "robot-musicien-guitare-anime.gif",
 	},
 
 // Victoire
