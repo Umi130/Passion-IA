@@ -107,13 +107,13 @@ const conducteur = [
 	},	
 
 	{
-		message: "Votre robot, contrairement à un bébé, n’est pas genré. Le nom que vous lui avez choisi, lui, l’est. Il définit donc la manière dont le robot sera perçu par les utilisateurs et le public.",
+		message: "Votre robot, contrairement à un bébé, n’est pas genré. Le nom que vous lui avez choisi, lui, l’est. Il définit donc la manière dont le robot sera perçu par les utilisateurs et le public. Ne pas définir de genre pour votre algorithme vous autorise à un peu plus de fantaisie.",
 		image: "robot-conducteur-bebe.png",
 		when: answers => answers.name === "Botmobile"
 	},	
 
 	{
-		message: "Ne pas définir de genre pour votre algorithme vous autorise à un peu plus de fantaisie. «Au lieu de commencer par se dire, c’est un assistant, donnons-lui une voix de femme, qu’est-ce qui nous empêche de lui donner une voix d’animal, par exemple, ou un truc qui ne ressemble à rien de réel, mais qui soit fun ?» explique Dipty Chander, présidente de l’association E-mma qui promeut la mixité dans le domaine du numérique.",
+		message: "«Au lieu de commencer par se dire, c’est un assistant, donnons-lui une voix de femme, qu’est-ce qui nous empêche de lui donner une voix d’animal, par exemple, ou un truc qui ne ressemble à rien de réel, mais qui soit fun ?» explique Dipty Chander, présidente de l’association E-mma qui promeut la mixité dans le domaine du numérique.",
 		image: "experts-dipty.jpg",
 		when: answers => answers.name === "Botmobile"
 	},	
