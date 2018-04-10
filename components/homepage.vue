@@ -25,7 +25,7 @@
 						Célia Mériguet & Thibaud Vuitton (franceinfo) pour leurs conseils éditoriaux</p>
 						<p><small>© 2018 Tous droits réservés</small></p>
 
-				    	<span class="close">X</span>
+				    	<span class="close" @click="closeModal">X</span>
   					</div>
 				</div>
 		</header>
@@ -140,10 +140,6 @@ module.exports = {
 	.modal-content{
 		width: 650px;
 		}
-	}
-
-
-	@media screen and (min-width: 768px){
    .rwd-break { display: none; }
-}
+	}
 </style>
