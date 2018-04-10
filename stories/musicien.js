@@ -30,7 +30,7 @@ const musicien = [
 	},
 
 	{
-		title: "Vous décidez de créer une musique en vous aidant d'une IA.",
+		title: "Vous décidez de créer une musique avec l'aide d'une IA.",
 		message: "Vous contactez Robin Meier, un musicien qui utilise des programmes informatiques pour composer. Pour la musique du spectacle «La Fabrique des Monstres», il a utilisé un algorithme en accès libre sur Internet.",
 		image: "experts-musicien-meier.jpg",
 	},
@@ -347,7 +347,7 @@ const musicien = [
 		message: "Vous faites appel à un spécialiste pour achever la reconnaissance des notes par {{name}}.",
 		image: "robot-musicien-bebe-etonne.png",
 
-		when: answers => answers.choice_mode_composition == "Celle de François Pachet" && !answers.contextPoints.blanks_minijeu_notes >=1,
+		when: answers => answers.choice_mode_composition == "Celle de François Pachet" && !answers.contextPoints.blanks_minijeu_notes < 1,
 	},
 
 // Robot devient enfant
