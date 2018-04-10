@@ -1173,13 +1173,6 @@ const conducteur = [
 
 ]
 
-//GENERIQUE
 //
+//GENERIQUE DANS credits.vue
 //
-// Graphisme : Julie Zentkowski
-// 
-// Merci tout particulièrement à Jules Bonnard et Pierre Romera de l'AFP pour leur aide précieuse en code
-//
-//
-// Remerciements : 
-// Google Maps, © 2017
