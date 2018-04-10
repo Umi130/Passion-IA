@@ -28,6 +28,12 @@
 
 module.exports = {
 	name: 'musicien',
+	beforeRouteEnter (to, from, next) {
+		if (parseInt(to.params.step) === 0) {
+			localStorage.removeItem('passion-ia-musicien')
+		}
+		next()	
+},	
 	components: {
 		Explanation: httpVueLoader('./explanation.vue'),
 		Illustration: httpVueLoader('./illustration.vue'),
@@ -39,7 +45,9 @@ module.exports = {
 		return {
 			story: musicien,
 			answers: {
-				points: 0
+				points: 0,
+				lastStep: 0,
+				contextPoints: { }
 			}
 		}
 	},
