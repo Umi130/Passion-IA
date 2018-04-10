@@ -363,7 +363,7 @@ const conducteur = [
 	},
 	{
 		name: "peopleonroad",
-		title: "Des personnes sont-elles sur la route ? (5/7)",
+		title: "Des personnes sont-elles sur la route ?",
 		message: "Score : {{peopleonroad}}  |  Étape 5/7",
 		largeimage: "robot-conducteur-reconnaitre-route-5.jpg",
 		yesno: {
@@ -373,7 +373,7 @@ const conducteur = [
 	},
 	{
 		name: "peopleonroad",
-		title: "Des personnes sont-elles sur la route ? (6/7)",
+		title: "Des personnes sont-elles sur la route ?",
 		message: "Score : {{peopleonroad}}  |  Étape 6/7",
 		largeimage: "robot-conducteur-reconnaitre-route-6.jpg",
 		yesno: {
@@ -383,7 +383,7 @@ const conducteur = [
 	},
 	{
 		name: "peopleonroad",
-		title: "Des personnes sont-elles sur la route ? (7/7)",
+		title: "Des personnes sont-elles sur la route ?",
 		message: "Score : {{peopleonroad}}  |  Étape 7/7",
 		largeimage: "robot-conducteur-reconnaitre-route-7.jpg",
 		yesno: {
