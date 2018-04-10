@@ -22,7 +22,7 @@ const conducteur = [
 		image: "experts-conducteur-coelingh.jpg",
 	},
 	{
-		message: "Erik Coelingh vous explique qu’avant de commencer à travailler sur la voiture proprement dite, vous devez fabriquer son «cerveau», l’algorithme. ",
+		message: "Erik Coelingh vous explique qu’avant de commencer à travailler sur la voiture proprement dite, vous devez fabriquer son «cerveau», l’algorithme.",
 		image: "experts-conducteur-coelingh.jpg",
 	},
 
@@ -301,7 +301,7 @@ const conducteur = [
 // Robot devient enfant
 	{
 		title: "Level up !",
-		message: "{{name}} a grandi ! C’est en écoutant les adultes qu’un bébé apprend à parler. Une fois que l’intelligence artificielle dispose d’une première base de donnée, elle peut commencer à apprendre d’elle-même, comme un enfant qui entre à l’école.",
+		message: "{{name}} a grandi ! C’est en écoutant les adultes qu’un bébé apprend à parler. Une fois que l’IA dispose d’une première base de données, elle peut commencer à apprendre d’elle-même, comme un enfant qui entre à l’école.",
 		image: "robot-conducteur-bebe-enfant.gif",
 	},
 //

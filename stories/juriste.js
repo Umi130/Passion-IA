@@ -332,7 +332,7 @@ const juriste = [
 			{
 				"value": "word_1",
 				"type": "input",
-				"answers": ['embauchée', 'embauchee', 'engagée', 'engagee' 'recrutée', 'recrutee', 'Embauchée', 'Engagée', 'Recrutée', 'embauchée ', 'engagée ', 'recrutée ', 'Embauchée ', 'Engagée ', 'Recrutée ']
+				"answers": ['embauchée', 'embauchee', 'engagée', 'engagee', 'recrutée', 'recrutee', 'Embauchée', 'Engagée', 'Recrutée', 'embauchée ', 'engagée ', 'recrutée ', 'Embauchée ', 'Engagée ', 'Recrutée ']
 			},
 			{
 				"value": " en 2013.",

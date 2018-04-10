@@ -95,7 +95,7 @@
 						Refaire une partie
 					</router-link>
 				</div>
-					<p><br>Partagez votre intelligence artificielle<br class="rwd-break"> avec vos amis !</p>
+					<p><br>Partagez votre intelligence artificielle<br> avec vos amis !</p>
 				<social-sharing inline-template class="mb-4">
 					<div>
 						<network network="facebook" class="btn btn-sm btn-default cursorhere">
@@ -173,6 +173,5 @@ module.exports = {
     	transform: translateY(-100%);
   	}
 
- .rwd-break { display: none; }
  }
 </style>
