@@ -347,7 +347,7 @@ const musicien = [
 		message: "Vous faites appel à un spécialiste pour achever la reconnaissance des notes par {{name}}.",
 		image: "robot-musicien-bebe-etonne.png",
 
-		when: answers => answers.choice_mode_composition == "Celle de François Pachet" && !answers.contextPoints.blanks_minijeu_notes < 1,
+		when: answers => answers.choice_mode_composition == "Celle de François Pachet" && !answers.contextPoints.blanks_minijeu_notes >= 1,
 	},
 
 // Robot devient enfant
@@ -475,7 +475,7 @@ const musicien = [
 		message: "Vous avez un score de {{ contextPoints.blanks_minijeu_notes }} sur 5. Vous avez réussi l’étape de labellisation des symboles musicaux. Quelle efficacité !",
 		image: "robot-musicien-enfant.png",
 
-		when: answers => answers.choice_mode_composition === "Celle de François Pachet" && answers.contextPoints.blanks_minijeu_notes >= 3,
+		when: answers => answers.choice_mode_composition == "Celle de François Pachet" && answers.contextPoints.blanks_minijeu_notes >= 3,
 	},
 // MINI JEU NOTES + PARTITIONS COMPTE SCORE SUR 5
 // ECHEC
@@ -484,7 +484,7 @@ const musicien = [
 		message: "Vous n’avez qu’un score de {{ contextPoints.blanks_minijeu_notes }} sur 5. Vos données ont besoin d’être mieux labellisées. Heureusement, vous avez fait appel à un musicologue pour vous aider.",
 		image: "robot-musicien-enfant-etonne.png",
 
-		when: answers => answers.choice_mode_composition === "Celle de François Pachet" && answers.contextPoints.blanks_minijeu_notes < 3,
+		when: answers => answers.choice_mode_composition == "Celle de François Pachet" && !answers.contextPoints.blanks_minijeu_notes >= 3,
 	},
 
 	{
@@ -516,7 +516,7 @@ const musicien = [
 // Robot devient ado
 	{
 		title: "Level up !",
-		message: "{{name}} a grandi ! Votre intelligence artificielle dispose d’assez de données pour pouvoir analyser les nouvelles informations que vous lui soumettez et adapter son comportement et ses prédictions à toutes les situations. Mais comme un adolescent, elle a besoin de tester ses limites. Et il abandonne la musique classique...",
+		message: "{{name}} a grandi ! Votre IA dispose d’assez de données pour pouvoir analyser les informations que vous lui soumettez et adapter son comportement à toutes les situations. Mais comme un adolescent, elle a besoin de tester ses limites. Et elle abandonne la musique classique...",
 		image: "robot-musicien-enfant-ado.gif",
 
 		when: answers => answers.choice_mode_composition === "Celle de François Pachet",
@@ -533,7 +533,7 @@ const musicien = [
 
 	{
 		title: "Voici le résultat obtenu par François Pachet",
-		message: "et par son équipe lorsqu'ils ont demandé à l'IA de composer un morceau dans le style des Beatles. La partition a été arrangée pour être interprétée.",
+		message: "et par son équipe lorsqu'ils ont demandé à l'IA de composer un morceau dans le style des Beatles. La partition a été arrangée avant d’être interprétée.",
 		music: {
 			controls: true,
 			src: "robot-musicien-beatles.mp3",
@@ -710,14 +710,14 @@ const musicien = [
 		title: "C’est un succès !",
 		message: "Avec un score de {{contextPoints.minijeu_instruments}} sur 3, vous avez pu vous constituer une bibliothèque de sons que vous allez pouvoir mélanger pour créer de nouveaux instruments.",
 		image: "robot-musicien-bebe.png",
-		when: answers => answers.choice_mode_composition === "Celle de Robin Meier" && answers.contextPoints.minijeu_instruments >= 2,
+		when: answers => answers.choice_mode_composition == "Celle de Robin Meier" && answers.contextPoints.minijeu_instruments >= 2,
 	},
 // Mauvaise réponse
 	{	
 		title: "C’est plutôt un échec...",
 		message: "Avec un score de {{contextPoints.minijeu_instruments}} sur 3, il va vous falloir passer un peu plus de temps sur la labellisation des instruments pour que votre bibliothèque soit complète.",
 		image: "robot-musicien-bebe-etonne.png",
-		when: answers => answers.choice_mode_composition === "Celle de Robin Meier" && answers.contextPoints.minijeu_instruments < 2,
+		when: answers => answers.choice_mode_composition == "Celle de Robin Meier" && answers.contextPoints.minijeu_instruments < 2,
 	},
 
 	{	
@@ -741,7 +741,7 @@ const musicien = [
 // Robot devient enfant
 	{
 		title: "Level up !",
-		message: "{{name}} a grandi ! C’est en écoutant les adultes qu’un bébé apprend à parler. Une fois que l’intelligence artificielle dispose d’une première base de donnée, elle peut commencer à apprendre d’elle-même, comme un enfant qui entre à l’école.",
+		message: "{{name}} a grandi ! C’est en écoutant les adultes qu’un bébé apprend à parler. Une fois que l’IA dispose d’une première base de données, elle peut commencer à apprendre d’elle-même, comme un enfant qui entre à l’école.",
 		image: "robot-musicien-bebe-enfant.gif",
 		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
 	},
@@ -887,7 +887,7 @@ const musicien = [
 // Robot devient ado
 	{
 		title: "Level up !",
-		message: "{{name}} a grandi ! Votre intelligence artificielle dispose d’assez de données pour pouvoir analyser les nouvelles informations que vous lui soumettez et adapter son comportement et ses prédictions à toutes les situations. Mais comme un adolescent, elle a besoin de tester ses limites.",
+		message: "{{name}} a grandi ! Votre IA dispose d’assez de données pour pouvoir analyser les informations que vous lui soumettez et adapter son comportement à toutes les situations. Mais comme un adolescent, elle a besoin de tester ses limites.",
 		image: "robot-musicien-enfant-ado.gif",
 
 		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
@@ -895,7 +895,7 @@ const musicien = [
 //
 
 	{
-		title: "Vous utilisez AI Experiments (le logiciel de Google) à nouveau",
+		title: "Vous utilisez AI Experiments, le logiciel de Google, à nouveau",
 		message: "Voici le mélange du son d’un chat et celui d’une harpe. Plutôt prometteur, non ?",
 		music: {
 			controls: true,
@@ -972,7 +972,7 @@ const musicien = [
 // Robot devient adulte
 	{
 		title: "Level up !",
-		message: "{{name}} a grandi ! Votre intelligence artificielle est fonctionnelle. Pendant la phase d’apprentissage, nous avons mis de côté les questions éthiques. Mais avec l’autonomie vient aussi les responsabilités morales auxquelles les jeunes adultes sont confrontés.",
+		message: "{{name}} a grandi ! Votre IA est fonctionnelle. Pendant la phase d’apprentissage, nous avons mis de côté les questions éthiques. Mais avec l’autonomie vient aussi les responsabilités morales auxquelles les jeunes adultes sont confrontés.",
 		image: "robot-musicien-ado-adulte.gif",
 	},
 //
@@ -992,7 +992,7 @@ const musicien = [
 // Génération de pochette
 	{
 		name: "choix_pochettealbum",
-		message: "Vous choisissez",
+		title: "Vous choisissez",
 		choices: [
 			{
 				"value": " ",
@@ -1046,7 +1046,7 @@ const musicien = [
 		choices: [
 			{
 				"value": "Créditer l'algorithme",
-				"description": "à la manière de François Pachet et son équipe sur l’album «Hello Shadow",
+				"description": "à la manière de François Pachet et son équipe sur l’album «Hello Shadow»",
 				"points": 0
 			},
 			{
@@ -1219,7 +1219,7 @@ const musicien = [
 // Compte des points perdus inférieur à 4
 	{
 		title: "Artiste incompris",
-		message: "Avec {{points}} points sur un total de 6, vous n’avez pas su apprendre à l’algorithme à reconnaître les sons, les notes ou la structure d’un morceau… Les résultats produits par la machine risquent d’être… originaux. Vous ne composerez peut-être pas le prochain tube planétaire, mais votre musique aura l’avantage d’être… différente !",
+		message: "Avec {{points}} points sur un total de 6, vous n’avez pas su apprendre à l’algorithme à reconnaître les sons, les notes ou la structure d’un morceau : les résultats produits par la machine risquent d’être... originaux. Vous ne composerez pas le prochain tube planétaire, mais votre musique aura l’avantage d’être... différente !",
 		image: "robot-musicien-echec.gif",
 		when: answers => answers.points < 4,		
 	},

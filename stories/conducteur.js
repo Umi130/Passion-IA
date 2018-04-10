@@ -459,7 +459,7 @@ const conducteur = [
 // Robot devient ado
 	{
 		title: "Level up !",
-		message: "{{name}} a grandi ! Votre intelligence artificielle dispose d’assez de données pour pouvoir analyser les nouvelles informations que vous lui soumettez et adapter son comportement et ses prédictions à toutes les situations. Mais comme un adolescent, elle a besoin de tester ses limites.",
+		message: "{{name}} a grandi ! Votre IA dispose d’assez de données pour pouvoir analyser les informations que vous lui soumettez et adapter son comportement à toutes les situations. Mais comme un adolescent, elle a besoin de tester ses limites.",
 		image: "robot-conducteur-enfant-ado.gif",
 	},
 //
@@ -978,7 +978,7 @@ const conducteur = [
 // Robot devient adulte
 	{
 		title: "Level up !",
-		message: "{{name}} a grandi ! Votre intelligence artificielle est fonctionnelle. Pendant la phase d’apprentissage, nous avons mis de côté les questions éthiques. Mais avec l’autonomie vient aussi les responsabilités morales auxquelles les jeunes adultes sont confrontés.",
+		message: "{{name}} a grandi ! Votre IA est fonctionnelle. Pendant la phase d’apprentissage, nous avons mis de côté les questions éthiques. Mais avec l’autonomie vient aussi les responsabilités morales auxquelles les jeunes adultes sont confrontés.",
 		image: "robot-conducteur-ado-adulte.gif",
 	},
 //

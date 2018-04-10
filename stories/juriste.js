@@ -174,7 +174,7 @@ const juriste = [
 
 //Si choix - Tous les articles de loi
 	{	
-		title: "C'est un mauvais choix...",
+		title: "C’est un mauvais choix...",
 		message: "Pour comprendre pourquoi, étudions un nouveau dossier.",
 		image: "robot-juriste-bebe-etonne.png",
 		when: answers => answers.choice_premiereslois === 'Tous les articles de loi'
@@ -182,7 +182,7 @@ const juriste = [
 
 	{	
 		title: "Deuxième dossier",
-		message: "Vous soumettez un dossier de votre pile pour tester {{ name }}. M. Husson a été victime d'un licenciement abusif après avoir travaillé 10 ans dans une entreprise de télécommunication.",
+		message: "Vous soumettez un dossier de votre pile pour tester {{ name }}. M. Husson a été victime d’un licenciement abusif après avoir travaillé 10 ans dans une entreprise de télécommunication.",
 		image: "robot-juriste-marteau-anime.gif",
 		when: answers => answers.choice_premiereslois === 'Tous les articles de loi'
 	},
@@ -199,7 +199,7 @@ const juriste = [
 		when: answers => answers.choice_premiereslois === 'Tous les articles de loi',
 	},
 	{
-		message: "En donnant à l'algorithme trop de textes de lois et trop de jurisprudence, vous prenez le risque de prendre en compte des dossiers trop différents de celui que vous souhaitez analyser.",
+		message: "En donnant à l’algorithme trop de textes de lois et trop de jurisprudence, vous prenez le risque de prendre en compte des dossiers trop différents de celui que vous souhaitez analyser.",
 		image: "robot-juriste-bebe.png",
 		when: answers => answers.choice_premiereslois === 'Tous les articles de loi',
 	},
@@ -211,7 +211,7 @@ const juriste = [
 
 //Si choix - Que des décisions similaires
 	{	
-		title: "C'est un bon choix...",
+		title: "C’est un bon choix...",
 		message: "Pour comprendre pourquoi, étudions un nouveau dossier.",
 		image: "robot-juriste-bebe.png",
 		when: answers => answers.choice_premiereslois !== 'Tous les articles de loi'
@@ -225,13 +225,13 @@ const juriste = [
 	},
 
 	{
-		title: "Résultat de l'algorithme :",
-		message: "M. Husson devrait recevoir trois mois de salaire brut en indemnités. C'est un résultat précis... mais vous vous rendez compte que {{name}} n'a pas tenu compte de la zone géographique de votre cour.",
+		title: "Résultat de l’algorithme :",
+		message: "M. Husson devrait recevoir trois mois de salaire brut en indemnités. C’est un résultat précis... mais vous vous rendez compte que {{name}} n'a pas tenu compte de la zone géographique de votre cour.",
 		image: "robot-juriste-bebe-etonne.png",
 		when: answers => answers.choice_premiereslois !== 'Tous les articles de loi',
 	},
 	{
-		message: "Vous auriez eu tendance à lui attribuer une indemnité d'au moins 6 mois de salaire brut puisque le chômage est plus élevé dans votre région.",
+		message: "Vous auriez eu tendance à lui attribuer une indemnité d’au moins 6 mois de salaire brut puisque le chômage est plus élevé dans votre région.",
 		image: "robot-juriste-bebe.png",
 		when: answers => answers.choice_premiereslois !== 'Tous les articles de loi',
 	},
@@ -247,7 +247,7 @@ const juriste = [
 // Robot devient enfant
 	{
 		title: "Level up !",
-		message: "{{name}} a grandi ! C’est en écoutant les adultes qu’un bébé apprend à parler. Une fois que l’intelligence artificielle dispose d’une première base de donnée, elle peut commencer à apprendre d’elle-même, comme un enfant qui entre à l’école.",
+		message: "{{name}} a grandi ! C’est en écoutant les adultes qu’un bébé apprend à parler. Une fois que l’IA dispose d’une première base de données, elle peut commencer à apprendre d’elle-même, comme un enfant qui entre à l’école.",
 		image: "robot-juriste-bebe-enfant.gif",
 	},
 //
@@ -332,7 +332,7 @@ const juriste = [
 			{
 				"value": "word_1",
 				"type": "input",
-				"answers": ['embauchée', 'engagée', 'recrutée', 'Embauchée', 'Engagée', 'Recrutée', 'embauchée ', 'engagée ', 'recrutée ', 'Embauchée ', 'Engagée ', 'Recrutée ']
+				"answers": ['embauchée', 'embauchee', 'engagée', 'engagee' 'recrutée', 'recrutee', 'Embauchée', 'Engagée', 'Recrutée', 'embauchée ', 'engagée ', 'recrutée ', 'Embauchée ', 'Engagée ', 'Recrutée ']
 			},
 			{
 				"value": " en 2013.",
@@ -391,7 +391,7 @@ const juriste = [
 // Robot devient ado
 	{
 		title: "Level up !",
-		message: "{{name}} a grandi ! Votre intelligence artificielle dispose d’assez de données pour pouvoir analyser les nouvelles informations que vous lui soumettez et adapter son comportement et ses prédictions à toutes les situations. Mais comme un adolescent, elle a besoin de tester ses limites. ",
+		message: "{{name}} a grandi ! Votre IA dispose d’assez de données pour pouvoir analyser les informations que vous lui soumettez et adapter son comportement à toutes les situations. Mais comme un adolescent, elle a besoin de tester ses limites.",
 		image: "robot-juriste-enfant-ado.gif",
 	},
 //
@@ -404,7 +404,7 @@ const juriste = [
 
 //TODO TABLEAU
 	{
-		title: "Voici deux dossiers similaires... En apparence.",
+		title: "Voici deux dossiers similaires... en apparence.",
 		image: "robot-juriste-dossier-analyse.png",
 	},
 	{
@@ -475,7 +475,7 @@ const juriste = [
 // Robot devient adulte
 	{
 		title: "Level up !",
-		message: "{{name}} a grandi ! Votre intelligence artificielle est fonctionnelle. Pendant la phase d’apprentissage, nous avons mis de côté les questions éthiques. Mais avec l’autonomie vient aussi les responsabilités morales auxquelles les jeunes adultes sont confrontés.",
+		message: "{{name}} a grandi ! Votre IA est fonctionnelle. Pendant la phase d’apprentissage, nous avons mis de côté les questions éthiques. Mais avec l’autonomie vient aussi les responsabilités morales auxquelles les jeunes adultes sont confrontés.",
 		image: "robot-juriste-ado-adulte.gif",
 	},
 //
@@ -554,7 +554,7 @@ const juriste = [
 //Si bonne réponse
 	{
 		title: "Sage décision !",
-		message: "Vous prenez le risque que {{name}} soit modifié, mais l'Open source permettra à chacun d'apprécier les fondements de la décision prise par le juge qui l'utilise. En le rendant gratuit, vous évitez la création de nouvelles inégalités entre les professionnels de la justice qui pourraient se l'offrir et ceux qui ne le pourraient pas.",
+		message: "Vous prenez le risque que {{name}} soit modifié, mais l'Open source permettra à chacun d'apprécier les fondements de la décision prise par le juge qui l'utilise. En le rendant gratuit, vous évitez la création de nouvelles inégalités entre les professionnels qui pourraient se l'offrir et ceux qui ne le pourraient pas.",
 		image: "robot-juriste-adulte.png",
 		when: answers => answers.choice_opensource === 'Le rendre accessible en Open source',
 	},
@@ -617,7 +617,7 @@ const juriste = [
 	{
 		title: "Biais de traitement",
 		message: "Des études montrent également que dans certains domaines du droit, il y a une différence de traitement entre les femmes et les hommes. Les hommes écopent par exemple de peines de prison plus lourdes.",
-		image: "robot-juriste-adulte.png",
+		image: "robot-juriste-adulte-etonne.png",
 	},
 
 	{
@@ -653,7 +653,7 @@ const juriste = [
 //Si mauvaise réponse
 	{
 		title: "Mauvaise réponse !",
-		message: "Si vous voulez utiliser l’intelligence artificielle dans d’autres domaines, il vous faudra répéter cette manipulation à chaque fois que vous trouverez un biais issu de la base de données et mal interprété par le système de traitement automatique du langage. Il vaut mieux anonymiser les données.",
+		message: "Si vous voulez utiliser l’intelligence artificielle dans d’autres domaines, il vous faudra répéter cette manipulation à chaque fois que vous trouverez un biais dans la base de données mal interprété par le système de traitement automatique du langage. Il vaut mieux anonymiser les données.",
 		image: "robot-juriste-adulte-etonne.png",
 		when: answers => answers.choice_indemniteshommefemme_biais !== "Anonymiser les décisions",
 	},
@@ -713,7 +713,7 @@ const juriste = [
 	},
 	{
 		title: "La justice 2.0, ce n’est pas pour tout de suite...",
-		message: "Pour utiliser l’intelligence artificielle dans le domaine de la justice, il faut d'abord que l’algorithme et les bases de données soient irréprochables.",
+		message: "Avant de pouvoir utiliser l’intelligence artificielle dans le domaine de la justice, il faut s’assurer que l’algorithme et les bases de données soient irréprochables.",
 		image: "robot-juriste-echec.gif",
 		when: answers => answers.points < 6,
 	},	
