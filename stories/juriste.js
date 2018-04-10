@@ -1,299 +1,261 @@
+// Tech todo: obsolete illustration.vue
+ 
+// Todo: fond couleur différent programmatique quand faux
+//       (container d-flex flex-column justify-content-center align-items-center)
 
-const conducteur = [
-	{
-		title: "Vous êtes un·e ingénieur·e automobile",
-		message: "Pour la marque Vroumvroum. Depuis toujours, votre rêve est de fabriquer une voiture autonome.",
-		image: "robot-conducteur-dodo.png",
-	},
-	{
-		title: "58 000 accidents de voitures ont lieu chaque année",
-		message: "Cela fait plus de 3 000 victimes. Vous voulez changer les choses !",
-		image: "robot-conducteur-cle-anime.gif",
-	},
-	{
-		title: "93 % des accidents sont causés par une erreur humaine",
-		message: "Pour réduire le nombre de morts, il faudrait pouvoir se passer du problème le plus important dans les voitures : l’humain.",
-		image: "robot-conducteur-dodo.png",
-	},
+// Todo: compte bonne réponses à incrémenter, then show as percentage
 
-	{
-		title: "Vous lancez le projet «voiture autonome» de Vroumvroum !",
-		message: "Vous appelez Erik Coelingh, qui travaille chez Zenuity et fabrique une intelligence artificielle capable de conduire une voiture.",
-		image: "experts-conducteur-coelingh.jpg",
-	},
-	{
-		message: "Erik Coelingh vous explique qu’avant de commencer à travailler sur la voiture proprement dite, vous devez fabriquer son «cerveau», l’algorithme. ",
-		image: "experts-conducteur-coelingh.jpg",
-	},
+// Todo : Blanks to finish (don't shift text box)
+// Todo : votre intelligence artificielle grandit ! when logo changes
+// Todo : valign image robot (image must be anchored on bottom, not top)
+// Todo : bouton SUIVANT ancré en bas
 
-	{
-		title: "Qu'est-ce qu'un algorithme ?",
-		message: "Ce sont les instructions qui commandent un programme informatique. C’est comme une recette de cuisine. Le plat, c’est une conduite autonome, les ingrédients c’est le code de la route.",
-		image: "robot-conducteur-dodo.png",
-	},
+// Todo : add close box to go back to main menu
 
+// Optional Todo : texte devient tableau pour aller à la ligne
+// Optional Todo: Illustrations -- Taille images variable desktop/smartphone?
+
+const juriste = [
 	{
-		message: "L’algorithme, c’est l’embryon de l’intelligence artificielle, son cerveau. Comme celui d’un bébé à la naissance, il est fonctionnel, mais pas encore prêt à interagir de manière autonome avec son environnement.",
-		image: "robot-conducteur-naissance.gif",
+		title: "Vous êtes assis·e à votre bureau...",
+		message: "Vous contemplez la centaine de dossiers en attente de jugement. Vous êtes en charge des affaires de recours en cas de licenciement abusif.",
+		image: "robot-juriste-dodo.png",
+	},
+	{
+		message: "Comme la plupart des tribunaux français, le vôtre est encombré. Vous avez entendu parler d’outils d'intelligence artificielle (IA) pour traiter plus rapidement des dossiers.",
+		image: "robot-juriste-dodo.png",
+	},
+	{
+		message: "Vous vous inspirez de Case Law Analytics et de Predictice, deux entreprises françaises qui proposent des outils d’IA à des avocats. Vous vous associez avec un ingénieur pour écrire un algorithme adapté aux magistrats.",
+		image: "robot-juriste-dodo.png",
+	},
+	{
+		title: "Qu'est-ce qu’un algorithme ?",
+		message: "Ce sont les instructions qui commandent un programme informatique. C’est un peu comme une recette de cuisine. Les ingrédients sont les données des dossiers ; votre plat, ce sont les différents jugements.",
+		image: "robot-juriste-dodo.png",
 	},
 
 	{
-		message: "Sur les conseils d’Erik Coelingh, vous commencez à travailler sur votre algorithme. Ce ne sont que quelques lignes de code, mais vous vous prenez déjà d’affection pour ce·tte petit·e conducteur·rice en herbe. Vous décidez de lui donner un prénom.",
-		image: "robot-conducteur-bebe.png",
-	},	
+		message: "L’algorithme, c’est l’embryon de l’intelligence artificielle, son cerveau. Comme celui d’un bébé à la naissance, il est fonctionnel, mais pas encore prêt à interagir de manière autonome avec son environnement. ",
+		image: "robot-juriste-naissance.gif",
+	},
+
+	{
+		message: "Ce ne sont que quelques lignes de code, mais vous vous prenez déjà d’affection pour ce super-assistant qui va faire diminuer la pile de dossiers sur votre bureau. Vous décidez de lui donner un prénom.",
+		image: "robot-juriste-bebe.png"
+	},
 
 	{
 		name: "name",
 		title: "Vous l’appelez...",
 		choices: [
 			{
-				"value": "Botmobile",
-				"description": "parce que vous êtes un inconditionnel de BD",
+				"value": "Ross",
+				"description": "Robot juriste star aux États-Unis",
 				"points": 0
 			},
 			{
-				"value": "Titine",
-				"description": "parce que ça vous rappelle votre première voiture",
+				"value": "Agatha",
+				"description": "Personnage pré-cognitif de Minority Report",
 				"points": 0
 			},
 			{
-				"value": "Hubert",
-				"description": "pour la blague",
+				"value": "Justum",
+				"description": "Nominatif neutre : ce qui est juste en latin",
 				"points": 0
 			}
 		]
 	},
 
-	{
-		message: "En choisissant d’appeler votre voiture autonome Hubert, vous prouvez à tout le monde que vous êtes un petit rigolo. Mais un homme dans la mécanique, c’est un peu cliché, non ?",
-		image: "robot-conducteur-bebe-etonne.png",
-		when: answers => answers.name === "Hubert"
+		{
+		message: "En choisissant d’appeler votre robot Ross, vous rendez hommage à un algorithme qui fait fureur dans les cabinets d’avocats américains. Ce logiciel est payant... mais une version gratuite existe : elle s’appelle Eva.",
+		image: "robot-juriste-bebe-etonne.png",
+		when: answers => answers.name === "Ross"
 	},	
 
 	{
 		message: "Votre robot, contrairement à un bébé, n’est pas genré. Le nom que vous lui avez choisi, lui, l’est. Il définit donc la manière dont le robot sera perçu par les utilisateurs et le public.",
-		image: "robot-conducteur-bebe.png",
-		when: answers => answers.name === "Hubert"
+		image: "robot-juriste-bebe.png",
+		when: answers => answers.name === "Ross"
 	},	
 
 	{
-		message: "Un prénom masculin peut participer à entretenir les préjugés selon lesquels l’automobile est réservée aux hommes.",
-		image: "robot-conducteur-cle-anime.gif",
-		when: answers => answers.name === "Hubert"
-	},	
-
-		{
-		message: "Beaucoup de français font comme vous le choix de donner un surnom affectueux à leur voiture. Espérons que Titine n’aura pas trop de mal à se faire une place dans le milieu très masculin de l’automobile.",
-		image: "robot-conducteur-bebe-etonne.png",
-		when: answers => answers.name === "Titine"
-	},	
-
-	{
-		message: "Votre robot, contrairement à un bébé, n’est pas genré. Le nom que vous lui avez choisi, lui, l’est. Il définit donc la manière dont le robot sera perçu par les utilisateurs et le public.",
-		image: "robot-conducteur-bebe.png",
-		when: answers => answers.name === "Titine"
-	},	
-
-	{
-		message: "Mais au fait, pourquoi appelle-t-on notre voiture Titine? Voici la réponse que l’on trouve sur un forum : «Je l'appelle 'cocotte', c'est mon côté macho et elle, c'est une vraie soumise, elle obéit à tout ce que je lui dis, elle me surprend parfois mais je l'adore...» Tout le contraire d’une voiture autonome, non ?",
-		image: "robot-conducteur-bebe.png",
-		when: answers => answers.name === "Titine"
-	},	
-
-		{
-		message: "Les geeks apprécieront la référence, Botmobile peut se vanter d’avoir un nom très cool. Et si votre IA développait les mêmes aptitudes que la voiture de Batman ?",
-		image: "robot-conducteur-bebe.png",
-		when: answers => answers.name === "Botmobile"
-	},	
-
-	{
-		message: "Votre robot, contrairement à un bébé, n’est pas genré. Le nom que vous lui avez choisi, lui, l’est. Il définit donc la manière dont le robot sera perçu par les utilisateurs et le public. Ne pas définir de genre pour votre algorithme vous autorise à un peu plus de fantaisie.",
-		image: "robot-conducteur-bebe.png",
-		when: answers => answers.name === "Botmobile"
-	},	
-
-	{
-		message: "«Au lieu de commencer par se dire, c’est un assistant, donnons-lui une voix de femme, qu’est-ce qui nous empêche de lui donner une voix d’animal, par exemple, ou un truc qui ne ressemble à rien de réel, mais qui soit fun ?» explique Dipty Chander, présidente de l’association E-mma qui promeut la mixité dans le domaine du numérique.",
+		message: "«C’est la façon dont les hommes construisent les IA qui risque d’aggraver les stéréotypes», explique Dipty Chander, présidente de l’association E-mma qui promeut la mixité dans le domaine du numérique.",
 		image: "experts-dipty.jpg",
-		when: answers => answers.name === "Botmobile"
+		when: answers => answers.name === "Ross"
 	},	
 
 	{
-		title: "Vous êtes impatient·e de tester votre nouvelle voiture !",
-		message: "Vous tournez la clé et le moteur vrombit. Mais rien ne se passe...",
-		image: "robot-conducteur-bebe-etonne.png",
-
+		message: "Attention donc à ne pas renforcer, sans le vouloir, les inégalités et les clichés liés au genre dans le secteur juridique. Il faudra donc enseigner à Ross à ne pas reproduire les biais sexistes qui existent dans le milieu du droit.",
+		image: "robot-juriste-bebe.png",
+		when: answers => answers.name === "Ross"
 	},	
 
 	{
-		message: "Normal, vous dit Erik Coelingh. {{name}} a un algorithme, mais encore faut-il lui donner des données pour l’enrichir et lui permettre de conduire.",
-		image: "experts-conducteur-coelingh.jpg",
+		message: "En choisissant d’appeler votre robot Agatha, vous faites référence au film Minority Report et à ses robots capables de prédire les crimes. Mais lui attribuer un nom féminin fait de votre algorithme une minorité au sein du milieu de la tech.",
+		image: "robot-juriste-bebe-etonne.png",
+		when: answers => answers.name === "Agatha"
 	},	
 
 	{
-		title: "En premier lieu, il faut donner des yeux à la voiture",
-		message: "C'est ainsi que {{name}} pourra récupérer les données visuelles qui seront indispensables à la conduite.",
-		image: "robot-conducteur-bebe.png",
+		message: "Votre robot, contrairement à un bébé, n’est pas genré. Le nom que vous lui avez choisi, lui, l’est. Il définit donc la manière dont le robot sera perçu par les utilisateurs et le public.",
+		image: "robot-juriste-bebe.png",
+		when: answers => answers.name === "Agatha"
 	},	
 
 	{
-		title: "Des caméras et des radars sont installés à tous les angles de la voiture",
-		message: "{{name}} doit avoir la vision la plus complète possible, à 360° !",
-		image: "robot-conducteur-lidar.jpg",
-	},
-	{
-		title: "La voiture est désormais équipée !",
-		message: "{{name}} peut maintenant voir la route, et même mieux que vous ! Seulement, il y a encore un problème à résoudre : {{name}} voit, mais ne sait pas encore reconnaître ce qui est vu.",
-		image: "robot-conducteur-bebe.png",
-	},
-	{
-		title: "Impossible de reconnaître un enfant d’un dos d’âne pour l’instant",
-		message: "Heureusement, Erik Coelingh a la solution ! Il s’agit du «labelling».",
-		image: "experts-conducteur-coelingh.jpg",
-	},
-	{
-		title: "Le «labelling», c'est l'étiquetage",
-		message: "C’est l’étape longue et fastidieuse où les ingénieurs doivent étiqueter chaque image à la main pour montrer à l’intelligence artificielle ce qui est à l’image.",
-		image: "experts-conducteur-coelingh.jpg",
-	},
-	{
-		message: "Pour qu’une intelligence artificielle apprenne à reconnaître la couleur rouge par elle-même, les ingénieurs ont passé des heures à lui montrer des images rouges, et d’autres bleues.",
-		image: "experts-conducteur-coelingh.jpg",
+		message: "«On leur adjoint des problèmes humains : on associe par exemple le travail d’assistant à celui de femmes, résultat, tous les assistants virtuels ont des noms féminins...»",
+		image: "experts-dipty.jpg",
+		when: answers => answers.name === "Agatha"
 	},
 
 	{
-		message: "{{name}} doit maintenant passer par cette étape de «labelling». On essaye ?",
-		image: "robot-conducteur-cle-anime.gif",
-	},
-
-//////////////
-// MINI-JEU 1/4
-// RECONNAISSANCE passage piéton
-// YES-NO
-//////////////
-
-	{
-		name: "passagepieton",
-		title: "Est-ce un passage piéton ?",
-		message: "Score : -  |  Étape 1/11",
-		largeimage: "robot-conducteur-reconnaitre-passage-1.jpg",
-		yesno: {
-			answer: true
-		}
-		//YES
-	},
-	{
-		name: "passagepieton",
-		title: "Est-ce un passage piéton ?",
-		message: "Score : {{ passagepieton }}  |  Étape 2/11",
-		largeimage: "robot-conducteur-reconnaitre-passage-2.jpg",
-		yesno: {
-			answer: true
-		}
-		//YES
-	},
-	{
-		name: "passagepieton",
-		title: "Est-ce un passage piéton ?",
-		message: "Score : {{ passagepieton }}  |  Étape 3/11",
-		largeimage: "robot-conducteur-reconnaitre-passage-3.jpg",
-		yesno: {
-			answer: false
-		}
-		//NO
-	},
-	{
-		name: "passagepieton",
-		title: "Est-ce un passage piéton ?",
-		message: "Score : {{ passagepieton }}  |  Étape 4/11",
-		largeimage: "robot-conducteur-reconnaitre-passage-4.jpg",
-		yesno: {
-			answer: true
-		}
-		//YES
-	},
-	{
-		name: "passagepieton",
-		title: "Est-ce un passage piéton ?",
-		message: "Score : {{ passagepieton }}  |  Étape 5/11",
-		largeimage: "robot-conducteur-reconnaitre-passage-5.jpg",
-		yesno: {
-			answer: false
-		}
-		//NO
-	},
-	{
-		name: "passagepieton",
-		title: "Est-ce un passage piéton ?",
-		message: "Score : {{ passagepieton }}  |  Étape 6/11",
-		largeimage: "robot-conducteur-reconnaitre-passage-6.jpg",
-		yesno: {
-			answer: false
-		}
-		//NO
-	},
-	{
-		name: "passagepieton",
-		title: "Est-ce un passage piéton ?",
-		message: "Score : {{ passagepieton }}  |  Étape 7/11",
-		largeimage: "robot-conducteur-reconnaitre-passage-7.jpg",
-		yesno: {
-			answer: true
-		}
-		//YES
-	},
-	{
-		name: "passagepieton",
-		title: "Est-ce un passage piéton ?",
-		message: "Score : {{ passagepieton }}  |  Étape 8/11",
-		largeimage: "robot-conducteur-reconnaitre-passage-8.jpg",
-		yesno: {
-			answer: true
-		}
-		//YES
-	},
-	{
-		name: "passagepieton",
-		title: "Est-ce un passage piéton ?",
-		message: "Score : {{ passagepieton }}  |  Étape 9/11",
-		largeimage: "robot-conducteur-reconnaitre-passage-9.jpg",
-		yesno: {
-			answer: false
-		}
-		//NO
-	},
-	{
-		name: "passagepieton",
-		title: "Est-ce un passage piéton ?",
-		message: "Score : {{ passagepieton }}  |  Étape 10/11",
-		largeimage: "robot-conducteur-reconnaitre-passage-10.jpg",
-		yesno: {
-			answer: true
-		}
-		//YES
-	},								
-	{
-		name: "passagepieton",
-		title: "Est-ce un passage piéton ?",
-		message: "Score : {{ passagepieton }}  |  Étape 11/11",
-		largeimage: "robot-conducteur-reconnaitre-passage-11.jpg",
-		yesno: {
-			answer: true
-		}
-		//YES
+		message: "«Sauf qu’en faisant cela, on aggrave le problème, on ne fait qu’enfoncer des stéréotypes, c’est encore pire !» explique Dipty Chander, présidente de l’association E-mma qui promeut la mixité dans le domaine du numérique.",
+		image: "experts-dipty.jpg",
+		when: answers => answers.name === "Agatha"
 	},	
-//////////////
-// FIN MINI-JEU 1/4
-// RECONNAISSANCE passage piéton
-// YES-NO
-//////////////
+	
+		{
+		message: "En choisissant d’appeler votre robot Justum, vous restez neutre, comme la justice est censée l’être.",
+		image: "robot-juriste-bebe.png",
+		when: answers => answers.name === "Justum"
+	},	
 
 	{
-		title: "Première phase du «labelling» achevée !",
-		message: "Score : {{ passagepieton }}/11",
-		image: "robot-conducteur-bebe.png",
+		message: "Votre robot, contrairement à un bébé, n’est pas genré. Le nom que vous lui avez choisi, lui, l’est. Il définit donc la manière dont le robot sera perçu par les utilisateurs et le public.",
+		image: "robot-juriste-bebe.png",
+		when: answers => answers.name === "Justum"
+	},	
+
+	{
+		message: "Les robots non-genrés sont encore rares. «Si on arrêtait de penser le design en fonction du genre, les choses fonctionneraient peut être mieux» avance Dipty Chander, présidente de l’association E-mma qui promeut la mixité dans le domaine du numérique.",
+		image: "experts-dipty.jpg",
+		when: answers => answers.name === "Justum"
+	},	
+
+
+	{
+		title: "L'ingrédient principal",
+		message: "Votre algorithme doit se nourrir de la loi qui détermine le montant des indemnités de licenciement d'un salarié.",
+		image: "robot-juriste-bebe.png",
 	},
 
+	{
+		message: "Vous décidez de tester votre algorithme en lui soumettant un premier dossier.",
+		image: "robot-juriste-bebe.png"
+	},
+
+	{
+		title: "Premier dossier",
+		message: "Mme Laurent a été victime d'un licenciement abusif après avoir travaillé cinq ans dans un petit magasin.",
+		image: "robot-juriste-marteau-anime.gif",
+	},
+	
+	{ 
+		title: "L’algorithme vous dit :",
+		message: "Mme Laurent a droit à une indemnité comprise entre 1,5 et 6 mois de salaire brut.",
+		image: "robot-juriste-bebe.png",
+	},
+	{
+		type: "explanation",
+        title: "Vous êtes complètement déçu·e...",
+		message: "{{name}} n’a fait que répéter ce qui est écrit dans la loi. Vous n’êtes pas très avancé·e, car vous souhaitez avoir un montant précis et pas seulement une fourchette.",
+		image: "robot-juriste-bebe-etonne.png",
+	},
+	{
+		title: "Vous demandez conseil.",
+		message: "L’algorithme a besoin de plus de précisions quant aux critères qui motivent votre décision. Jacques Levy Vehel, le co-fondateur de Case Law Analytics, vous assiste.",
+		image: "experts-juriste-vehel.jpg",
+	},
+	{
+		message:"«L’intelligence artificielle calcule ces probabilités grâce à un algorithme: à condition qu'on lui donne assez d'exemples, elle pourra simuler les différentes décisions possibles pour un cas particulier.»",
+		image: "experts-juriste-vehel.jpg",
+	}, 
+	{
+		name: "choice_premiereslois",
+		message: "Vous choisissez de nourrir {{ name }} avec :",
+		choices: [
+			{
+				"value": "Tous les articles de loi",
+				"description": "Les 11 000 articles du code du travail et la jurisprudence associée",
+				"points": 0
+			},
+			{
+				"value": "Uniquement des décisions similaires",
+				"description": "1 500 décisions prises par vous et vos collègues dans des cas similaires depuis le changement de la loi en septembre 2017",
+				"points": 1
+			},
+		]
+	},
+
+//Si choix - Tous les articles de loi
+	{	
+		title: "C'est un mauvais choix...",
+		message: "Pour comprendre pourquoi, étudions un nouveau dossier.",
+		image: "robot-juriste-bebe-etonne.png",
+		when: answers => answers.choice_premiereslois === 'Tous les articles de loi'
+	},
+
+	{	
+		title: "Deuxième dossier",
+		message: "Vous soumettez un dossier de votre pile pour tester {{ name }}. M. Husson a été victime d'un licenciement abusif après avoir travaillé 10 ans dans une entreprise de télécommunication.",
+		image: "robot-juriste-marteau-anime.gif",
+		when: answers => answers.choice_premiereslois === 'Tous les articles de loi'
+	},
+
+	{
+		title: "Résultat de l'algorithme :",
+		message: "M. Husson devrait recevoir douze mois de salaire brut en indemnité. Ce n’est plus une fourchette... mais le montant des indemnités est supérieur à ce que prévoit la loi actuelle.",
+		image: "robot-juriste-bebe.png",
+		when: answers => answers.choice_premiereslois === 'Tous les articles de loi',
+	},
+	{
+		message: "L’algorithme a pris en compte toutes les décisions liées aux lois précédentes. Le résultat est faussé.",
+		image: "robot-juriste-bebe.png",
+		when: answers => answers.choice_premiereslois === 'Tous les articles de loi',
+	},
+	{
+		message: "En donnant à l'algorithme trop de textes de lois et trop de jurisprudence, vous prenez le risque de prendre en compte des dossiers trop différents de celui que vous souhaitez analyser.",
+		image: "robot-juriste-bebe.png",
+		when: answers => answers.choice_premiereslois === 'Tous les articles de loi',
+	},
+	{
+		message: "Définir manuellement les critères qui motivent votre décision va prendre du temps. C'est le côté «humain» de l'IA.",
+		image: "robot-juriste-bebe.png",
+		when: answers => answers.choice_premiereslois === 'Tous les articles de loi',
+	},
+
+//Si choix - Que des décisions similaires
+	{	
+		title: "C'est un bon choix...",
+		message: "Pour comprendre pourquoi, étudions un nouveau dossier.",
+		image: "robot-juriste-bebe.png",
+		when: answers => answers.choice_premiereslois !== 'Tous les articles de loi'
+	},
+
+	{	
+		title: "Deuxième dossier",
+		message: "M. Husson a été victime d’un licenciement abusif après avoir travaillé 10 ans dans une entreprise de télécommunication.",
+		image: "robot-juriste-marteau-anime.gif",
+		when: answers => answers.choice_premiereslois !== 'Tous les articles de loi',
+	},
+
+	{
+		title: "Résultat de l'algorithme :",
+		message: "M. Husson devrait recevoir trois mois de salaire brut en indemnités. C'est un résultat précis... mais vous vous rendez compte que {{name}} n'a pas tenu compte de la zone géographique de votre cour.",
+		image: "robot-juriste-bebe-etonne.png",
+		when: answers => answers.choice_premiereslois !== 'Tous les articles de loi',
+	},
+	{
+		message: "Vous auriez eu tendance à lui attribuer une indemnité d'au moins 6 mois de salaire brut puisque le chômage est plus élevé dans votre région.",
+		image: "robot-juriste-bebe.png",
+		when: answers => answers.choice_premiereslois !== 'Tous les articles de loi',
+	},
+	{
+		message: "La définition manuelle des critères vous prend du temps, mais elle sera plus juste, car elle tiendra compte des spécificités des dossiers. C'est le côté «humain» de l'IA.",
+		image: "robot-juriste-bebe.png",
+		when: answers => answers.choice_premiereslois !== 'Tous les articles de loi',
+	},
 ////////////////
 // ROBOT ENFANT
 ////////////////
@@ -302,155 +264,141 @@ const conducteur = [
 	{
 		title: "Level up !",
 		message: "{{name}} a grandi ! C’est en écoutant les adultes qu’un bébé apprend à parler. Une fois que l’intelligence artificielle dispose d’une première base de donnée, elle peut commencer à apprendre d’elle-même, comme un enfant qui entre à l’école.",
-		image: "robot-conducteur-bebe-enfant.gif",
+		image: "robot-juriste-bebe-enfant.gif",
 	},
 //
-
 	{
-		message: "Maintenant que {{name}} sait reconnaître les passages piétons, vos ingénieurs vont s’occuper de lui apprendre à reconnaître les voitures, les camions, et ainsi de suite.",
-		image: "robot-conducteur-enfant.png",
-	},
-	{
-		title: "Vous pouvez procéder à la deuxième phase : la localisation dans l'espace",
-		message: "Il ne suffit pas que {{name}} puisse reconnaître les objets, la voiture doit aussi pouvoir les placer dans l’espace.",
-		image: "robot-conducteur-enfant.png",
+		title: "Création d’une base de données intelligente",
+		message: "Pour que {{ name }} puisse reconnaître les données importantes dans toutes les futures décisions que vous ajouterez à la base de données, il faut recourir aux techniques de traitement automatique du langage naturel.",
+		image: "robot-juriste-enfant.png",
 	},
 
-//////////////
-// MINI-JEU 2/4
-// RECONNAISSANCE route présence piétons
-// YES-NO
-//////////////
 	{
-		name: "peopleonroad",
-		title: "Des personnes sont-elles sur la route ?",
-		message: "Score : - |  Étape 1/7",
-		largeimage: "robot-conducteur-reconnaitre-route-1.jpg",
-		yesno: {
-			answer: true
-		}
-		//YES
+		message: "Une partie de ce processus consiste à soumettre à {{name}} un texte à trous. À chaque fois que la machine trouve le bon mot, elle est récompensée.",
+		image: "robot-juriste-enfant.png",
 	},
 	{
-		name: "peopleonroad",
-		title: "Des personnes sont-elles sur la route ?",
-		message: "Score : {{peopleonroad}}  |  Étape 2/7",
-		largeimage: "robot-conducteur-reconnaitre-route-2.jpg",
-		yesno: {
-			answer: true
-		}
-		//YES
+		message: "C’est en multipliant les exemples que {{name}} finit par comprendre où se situe l'information-clé dans une phrase, en fonction des mots qui l'entourent.",
+		image: "robot-juriste-enfant.png",
 	},
 	{
-		name: "peopleonroad",
-		title: "Des personnes sont-elles sur la route ?",
-		message: "Score : {{peopleonroad}}  |  Étape 3/7",
-		largeimage: "robot-conducteur-reconnaitre-route-3.jpg",
-		yesno: {
-			answer: true
-		}
-		//YES
-	},
-	{
-		name: "peopleonroad",
-		title: "Des personnes sont-elles sur la route ?",
-		message: "Score : {{peopleonroad}}  |  Étape 4/7",
-		largeimage: "robot-conducteur-reconnaitre-route-4.jpg",
-		yesno: {
-			answer: true
-		}
-		//YES
-	},
-	{
-		name: "peopleonroad",
-		title: "Des personnes sont-elles sur la route ? (5/7)",
-		message: "Score : {{peopleonroad}}  |  Étape 5/7",
-		largeimage: "robot-conducteur-reconnaitre-route-5.jpg",
-		yesno: {
-			answer: false
-		}
-		//NO
-	},
-	{
-		name: "peopleonroad",
-		title: "Des personnes sont-elles sur la route ? (6/7)",
-		message: "Score : {{peopleonroad}}  |  Étape 6/7",
-		largeimage: "robot-conducteur-reconnaitre-route-6.jpg",
-		yesno: {
-			answer: true
-		}
-		//YES
-	},
-	{
-		name: "peopleonroad",
-		title: "Des personnes sont-elles sur la route ? (7/7)",
-		message: "Score : {{peopleonroad}}  |  Étape 7/7",
-		largeimage: "robot-conducteur-reconnaitre-route-7.jpg",
-		yesno: {
-			answer: false
-		}
-		//NO
-	},
-//////////////
-// FIN MINI-JEU 2/4
-// RECONNAISSANCE route présence piétons
-// YES-NO
-//////////////
-
-	{
-		title: "Seconde phase du «labelling» achevée !",
-		message: "Score : {{peopleonroad}}/7  |  {{name}} sait désormais reconnaître les objets et peut les placer sur une image.",
-		image: "robot-conducteur-enfant.png",
+		message: "Pour nos dossiers, {{ name }}  doit repérer l’ancienneté d'un salarié dans l'entreprise, critère décisif pour définir le montant des indemnités. On essaye ?",
+		image: "robot-juriste-enfant.png",
 	},
 
-//
-// QUESTION BASE DE DONNEES
-//
+
+//INPUT OLIVIER FERRAND 
 	{
-		name: "choice_basedonnees",
-		title: "Base de données",
-		message: "Il est maintenant temps de fournir à {{name}} des données à analyser. Que choisissez-vous ?",
-		choices: [
+		name: "blanks_emploi_duree1",
+		title: "Entrez les mots manquants",
+		points: 1,
+		blanks: [
 			{
-				"value": "Le code de la route",
-				"points": 0
+				"value": "M. Olivier Ferrand a travaillé"
 			},
 			{
-				"value": "Les lois de la physique",
-				"points": 1
+				"value": "word_1",
+				"type": "input",
+				"answers": ['pendant', 'durant', 'Pendant', 'Durant']
+			},
+			{
+				"value": " 10 ",
+			},
+			{
+				"value": "word_2",
+				"type": "input",
+				"answers": ['ans', 'années', 'Ans', 'Années']
+			},
+			{
+				"value": " au sein de l’entreprise.",
+			},			
+		]
+	},
+//Si réponse correcte
+	{
+		title: "Bonne réponse !",
+		message: "Ici, l’information-clé est le nombre d’années passées dans l’entreprise. Pour repérer cette information, qui varie selon les salariés, {{name}} doit identifier les mots contextuels «pendant» et «ans» qui précèdent et suivent cette information.",
+		image: "robot-juriste-enfant.png",
+		when: answers => answers.blanks_emploi_duree1
+	},
+//Si réponse incorrecte
+	{
+		title: "Mauvaise réponse !",
+		message: "Ici, l’information-clé est le nombre d’années passées dans l’entreprise. Pour repérer cette information, qui varie selon les salariés, {{name}} doit reconnaître les mots contextuels «pendant» et «ans» qui précèdent et suivent cette information.",
+		image: "robot-juriste-enfant-etonne.png",
+		when: answers => !answers.blanks_emploi_duree1
+	},
+
+//Transition
+	{
+		message: "Tentons un second exemple.",
+		image: "robot-juriste-enfant.png",
+	},
+
+//INPUT CORINNE DUTEIL
+	{
+		name: "blanks_emploi_duree2",
+		title: "Entrez les mots manquants",
+		message: "",
+		points: 1,
+		blanks: [
+			{
+				"value": "Mme Corinne Duteil a été victime d’un licenciement abusif. L'entreprise l'avait "
+			},
+			{
+				"value": "word_1",
+				"type": "input",
+				"answers": ['embauchée', 'engagée', 'recrutée', 'Embauchée', 'Engagée', 'Recrutée', 'embauchée ', 'engagée ', 'recrutée ', 'Embauchée ', 'Engagée ', 'Recrutée ']
+			},
+			{
+				"value": " en 2013.",
 			},
 		]
 	},
+//Si réponse correcte
+	{
+		title: "Bonne réponse !",
+		message: "Ici, trois réponses étaient possibles : «embauchée», «recrutée» ou «engagée». Plus il y a de manières d'exprimer une idée, plus {{name}} mettra du temps à reconnaître l'information.",
+		image: "robot-juriste-enfant.png",
+		when: answers => answers.blanks_emploi_duree2 
+	},
+//Si réponse incorrecte
+	{
+		title: "Mauvaise réponse !",
+		message: "Ici, trois réponses étaient possibles : «embauchée», «recrutée» ou «engagée». Plus il y a de manières d'exprimer une idée, plus {{name}} mettra du temps à reconnaître l'information.",
+		image: "robot-juriste-enfant-etonne.png",
+		when: answers => !answers.blanks_emploi_duree2 
+	},
 
-//Si bonne réponse
+//Si toutes réponses correctes
 	{
-		title: "Vous faites bien !",
-		message: "Il faut avant tout que la voiture apprenne les lois de la physique élémentaire, surtout en ce qui concerne la vitesse. L’apprentissage du code de la route viendra après.",
-		image: "robot-conducteur-enfant.png",
-		when: answers => answers.choice_basedonnees === 'Les lois de la physique',
+		title: "Bravo !",
+		message: "Le taux d’erreur de {{name}} est inférieur à 15%, vous pourrez donc économiser de longues heures d’étiquetage manuel de vos données. Vous avez maintenant une base de données suffisamment complète pour que {{name}} puisse «prédire» la probabilité des différents jugements pour un nouveau dossier.",
+		when: answers => answers.blanks_emploi_duree1 && answers.blanks_emploi_duree2,
+		image: "robot-juriste-enfant.png",
 	},
-//Si mauvaise réponse
+//Sinon
 	{
-		title: "Attention !",
-		message: "il faut apprendre le code de la route, mais cette étape vient bien après. La voiture doit avant tout connaître les lois de la physique élémentaire, surtout en ce qui concerne la vitesse.",
-		image: "robot-conducteur-enfant-etonne.png",
-		when: answers => answers.choice_basedonnees === 'Le code de la route',
+		title: "Vous avez fait trop d'erreurs...",
+		message: "Vous devez étiqueter vos données manuellement. Vous perdez beaucoup de temps, mais vous avez maintenant une base de données suffisamment complète pour que {{name}} puisse «prédire» la probabilité des différents jugements pour un nouveau dossier.",
+		image: "robot-juriste-enfant-etonne.png",
+		when: answers => !answers.blanks_emploi_duree1 || !answers.blanks_emploi_duree2,
 	},
 
-	{
-		title: "Votre voiture comprend maintenant la physique de base",
-		message: "Par exemple, si elle va à 100 km/h sur une route sèche, il lui faudra 80 mètres pour s’arrêter complètement.",
-		image: "robot-conducteur-enfant.png",
+{
+		title: "",
+		message: "«Quand le taux d’erreur est supérieur à 15 ou 20%, on étiquette les données à la main.» (Jacques Levy-Vehel, co-fondateur de Case Law Analytics)",
+		image: "experts-juriste-vehel.jpg",
 	},
+
+
+//TODO Ajouter compte des bonnes & mauvaises réponses
 	{
-		title: "La physique est importante pour l'intelligence artificielle des voitures",
-		message: "Sa compréhension permet d’anticiper la trajectoire des véhicules alentours.",
-		image: "robot-conducteur-cle-anime.gif",
+		title: "L'étiquetage des données est une tâche longue et fastidieuse...",
+		message: "C'est la partie «humaine» de l’intelligence artificielle. Selon la taille de la base de données, l’opération peut prendre plusieurs jours, voire plusieurs semaines.",
+		image: "robot-juriste-enfant.png",	
 	},
-	{
-		message: "Mettons qu'un camion derrière vous aille trop vite pour pouvoir s’arrêter en cas de freinage d’urgence. {{name}} pourra alors choisir de se déporter.",
-		image: "robot-conducteur-enfant.png",
-	},
+
 
 ////////////////
 // ROBOT ADO
@@ -459,516 +407,81 @@ const conducteur = [
 // Robot devient ado
 	{
 		title: "Level up !",
-		message: "{{name}} a grandi ! Votre intelligence artificielle dispose d’assez de données pour pouvoir analyser les nouvelles informations que vous lui soumettez et adapter son comportement et ses prédictions à toutes les situations. Mais comme un adolescent, elle a besoin de tester ses limites.",
-		image: "robot-conducteur-enfant-ado.gif",
+		message: "{{name}} a grandi ! Votre intelligence artificielle dispose d’assez de données pour pouvoir analyser les nouvelles informations que vous lui soumettez et adapter son comportement et ses prédictions à toutes les situations. Mais comme un adolescent, elle a besoin de tester ses limites. ",
+		image: "robot-juriste-enfant-ado.gif",
 	},
 //
 
+//Cas licenciements
 	{
-		title: "Apprentissage du code de la route",
-		message: "Vous aidez {{name}} à reconnaître les panneaux de signalisation routière.",
-		image: "robot-conducteur-ado.png",
+		message: "Avant d’utiliser {{name}}, il faut vérifier si ses prédictions reflètent la réalité des décisions que vous avez prises par le passé. Case Law Analytics vous conseille de comparer les statistiques générées par {{name}} à un groupe de décisions «témoin».",
+		image: "robot-juriste-ado.png",
 	},
 
-
-//////////////
-// MINI-JEU 3/4
-// RECONNAISSANCE noms panneaux
-// Choix
-//////////////
+//TODO TABLEAU
 	{
-		name: "jeu_panneaux1",
-		title: "Quel est ce panneau ?",
-		message: "Score : -  |  Étape 1/10",
-		image: "robot-conducteur-reconnaitre-panneau-1.png",
-		contextPoints: "jeu_panneaux",
+		title: "Voici deux dossiers similaires... En apparence.",
+		image: "robot-juriste-dossier-analyse.png",
+	},
+	{
+		title: "Le montant des indemnités est différent...",
+		message: "Vous ne comprenez pas pourquoi : Mme Petit et M. Martin ont pourtant travaillé tous deux 10 ans dans l’entreprise.",
+			image: "robot-juriste-ado-etonne.png",
+	},
+	{
+		message: "Vous aviez pourtant programmé {{name}} pour calculer le montant des indemnités en fonction de l’ancienneté du salarié.",
+		image: "robot-juriste-ado-etonne.png",
+	},
+//Choix proposé
+	{
+		name: "choice_critereneglige",
+		message: "Lequel de ces critères avez-vous négligé ?",
 		choices: [
 			{
-				"description": "Sens interdit",
+				"value": "Âge du salarié",
+				"description": ""
+			},
+			{
+				"value": "Sexe du salarié",
+				"description": ""
+			},
+			{
+				"value": "Nombre de salariés dans l’entreprise",
+				"description": "",
 				"points": 1
 			},
 			{
-				"description": "Interdit de stationner",
-				"points": 0
+				"value": "Poste du salarié",
+				"description": "Cadre ou non-cadre"
 			},
-			{
-				"description": "Stop",
-				"points": 0
-			}		
-		]
+			]
 	},
-
+//Réponse correcte 3
 	{
-		name: "jeu_panneaux2",
-		title: "Quel est ce panneau ?",
-		message: "Score : {{ contextPoints.jeu_panneaux }}  |  Étape 2/10",
-		image: "robot-conducteur-reconnaitre-panneau-2.png",
-		contextPoints: "jeu_panneaux",
-		choices: [
-			{
-				"description": "Passage d’animaux domestiques",
-				"points": 0
-			},
-			{
-				"description": "Passage à niveau",
-				"points": 0
-			},
-			{
-				"description": "Proximité d’un pont mobile",
-				"points": 1
-			},		
-		]
+		title: "Bravo !",
+		message: "Depuis 2017, les indemnités diffèrent en fonction du nombre de salarié dans l’entreprise. Il faut donc augmenter le poids de ce critère lorsque {{name}} apprend à reconnaître les informations clés d’un dossier.",
+		image: "robot-juriste-ado.png",
+		when: answers => answers.choice_critereneglige === 'Nombre de salariés dans l’entreprise',
 	},
-
-	{
-		name: "jeu_panneaux3",
-		title: "Quel est ce panneau ?",
-		message: "Score : {{ contextPoints.jeu_panneaux }}  |  Étape 3/10",
-		image: "robot-conducteur-reconnaitre-panneau-3.png",
-		contextPoints: "jeu_panneaux",
-		choices: [
-			{
-				"description": "Fin d’interdiction",
-				"points": 0
-			},
-			{
-				"description": "Intersection",
-				"points": 0
-			},
-			{
-				"description": "Fin du caractère prioritaire d’une route",
-				"points": 1
-			},			
-		]
-	},	
-
-	{
-		name: "jeu_panneaux4",
-		title: "Quel est ce panneau ?",
-		message: "Score : {{ contextPoints.jeu_panneaux }}  |  Étape 4/10",
-		image: "robot-conducteur-reconnaitre-panneau-4.png",
-		contextPoints: "jeu_panneaux",
-		choices: [
-			{
-				"description": "Pizza flottante",
-				"points": 0
-			},
-			{
-				"description": "Accès à une rocade",
-				"points": 1
-			},
-			{
-				"description": "Passage piéton surélevé",
-				"points": 0
-			},			
-		]
-	},	
-
-	{
-		name: "jeu_panneaux5",
-		title: "Quel est ce panneau ?",
-		message: "Score : {{ contextPoints.jeu_panneaux }}  |  Étape 5/10",
-		image: "robot-conducteur-reconnaitre-panneau-5.png",
-		contextPoints: "jeu_panneaux",
-		choices: [
-			{
-				"description": "Risque de chute de pierres",
-				"points": 1
-			},
-			{
-				"description": "Succession de virages",
-				"points": 0
-			},
-			{
-				"description": "Descente dangereuse",
-				"points": 0
-			},			
-		]
-	},
-
-	{
-		name: "jeu_panneaux6",
-		title: "Quel est ce panneau ?",
-		message: "Score : {{ contextPoints.jeu_panneaux }}  |  Étape 6/10",
-		image: "robot-conducteur-reconnaitre-panneau-6.png",
-		contextPoints: "jeu_panneaux",
-		choices: [
-			{
-				"description": "Circulation à sens unique",
-				"points": 0
-			},
-			{
-				"description": "Interdiction de dépasser",
-				"points": 1
-			},
-			{
-				"description": "Lieu aménagé pour le stationnement",
-				"points": 0
-			},			
-		]
-	},
-
-	{
-		name: "jeu_panneaux7",
-		title: "Quel est ce panneau ?",
-		message: "Score : {{ contextPoints.jeu_panneaux }}  |  Étape 7/10",
-		image: "robot-conducteur-reconnaitre-panneau-7.png",
-		contextPoints: "jeu_panneaux",
-		choices: [
-			{
-				"description": "Obligation d’aller tout droit",
-				"points": 0
-			},
-			{
-				"description": "Vous avez la priorité",
-				"points": 0
-			},
-			{
-				"description": "Cédez le passage aux véhicules en sens inverse",
-				"points": 1
-			},			
-		]
-	},
-
-	{
-		name: "jeu_panneaux8",
-		title: "Quel est ce panneau ?",
-		message: "Score : {{ contextPoints.jeu_panneaux }}  |  Étape 8/10",
-		image: "robot-conducteur-reconnaitre-panneau-8.png",
-		contextPoints: "jeu_panneaux",
-		choices: [
-			{
-				"description": "Entrée sur une rocade",
-				"points": 1
-			},
-			{
-				"description": "Début d’une section d’autoroute",
-				"points": 1
-			},
-			{
-				"description": "Intersection",
-				"points": 0
-			},			
-		]
-	},
-
-	{
-		name: "jeu_panneaux9",
-		title: "Quel est ce panneau ?",
-		message: "Score : {{ contextPoints.jeu_panneaux }}  |  Étape 9/10",
-		image: "robot-conducteur-reconnaitre-panneau-9.png",
-		contextPoints: "jeu_panneaux",
-		choices: [
-			{
-				"description": "Fin d’interdiction",
-				"points": 0
-			},
-			{
-				"description": "Stationnement interdit",
-				"points": 1
-			},
-			{
-				"description": "Arrêt et stationnement interdits",
-				"points": 0
-			},			
-		]
-	},
-
-	{
-		name: "jeu_panneaux10",
-		title: "Quel est ce panneau ?",
-		message: "Score : {{ contextPoints.jeu_panneaux }}  |  Étape 10/10",
-		image: "robot-conducteur-reconnaitre-panneau-10.png",
-		contextPoints: "jeu_panneaux",
-		choices: [
-			{
-				"description": "Arrêt à l’intersection",
-				"points": 1
-			},
-			{
-				"description": "Air réservée à l’auto-stop",
-				"points": 0
-			},
-			{
-				"description": "Ville de Stop (Loire-et-Cher)",
-				"points": 0
-			},			
-		]
-	},
-//////////////
-// FIN MINI-JEU 3/4
-// RECONNAISSANCE noms panneaux
-// Choix
-//////////////
-
-	{
-		title: "Apprentissage du code de la route achevé !",
-		message: "Score : {{ contextPoints.jeu_panneaux }}/10  |  Vous êtes fin prêt·e à tester {{name}} sur l’un des circuits de Vroumvroum.",
-		image: "robot-conducteur-ado.png",
-	},
-
-	{
-		title: "Apprentissage des situations de conduite",
-		message: "{{name}} doit maintenant apprendre à réagir en fonction de ce qui est vu : par exemple, si {{name}} voit qu’un piéton traverse, il faudra ralentir pour le laisser passer.",
-		image: "robot-conducteur-ado.png",
-	},	
-
-//////////////
-// MINI-JEU 4/4
-// RECONNAISSANCE situation route
-// Choix
-//////////////
-	{
-		name: "jeu_route1",
-		contextPoints: "jeu_route",
-		message: "Le feu est vert, mais les piétons sont sur la route. Que faire ? (1/6)",
-		image: "robot-conducteur-test-1.jpg",
-		choices: [
-			{
-				"value": "",
-				"description": "Avancer",
-				"points": 1
-			},
-			{
-				"value": " ",
-				"description": "Les laisser passer",
-				"points": 0
-			},
-			{
-				"value": "  ",
-				"description": "Klaxonner : les piétons devraient être sur le trottoir",
-				"points": 0
-			},			
-		]
-	},
-//Si réponse correcte
-	{
-		title: "Bonne réponse !",
-		message: "Il fallait bien choisir de continuer à avancer.",
-		image: "robot-conducteur-ado.png",
-		when: answers => answers.jeu_route1 === "",
-	},
-//Si réponse incorrecte
+//Si mauvaise réponse
 	{
 		title: "Mauvaise réponse !",
-		message: "Il fallait choisir de continuer à avancer.",
-		image: "robot-conducteur-ado-etonne.png",
-		when: answers => answers.jeu_route1 !== "",
+		message: "Les indemnités diffèrent en fonction du nombre de salariés dans l’entreprise. Il faut donc augmenter le poids de ce critère lorsque {{name}} apprend à reconnaître les informations-clés d'un dossier.",
+		image: "robot-juriste-ado-etonne.png",
+		when: answers => answers.choice_critereneglige !== 'Nombre de salariés dans l’entreprise',
+	},
+
+// Etape commune 	
+	{
+		title: "Votre algorithme est maintenant bien entraîné !",
+		message:"Vous lui soumettez un nouveau dossier. M. Olivier a été victime d’un licenciement abusif après avoir travaillé pendant 1 an dans une start-up.", 
+		image: "robot-juriste-marteau-anime.gif",
 	},
 
 	{
-		name: "jeu_route2",
-		contextPoints: "jeu_route",
-		message: "Un animal surgit sur la route. Que faire ? (2/6)",
-		image: "robot-conducteur-test-2.jpg",
-		choices: [
-			{
-				"value": " ",				
-				"description": "Mettre un coup de volant pour l’éviter",
-				"points": 0
-			},
-			{
-				"value": "",				
-				"description": "Freiner pour éviter de le percuter",
-				"points": 1
-			},
-			{
-				"value": "  ",
-				"description": "Continuer à rouler normalement",
-				"points": 0
-			},			
-		]
-	},	
-//Si réponse correcte
-	{
-		title: "Bonne réponse !",
-		message: "Il fallait bien choisir de freiner.",
-		image: "robot-conducteur-ado.png",
-		when: answers => answers.jeu_route2 === "",
-	},
-//Si réponse incorrecte
-	{
-		title: "Mauvaise réponse !",
-		message: "Il fallait choisir de freiner.",
-		image: "robot-conducteur-ado-etonne.png",
-		when: answers => answers.jeu_route2 !== "",
-	},
-
-	{
-		name: "jeu_route3",
-		contextPoints: "jeu_route",
-		message: "Le feu est vert. Que faire ? (3/6)",
-		image: "robot-conducteur-test-3.jpg",
-		choices: [
-			{
-				"value": " ",
-				"description": "Ralentir",
-				"points": 0
-			},
-			{
-				"value": "  ",
-				"description": "S'arrêter",
-				"points": 0
-			},
-			{
-				"value": "",
-				"description": "Continuer à rouler normalement",
-				"points": 1
-			},			
-		]
-	},	
-//Si réponse correcte
-	{
-		title: "Bonne réponse !",
-		message: "Il fallait bien choisir de continuer à rouler normalement.",
-		image: "robot-conducteur-ado.png",
-		when: answers => answers.jeu_route3 === "",
-	},
-//Si réponse incorrecte
-	{
-		title: "Mauvaise réponse !",
-		message: "Il fallait choisir de continuer à rouler normalement.",
-		image: "robot-conducteur-ado-etonne.png",
-		when: answers => answers.jeu_route3 !== "",
-	},
-
-	{
-		name: "jeu_route4",
-		contextPoints: "jeu_route",
-		message: "La route est bloquée. Que faire ? (4/6)",
-		image: "robot-conducteur-test-4.jpg",
-		choices: [
-			{
-				"value": " ",
-				"description": "Rebrousser chemin en marche arrière",
-				"points": 0
-			},
-			{
-				"value": "  ",
-				"description": "Continuer à rouler normalement",
-				"points": 0
-			},
-			{
-				"value": "",
-				"description": "Faire demi-tour en trois temps",
-				"points": 1
-			},			
-		]
-	},	
-//Si réponse correcte
-	{
-		title: "Bonne réponse !",
-		message: "Il fallait bien choisir de faire demi-tour.",
-		image: "robot-conducteur-ado.png",
-		when: answers => answers.jeu_route4 === "",
-	},
-//Si réponse incorrecte
-	{
-		title: "Mauvaise réponse !",
-		message: "Il fallait choisir de faire demi-tour.",
-		image: "robot-conducteur-ado-etonne.png",
-		when: answers => answers.jeu_route4 !== "",
-	},
-
-	{
-		name: "jeu_route5",
-		contextPoints: "jeu_route",
-		message: "La voiture détecte un obstacle sur la route. Que faire ? {{ contextPoints.jeu_route }} (5/6)",
-		image: "robot-conducteur-test-5.jpg",
-		choices: [
-			{
-				"value": " ",
-				"description": "Rouler dessus : c’est un simple sac plastique",
-				"points": 0
-			},
-			{
-				"value": "  ",
-				"description": "L'éviter : c'est un rocher",
-				"points": 0
-			},
-			{
-				"value": "",
-				"description": "Ralentir tout en s’approchant : permet d’identifier l’obstacle",
-				"points": 1
-			},			
-		]
-	},	
-//Si réponse correcte
-	{
-		title: "Bonne réponse !",
-		message: "Il fallait bien choisir de ralentir.",
-		image: "robot-conducteur-ado.png",
-		when: answers => answers.jeu_route5 === "",
-	},
-//Si réponse incorrecte
-	{
-		title: "Mauvaise réponse !",
-		message: "Il fallait choisir de ralentir.",
-		image: "robot-conducteur-ado-etonne.png",
-		when: answers => answers.jeu_route5 !== "",
-	},
-
-	{
-		name: "jeu_route6",
-		contextPoints: "jeu_route",
-		message: "Le garçon veut visiblement traverser, mais vous ne savez pas s'il a vu la voiture. Que faire ? (6/6)",
-		image: "robot-conducteur-test-6.jpg",
-		choices: [
-			{
-				"value": " ",				
-				"description": "Continuer sans ralentir : c’est à lui de regarder la route",
-				"points": 0
-			},
-			{
-				"value": "",
-				"description": "Ralentir en attendant de voir ce qu'il va faire",
-				"points": 1
-			},
-			{
-				"value": "  ",
-				"description": "Klaxonner pour signaler sa présence",
-				"points": 0
-			},			
-		]
-	},	
-//Si réponse correcte
-	{
-		title: "Bonne réponse !",
-		message: "Il fallait bien choisir de ralentir.",
-		image: "robot-conducteur-ado.png",
-		when: answers => answers.jeu_route6 === "",
-	},
-//Si réponse incorrecte
-	{
-		title: "Mauvaise réponse !",
-		message: "Il fallait choisir de ralentir.",
-		image: "robot-conducteur-ado-etonne.png",
-		when: answers => answers.jeu_route6 !== "",
-	},
-
-//////////////
-// FIN MINI-JEU 4/4
-// RECONNAISSANCE situation route
-// Choix
-//////////////
-
-
-//MINI-JEU 3 & 4 > CONCLUSION
-//SI 80% BONNES REPONSES OU PLUS:
-	{
-		title: "C'est un succès !",
-		message: "Avec {{contextPoints.jeu_route}} bonnes réponses sur 6, {{name}} a passé avec succès cette phase de test !",
-		image: "robot-conducteur-ado.png",
-		when: answers => answers.contextPoints.jeu_route >= 4,
-
-	},
-//MINI-JEU 3 & 4 > CONCLUSION
-//SI MOINS DE 80% BONNES REPONSES:
-	{
-		title: "C'est plutôt un échec...",
-		message: "Avec {{contextPoints.jeu_route}} bonnes réponses sur 6, il vous faut encore faire un effort. Vous continuez à faire tester {{name}}.",
-		image: "robot-conducteur-ado-etonne.png",
-		when: answers => answers.contextPoints.jeu_route < 4,
+		title: "Résultat de l’algorithme :",
+		message: "M. Olivier devrait avoir 1 mois de salaire brut d’indemnité. C'est exactement ce que vous auriez décidé en étudiant vous-même le dossier.",
+		image: "robot-juriste-ado.png",
 	},
 
 ////////////////
@@ -979,207 +492,269 @@ const conducteur = [
 	{
 		title: "Level up !",
 		message: "{{name}} a grandi ! Votre intelligence artificielle est fonctionnelle. Pendant la phase d’apprentissage, nous avons mis de côté les questions éthiques. Mais avec l’autonomie vient aussi les responsabilités morales auxquelles les jeunes adultes sont confrontés.",
-		image: "robot-conducteur-ado-adulte.gif",
+		image: "robot-juriste-ado-adulte.gif",
 	},
 //
 
 	{
-		title: "Après tous ces tests...",
-		message: "{{name}} a enfin obtenu les autorisations pour des essais sur la route ! Vous sortez votre voiture pour la faire rouler en ville.",
-		image: "robot-conducteur-adulte.png",
-	},
+		title: "Les dossiers s'enchaînent...",
+		message: "Grâce à {{name}}, la pile fond comme neige au soleil. Vous avez beaucoup plus de temps à consacrer aux dossiers compliqués.",
+		image: "robot-juriste-adulte.png",
+},
 	{
-		title: "Tout se passe bien, mais soudain...",
-		message: "Un scooter vous double par la droite, alors que vous vous apprêtiez à prendre un virage à droite. Vous le percutez et lui cassez une jambe à cause du choc.",
-		image: "robot-conducteur-adulte-etonne.png",
-	},
-
-/// Choix responsabilité ///
-/// Pas de bonne ou mauvaise réponse ///
-
-//
-// QUESTION RESPONSABILITE
-//
+		message: "Pour chaque affaire, {{name}} vous propose plusieurs décisions et les classe en fonction de leur probabilité. Pour les dossiers les plus simples, une décision se dégage souvent avec un taux de probabilité supérieur à 90%.",
+		image: "robot-juriste-adulte.png",
+	},	 
+//Nouveau choix proposé
 	{
-		name: "choice_responsabilite",
-		title: "Que choisissez-vous ?",
+		name: "choice_critereneglige_automatise",
+		title: "Vous décidez d'automatiser vos décisions",
+		message: "sur les dossiers les plus simples, afin de consacrer plus de temps aux dossiers complexes.",
 		choices: [
 			{
-				"value": "Refus de responsabilité",
-				"description": "Vous et Vroumvroum refusez d’endosser la responsabilité de cet accident",
-				"points": 0
+				"value": "Oui",
+				"description": "",
+
 			},
 			{
-				"value": "Prise de responsabilité",
-				"description": "Vous et Vroumvoum vous portez responsable",
-				"points": 0
+				"value": "Non",
+				"description": "",
+				"points": 1				
 			},
-		]
-	},
-	{
-		title: "Une enquête est ouverte",
-		message: "C’est le premier incident impliquant une voiture autonome en France. Les autorités prennent donc ce cas au sérieux.",
-		image: "robot-conducteur-adulte-etonne.png",
-	},
-	{
-		title: "La zone grise de la législation",
-		message: "Il n’y a pas encore de texte de loi encadrant la responsabilité des voitures autonomes en France. Votre accident va donc faire jurisprudence.",
-		image: "robot-conducteur-adulte-etonne.png",
-	},
-
-//
-// QUESTION RESPONSABILITE
-//
-/// Parcours refus de responsabilité
-	
-	{
-		message: "Mieux vaut vous entourer d’avocats pour vous protéger, si le conducteur du scooter décide de porter plainte.",
-		image: "robot-conducteur-adulte-etonne.png",
-		when: answers => answers.choice_responsabilite === "Refus de responsabilité",
-	},
-	{
-		title: "Dans votre cas...",
-		message: "{{name}} n’était pas en faute : c’est le scooter qui n’a pas respecté le code de la route.",
-		image: "robot-conducteur-adulte-etonne.png",
-		when: answers => answers.choice_responsabilite === "Refus de responsabilité",
-	},
-	{
-		message: "En revanche, impossible de savoir si un conducteur aurait pu éviter le scooter. L’affaire se termine par un non-lieu.",
-		image: "robot-conducteur-adulte-etonne.png",
-		when: answers => answers.choice_responsabilite === "Refus de responsabilité",
-	},
-	{
-		title: "Un coup dur pour l’industrie du véhicule autonome...",
-		message: "Les constructeurs ont mis en pause leurs tests et l’opinion du public sur les voitures automatiques est maintenant négative.",
-		image: "robot-conducteur-adulte-etonne.png",
-		when: answers => answers.choice_responsabilite === "Refus de responsabilité",
-	},
-
-//
-// QUESTION RESPONSABILITE
-//
-/// Parcours prise de responsabilité
-
-	{
-		message: "Puisque vous avez décidé de prendre vos responsabilités, vous allez avoir besoin d’avocats pour vous défendre.",
-		image: "robot-conducteur-cle-anime.gif",
-		when: answers => answers.choice_responsabilite !== "Refus de responsabilité",
-	},
-	{
-		message: "Dans votre cas...",
-		message: "{{name}} n’était pas en faute : c’est le scooter qui n’a pas respecté le code de la route. Mais le juge veut faire de ce cas un exemple, et comme vous vous portez responsable, vous êtes condamnés à payer une amende.",
-		image: "robot-conducteur-adulte.png",
-		when: answers => answers.choice_responsabilite !== "Refus de responsabilité",
-	},
-	{
-		title: "Un coup dur pour l'industrie du véhicule autonome...",
-		message: "Beaucoup de projets ont été interrompus. Cependant, vous avez réussi à rassurer le public en acceptant d’endosser la responsabilité de l’accident.",
-		image: "robot-conducteur-adulte.png",
-		when: answers => answers.choice_responsabilite !== "Refus de responsabilité",
-	},
-//
-// QUESTION RESPONSABILITE
-// Fin de la question
-
-	{
-		title: "Un cas similaire s'est produit aux États-Unis",
-		message: "Une voiture Uber en phase de test a renversé une piétonne, qui est décédée. L’enquête n’a pas encore livré ses conclusions, mais a laissé toute l’industrie en suspens.",
-		image: "robot-conducteur-adulte-etonne.png",
-	},
-	{
-		message: "Depuis, les chercheurs se sont posés des questions sur la réaction à adopter en cas d’accident. Que se passe-t-il si la voiture doit faire un choix ? Il faut définir un code moral pour que le véhicule sache quoi faire.",
-		image: "robot-conducteur-adulte.png",
-	},
-
-	{
-		name: "choice_accidentinevitable",
-		title: "Dans le cas d’un accident inévitable, qui choisissez-vous de sauver ?",
-		choices: [
-			{
-				"value": "Les passagers",
-				"description": "de la voiture",
-				"points": 0
-			},
-			{
-				"value": "Les piétons",
-				"description": " ",
-				"points": 0
-			}
 			]
 	},
+//Si bonne réponse
+	{
+		title: "Attention !",
+		message: "Vous risquez d'être sanctionné si vous oubliez le côté «humain» de la justice. Une décision ne peut se baser uniquement sur un algorithme : {{name}} ne peut être qu'un outil d’aide à la décision.",
+		image: "robot-juriste-adulte-etonne.png",
+		when: answers => answers.choice_critereneglige_automatise === 'Oui',
+	},
+		{
+		message: "Mieux vaut prendre le temps d’étudier chaque propositions de l’intelligence artificielle à la lumière des spécificités des dossiers, et de la chambre chargée de les traiter.",
+		image: "robot-juriste-adulte-etonne.png",
+		when: answers => answers.choice_critereneglige_automatise === 'Oui',
+	},
+//Si mauvaise réponse
+	{
+		title: "Vous faites bien...",
+		message: "Même sur les dossiers les plus simples, les décisions ne peuvent être prises automatiquement car cela va à l’encontre de la nature même d'une procédure judiciaire. {{name}} ne peut être qu'un outil d'aide à la décision.",
+		image: "robot-juriste-adulte.png",
+		when: answers => answers.choice_critereneglige_automatise === 'Non',
+	},
+
+//Commun à tous 
+	{
+		title: "La situation aux États-Unis",
+		message: "Le logiciel Compas permet d’évaluer le risque de récidive d'un criminel. Mais les juges qui ne se basaient que sur ce programme ont été contraints de revoir leur jugement, et de justifier leur décision par un raisonnement humain et non informatique.",
+		image: "experts-juriste-compas.jpg",
+	},
+
+//Choix Open source
+	{
+		name: "choice_opensource",
+		title: "Plusieurs juges sont intéressés par votre outil",
+		message: "Vous décidez de :",
+		choices: [
+			{
+				"value": "Le rendre accessible en Open source",
+				"description": "lisible, modifiable et utilisable par tous (magistrats, avocats et juristes) gratuitement",
+				"points": 1
+			},
+			{
+				"value": "Le diffuser uniquement aux magistrats",
+				"description": "pour éviter que le programme ne soit modifié ou utilisé à mauvais escient."
+			},
+			]
+	},
+//Si bonne réponse
+	{
+		title: "Sage décision !",
+		message: "Vous prenez le risque que {{name}} soit modifié, mais l'Open source permettra à chacun d'apprécier les fondements de la décision prise par le juge qui l'utilise. En le rendant gratuit, vous évitez la création de nouvelles inégalités entre les professionnels de la justice qui pourraient se l'offrir et ceux qui ne le pourraient pas.",
+		image: "robot-juriste-adulte.png",
+		when: answers => answers.choice_opensource === 'Le rendre accessible en Open source',
+	},
+	{
+		title: "Après plusieurs mois d'utilisation...",
+		message: "Vous êtes confronté·e à un nouveau type de contestation. Une association a étudié en détail votre algorithme. Elle lui a soumis des dossiers similaires : les résultats montrent que les indemnités proposées aux femmes par {{name}} sont souvent inférieures à celles proposées aux hommes.",
+		image: "robot-juriste-adulte.png",
+		when: answers => answers.choice_opensource === 'Le rendre accessible en Open source',
+	},
+
+//Si mauvaise réponse
 
 	{
-		title: "Vous avez eu du mal à faire un choix ?",
-		message: "C'est normal : il n'y a pas de bonne réponse à cette question. Chaque situation a ses particularités et la décision ne dépend pas que des faits : elle fait appel à votre morale.",
-		image: "robot-conducteur-adulte.png",
+		title: "Mauvaise idée...",
+		message: "En rendant le code de {{name}} secret, vous exposez les juges qui l'utiliseront à des contestations : il faut que ceux-ci sachent sur quels critères se basent {{name}}. Pour assurer la transparence d'une décision, il faut que l'outil que vous utilisez le soit aussi.",
+		image: "robot-juriste-adulte-etonne.png",
+		when: answers => answers.choice_opensource !== 'Le rendre accessible en Open source',
+	},
+	{
+		title: "Après plusieurs mois d'utilisation...",
+		message: "Vous êtes confronté·e à un nouveau type de contestation. Des hackers ont réussi à pirater votre programme. Ils lui ont soumis des dossiers similaires : les résultats montrent que les indemnités proposées aux femmes par {{name}} sont souvent inférieures à celles proposées aux hommes.",
+		image: "robot-juriste-adulte.png",
+		when: answers => answers.choice_opensource !== 'Le rendre accessible en Open source',
+	},
+
+
+//Indemnités homme/femme
+	{
+		name: "choice_indemniteshommefemme",
+		title: "Les indemnités sont calculées en fonction du salaire",
+		message: "Puisque le salaire des femmes est moins élevé, les indemnités seront moins élevées.",
+		choices: [
+			{
+				"value": "Argument valide",
+				"description": ""
+			},
+			{
+				"value": "Argument invalide",
+				"description": "",
+				"points": 1	
+			},
+			]
+	},
+//Si bonne réponse
+	{
+		title: "Bonne réponse !",
+		message: "Le raisonnement paraît logique, mais vous ne vous êtes pas fait·e avoir : les dossiers dont on parle sont similaires en termes de salaire.",
+		image: "robot-juriste-adulte.png",
+		when: answers => answers.choice_indemniteshommefemme === "Argument invalide",
+	},
+//Si mauvaise réponse
+	{
+		title: "Mauvaise réponse !",
+		message: "Le raisonnement est plutôt logique, mais les contestations concernent des dossiers similaires, dans lesquels les femmes touchent autant que les hommes.",
+		image: "robot-juriste-adulte-etonne.png",
+		when: answers => answers.choice_indemniteshommefemme !== "Argument invalide",
+	},
+
+
+	{
+		title: "Biais de traitement",
+		message: "Des études montrent également que dans certains domaines du droit, il y a une différence de traitement entre les femmes et les hommes. Les hommes écopent par exemple de peines de prison plus lourdes.",
+		image: "robot-juriste-adulte.png",
 	},
 
 	{
-		message: "Le site Moral Machine propose à ses utilisateurs de prendre différentes décisions lorsqu'une situation d'accident se présente. Les statistiques récoltées fournissent un aperçu de la position de l’opinion publique sur ces questions.",
-		image: "robot-conducteur-moralmachine.jpg",
+		message: "Le biais peut donc se situer dans l’appréciation personnelle des juges. Il risque de se refléter dans la base de données soumise à l'algorithme.",
+		image: "robot-juriste-adulte.png",
+	},
+
+
+//Biais indemnités homme/femme
+	{
+		name: "choice_indemniteshommefemme_biais",
+		title: "Comment corriger ce biais ?",
+		message: "",
+		choices: [
+			{
+				"value": "Modifier le programme",
+				"description": "pour que le mot «Madame» ne soit pas associé à des indemnités plus faibles que celles des hommes."
+			},
+			{
+				"value": "Anonymiser les décisions",
+				"description": "de votre base de données.",
+				"points": 1
+			},
+			]
+	},
+//Si bonne réponse
+	{
+		title: "Bonne réponse !",
+		message: "En prenant l’habitude d'anonymiser vos données, vous éviterez les biais liés au sexe des individus dans tous les domaines du droit que vous souhaitez couvrir avec votre intelligence artificielle.",
+		image: "robot-juriste-adulte.png",
+		when: answers => answers.choice_indemniteshommefemme_biais === "Anonymiser les décisions",
+	},
+//Si mauvaise réponse
+	{
+		title: "Mauvaise réponse !",
+		message: "Si vous voulez utiliser l’intelligence artificielle dans d’autres domaines, il vous faudra répéter cette manipulation à chaque fois que vous trouverez un biais issu de la base de données et mal interprété par le système de traitement automatique du langage. Il vaut mieux anonymiser les données.",
+		image: "robot-juriste-adulte-etonne.png",
+		when: answers => answers.choice_indemniteshommefemme_biais !== "Anonymiser les décisions",
+	},
+
+	{
+		title: "L’anonymisation des données est un enjeu clé",
+		message: "Depuis le vote de la loi pour une République Numérique en octobre 2016, et la publication du rapport Cadiet sur l’open data dans le monde de la justice, les professionnels du secteur attendent une décision sur la question.",
+		image: "robot-juriste-adulte.png",
+	},
+	{
+		message: "Avocats, juristes et magistrats sont nombreux à s’inquiéter d’une intelligence artificielle qui utiliserait des données non anonymisées, notamment dans le cadre de procédure pénale.",
+		image: "robot-juriste-adulte.png",
+	},
+
+	{
+		message: "Le député Cédric Villani a rendu un rapport intitulé «Donner un sens à l’intelligence artificielle». Ces quelque 240 pages recommandent la création d’un corps d’experts qui pourrait être saisi pour enquêter sur une prise de décision algorithmique.",
+		image: "experts-juriste-villani.jpg",
+	},
+
+	{
+		message: "Il préconise des études d’impact pour éviter les discriminations dont pourrait se rendre coupable l’intelligence artificielle, notamment dans le domaine de la justice. La sensibilisation des concepteurs d’intelligence artificielle à l’éthique est donc essentielle.",
+		image: "experts-juriste-villani.jpg",
 	},
 
 //
 // CONCLUSION
 // Compte des points
 //
-
 	{
 		title: "Votre score",
-		message: "Mais avant de penser à tout cela, voyons si votre véhicule pourrait rouler, en fonction de vos réponses tout au long du parcours.",
-		image: "robot-conducteur-cle-anime.gif",
+		message: "En fonction de vos réponses tout au long de l’éducation de {{name}}, essayons de voir si vous avez adopté les bons réflexes.",
+		image: "robot-juriste-adulte.png",
 	},
 
-/// Victoire
-/// Parcours véhicule opérationnel (25 points ou plus) 
+// Victoire
+// Compte des points gagnés (6 ou plus sur 9)
+	{
+		title: "La justice 2.0 vous tend les bras !",
+		message: "Vous avez {{points}} points sur un total de 9. Vous avez su entraîner {{name}} pour que l’intelligence artificielle soit techniquement performante et moralement irréprochable... ou presque.",
+		image: "robot-juriste-gagnant.gif",
+		when: answers => answers.points >= 6,
+	},
+	{
+		title: "La justice 2.0 vous tend les bras !",
+		message: "Si elle est bien maîtrisée, l’intelligence artificielle peut être très utile à la justice, notamment pour désengorger les tribunaux.",
+		image: "robot-juriste-gagnant.gif",
+		when: answers => answers.points >= 6,
+	},	
 
+// Défaite
+// Compte des points perdus (6 ou plus sur 9)
 	{
-		title: "Votre véhicule autonome est prometteur !",
-		message: "Vous avez {{points}} points sur un total de 35.",
-		image: "robot-conducteur-gagnant.gif",
-		when: answers => answers.points >= 25,
+		title: "La justice 2.0, ce n’est pas pour tout de suite...",
+		message: "Vous avez {{points}} points sur un total de 9. {{name}} n’est pas encore assez performant au niveau technique, et certains de vos choix «moraux» nuisent à l’équité des jugements rendus.",
+		image: "robot-juriste-echec.gif",
+		when: answers => answers.points < 6,
 	},
 	{
-		title: "Mais le manque de législation vous empêche de le commercialiser",
-		message: "Justement, le député Cédric Villani a proposé la création d’un comité éthique pour répondre à ces problématiques dans un rapport de mars 2018.",
-		image: "experts-juriste-villani.jpg",
-		when: answers => answers.points >= 25,
-	},
-	{
-		message: "En attendant, cela vous laisse du temps pour continuer à améliorer {{name}}, notamment en vous penchant sur les enjeux moraux que soulève votre technologie.",
-		image: "robot-conducteur-gagnant.gif",
-		when: answers => answers.points >= 25,
-	},
-
-/// Échec
-/// Parcours véhicule non opérationnel (moins de 25 points)
-
-	{
-		title: "Votre voiture autonome n'est vraiment pas prête...",
-		message: "Vous avez {{points}} points sur un total de 35. L’accident avec le scooter vous l’a montré, {{name}} n’est pas encore totalement en capacité de rouler en toute sécurité.",
-		image: "robot-conducteur-echec.gif",
-		when: answers => answers.points < 25,
-	},
-	{
-		message: "En attendant, le député Cédric Villani a proposé dans un rapport de mars 2018 la création d’un comité éthique pour étudier les questions morales liés aux accidents de voitures autonomes.",
-		image: "experts-juriste-villani.jpg",
-		when: answers => answers.points < 25,
-	},
-	{
-		message: "Pour l’instant, votre objectif de base - réduire le nombre de morts sur la route - n’est pas encore atteint. Il va vous falloir davantage travailler sur votre voiture autonome.",
-		image: "robot-conducteur-echec.gif",
-		when: answers => answers.points < 25,
-	},
+		title: "La justice 2.0, ce n’est pas pour tout de suite...",
+		message: "Pour utiliser l’intelligence artificielle dans le domaine de la justice, il faut d'abord que l’algorithme et les bases de données soient irréprochables.",
+		image: "robot-juriste-echec.gif",
+		when: answers => answers.points < 6,
+	},	
 
 ]
 
 //GENERIQUE
 //
+// Enquête :
+// 
+// Code :
 //
 // Graphisme : Julie Zentkowski
 // 
 // Merci tout particulièrement à Jules Bonnard et Pierre Romera de l'AFP pour leur aide précieuse en code
 //
 //
-// Remerciements : 
-// Google Maps, © 2017
+// Remerciements :
+//Jacques Levy-Vehel (co-fondateur de Case Law Analytics et chercheur à l'Institut national de recherche en informatique et en automatique)
+//Joachim Herrera (doctorant à l'Ecole de droit de Sciences Po)
+//Antoine Garapon (magistrat et juriste; Secrétaire général de l'Institut des hautes études sur la Justice)
+//Lise Damelet (avocate chez Orrick, Herrington & Sutcliffe, cofondatrice de l'Incubateur du barreau de Paris)
+//Dipty Chander (Présidente E-mma France)
+//
+// Icône « iMac » par Vladimir Belochkin, de thenounproject.com
+//
+//
+//

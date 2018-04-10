@@ -1,7 +1,7 @@
 Vue.use(VueRouter)
 Vue.use(httpVueLoader)
 Vue.use(SocialSharing)
-
+ 
 const Homepage = httpVueLoader('./components/homepage.vue')
 const Juriste = httpVueLoader('./components/juriste.vue')
 const Musicien = httpVueLoader('./components/musicien.vue')

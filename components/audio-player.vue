@@ -6,7 +6,7 @@
 		</audio>
 	</section>
 </template>
-
+ 
 <script>
 module.exports = {
 	name: 'AudioPlayer',

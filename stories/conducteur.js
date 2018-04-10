@@ -1,4 +1,4 @@
-
+ 
 const conducteur = [
 	{
 		title: "Vous êtes un·e ingénieur·e automobile",
@@ -363,7 +363,7 @@ const conducteur = [
 	},
 	{
 		name: "peopleonroad",
-		title: "Des personnes sont-elles sur la route ?",
+		title: "Des personnes sont-elles sur la route ? (5/7)",
 		message: "Score : {{peopleonroad}}  |  Étape 5/7",
 		largeimage: "robot-conducteur-reconnaitre-route-5.jpg",
 		yesno: {
@@ -373,7 +373,7 @@ const conducteur = [
 	},
 	{
 		name: "peopleonroad",
-		title: "Des personnes sont-elles sur la route ?",
+		title: "Des personnes sont-elles sur la route ? (6/7)",
 		message: "Score : {{peopleonroad}}  |  Étape 6/7",
 		largeimage: "robot-conducteur-reconnaitre-route-6.jpg",
 		yesno: {
@@ -383,7 +383,7 @@ const conducteur = [
 	},
 	{
 		name: "peopleonroad",
-		title: "Des personnes sont-elles sur la route ?",
+		title: "Des personnes sont-elles sur la route ? (7/7)",
 		message: "Score : {{peopleonroad}}  |  Étape 7/7",
 		largeimage: "robot-conducteur-reconnaitre-route-7.jpg",
 		yesno: {
@@ -501,7 +501,7 @@ const conducteur = [
 	{
 		name: "jeu_panneaux2",
 		title: "Quel est ce panneau ?",
-		message: "Score : {{ contextPoints.jeu_panneaux }}  |  Étape 2/10",
+		message: "Score : {{ contextPoints.jeu_panneaux }}  |  Étape 2/10",
 		image: "robot-conducteur-reconnaitre-panneau-2.png",
 		contextPoints: "jeu_panneaux",
 		choices: [
@@ -523,7 +523,7 @@ const conducteur = [
 	{
 		name: "jeu_panneaux3",
 		title: "Quel est ce panneau ?",
-		message: "Score : {{ contextPoints.jeu_panneaux }}  |  Étape 3/10",
+		message: "Score : {{ contextPoints.jeu_panneaux }}  |  Étape 3/10",
 		image: "robot-conducteur-reconnaitre-panneau-3.png",
 		contextPoints: "jeu_panneaux",
 		choices: [
@@ -545,7 +545,7 @@ const conducteur = [
 	{
 		name: "jeu_panneaux4",
 		title: "Quel est ce panneau ?",
-		message: "Score : {{ contextPoints.jeu_panneaux }}  |  Étape 4/10",
+		message: "Score : {{ contextPoints.jeu_panneaux }}  |  Étape 4/10",
 		image: "robot-conducteur-reconnaitre-panneau-4.png",
 		contextPoints: "jeu_panneaux",
 		choices: [
@@ -567,7 +567,7 @@ const conducteur = [
 	{
 		name: "jeu_panneaux5",
 		title: "Quel est ce panneau ?",
-		message: "Score : {{ contextPoints.jeu_panneaux }}  |  Étape 5/10",
+		message: "Score : {{ contextPoints.jeu_panneaux }}  |  Étape 5/10",
 		image: "robot-conducteur-reconnaitre-panneau-5.png",
 		contextPoints: "jeu_panneaux",
 		choices: [
@@ -589,7 +589,7 @@ const conducteur = [
 	{
 		name: "jeu_panneaux6",
 		title: "Quel est ce panneau ?",
-		message: "Score : {{ contextPoints.jeu_panneaux }}  |  Étape 6/10",
+		message: "Score : {{ contextPoints.jeu_panneaux }}  |  Étape 6/10",
 		image: "robot-conducteur-reconnaitre-panneau-6.png",
 		contextPoints: "jeu_panneaux",
 		choices: [
@@ -611,7 +611,7 @@ const conducteur = [
 	{
 		name: "jeu_panneaux7",
 		title: "Quel est ce panneau ?",
-		message: "Score : {{ contextPoints.jeu_panneaux }}  |  Étape 7/10",
+		message: "Score : {{ contextPoints.jeu_panneaux }}  |  Étape 7/10",
 		image: "robot-conducteur-reconnaitre-panneau-7.png",
 		contextPoints: "jeu_panneaux",
 		choices: [
@@ -633,7 +633,7 @@ const conducteur = [
 	{
 		name: "jeu_panneaux8",
 		title: "Quel est ce panneau ?",
-		message: "Score : {{ contextPoints.jeu_panneaux }}  |  Étape 8/10",
+		message: "Score : {{ contextPoints.jeu_panneaux }}  |  Étape 8/10",
 		image: "robot-conducteur-reconnaitre-panneau-8.png",
 		contextPoints: "jeu_panneaux",
 		choices: [
@@ -655,7 +655,7 @@ const conducteur = [
 	{
 		name: "jeu_panneaux9",
 		title: "Quel est ce panneau ?",
-		message: "Score : {{ contextPoints.jeu_panneaux }}  |  Étape 9/10",
+		message: "Score : {{ contextPoints.jeu_panneaux }}  |  Étape 9/10",
 		image: "robot-conducteur-reconnaitre-panneau-9.png",
 		contextPoints: "jeu_panneaux",
 		choices: [
@@ -677,7 +677,7 @@ const conducteur = [
 	{
 		name: "jeu_panneaux10",
 		title: "Quel est ce panneau ?",
-		message: "Score : {{ contextPoints.jeu_panneaux }}  |  Étape 10/10",
+		message: "Score : {{ contextPoints.jeu_panneaux }}  |  Étape 10/10",
 		image: "robot-conducteur-reconnaitre-panneau-10.png",
 		contextPoints: "jeu_panneaux",
 		choices: [
@@ -703,7 +703,7 @@ const conducteur = [
 
 	{
 		title: "Apprentissage du code de la route achevé !",
-		message: "Score : {{ contextPoints.jeu_panneaux }}/10  |  Vous êtes fin prêt·e à tester {{name}} sur l’un des circuits de Vroumvroum.",
+		message: "Score : {{ contextPoints.jeu_panneaux }}/10  |  Vous êtes fin prêt·e à tester {{name}} sur l’un des circuits de Vroumvroum.",
 		image: "robot-conducteur-ado.png",
 	},
 
@@ -873,7 +873,7 @@ const conducteur = [
 	{
 		name: "jeu_route5",
 		contextPoints: "jeu_route",
-		message: "La voiture détecte un obstacle sur la route. Que faire ? {{ contextPoints.jeu_route }} (5/6)",
+		message: "La voiture détecte un obstacle sur la route. Que faire ? {{ contextPoints.jeu_route }} (5/6)",
 		image: "robot-conducteur-test-5.jpg",
 		choices: [
 			{
@@ -1123,7 +1123,7 @@ const conducteur = [
 // CONCLUSION
 // Compte des points
 //
-
+ 
 	{
 		title: "Votre score",
 		message: "Mais avant de penser à tout cela, voyons si votre véhicule pourrait rouler, en fonction de vos réponses tout au long du parcours.",

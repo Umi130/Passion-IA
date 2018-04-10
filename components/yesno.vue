@@ -11,7 +11,7 @@
 		</footer>
 	</section>
 </template>
-
+ 
 <script>
 module.exports = {
 	name: 'choices',

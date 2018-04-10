@@ -6,7 +6,7 @@
 			</router-link>
 		</div>
 		<explanation v-if="currentStep.title || currentStep.message" :content="currentStep" :answers="answers"></explanation>
-
+ 
 		<illustration v-if="currentStep.image" :content="currentStep"></illustration>
 		<audio-player v-if="currentStep.music" :content="currentStep"></audio-player>
 

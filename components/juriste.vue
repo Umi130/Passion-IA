@@ -8,7 +8,7 @@
 		<explanation v-if="currentStep.title || currentStep.message" :content="currentStep" :answers="answers"></explanation>
 
 		<illustration v-if="currentStep.image" :content="currentStep"></illustration>
-
+ 
 		<choices v-if="currentStep.choices" :content="currentStep" v-on:select="selectChoice" :answers="answers"></choices>
 		<blanks v-if="currentStep.blanks" :content="currentStep" v-on:fill="fillBlanks"></blanks>
 

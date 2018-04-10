@@ -8,7 +8,7 @@
 						<img src="./assets/images/element-info.png" alt="About"/>
 					</a>
 				</p>
-
+ 
 				<!-- Modal for informations informations -->
 				<!-- The Modal -->
 				<div id="modalInfo" class="modal" v-if="withModal">

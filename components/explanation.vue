@@ -4,7 +4,7 @@
 		<p v-if="content.message">{{ formattedMessage }}</p>
 	</header>
 </template>
-
+ 
 <script>
 
 module.exports = {

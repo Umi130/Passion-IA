@@ -1,7 +1,7 @@
 <template>
 	<section :style="{ 'background-image': 'url(./assets/images/' + content.image + ')' }"></section>
 </template>
-
+ 
 <script>
 module.exports = {
 	name: 'illustration',

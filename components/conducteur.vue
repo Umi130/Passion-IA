@@ -10,7 +10,7 @@
 		<illustration v-if="currentStep.image" :content="currentStep"></illustration>
 
 		<choices v-if="currentStep.choices" :content="currentStep" v-on:select="selectChoice" :answers="answers"></choices>
-
+ 
 		<yesno v-if="currentStep.yesno" :content="currentStep" v-on:select="selectYesNo" :answers="answers"></yesno>
 
 		<footer class="text-center pb-2" v-if="!currentStep.choices && !currentStep.yesno">
