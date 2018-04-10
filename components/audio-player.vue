@@ -1,5 +1,5 @@
 <template>
-	<section class="d-flex">
+	<section class="audionoflex">
 		<audio autoplay :controls="content.music.controls" style="width:100%;">
 		  <source :src="'assets/music/'+content.music.src" type="audio/mp3">
 		  Your browser does not support the audio element.
@@ -14,4 +14,8 @@ module.exports = {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.audionoflex{
+		flex: 0;
+}
+</style>
