@@ -1,7 +1,7 @@
 <template>
 	<main>
 		<header class="container text-center mt-4">
-				<h2>L'école des Intelligences Artificielles</h2>
+				<h2>L'école des<br class="rwd-break"> Intelligences Artificielles</h2>
 				<p class="lead">
 					Choisissez un profil à faire grandir
 					<a class="about-btn" @click="showModal">
@@ -135,4 +135,8 @@ module.exports = {
 		width: 18px;
 		cursor: pointer;
 	}
+
+	@media screen and (min-width: 768px){
+   .rwd-break { display: none; }
+}
 </style>
