@@ -137,6 +137,13 @@ module.exports = {
 	}
 
 	@media screen and (min-width: 768px){
+	.modal-content{
+		width: 650px;
+		}
+	}
+
+
+	@media screen and (min-width: 768px){
    .rwd-break { display: none; }
 }
 </style>
