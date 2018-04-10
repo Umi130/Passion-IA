@@ -27,7 +27,7 @@ const conducteur = [
 	},
 
 	{
-		title: "Qu'est-ce qu'un algorithme ?",
+		title: "Qu’est-ce qu’un algorithme ?",
 		message: "Ce sont les instructions qui commandent un programme informatique. C’est comme une recette de cuisine. Le plat, c’est une conduite autonome, les ingrédients c’est le code de la route.",
 		image: "robot-conducteur-dodo.png",
 	},
@@ -95,7 +95,7 @@ const conducteur = [
 	},	
 
 	{
-		message: "Mais au fait, pourquoi appelle-t-on notre voiture Titine? Voici la réponse que l’on trouve sur un forum : «Je l'appelle 'cocotte', c'est mon côté macho et elle, c'est une vraie soumise, elle obéit à tout ce que je lui dis, elle me surprend parfois mais je l'adore...» Tout le contraire d’une voiture autonome, non ?",
+		message: "Mais au fait, pourquoi appelle-t-on notre voiture Titine? Voici la réponse que l’on trouve sur un forum : «Je l’appelle 'cocotte', c’est mon côté macho et elle, c’est une vraie soumise, elle obéit à tout ce que je lui dis, elle me surprend parfois mais je l’adore...» Tout le contraire d’une voiture autonome, non ?",
 		image: "robot-conducteur-bebe.png",
 		when: answers => answers.name === "Titine"
 	},	
@@ -132,7 +132,7 @@ const conducteur = [
 
 	{
 		title: "En premier lieu, il faut donner des yeux à la voiture",
-		message: "C'est ainsi que {{name}} pourra récupérer les données visuelles qui seront indispensables à la conduite.",
+		message: "C’est ainsi que {{name}} pourra récupérer les données visuelles qui seront indispensables à la conduite.",
 		image: "robot-conducteur-bebe.png",
 	},	
 
@@ -152,7 +152,7 @@ const conducteur = [
 		image: "experts-conducteur-coelingh.jpg",
 	},
 	{
-		title: "Le «labelling», c'est l'étiquetage",
+		title: "Le «labelling», c’est l’étiquetage",
 		message: "C’est l’étape longue et fastidieuse où les ingénieurs doivent étiqueter chaque image à la main pour montrer à l’intelligence artificielle ce qui est à l’image.",
 		image: "experts-conducteur-coelingh.jpg",
 	},
@@ -311,7 +311,7 @@ const conducteur = [
 		image: "robot-conducteur-enfant.png",
 	},
 	{
-		title: "Vous pouvez procéder à la deuxième phase : la localisation dans l'espace",
+		title: "Vous pouvez procéder à la deuxième phase : la localisation dans l’espace",
 		message: "Il ne suffit pas que {{name}} puisse reconnaître les objets, la voiture doit aussi pouvoir les placer dans l’espace.",
 		image: "robot-conducteur-enfant.png",
 	},
@@ -443,12 +443,12 @@ const conducteur = [
 		image: "robot-conducteur-enfant.png",
 	},
 	{
-		title: "La physique est importante pour l'intelligence artificielle des voitures",
+		title: "La physique est importante pour l’intelligence artificielle des voitures",
 		message: "Sa compréhension permet d’anticiper la trajectoire des véhicules alentours.",
 		image: "robot-conducteur-cle-anime.gif",
 	},
 	{
-		message: "Mettons qu'un camion derrière vous aille trop vite pour pouvoir s’arrêter en cas de freinage d’urgence. {{name}} pourra alors choisir de se déporter.",
+		message: "Mettons qu’un camion derrière vous aille trop vite pour pouvoir s’arrêter en cas de freinage d’urgence. {{name}} pourra alors choisir de se déporter.",
 		image: "robot-conducteur-enfant.png",
 	},
 
@@ -807,7 +807,7 @@ const conducteur = [
 			},
 			{
 				"value": "  ",
-				"description": "S'arrêter",
+				"description": "S’arrêter",
 				"points": 0
 			},
 			{
@@ -883,7 +883,7 @@ const conducteur = [
 			},
 			{
 				"value": "  ",
-				"description": "L'éviter : c'est un rocher",
+				"description": "L’éviter : c’est un rocher",
 				"points": 0
 			},
 			{
@@ -911,7 +911,7 @@ const conducteur = [
 	{
 		name: "jeu_route6",
 		contextPoints: "jeu_route",
-		message: "Le garçon veut visiblement traverser, mais vous ne savez pas s'il a vu la voiture. Que faire ? (6/6)",
+		message: "Le garçon veut visiblement traverser, mais vous ne savez pas s’il a vu la voiture. Que faire ? (6/6)",
 		image: "robot-conducteur-test-6.jpg",
 		choices: [
 			{
@@ -921,7 +921,7 @@ const conducteur = [
 			},
 			{
 				"value": "",
-				"description": "Ralentir en attendant de voir ce qu'il va faire",
+				"description": "Ralentir en attendant de voir ce qu’il va faire",
 				"points": 1
 			},
 			{
@@ -956,7 +956,7 @@ const conducteur = [
 //MINI-JEU 3 & 4 > CONCLUSION
 //SI 80% BONNES REPONSES OU PLUS:
 	{
-		title: "C'est un succès !",
+		title: "C’est un succès !",
 		message: "Avec {{contextPoints.jeu_route}} bonnes réponses sur 6, {{name}} a passé avec succès cette phase de test !",
 		image: "robot-conducteur-ado.png",
 		when: answers => answers.contextPoints.jeu_route >= 4,
@@ -965,7 +965,7 @@ const conducteur = [
 //MINI-JEU 3 & 4 > CONCLUSION
 //SI MOINS DE 80% BONNES REPONSES:
 	{
-		title: "C'est plutôt un échec...",
+		title: "C’est plutôt un échec...",
 		message: "Avec {{contextPoints.jeu_route}} bonnes réponses sur 6, il vous faut encore faire un effort. Vous continuez à faire tester {{name}}.",
 		image: "robot-conducteur-ado-etonne.png",
 		when: answers => answers.contextPoints.jeu_route < 4,
@@ -1040,7 +1040,7 @@ const conducteur = [
 	{
 		title: "Dans votre cas...",
 		message: "{{name}} n’était pas en faute : c’est le scooter qui n’a pas respecté le code de la route.",
-		image: "robot-conducteur-adulte-etonne.png",
+		image: "robot-conducteur-adulte.png",
 		when: answers => answers.choice_responsabilite === "Refus de responsabilité",
 	},
 	{
@@ -1072,9 +1072,9 @@ const conducteur = [
 		when: answers => answers.choice_responsabilite !== "Refus de responsabilité",
 	},
 	{
-		title: "Un coup dur pour l'industrie du véhicule autonome...",
+		title: "Un coup dur pour l’industrie du véhicule autonome...",
 		message: "Beaucoup de projets ont été interrompus. Cependant, vous avez réussi à rassurer le public en acceptant d’endosser la responsabilité de l’accident.",
-		image: "robot-conducteur-adulte.png",
+		image: "robot-conducteur-adulte-etonne.png",
 		when: answers => answers.choice_responsabilite !== "Refus de responsabilité",
 	},
 //
@@ -1082,7 +1082,7 @@ const conducteur = [
 // Fin de la question
 
 	{
-		title: "Un cas similaire s'est produit aux États-Unis",
+		title: "Un cas similaire s’est produit aux États-Unis",
 		message: "Une voiture Uber en phase de test a renversé une piétonne, qui est décédée. L’enquête n’a pas encore livré ses conclusions, mais a laissé toute l’industrie en suspens.",
 		image: "robot-conducteur-adulte-etonne.png",
 	},
@@ -1110,12 +1110,12 @@ const conducteur = [
 
 	{
 		title: "Vous avez eu du mal à faire un choix ?",
-		message: "C'est normal : il n'y a pas de bonne réponse à cette question. Chaque situation a ses particularités et la décision ne dépend pas que des faits : elle fait appel à votre morale.",
+		message: "C’est normal : il n’y a pas de bonne réponse à cette question. Chaque situation a ses particularités et la décision ne dépend pas que des faits : elle fait appel à votre morale.",
 		image: "robot-conducteur-adulte.png",
 	},
 
 	{
-		message: "Le site Moral Machine propose à ses utilisateurs de prendre différentes décisions lorsqu'une situation d'accident se présente. Les statistiques récoltées fournissent un aperçu de la position de l’opinion publique sur ces questions.",
+		message: "Le site Moral Machine propose à ses utilisateurs de prendre différentes décisions lorsqu’une situation d’accident se présente. Les statistiques récoltées fournissent un aperçu de la position de l’opinion publique sur ces questions.",
 		image: "robot-conducteur-moralmachine.jpg",
 	},
 
@@ -1155,7 +1155,7 @@ const conducteur = [
 /// Parcours véhicule non opérationnel (moins de 25 points)
 
 	{
-		title: "Votre voiture autonome n'est vraiment pas prête...",
+		title: "Votre voiture autonome n’est vraiment pas prête...",
 		message: "Vous avez {{points}} points sur un total de 35. L’accident avec le scooter vous l’a montré, {{name}} n’est pas encore totalement en capacité de rouler en toute sécurité.",
 		image: "robot-conducteur-echec.gif",
 		when: answers => answers.points < 25,

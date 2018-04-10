@@ -29,11 +29,11 @@ module.exports = {
 <style scoped>
 	.choices {
 		flex: 1;
-		padding: 15px;
+		padding: 5px;
 	}
 	.choice {
 		flex: 1;
-		padding: 20px 24px;
+		padding: 15px 24px;
 		margin: 5px 5px 5px 5px;
 		border: 1px solid transparent;
 		border-color: #7299de;
