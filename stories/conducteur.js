@@ -911,7 +911,7 @@ const conducteur = [
 	{
 		name: "jeu_route6",
 		contextPoints: "jeu_route",
-		message: "Le garçon veut visiblement traverser, mais vous ne savez pas s’il a vu la voiture. Que faire ? (6/6)",
+		message: "Le garçon semble vouloir traverser, mais vous ne savez pas s’il a vu la voiture. Que faire ? (6/6)",
 		image: "robot-conducteur-test-6.jpg",
 		choices: [
 			{
@@ -1126,7 +1126,7 @@ const conducteur = [
  
 	{
 		title: "Votre score",
-		message: "Mais avant de penser à tout cela, voyons si votre véhicule pourrait rouler, en fonction de vos réponses tout au long du parcours.",
+		message: "Voyons si votre véhicule pourrait rouler, en fonction de vos réponses tout au long du parcours.",
 		image: "robot-conducteur-cle-anime.gif",
 	},
 
