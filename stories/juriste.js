@@ -1,19 +1,3 @@
-// Tech todo: obsolete illustration.vue
- 
-// Todo: fond couleur différent programmatique quand faux
-//       (container d-flex flex-column justify-content-center align-items-center)
-
-// Todo: compte bonne réponses à incrémenter, then show as percentage
-
-// Todo : Blanks to finish (don't shift text box)
-// Todo : votre intelligence artificielle grandit ! when logo changes
-// Todo : valign image robot (image must be anchored on bottom, not top)
-// Todo : bouton SUIVANT ancré en bas
-
-// Todo : add close box to go back to main menu
-
-// Optional Todo : texte devient tableau pour aller à la ligne
-// Optional Todo: Illustrations -- Taille images variable desktop/smartphone?
 
 const juriste = [
 	{

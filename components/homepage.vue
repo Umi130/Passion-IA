@@ -133,5 +133,6 @@ module.exports = {
 
 	.about-btn img {
 		width: 18px;
+		cursor: pointer;
 	}
 </style>
