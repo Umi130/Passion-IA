@@ -83,7 +83,7 @@ const conducteur = [
 	},	
 
 		{
-		message: "Beaucoup de français font comme vous le choix de donner un surnom affectueux à leur voiture. Espérons que Titine n’aura pas trop de mal à se faire une place dans le milieu très masculin de l’automobile.",
+		message: "Beaucoup de Français font comme vous le choix de donner un surnom affectueux à leur voiture. Espérons que Titine n’aura pas trop de mal à se faire une place dans le milieu très masculin de l’automobile.",
 		image: "robot-conducteur-bebe-etonne.png",
 		when: answers => answers.name === "Titine"
 	},	
@@ -873,7 +873,7 @@ const conducteur = [
 	{
 		name: "jeu_route5",
 		contextPoints: "jeu_route",
-		message: "La voiture détecte un obstacle sur la route. Que faire ? {{ contextPoints.jeu_route }} (5/6)",
+		message: "La voiture détecte un obstacle sur la route. Que faire ? (5/6)",
 		image: "robot-conducteur-test-5.jpg",
 		choices: [
 			{
