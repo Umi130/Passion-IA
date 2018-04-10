@@ -24,7 +24,7 @@ const musicien = [
 	},
 
 	{
-		title: "«Hello Shadow», composée à l'aide d'une intelligence artificielle ?",
+		title: "Une chanson composée à l'aide d'une intelligence artificielle ?",
 		message: "Elle ressemble pourtant au style de Stromae. Vous faites une petite recherche sur Internet...",
 		image: "illust-musicien-stromae.jpg",
 	},
@@ -169,8 +169,8 @@ const musicien = [
 	},
 
 	{
-		title: "Vous avez oublié une étape cruciale :",
-		message: "Nourrir la machine de vos influences. «Pour mes projets, je pars avec une base de données d’au moins 4h de son», précise Robin Meier. D'autres, comme François Pachet, n'utilisent pas directement le son mais les partitions des morceaux pour que l'IA les analyse.",
+		title: "Une étape indispensable :",
+		message: "nourrir la machine de vos influences. «Pour mes projets, je pars avec une base de données d’au moins 4h de son», précise Robin Meier. D'autres, comme François Pachet, n'utilisent pas directement le son mais les partitions des morceaux pour que l'IA les analyse.",
 		image: "robot-musicien-guitare-anime.gif",
 	},
 

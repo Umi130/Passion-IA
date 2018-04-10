@@ -2,7 +2,7 @@
 const conducteur = [
 	{
 		title: "Vous êtes un·e ingénieur·e automobile",
-		message: "Pour la marque Vroumvroum. Depuis toujours, votre rêve est de fabriquer une voiture autonome.",
+		message: "pour la marque Vroumvroum. Depuis toujours, votre rêve est de fabriquer une voiture autonome.",
 		image: "robot-conducteur-dodo.png",
 	},
 	{

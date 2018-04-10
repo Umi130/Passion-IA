@@ -20,9 +20,9 @@
 						Lawrence Bekk-Day, Tamara Bouhl, Océane Cornevin, Mathilde Dumazet, Aurore Gayte & Mathilde Saliou</p>
 
 						<p><em>Remerciements tout particuliers à :</em><br>
-							Julie Zentkowski pour le graphisme<br>
-							Jules Bonnard (AFP) & Pierre Romera (ICIJ) pour leur accompagnement<br>
-						Célia Mériguet & Thibaud Vuitton (franceinfo) pour leurs conseils éditoriaux</p>
+							▪ Julie Zentkowski pour le graphisme<br>
+							▪ Jules Bonnard (AFP) & Pierre Romera (ICIJ) pour leur accompagnement<br>
+							▪ Célia Mériguet & Thibaud Vuitton (franceinfo) pour leurs conseils éditoriaux</p>
 						<p><small>© 2018 Tous droits réservés</small></p>
 
 				    	<span class="close" @click="closeModal">X</span>

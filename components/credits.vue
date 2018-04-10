@@ -1,7 +1,7 @@
 <template>
 	<div class="credits">
 		<div class="wrapper" :style="{ 'animation-duration': animationDuration }">
-			<h2>Crédits</h2>
+			<h2></h2>
  
 			<div v-if="parcours === 'conducteur'">			
 						<p><em>Ce projet a été conçu par six étudiants de l’École de journalisme de Sciences Po :</em></p>
@@ -90,22 +90,22 @@
 
 
 			<div class="credits-footer">
-				Partagez votre score avec vos amis !
-				<social-sharing inline-template class="mb-4">
-					<div>
-						<network network="facebook" class="btn btn-sm btn-default">
-						  <i class="fa fa-fw fa-facebook"></i> Facebook
-						</network>
-						<network network="twitter" class="btn btn-sm btn-default">
-						  <i class="fa fa-fw fa-twitter"></i> Twitter
-						</network>
-					</div>
-				</social-sharing>
 				<div class="text-center mt-4">
 					<router-link to="/" class="btn btn-primary">
 						Refaire une partie
 					</router-link>
 				</div>
+					<p><br>Partagez votre score avec vos amis !</p>
+				<social-sharing inline-template class="mb-4">
+					<div>
+						<network network="facebook" class="btn btn-sm btn-default cursorhere">
+						  <i class="fa fa-fw fa-facebook"></i> Facebook
+						</network>
+						<network network="twitter" class="btn btn-sm btn-default cursorhere">
+						  <i class="fa fa-fw fa-twitter"></i> Twitter
+						</network>
+					</div>
+				</social-sharing>
 			</div>
 		</div>
 	</div>
@@ -137,6 +137,10 @@ module.exports = {
 	max-width: 660px;
 	transform: translateX(-50%);
 	overflow: hidden;
+}
+
+.cursorhere {
+	cursor: pointer;
 }
 
 .wrapper {

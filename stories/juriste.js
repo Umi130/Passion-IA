@@ -149,11 +149,11 @@ const juriste = [
 	{
 		title: "Vous demandez conseil.",
 		message: "L’algorithme a besoin de plus de précisions quant aux critères qui motivent votre décision. Jacques Levy Vehel, le co-fondateur de Case Law Analytics, vous assiste.",
-		image: "experts-juriste-vehel.jpg",
+		image: "experts-juriste-caselaw.png",
 	},
 	{
 		message:"«L’intelligence artificielle calcule ces probabilités grâce à un algorithme: à condition qu'on lui donne assez d'exemples, elle pourra simuler les différentes décisions possibles pour un cas particulier.»",
-		image: "experts-juriste-vehel.jpg",
+		image: "experts-juriste-caselaw.png",
 	}, 
 	{
 		name: "choice_premiereslois",
@@ -372,7 +372,7 @@ const juriste = [
 {
 		title: "",
 		message: "«Quand le taux d’erreur est supérieur à 15 ou 20%, on étiquette les données à la main.» (Jacques Levy-Vehel, co-fondateur de Case Law Analytics)",
-		image: "experts-juriste-vehel.jpg",
+		image: "experts-juriste-caselaw.png",
 	},
 
 
