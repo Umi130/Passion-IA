@@ -106,7 +106,7 @@ const juriste = [
 	},	
 
 	{
-		message: "Votre robot, contrairement à un bébé, n’est pas genré. Le nom que vous lui avez choisi, lui, l’est. Il définit donc la manière dont le robot sera perçu par les utilisateurs et le public.",
+		message: "Votre robot, contrairement à un bébé, n’est pas genré. Il est donc important de choisir un prénom qui ne l’est pas non plus.",
 		image: "robot-juriste-bebe.png",
 		when: answers => answers.name === "Justum"
 	},	
