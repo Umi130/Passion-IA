@@ -16,7 +16,7 @@
 					<div class="modal-content">
 				    	<p><strong>«Machine learning», «réseaux de neurones», «traitement automatique du langage»... Difficile d’expliquer simplement le fonctionnement d’un algorithme !</strong></p>
 						<p>Ce jeu vous propose de devenir «éleveur de robot», pour mieux comprendre le fonctionnement d’une IA.</p>
-						<p><em>Ce projet a été conçu par Lawrence Bekk-Day, Tamara Bouhl, Océane Cornevin, Mathilde Dumazet, Aurore Gayte & Mathilde Saliou</em></p>
+						<p><em>Ce projet a été conçu par</em> Lawrence Bekk-Day, Tamara Bouhl, Océane Cornevin, Mathilde Dumazet, Aurore Gayte & Mathilde Saliou</p>
 
 						<p><em>Remerciements tout particuliers à :</em><br>
 							▪ Julie Zentkowski pour le graphisme<br>
