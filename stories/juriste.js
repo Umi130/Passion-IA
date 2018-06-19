@@ -370,7 +370,6 @@ const juriste = [
 	},
 	{
 		message: "Vous avez maintenant une base de données suffisamment complète pour que {{name}} puisse «prédire» la probabilité des différents jugements pour un nouveau dossier.",
-		when: answers => answers.blanks_emploi_duree1 && answers.blanks_emploi_duree2,
 		image: "robot-juriste-enfant.png",
 	},
 	
