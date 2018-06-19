@@ -715,7 +715,7 @@ const musicien = [
 // Mauvaise réponse
 	{	
 		title: "C’est plutôt un échec...",
-		message: "Avec un score de {{contextPoints.minijeu_instruments}} sur 3, il va vous falloir passer un peu plus de temps sur la labellisation des instruments pour que votre bibliothèque soit complète.",
+		message: "Avec un score de {{contextPoints.minijeu_instruments}} sur 3, il va vous falloir passer un peu plus de temps sur la labellisation des instruments pour que votre bibliothèque soit complète. Ce n'est qu'après que vous pourrez créer de nouveaux sons en mélangeant des enregistrements existants.",
 		image: "robot-musicien-bebe-etonne.png",
 		when: answers => answers.choice_mode_composition == "Celle de Robin Meier" && answers.contextPoints.minijeu_instruments < 2,
 	},
@@ -930,10 +930,16 @@ const musicien = [
 
 	{
 		title: "Avec cette technique, vous pouvez choisir les sons que vous voulez mettre en valeur",
-		message: "En s’inspirant des formes d’ondes, {{name}} n’a besoin que d’une fraction de seconde de son pour se lancer. L’algorithme prédira ensuite la courbe de l’onde en fonction de ce qu’il aura appris avec la base de données.",
+		message: "En s’inspirant des formes d’ondes, {{name}} n’a besoin que d’une fraction de seconde de son pour se lancer.",
 		image: "robot-musicien-ado.png",
 		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
 	},
+	{
+		message: "L’algorithme prédira ensuite la courbe de l’onde en fonction de ce qu’il aura appris avec la base de données.",
+		image: "robot-musicien-ado.png",
+		when: answers => answers.choice_mode_composition === "Celle de Robin Meier",
+	},
+	
 
 	{
 		message: "Cette technique est beaucoup plus lente que lorsque la machine apprend à partir de partitions puisque les ondes sonores sont plus longues à analyser.",
@@ -979,13 +985,13 @@ const musicien = [
 
 	{
 		title: "Vous avez réussi à composer un album entier !",
-		message: "Il vous faut maintenant trouver une image pour la pochette. Il existe un algorithme de Google, Deep Dream, qui permet de générer une image à partir d’une base de données et d’une inspiration que vous lui soumettez. Deep Dream utilise l'intelligence artificielle.",
+		message: "Il vous faut maintenant trouver une image pour la pochette. Il existe un algorithme de Google, Deep Dream, qui permet de générer une image à partir d’une base de données et d’une inspiration que vous lui soumettez.",
 		image: "robot-musicien-adulte.png",
 	},
 
 	{
-		title: "Vous utilisez Google Deep Dream",
-		message: "Il vous permettra de créer la pochette de votre album. Vous pouvez lui soumettre une image dont l’algorithme va s’inspirer.",
+		title: "Deep Dream utilise l'intelligence artificielle.",
+		message: "Cela vous permettra de créer la pochette de votre album. Vous pouvez soumettre une image dont l’algorithme va s’inspirer.",
 		image: "robot-musicien-adulte.png",
 	},
 
@@ -1136,7 +1142,7 @@ const musicien = [
 	},
 	{
 		title: "Attention aussi à la contrainte imposée par le producteur",
-		message: "Composer de la musique uniquement en fonction des goûts des auditeurs pourrait conduire à une uniformisation des musiques diffusées à la radio. L’intérêt d’écouter une radio est aussi de pouvoir découvrir de nouveaux styles.",
+		message: "Composer de la musique uniquement en fonction des goûts des auditeurs pourrait conduire à une uniformisation des musiques diffusées à la radio.",
 		image: "robot-musicien-adulte-etonne.png",
 		when: answers => answers.musicien_commanderadio === "Vous l’acceptez",
 	},	

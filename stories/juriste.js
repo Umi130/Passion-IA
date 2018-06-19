@@ -226,10 +226,17 @@ const juriste = [
 
 	{
 		title: "Résultat de l’algorithme :",
-		message: "M. Husson devrait recevoir trois mois de salaire brut en indemnités. C’est un résultat précis... mais vous vous rendez compte que {{name}} n’a pas tenu compte de la zone géographique de votre cour.",
+		message: "M. Husson devrait recevoir trois mois de salaire brut en indemnités. C’est un résultat précis qui correspond à la loi. Vous êtes satisfait...",
 		image: "robot-juriste-bebe-etonne.png",
 		when: answers => answers.choice_premiereslois !== 'Tous les articles de loi',
 	},
+	{
+		title: "Vous êtes satisfait...",
+		message: "mais vous vous rendez compte que {{name}} n’a pas tenu compte de la zone géographique de votre cour.",
+		image: "robot-juriste-bebe-etonne.png",
+		when: answers => answers.choice_premiereslois !== 'Tous les articles de loi',
+	},
+	
 	{
 		message: "Vous auriez eu tendance à lui attribuer une indemnité d’au moins 6 mois de salaire brut puisque le chômage est plus élevé dans votre région.",
 		image: "robot-juriste-bebe.png",
@@ -357,10 +364,17 @@ const juriste = [
 //Si toutes réponses correctes
 	{
 		title: "Bravo !",
-		message: "Le taux d’erreur de {{name}} est inférieur à 15%, vous pourrez donc économiser de longues heures d’étiquetage manuel de vos données. Vous avez maintenant une base de données suffisamment complète pour que {{name}} puisse «prédire» la probabilité des différents jugements pour un nouveau dossier.",
+		message: "Le taux d’erreur de {{name}} est inférieur à 15%, vous pourrez donc économiser de longues heures d’étiquetage manuel de vos données.",
 		when: answers => answers.blanks_emploi_duree1 && answers.blanks_emploi_duree2,
 		image: "robot-juriste-enfant.png",
 	},
+	{
+		title: 
+		message: "Vous avez maintenant une base de données suffisamment complète pour que {{name}} puisse «prédire» la probabilité des différents jugements pour un nouveau dossier.",
+		when: answers => answers.blanks_emploi_duree1 && answers.blanks_emploi_duree2,
+		image: "robot-juriste-enfant.png",
+	},
+	
 //Sinon
 	{
 		title: "Vous avez fait trop d’erreurs...",
@@ -554,13 +568,23 @@ const juriste = [
 //Si bonne réponse
 	{
 		title: "Sage décision !",
-		message: "Vous prenez le risque que {{name}} soit modifié, mais l’Open source permettra à chacun d’apprécier les fondements de la décision prise par le juge qui l’utilise. En le rendant gratuit, vous évitez la création de nouvelles inégalités entre les professionnels qui pourraient se l’offrir et ceux qui ne le pourraient pas.",
+		message: "Vous prenez le risque que {{name}} soit modifié, mais l’Open source permettra à chacun d’apprécier les fondements de la décision prise par le juge qui l’utilise.",
+		image: "robot-juriste-adulte.png",
+		when: answers => answers.choice_opensource === 'Le rendre accessible en Open source',
+	},
+	{
+		message: "En le rendant gratuit, vous évitez la création de nouvelles inégalités entre les professionnels qui pourraient se l’offrir et ceux qui ne le pourraient pas.",
 		image: "robot-juriste-adulte.png",
 		when: answers => answers.choice_opensource === 'Le rendre accessible en Open source',
 	},
 	{
 		title: "Après plusieurs mois d’utilisation...",
-		message: "Vous êtes confronté·e à un nouveau type de contestation. Une association a étudié en détail votre algorithme. Elle lui a soumis des dossiers similaires : les résultats montrent que les indemnités proposées aux femmes par {{name}} sont souvent inférieures à celles proposées aux hommes.",
+		message: "Vous êtes confronté·e à un nouveau type de contestation. Une association a étudié en détail votre algorithme.",
+		image: "robot-juriste-adulte.png",
+		when: answers => answers.choice_opensource === 'Le rendre accessible en Open source',
+	},
+	{
+		message: "Elle a soumis à votre algorithme des dossiers similaires : les résultats montrent que les indemnités proposées aux femmes par {{name}} sont souvent inférieures à celles proposées aux hommes.",
 		image: "robot-juriste-adulte.png",
 		when: answers => answers.choice_opensource === 'Le rendre accessible en Open source',
 	},
@@ -575,7 +599,13 @@ const juriste = [
 	},
 	{
 		title: "Après plusieurs mois d’utilisation...",
-		message: "Vous êtes confronté·e à un nouveau type de contestation. Des hackers ont réussi à pirater votre programme. Ils lui ont soumis des dossiers similaires : les résultats montrent que les indemnités proposées aux femmes par {{name}} sont souvent inférieures à celles proposées aux hommes.",
+		message: "Vous êtes confronté·e à un nouveau type de contestation. Des hackers ont réussi à pirater votre programme.",
+		image: "robot-juriste-adulte.png",
+		when: answers => answers.choice_opensource !== 'Le rendre accessible en Open source',
+	},
+	{
+		title: "Après plusieurs mois d’utilisation...",
+		message: "Ils ont soumis à votre algorithme des dossiers similaires : les résultats montrent que les indemnités proposées aux femmes par {{name}} sont souvent inférieures à celles proposées aux hommes.",
 		image: "robot-juriste-adulte.png",
 		when: answers => answers.choice_opensource !== 'Le rendre accessible en Open source',
 	},
@@ -653,7 +683,7 @@ const juriste = [
 //Si mauvaise réponse
 	{
 		title: "Mauvaise réponse !",
-		message: "Si vous voulez utiliser l’intelligence artificielle dans d’autres domaines, il vous faudra répéter cette manipulation à chaque fois que vous trouverez un biais dans la base de données mal interprété par le système de traitement automatique du langage. Il vaut mieux anonymiser les données.",
+		message: "Si vous voulez utiliser l’intelligence artificielle dans d’autres domaines, il vous faudra répéter cette manipulation à chaque fois que vous trouverez un biais dans la base de données. Il vaut mieux anonymiser les données.",
 		image: "robot-juriste-adulte-etonne.png",
 		when: answers => answers.choice_indemniteshommefemme_biais !== "Anonymiser les décisions",
 	},
