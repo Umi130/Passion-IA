@@ -4,7 +4,6 @@
 			<h2></h2>
  
 			<div v-if="parcours === 'conducteur'">			
-						<p><em>Ce projet a été conçu par six étudiants de l’École de journalisme de Sciences Po :</em></p>
 						<p><strong>Enquête</strong><br>
 						Tamara Bouhl, Mathilde Dumazet, Aurore Gayte & Mathilde Saliou</p>
 						<p><strong>Code</strong><br>
@@ -20,7 +19,6 @@
 						<p><small>© 2018 Tous droits réservés</small></p>
 			</div>
 			<div v-else-if="parcours === 'musicien'">			
-						<p><em>Ce projet a été conçu par six étudiants de l’École de journalisme de Sciences Po :</em></p>
 						<p><strong>Enquête</strong><br>
 						Tamara Bouhl, Mathilde Dumazet, Aurore Gayte & Mathilde Saliou</p>
 						<p><strong>Code</strong><br>
@@ -68,7 +66,6 @@
 
 			</div>
 			<div v-else-if="parcours === 'juriste'">			
-						<p><em>Ce projet a été conçu par six étudiants de l’École de journalisme de Sciences Po :</em></p>
 						<p><strong>Enquête</strong><br>
 						Tamara Bouhl, Mathilde Dumazet, Aurore Gayte & Mathilde Saliou</p>
 						<p><strong>Code</strong><br>
