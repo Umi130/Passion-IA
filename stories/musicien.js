@@ -484,7 +484,7 @@ const musicien = [
 		message: "Vous n’avez qu’un score de {{ contextPoints.blanks_minijeu_notes }} sur 5. Vos données ont besoin d’être mieux labellisées. Heureusement, vous avez fait appel à un musicologue pour vous aider.",
 		image: "robot-musicien-enfant-etonne.png",
 
-		when: answers => answers.choice_mode_composition == "Celle de François Pachet" && !answers.contextPoints.blanks_minijeu_notes >= 3,
+		when: answers => answers.choice_mode_composition == "Celle de François Pachet" && answers.contextPoints.blanks_minijeu_notes < 3,
 	},
 
 	{
