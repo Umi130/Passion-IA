@@ -845,14 +845,14 @@ const musicien = [
 //TO DO
 	//{	
 		// title: "C’est un succès !",
-		// message: "Avec un score de {{contextPoints.minijeu_instruments}} sur 3, vous avez pu vous constituer une bibliothèque de sons que vous allez pouvoir mélanger pour créer de nouveaux instruments.",
+		// message: "Avec un score de {{contextPoints.minijeu_instruments}} sur 2, vous avez pu vous constituer une bibliothèque de sons originaux que vous allez pouvoir mélanger à des fréquences musicales.",
 		// image: "robot-musicien-bebe.png",
 		// when: answers => answers.choice_mode_composition == "Celle de Robin Meier" && answers.contextPoints.minijeu_instruments >= 2,
 	// },
 // Mauvaise réponse
 	// {	
 		// title: "C’est plutôt un échec...",
-		// message: "Avec un score de {{contextPoints.minijeu_instruments}} sur 3, il va vous falloir passer un peu plus de temps sur la labellisation des instruments pour que votre bibliothèque soit complète. Ce n'est qu'après que vous pourrez créer de nouveaux sons en mélangeant des enregistrements existants.",
+		// message: "Avec un score de {{contextPoints.minijeu_instruments}} sur 2, il va vous falloir passer un peu plus de temps sur la labellisation des sons pour que votre bibliothèque soit complète.",
 		// image: "robot-musicien-bebe-etonne.png",
 		// when: answers => answers.choice_mode_composition == "Celle de Robin Meier" && answers.contextPoints.minijeu_instruments < 2,
 	// },
