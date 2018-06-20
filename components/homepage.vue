@@ -14,14 +14,14 @@
 				<div id="modalInfo" class="modal" v-if="withModal">
 				  	<!-- Modal content -->
 					<div class="modal-content">
-				    	<p><strong>«Machine learning», «réseaux de neurones», «traitement automatique du langage»... Difficile d’expliquer simplement le fonctionnement d’un algorithme !</strong></p>
-						<p>Ce jeu vous propose de devenir «éleveur de robot», pour mieux comprendre le fonctionnement d’une IA.</p>
-						<p><em>Ce projet a été conçu par</em> Lawrence Bekk-Day, Tamara Bouhl, Océane Cornevin, Mathilde Dumazet, Aurore Gayte & Mathilde Saliou</p>
+				    	<p><strong>«Machine learning», «réseaux de neurones», «traitement automatique du langage»... Difficile d’expliquer simplement le fonctionnement d’une intelligence artificielle !</strong></p>
+						<p>Ce jeu vous propose de devenir «éleveur de robot» pour mieux comprendre les algorithmes qui les font vivre. Votre mission : faire grandir un bébé voiture autonome, un petit juge ou un apprenti musicien. Grâce à des mini-jeux, vous devrez leur fournir des connaissances et leur apprendre des choix. A vous, aussi, de réfléchir aux questionnements éthiques qui permettront de les rendre indépendants.</p>
+						<p><em>Ce projet a été conçu par les journalistes</em> Lawrence Bekk-Day, Tamara Bouhl, Océane Cornevin, Mathilde Dumazet, Aurore Gayte & Mathilde Saliou</p>
 
 						<p><em>Remerciements tout particuliers à :</em><br>
 							▪ Julie Zentkowski pour le graphisme<br>
-							▪ Jules Bonnard (AFP) & Pierre Romera (ICIJ) pour leur accompagnement<br>
-							▪ Célia Mériguet & Thibaud Vuitton (franceinfo) pour leurs conseils éditoriaux</p>
+							▪ Jules Bonnard & Pierre Romera pour leur accompagnement sur le code<br>
+							▪ Célia Mériguet & Thibaud Vuitton pour leurs conseils éditoriaux</p>
 						<p><small>© 2018 Tous droits réservés</small></p>
 
 				    	<span class="close" @click="closeModal">X</span>
