@@ -425,7 +425,7 @@ const musicien = [
 
 	{
 		title: "Mauvaise réponse !",
-		message: "La première image était la bonne. C'était l'indication chiffrée de rythme au début d'une partition qui vous l'indiquait.",
+		message: "La première image était la bonne. C'était l'indication chiffrée au début de la partition qui vous l'indiquait.",
 		image: "robot-musicien-enfant-etonne.png",
 
 		when: answers => answers.choice_mode_composition == "Celle de François Pachet" && answers.choix_reconnaitre_1 == "2.",
@@ -842,6 +842,7 @@ const musicien = [
 		when: answers => !answers.blanks_sons_2 && answers.choice_mode_composition === "Celle de Robin Meier",
 	},
 
+//TO DO
 	//{	
 		// title: "C’est un succès !",
 		// message: "Avec un score de {{contextPoints.minijeu_instruments}} sur 3, vous avez pu vous constituer une bibliothèque de sons que vous allez pouvoir mélanger pour créer de nouveaux instruments.",

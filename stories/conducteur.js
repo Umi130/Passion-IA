@@ -107,13 +107,13 @@ const conducteur = [
 	},	
 
 	{
-		message: "Votre robot, contrairement à un bébé, n’est pas genré. Le nom que vous lui avez choisi, lui, l’est. Il définit donc la manière dont le robot sera perçu par les utilisateurs et le public. Ne pas définir de genre pour votre algorithme vous autorise à un peu plus de fantaisie.",
+		message: "Votre robot, contrairement à un bébé, n’est pas genré. Le nom que vous avez choisi est relativement neutre. Il définit donc la manière dont le robot sera perçu par les utilisateurs et le public. Ne pas définir de genre pour votre algorithme vous autorise à un peu plus de fantaisie.",
 		image: "robot-conducteur-bebe.png",
 		when: answers => answers.name === "Botmobile"
 	},	
 
 	{
-		message: "«Au lieu de commencer par se dire, c’est un assistant, donnons-lui une voix de femme, qu’est-ce qui nous empêche de lui donner une voix d’animal, par exemple, ou un truc qui ne ressemble à rien de réel, mais qui soit fun ?» explique Dipty Chander, présidente de l’association E-mma qui promeut la mixité dans le domaine du numérique.",
+		message: "«Au lieu de commencer par se dire, c’est un assistant, donnons-lui une voix de femme, qu’est-ce qui nous empêche de lui donner une voix d’animal par exemple» explique Dipty Chander, présidente de l’association E-mma qui promeut la mixité dans le domaine du numérique.",
 		image: "experts-dipty.jpg",
 		when: answers => answers.name === "Botmobile"
 	},	
@@ -290,7 +290,7 @@ const conducteur = [
 
 	{
 		title: "Première phase du «labelling» achevée !",
-		message: "Score : {{ passagepieton }}/11",
+		message: "Score : {{ passagepieton }}/11. Si votre score est inférieur à 7, un petit retour à l'auto-école s'impose pour que votre première base de données soit complète. La reconnaissance des passages piétons est essentielle pour éviter les accidents.",
 		image: "robot-conducteur-bebe.png",
 	},
 
@@ -399,7 +399,7 @@ const conducteur = [
 
 	{
 		title: "Seconde phase du «labelling» achevée !",
-		message: "Score : {{peopleonroad}}/7  |  {{name}} sait désormais reconnaître les objets et peut les placer sur une image.",
+		message: "Score : {{peopleonroad}}/7  |  Si votre score est inférieur à 5, nous vous déconseillons de tester {{name}} en conditions réelles.",
 		image: "robot-conducteur-enfant.png",
 	},
 
@@ -408,8 +408,8 @@ const conducteur = [
 //
 	{
 		name: "choice_basedonnees",
-		title: "Base de données",
-		message: "Il est maintenant temps de fournir à {{name}} des données à analyser. Que choisissez-vous ?",
+		title: "Pour réagir sur la route...",
+		message: "{{name}} doit apprendre un certain nombre de règles. Quelle base de données lui soumettez-vous en premier ?",
 		choices: [
 			{
 				"value": "Le code de la route",
@@ -432,7 +432,7 @@ const conducteur = [
 //Si mauvaise réponse
 	{
 		title: "Attention !",
-		message: "il faut apprendre le code de la route, mais cette étape vient bien après. La voiture doit avant tout connaître les lois de la physique élémentaire, surtout en ce qui concerne la vitesse.",
+		message: "il faut apprendre le code de la route, mais cette étape vient bien plus tard. La voiture doit avant tout connaître les lois de la physique élémentaire, surtout en ce qui concerne la vitesse.",
 		image: "robot-conducteur-enfant-etonne.png",
 		when: answers => answers.choice_basedonnees === 'Le code de la route',
 	},
@@ -639,7 +639,7 @@ const conducteur = [
 		choices: [
 			{
 				"description": "Entrée sur une rocade",
-				"points": 1
+				"points": 0
 			},
 			{
 				"description": "Début d’une section d’autoroute",
@@ -703,7 +703,7 @@ const conducteur = [
 
 	{
 		title: "Apprentissage du code de la route achevé !",
-		message: "Score : {{ contextPoints.jeu_panneaux }}/10  |  Vous êtes fin prêt·e à tester {{name}} sur l’un des circuits de Vroumvroum.",
+		message: "Score : {{ contextPoints.jeu_panneaux }}/10  |  Si votre score est inférieur à 8, vous confiez {{name}} à des moniteurs d'auto-école pour parfaire son apprentissage du code de la route.",
 		image: "robot-conducteur-ado.png",
 	},
 
@@ -966,7 +966,7 @@ const conducteur = [
 //SI MOINS DE 80% BONNES REPONSES:
 	{
 		title: "C’est plutôt un échec...",
-		message: "Avec {{contextPoints.jeu_route}} bonnes réponses sur 6, il vous faut encore faire un effort. Vous continuez à faire tester {{name}}.",
+		message: "Avec {{contextPoints.jeu_route}} bonnes réponses sur 6, il vous faut encore faire un effort. Vous continuez à faire tester {{name}} jusqu'à ce que ses résultats soient parfaits.",
 		image: "robot-conducteur-ado-etonne.png",
 		when: answers => answers.contextPoints.jeu_route < 4,
 	},
